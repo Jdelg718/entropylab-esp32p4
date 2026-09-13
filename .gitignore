@@ -1,0 +1,34 @@
+# Build products, caches and local configuration
+**/target/
+**/build/
+**/managed_components/
+**/sdkconfig
+**/sdkconfig.old
+**/logs/
+.cache/
+.tools/
+.env
+.env.*
+!.env.example
+**/__pycache__/
+*.pyc
+.venv/
+node_modules/
+.DS_Store
+# Never publish device memory or credentials
+*.bin
+*.elf
+*.a
+*.o
+*.map
+*.log
+*.dump
+*.img
+*.bak
+*.pem
+*.key
+*.pcap
+backups/
+recovery/
+private/
+**/host-test

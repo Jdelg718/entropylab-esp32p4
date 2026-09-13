@@ -1,0 +1,16 @@
+name: Host public-fixture tests
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Install pinned host Rust
+        run: rustup toolchain install 1.95.0 --profile minimal
+      - name: Run real host tests and C ABI link
+        run: bash scripts/test-host.sh

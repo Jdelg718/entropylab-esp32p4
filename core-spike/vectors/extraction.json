@@ -1,0 +1,22 @@
+{
+  "commit": "6e1f39cc7da25942c7a1f51ea5837f4ac7ef8f51",
+  "source_sha256": "db3614d6f398e2f9c5493b9c5c0f47cc42c9511aa8c62a52e3e5ec43a76a85aa",
+  "functions": [
+    "ctx",
+    "wipe",
+    "wipe_bytes",
+    "wipe_val",
+    "wipe_string",
+    "wipe_xpriv",
+    "read",
+    "write78",
+    "el_hd_master",
+    "el_hd_ckd_priv",
+    "el_bip39_entropy_to_mnemonic",
+    "network_from_selector",
+    "write_script",
+    "el_spk_p2wpkh",
+    "el_addr_from_script"
+  ],
+  "changes": "imports subset; exported C functions become parent-visible Rust functions; helper visibility only; function bodies unchanged"
+}

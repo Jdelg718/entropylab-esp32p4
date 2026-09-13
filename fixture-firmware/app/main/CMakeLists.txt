@@ -1,0 +1,5 @@
+idf_component_register(SRCS "main.c" INCLUDE_DIRS ".")
+add_prebuilt_library(fixture_core "${CMAKE_CURRENT_LIST_DIR}/../../rust/target/riscv32imafc-esp-espidf/release/libentropylab_fixture.a")
+target_link_libraries(${COMPONENT_LIB} PRIVATE fixture_core)
+idf_component_get_property(LVGL_LIB lvgl__lvgl COMPONENT_LIB)
+target_compile_options(${LVGL_LIB} PRIVATE -Wno-error=attributes -Wno-error=cpp)

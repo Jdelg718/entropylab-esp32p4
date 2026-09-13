@@ -1,0 +1,2 @@
+# Preserve original upstream/config bytes and recognize retained CRLF endings.
+* -text whitespace=cr-at-eol
