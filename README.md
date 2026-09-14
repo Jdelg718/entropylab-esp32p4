@@ -18,8 +18,10 @@ temporaries, keys or allocations. OOM/panic aborts rather than unwinding across 
 The source fixture was flashed and passed on a Waveshare ESP32-P4-WIFI6-Touch-LCD-4.3,
 chip Rev1.3, with 32 MB PSRAM at 200 MHz and working display/touch. The recorded
 calculation returned `rc=0 pass=1`. See [sanitized evidence](docs/HARDWARE-EVIDENCE.md).
-This is evidence for the source milestone, not a claim that this reorganized
-checkout has been freshly target-built or flashed. Host checks run independently.
+This is runtime evidence for the source milestone, not this checkout's new binary.
+A fresh target build from this checkout with reused external dependencies passed;
+no fresh dependency download, relocation test, or flash/runtime test of this new
+binary is claimed. Host checks run independently.
 
 ## Quick start (Linux host)
 
@@ -38,7 +40,14 @@ The host CLI accepts only its documented public-test interface: never supply sec
 
 See [BUILD](docs/BUILD.md) for pinned target setup, [RECOVERY](docs/RECOVERY.md)
 before flashing, [ROADMAP](ROADMAP.md), and [CONTRIBUTING](CONTRIBUTING.md).
-GUI redesign is a future integration; no browser mockup is presented as firmware.
+The native 480×800 dark GUI is integrated: orange public-fixture action, disabled
+hex keypad/Clear/Delete preview, real result navigation, and busy/failure/retry states.
+Hex entry remains future work: no editable input or hex-core API is added.
+The user confirmed Run public fixture on the reviewed source GUI hardware build;
+that is not a flash/runtime claim for this checkout. The same GUI/font sources pass
+the native LVGL host renderer (51 controls checked across states). Run
+`bash scripts/test-gui-host.sh` after target dependency setup, or set
+`LVGL_SOURCE_DIR` to an external LVGL 9.5.0 source checkout. Renders are host evidence only.
 
 ## Upstream and licensing
 
@@ -49,5 +58,7 @@ a direct library adapter, **not** the 15-function host extraction ported to no_s
 See [provenance](docs/PROVENANCE.md), LICENSE and THIRD_PARTY_NOTICES.md.
 
 This limited source-fixture release passed independent public-content and license
-review plus local host tests. A clean target build of this reorganized checkout
-remains unverified. No upstream endorsement or contributor affiliation is implied.
+review plus local host tests. A fresh target build from this checkout with reused
+external dependencies passed (see [checkpoint](docs/NATIVE-GUI-CHECKPOINT.md));
+fresh dependency download, relocation, and this new binary's flash/runtime remain
+unverified. No upstream endorsement or contributor affiliation is implied.

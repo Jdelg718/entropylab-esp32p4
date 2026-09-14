@@ -18,7 +18,7 @@ symbols=(r/'logs/symbols.txt').read_text()
 for symbol in ['fixture_run','fixture_alloc','fixture_free']:
     assert re.search(r'\bT '+symbol+r'$',symbols,re.M),symbol
 # No application activation of networking, storage, signing or entropy acquisition.
-source=(r/'app/main/main.c').read_text()+(r/'rust/src/lib.rs').read_text().split('#[cfg(test)]')[0]
+source=''.join(p.read_text() for p in (r/'app/main').glob('*.c'))+(r/'rust/src/lib.rs').read_text().split('#[cfg(test)]')[0]
 for forbidden in ['esp_wifi_init(', 'esp_netif_init(', 'nvs_flash_init(', 'esp_fill_random(', 'esp_random(', '.sign_ecdsa(', '.sign_schnorr(']:
     assert forbidden not in source,forbidden
 report={'status':'PASS','runtime_hardware_tested':False,'archive_members':len(flags),'revision':[100,199],'artifacts':{str(p.relative_to(r)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [r/'build/entropylab_fixture.bin',r/'build/entropylab_fixture.elf']}}
