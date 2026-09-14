@@ -20,7 +20,8 @@ class ArchiveChecks(unittest.TestCase):
             root = Path(tmp)
             firmware = root / 'fixture-firmware'
             coin = firmware / 'coin/target/riscv32imafc-esp-espidf/release'
-            hexd = firmware / 'rust/target/riscv32imafc-esp-espidf/release'
+            # No historical HEX target exists in this isolated fixture.
+            hexd = firmware / 'dice/target/riscv32imafc-esp-espidf/release'
             coin.mkdir(parents=True); hexd.mkdir(parents=True)
             (root / 'scripts').mkdir()
             shutil.copyfile(SCRIPT, root / 'scripts/localize-coin.py')
@@ -62,13 +63,20 @@ elif mode == 'malformed':
                 run(tools['as'], '--32', '-o', name + '.o', name + '.s')
             src = coin / 'libentropylab_coin_core.a'
             run(tools['ar'], 'rcs', str(src), 'first.o', 'second.o')
-            run(tools['ar'], 'rcs', str(hexd / 'libentropylab_hex_core.a'), 'hex.o')
+            run(tools['ar'], 'rcs', str(hexd / 'libentropylab_dice_core.a'), 'hex.o')
             (root / 'payload').write_bytes(b'\xcc')
             env = dict(os.environ, PATH=str(bindir) + os.pathsep + os.environ['PATH'],
                        REAL_OBJCOPY=tools['objcopy'], REAL_AR=tools['ar'], PAYLOAD=str(root / 'payload'))
+            self.assertFalse((firmware / 'rust/target').exists())
+            # Omission and a nonexistent explicit runtime must fail closed.
+            for args in ([], ['--runtime-archive', str(root / 'missing-runtime.a')]):
+                result = subprocess.run([sys.executable, str(root / 'scripts/localize-coin.py')] + args,
+                                        cwd=root, env=dict(env, MUTATION='unchanged'), capture_output=True, text=True)
+                self.assertNotEqual(result.returncode, 0)
+                self.assertNotIn('PASS', result.stdout)
             for mode in ('unchanged', 'payload', 'addition', 'removal', 'missing', 'extra', 'reordered', 'malformed'):
                 with self.subTest(mode=mode):
-                    result = subprocess.run([sys.executable, str(root / 'scripts/localize-coin.py')],
+                    result = subprocess.run([sys.executable, str(root / 'scripts/localize-coin.py'), '--runtime-archive', str(hexd / 'libentropylab_dice_core.a')],
                                             cwd=root, env=dict(env, MUTATION=mode), capture_output=True, text=True)
                     if mode == 'unchanged':
                         self.assertEqual(result.returncode, 0, result.stderr)

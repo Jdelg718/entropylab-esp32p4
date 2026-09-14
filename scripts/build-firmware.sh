@@ -6,13 +6,14 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 command -v idf.py >/dev/null
 command -v riscv32-esp-elf-gcc >/dev/null
 CARGO="${CARGO:-cargo}"
+python3 "$ROOT/scripts/test-dice-lock.py"
 export CC_riscv32imafc_esp_espidf=riscv32-esp-elf-gcc
 export AR_riscv32imafc_esp_espidf=riscv32-esp-elf-ar
 export CFLAGS_riscv32imafc_esp_espidf='-march=rv32imafc -mabi=ilp32f -fno-pic -fno-pie'
 export CARGO_TARGET_RISCV32IMAFC_ESP_ESPIDF_RUSTFLAGS='-C relocation-model=static'
-"$CARGO" +nightly-2026-04-15 build --release --target riscv32imafc-esp-espidf -Zbuild-std=core,alloc --locked --manifest-path "$ROOT/fixture-firmware/rust/Cargo.toml" --target-dir "$ROOT/fixture-firmware/rust/target"
+"$CARGO" +nightly-2026-04-15 build --release --target riscv32imafc-esp-espidf -Zbuild-std=core,alloc --locked --manifest-path "$ROOT/fixture-firmware/dice/Cargo.toml" --target-dir "$ROOT/fixture-firmware/dice/target"
 "$CARGO" +nightly-2026-04-15 build --release --target riscv32imafc-esp-espidf -Zbuild-std=core --locked --manifest-path "$ROOT/fixture-firmware/coin/Cargo.toml" --target-dir "$ROOT/fixture-firmware/coin/target"
-python3 "$ROOT/scripts/localize-coin.py"
+python3 "$ROOT/scripts/localize-coin.py" --runtime-archive "$ROOT/fixture-firmware/dice/target/riscv32imafc-esp-espidf/release/libentropylab_dice_core.a"
 APP="$ROOT/fixture-firmware/app"
 # Reproduce reviewed Rev1.3 configuration, not a stale developer sdkconfig.
 cp "$APP/sdkconfig.baseline" "$APP/sdkconfig"
@@ -20,7 +21,7 @@ LOCK_SHA="$(sha256sum "$APP/dependencies.lock")"
 cd "$APP"
 idf.py -B "$ROOT/fixture-firmware/build" -D 'SDKCONFIG_DEFAULTS=sdkconfig.defaults;rev1_3.defaults' build
 mkdir -p "$ROOT/fixture-firmware/logs"
-riscv32-esp-elf-readelf -h "$ROOT/fixture-firmware/rust/target/riscv32imafc-esp-espidf/release/libentropylab_hex_core.a" > "$ROOT/fixture-firmware/logs/archive-headers.txt"
+riscv32-esp-elf-readelf -h "$ROOT/fixture-firmware/dice/target/riscv32imafc-esp-espidf/release/libentropylab_dice_core.a" > "$ROOT/fixture-firmware/logs/archive-headers.txt"
 riscv32-esp-elf-nm "$ROOT/fixture-firmware/build/entropylab_fixture.elf" > "$ROOT/fixture-firmware/logs/symbols.txt"
 python3 "$ROOT/fixture-firmware/verify.py"
 python3 "$ROOT/scripts/verify-coin-elf.py"

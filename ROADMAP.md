@@ -30,12 +30,13 @@ gap: the board's C6 presence must remain explicit in hardware threat modeling.
    [COIN milestone](docs/COIN-MILESTONE.md) for source/build identities and actual
    verification limits. A newly built repository binary is not thereby
    hardware-verified.
-3. **Hashed D6 (next feature, not implemented):** keep the original
-   COLDCARD-style convention and the Coleman 6-to-0 convention as distinct,
-   explicitly labeled modes. Before implementation, trace each exact upstream
-   input mapping, serialization, hash and output-width rule; establish public
-   reference vectors and independent comparisons. Do not silently treat these
-   conventions as interchangeable or infer entropy from a hash's output width.
+3. **Hashed D6 (local candidate, review gated):** original COLDCARD-style raw
+   digits and Coleman 6-to-0 before SHA256 remain distinct labeled modes with
+   separate transcripts. Strict ASCII 1–6, maximum 1024 rolls, all five word
+   counts. Exactly two short weak public source-image hardware tests were
+   reported; threshold, soak and readiness hardware coverage is not claimed.
+   See [DICE milestone](docs/DICE-MILESTONE.md). Hash output width and nominal
+   roll thresholds do not certify entropy.
 4. **Reliability and readiness (ongoing gates):** queue saturation, startup and
    allocation failure injection, cancellation/reset semantics, soak tests,
    stack/RAM headroom, secret-lifetime review and dependency review. Each feature
@@ -56,6 +57,14 @@ gap: the board's C6 presence must remain explicit in hardware threat modeling.
    handling belong in the threat model. **No export implementation or SD writes
    are authorized now.** This backlog item does not block other feature work.
 
+7. **EntropyLab logo screensaver (deferred design gate):** use the authentic
+   upstream website logo, not a recreation. Exact website asset provenance and
+   redistribution/license review are pending; bundle the approved asset locally
+   for offline use, with no runtime website fetch. Idle timeout and wake behavior
+   require future design review. Do not overlay a secrets screen or imply that
+   displaying the logo automatically erases secrets. No implementation is
+   authorized by this roadmap item.
+
 ## Change and release gates
 
 Signing and transaction workflows are outside the product direction. Real-secret
@@ -66,5 +75,5 @@ does not grant implementation approval.
 
 Public release requires independent content/privacy/license audit and explicit
 publication approval. Contributions are via reviewed changes, not automatic
-access. This update is documentation only; code changes, commits and pushes
+access. This local candidate includes code; commits and pushes
 remain gated on review and approval.

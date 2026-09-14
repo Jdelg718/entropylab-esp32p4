@@ -1,5 +1,6 @@
 #include "gui.h"
 #include "lvgl.h"
+#include "dice_core.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -19,12 +20,12 @@ static hex_request_t snapshot(const char *input_text,size_t n,uint32_t input_mod
     memcpy(request.hex,input_text,n);request.length=n;request.mode=input_mode;request.words=words_count;
     return request;
 }
-static char transcripts[2][257];
-static size_t lengths[2];
+static char transcripts[4][1025];
+static size_t lengths[4];
 static unsigned mode, selector=12;
 #define hex transcripts[mode]
 #define length lengths[mode]
-static lv_obj_t *back, *keypad, *coinpad, *modes[2], *choices[5], *flips[2];
+static lv_obj_t *back, *keypad, *coinpad, *dicepad, *dicekeys[6], *dicechoices[5], *dicemethod, *modes[4], *choices[5], *flips[2];
 static bool busy, valid_result;
 static void refresh(void);
 static void style_surface(lv_style_t *s, uint32_t color, int radius, bool border) {
@@ -65,70 +66,78 @@ static void show(bool results) {
     else {lv_obj_remove_flag(input,LV_OBJ_FLAG_HIDDEN);lv_obj_add_flag(output,LV_OBJ_FLAG_HIDDEN);}
     lv_obj_remove_state(tabs[!results],LV_STATE_CHECKED);lv_obj_add_state(tabs[results],LV_STATE_CHECKED);
 }
-static bool allowed(void) {return mode?length==selector*32/3:(length>=32 && length<=64 && length%8==0);}
+static bool allowed(void) {return mode>=2?(length>0 && length<=1024):mode?length==selector*32/3:(length>=32 && length<=64 && length%8==0);}
 static void invalidate(void) {
     valid_result=false;
     for(int i=0;i<24;i++)lv_label_set_text(words[i],"--");
     lv_label_set_text(fp,"--------");lv_label_set_text(addr,"Not calculated");
-    lv_label_set_text(note,"No result. Enter public TEST INPUT only.\nEnglish / empty passphrase / NEVER fund.");
+    lv_label_set_text(note,mode>=2&&length&&length<(size_t)el_dice_required_rolls(selector)?"WEAK_INPUT_LAB_ONLY / No result\nPublic TEST input only / NEVER fund.":"No result. Enter public TEST INPUT only.\nEnglish / empty passphrase / NEVER fund.");
 }
 static void refresh(void) {
     char c[64];snprintf(c,sizeof c,"%u / 64 chars  |  %u bits",(unsigned)length,(unsigned)length*4);
-    if(mode)snprintf(c,sizeof c,"%u / %u encoded bits",(unsigned)length,selector*32/3);
+    if(mode==1)snprintf(c,sizeof c,"%u / %u encoded bits",(unsigned)length,selector*32/3);
+    if(mode>=2)snprintf(c,sizeof c,"%u / %d nominal rolls (max 1024)",(unsigned)length,(int)el_dice_required_rolls(selector));
     lv_label_set_text(count,c);
     /* Coin preview is explicitly the latest 64 bits; full owned transcript retained. */
-    lv_label_set_text(hexlabel,length?(mode&&length>64?hex+length-64:hex):(mode?"Heads=0 / Tails=1. Raw bits, MSB first.":"Tap 0-F to enter public test hex"));
+    lv_label_set_text(hexlabel,length?(mode&&length>64?hex+length-64:hex):(mode>=2?"Tap 1-6: public laboratory rolls":mode?"Heads=0 / Tails=1. Raw bits, MSB first.":"Tap 0-F to enter public test hex"));
     lv_label_set_text(lv_obj_get_child(edits[16],0),mode?"Undo":"Delete");
-    lv_label_set_text(lv_obj_get_child(tabs[0],0),mode?"Coin input":"Hex input");
-    lv_label_set_text(lv_obj_get_child(back,0),mode?"Back to coin input":"Back to hex input");
-    if(mode){lv_obj_add_flag(keypad,LV_OBJ_FLAG_HIDDEN);lv_obj_remove_flag(coinpad,LV_OBJ_FLAG_HIDDEN);}
+    lv_label_set_text(lv_obj_get_child(tabs[0],0),mode>=2?"Dice input":mode?"Coin input":"Hex input");
+    lv_label_set_text(lv_obj_get_child(back,0),mode>=2?"Back to dice input":mode?"Back to coin input":"Back to hex input");
+    lv_obj_add_flag(dicepad,LV_OBJ_FLAG_HIDDEN);
+    if(mode>=2){lv_obj_add_flag(keypad,LV_OBJ_FLAG_HIDDEN);lv_obj_add_flag(coinpad,LV_OBJ_FLAG_HIDDEN);lv_obj_remove_flag(dicepad,LV_OBJ_FLAG_HIDDEN);}
+    else if(mode){lv_obj_add_flag(keypad,LV_OBJ_FLAG_HIDDEN);lv_obj_remove_flag(coinpad,LV_OBJ_FLAG_HIDDEN);}
     else {lv_obj_remove_flag(keypad,LV_OBJ_FLAG_HIDDEN);lv_obj_add_flag(coinpad,LV_OBJ_FLAG_HIDDEN);}
-    for(int i=0;i<2;i++){
-        if(busy){lv_obj_add_state(modes[i],LV_STATE_DISABLED);lv_obj_add_state(flips[i],LV_STATE_DISABLED);}
-        else {lv_obj_remove_state(modes[i],LV_STATE_DISABLED);lv_obj_remove_state(flips[i],LV_STATE_DISABLED);}
+    for(int i=0;i<4;i++){
+        if(busy){lv_obj_add_state(modes[i],LV_STATE_DISABLED);if(i<2)lv_obj_add_state(flips[i],LV_STATE_DISABLED);}
+        else {lv_obj_remove_state(modes[i],LV_STATE_DISABLED);if(i<2)lv_obj_remove_state(flips[i],LV_STATE_DISABLED);}
         if(mode==(unsigned)i)lv_obj_add_state(modes[i],LV_STATE_CHECKED);else lv_obj_remove_state(modes[i],LV_STATE_CHECKED);
     }
     for(int i=0;i<5;i++){
         if(busy)lv_obj_add_state(choices[i],LV_STATE_DISABLED);else lv_obj_remove_state(choices[i],LV_STATE_DISABLED);
         if(selector==(unsigned)(12+3*i))lv_obj_add_state(choices[i],LV_STATE_CHECKED);else lv_obj_remove_state(choices[i],LV_STATE_CHECKED);
     }
+    for(int i=0;i<6;i++){if(busy)lv_obj_add_state(dicekeys[i],LV_STATE_DISABLED);else lv_obj_remove_state(dicekeys[i],LV_STATE_DISABLED);}
+    for(int i=0;i<5;i++){if(busy)lv_obj_add_state(dicechoices[i],LV_STATE_DISABLED);else lv_obj_remove_state(dicechoices[i],LV_STATE_DISABLED);if(selector==(unsigned)(12+3*i))lv_obj_add_state(dicechoices[i],LV_STATE_CHECKED);else lv_obj_remove_state(dicechoices[i],LV_STATE_CHECKED);}
+    if(mode>=2)lv_obj_add_flag(edits[18],LV_OBJ_FLAG_HIDDEN);else lv_obj_remove_flag(edits[18],LV_OBJ_FLAG_HIDDEN);
     for(int i=0;i<20;i++) {if(busy)lv_obj_add_state(edits[i],LV_STATE_DISABLED);else lv_obj_remove_state(edits[i],LV_STATE_DISABLED);}
     if(busy||!allowed())lv_obj_add_state(run,LV_STATE_DISABLED);else lv_obj_remove_state(run,LV_STATE_DISABLED);
-    lv_label_set_text(status,busy?"Calculating outside the display lock...":allowed()?"Valid length. English / empty passphrase.":(mode?"Exact selected bit count required. No truncation.":"Requires 32, 40, 48, 56 or 64 hex characters."));
+    lv_label_set_text(dicemethod,mode==3?"Coleman: 6->0 before SHA256":"D6 raw COLDCARD-style SHA256");
+    lv_label_set_text(status,busy?(mode>=2&&length<(size_t)el_dice_required_rolls(selector)?"WEAK_INPUT_LAB_ONLY / Calculating...":"Calculating outside the display lock..."):mode>=2?(length==0?"Empty input: enter at least one roll.":length<(size_t)el_dice_required_rolls(selector)?"WEAK_INPUT_LAB_ONLY":"Count only - NOT randomness quality."):allowed()?"Valid length. English / empty passphrase.":(mode?"Exact selected bit count required. No truncation.":"Requires 32, 40, 48, 56 or 64 hex characters."));
 }
 static void switch_mode(lv_event_t *e){if(busy)return;mode=(uintptr_t)lv_event_get_user_data(e);invalidate();refresh();show(false);}
 static void select_words(lv_event_t *e){if(busy)return;selector=(uintptr_t)lv_event_get_user_data(e);invalidate();refresh();show(false);}
 static void flip(lv_event_t *e){if(busy||mode!=1||length>=256)return;hex[length++]=(uintptr_t)lv_event_get_user_data(e)?'1':'0';hex[length]=0;invalidate();refresh();show(false);}
+static void roll(lv_event_t *e){if(busy||mode<2||length>=1024)return;hex[length++]='0'+(uintptr_t)lv_event_get_user_data(e);hex[length]=0;invalidate();refresh();show(false);}
 static void navigate(lv_event_t *e){show(lv_event_get_user_data(e)!=NULL);}
 static void edit(lv_event_t *e) {
     if(busy)return;
     uintptr_t k=(uintptr_t)lv_event_get_user_data(e);
     if(k<16){if(mode||length==64)return;hex[length++]="0123456789ABCDEF"[k];hex[length]=0;}
     else if(k==16){if(length)hex[--length]=0;}
-    else {memset(hex,0,sizeof hex);length=0;if(k==18){length=mode?selector*32/3:64;memset(hex,'0',length);}}
+    else {if(k==18&&mode>=2)return;memset(hex,0,sizeof hex);length=0;if(k==18){length=mode?selector*32/3:64;memset(hex,'0',length);}}
     invalidate();refresh();show(false);
 }
 static void calculate(lv_event_t *e){
     (void)e;if(busy||!allowed())return;
     hex_request_t r=snapshot(hex,length,mode,mode?selector:(uint32_t)(length*3/8));
     invalidate();busy=true;refresh();
-    if(!request_hex || !request_hex(&r)){busy=false;refresh();lv_label_set_text(status,"Worker unavailable. Retry calculation.");}
+    if(!request_hex || !request_hex(&r)){busy=false;refresh();lv_label_set_text(status,mode>=2&&length<(size_t)el_dice_required_rolls(selector)?"WEAK_INPUT_LAB_ONLY / Worker unavailable":"Worker unavailable. Retry calculation.");}
     memset(&r,0,sizeof r); /* best effort only; not a secure erasure guarantee */
 }
 void gui_result(const hex_result_t *r) {
     if(!busy)return;
     busy=false;invalidate();refresh();
-    if(r->rc || !memchr(r->mnemonic,0,sizeof r->mnemonic) || !memchr(r->fingerprint,0,sizeof r->fingerprint) || !memchr(r->address,0,sizeof r->address)) {
-        lv_label_set_text(note,"Calculation failed. Back to input and retry.");show(true);return;
+    if(r->rc<0 || r->mode!=mode || r->words!=(mode?selector:length*3/8) || r->weak!=(mode>=2&&length<(size_t)el_dice_required_rolls(selector)) || !memchr(r->mnemonic,0,sizeof r->mnemonic) || !memchr(r->fingerprint,0,sizeof r->fingerprint) || !memchr(r->address,0,sizeof r->address)) {
+        lv_label_set_text(note,mode>=2&&length<(size_t)el_dice_required_rolls(selector)?"WEAK_INPUT_LAB_ONLY / Calculation failed\nBack to input and retry.":"Calculation failed. Back to input and retry.");show(true);return;
     }
     const char *p=r->mnemonic;unsigned nwords=0;
     while(*p){size_t n=strcspn(p," ");if(!n||n>8||nwords>=24)break;nwords++;p+=n;if(*p==' ')p++;}
-    if(*p || nwords!=(mode?selector:length*3/8)){lv_label_set_text(note,"Invalid result length. Retry.");show(true);return;}
+    if(*p || nwords!=(mode?selector:length*3/8)){lv_label_set_text(note,mode>=2&&length<(size_t)el_dice_required_rolls(selector)?"WEAK_INPUT_LAB_ONLY / Invalid result\nBack to input and retry.":"Invalid result length. Retry.");show(true);return;}
     p=r->mnemonic;
     for(unsigned i=0;i<nwords;i++){char w[9];size_t n=strcspn(p," ");memcpy(w,p,n);w[n]=0;lv_label_set_text(words[i],w);p+=n;if(*p==' ')p++;}
     lv_label_set_text(fp,r->fingerprint);lv_label_set_text(addr,r->address);
     valid_result=true;
-    lv_label_set_text(note,"Computed TEST output - not a vector PASS.\nEnglish / empty passphrase / NEVER fund.");show(true);
+    if(mode>=2){char message[128];snprintf(message,sizeof message,"%s\n%s / NEVER fund",r->mode==2?"D6 raw COLDCARD-style":"Coleman 6->0 before SHA256",r->weak?"WEAK_INPUT_LAB_ONLY":"Count only, NOT quality proof");lv_label_set_text(note,message);}else lv_label_set_text(note,"Computed TEST output - not a vector PASS.\nEnglish / empty passphrase / NEVER fund.");show(true);
 }
 void gui_create(bool (*cb)(const hex_request_t *)) {
     request_hex=cb;memset(transcripts,0,sizeof transcripts);memset(lengths,0,sizeof lengths);mode=0;selector=12;busy=false;valid_result=false;
@@ -140,7 +149,7 @@ void gui_create(bool (*cb)(const hex_request_t *)) {
     style_surface(&tab,0x000000,8,true);lv_style_set_text_color(&tab,lv_color_hex(0xa3a3a3));
     lv_obj_t *s=lv_screen_active();lv_obj_remove_style_all(s);lv_obj_add_style(s,&base,0);lv_obj_remove_flag(s,LV_OBJ_FLAG_SCROLLABLE);
     text(s,16,12,220,"EntropyLab",&el_serif_24,0xeeeeee);
-    text(s,322,19,142,"P4 / Hex + Coins",&el_sans_14,0xa3a3a3);
+    text(s,322,19,142,"P4 / Offline lab",&el_sans_14,0xa3a3a3);
     lv_obj_t *line=box(s,16,47,448,1,&readout);(void)line;
     lv_obj_t *warning=box(s,16,56,448,60,&card);
     /* Offline OKLab mix(danger 14%, surface) from the approved browser design. */
@@ -148,8 +157,8 @@ void gui_create(bool (*cb)(const hex_request_t *)) {
     lv_obj_set_style_border_color(warning,lv_color_hex(0xd4574a),0);lv_obj_set_style_radius(warning,10,0);
     text(warning,12,8,420,"PUBLIC TEST INPUT - NO FUNDS",&el_sans_14,0xff4438);
     text(warning,12,31,420,"No real secrets or funds. Never fund this address.",&el_sans_14,0xeeeeee);
-    modes[0]=button(s,16,120,112,"Hex",switch_mode,NULL);modes[1]=button(s,136,120,112,"Coins",switch_mode,(void*)1);
-    text(s,270,141,194,"Hex > BIP39 > BIP84",&el_sans_14,0xa3a3a3);
+    modes[0]=button(s,16,120,100,"Hex",switch_mode,NULL);modes[1]=button(s,124,120,100,"Coins",switch_mode,(void*)1);modes[2]=button(s,232,120,108,"D6 raw",switch_mode,(void*)2);modes[3]=button(s,348,120,116,"D6 6->0",switch_mode,(void*)3);
+
     lv_obj_t *panel=box(s,16,167,448,571,&well);lv_obj_set_style_radius(panel,0,0);
     text(panel,12,10,420,"YOUR ENTROPY ENTERS THE LAB",&el_sans_14,0xd8892b);
     tabs[0]=button(panel,12,35,207,"Hex input",navigate,NULL);
@@ -159,7 +168,7 @@ void gui_create(bool (*cb)(const hex_request_t *)) {
     count=text(input,16,10,388,"",&el_mono_16,0xa3a3a3);
     lv_obj_t *field=box(input,16,36,388,66,&well);
     hexlabel=text(field,10,8,366,"",&el_mono_16,0xeeeeee);
-    status=text(input,16,108,388,"",&el_sans_14,0xa3a3a3);
+    status=text(input,16,108,388,"",&el_sans_14,0xff9900);
     keypad=box(input,16,134,388,206,&well);
     coinpad=box(input,16,134,388,206,&well);
     flips[0]=button(coinpad,6,6,184,"Heads 0",flip,NULL);
@@ -167,6 +176,11 @@ void gui_create(bool (*cb)(const hex_request_t *)) {
     text(coinpad,6,60,376,"Target BIP39 words",&el_sans_14,0xa3a3a3);
     for(int i=0;i<5;i++){char n[4];snprintf(n,sizeof n,"%d",12+3*i);choices[i]=button(coinpad,6+i*76,82,70,n,select_words,(void*)(uintptr_t)(12+3*i));}
     text(coinpad,8,140,370,"Preview: latest 64 bits / input retained.\nEncoded count is not a randomness score.\nRaw bits: no hash, padding or truncation.",&el_sans_14,0xa3a3a3);
+    dicepad=box(input,16,134,388,206,&well);
+    for(int i=0;i<6;i++){char k[2]={'1'+i,0};dicekeys[i]=button(dicepad,6+i*63,6,58,k,roll,(void*)(uintptr_t)(i+1));}
+    for(int i=0;i<5;i++){char n[4];snprintf(n,sizeof n,"%d",12+3*i);dicechoices[i]=button(dicepad,6+i*76,58,70,n,select_words,(void*)(uintptr_t)(12+3*i));}
+    dicemethod=text(dicepad,8,108,370,"",&el_sans_14,0xff9900);
+    text(dicepad,8,130,370,"Nominal count: fair INDEPENDENT D6.\nHashing cannot invent randomness.\nPreview last 64; ALL rolls hashed.\n12 / 15 / 18 / 21 / 24 BIP39 words",&el_sans_14,0xa3a3a3);
     for(int i=0;i<16;i++){
         char k[2]={"0123456789ABCDEF"[i],0};
         edits[i]=button(keypad,6+(i%4)*95,6+(i/4)*50,89,k,edit,(void*)(uintptr_t)i);
@@ -176,7 +190,7 @@ void gui_create(bool (*cb)(const hex_request_t *)) {
     edits[16]=button(input,214,348,190,"Delete",edit,(void*)16);
     edits[18]=button(input,16,404,190,"Load public zero",edit,(void*)18);
     run=button(input,214,404,190,"Calculate",calculate,NULL);lv_obj_add_style(run,&selected,0);
-    note=text(output,16,10,388,"",&el_sans_14,0xa3a3a3);
+    note=text(output,16,10,388,"",&el_sans_14,0xff9900);
     for(int i=0;i<24;i++){
         lv_obj_t *cell=box(output,16+(i/12)*198,54+(i%12)*22,190,21,&readout);
         char n[4];snprintf(n,sizeof n,"%02d",i+1);

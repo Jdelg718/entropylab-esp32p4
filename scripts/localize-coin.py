@@ -8,7 +8,11 @@ def main():
  r=Path(__file__).resolve().parents[1]/'fixture-firmware'
  src=r/'coin/target/riscv32imafc-esp-espidf/release/libentropylab_coin_core.a'
  out=r/'coin/target/libentropylab_coin_core_linkable.a'
- hx=r/'rust/target/riscv32imafc-esp-espidf/release/libentropylab_hex_core.a'
+ import argparse
+ parser=argparse.ArgumentParser(description=__doc__)
+ parser.add_argument('--runtime-archive', required=True, type=Path,
+                     help='freshly built archive owning the HEX runtime and global panic')
+ hx=parser.parse_args().runtime_archive
  def run(*args): return subprocess.check_output(args,text=True,stderr=subprocess.DEVNULL)
  def symbols(p):
   return {tuple(x.split()[-2:]) for x in run('riscv32-esp-elf-nm','--defined-only',str(p)).splitlines() if len(x.split())==3 and x.split()[-2].isupper()}

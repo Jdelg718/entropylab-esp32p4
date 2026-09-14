@@ -19,3 +19,4 @@ mkdir -p "$ROOT/fixture-firmware/build"
 python3 "$ROOT/scripts/test-hex-integration.py"
 
 bash "$ROOT/scripts/test-coin-host.sh"
+bash "$ROOT/scripts/test-dice-host.sh"
