@@ -27,7 +27,9 @@ This is a mixed-license source distribution; not a blanket MIT relicensing.
   these notices are supplemental, not a claim of complete binary-license coverage.
 - Rust dependencies retain their original licenses. Exact resolved names, versions,
   registry checksums and license expressions are in docs/RUST-DEPENDENCIES.md
-  and both Cargo.lock files. Libraries are fetched, not vendored here.
+  and the preserved native/HEX locks. The Dice effective inherited graph is
+  checked against the HEX lock (including versions and checksums). Libraries
+  are fetched, not vendored here.
 - ESP-IDF (Apache-2.0), LVGL (MIT), Waveshare BSP and transitive managed components
   retain their distributed licenses and notices. Full component resolution/hashes
   are in fixture-firmware/app/dependencies.lock. Registry sources are not bundled.
@@ -42,3 +44,15 @@ Before binary distribution, collect and review all applicable dependency license
 texts (including libsecp256k1, FreeType, libpng and zlib) from the exact resolved
 sources. This source preparation is not an exhaustive legal compliance opinion.
 No vendor endorsement, trademark license or upstream affiliation is claimed.
+
+## DICE candidate
+
+`fixture-firmware/dice` retains complete MIT and custom Ooga Booga licenses.
+Its exact public upstream dice fixtures derive from the same pinned EntropyLab
+revision and retain fixture source metadata. See `docs/dice-import-manifest.json`
+and `docs/DICE-MILESTONE.md`; no upstream endorsement is implied.
+The intentional Dice lock portability exception restores the exact repository
+HEX dependency versions/checksums, including both hex-conservative versions.
+`docs/RUST-DEPENDENCIES.md` already covers those versions and license expressions;
+no registry package or license delta is introduced relative to the HEX runtime.
+This does not replace the binary-distribution license review required above.

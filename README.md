@@ -1,7 +1,7 @@
 # EntropyLab for ESP32-P4
 
 **Unofficial offline seed/mnemonic + fingerprint generator for supported
- general-purpose hardware — currently an experimental public-test HEX + COIN build.**
+ general-purpose hardware — currently an experimental public-test HEX + COIN + DICE build.**
 
 The product direction is entropy-process assurance: traceable input handling,
 explicit entropy-source assumptions and independently checked derivation, not a
@@ -10,7 +10,7 @@ not a permanent product limitation; real-secret use still needs an explicit
 threat-model and readiness review. Statistical tests cannot prove randomness or
 physical entropy provenance. Offline application operation does not establish a
 physical air gap; the board's C6 presence remains a hardware threat-model concern.
-See the [roadmap and acceptance gates](ROADMAP.md): hashed D6 is next, other
+See the [roadmap and acceptance gates](ROADMAP.md): hashed D6 is a local candidate, other
 upstream features await a traced inventory, and optional microSD seed export is
 deferred behind a design gate (explicit user action only, never automatic storage;
 no export implementation or SD writes now).
@@ -25,6 +25,12 @@ reviewed source image, not on a new repository binary; manual flips, Undo and
 mode isolation are host-tested only. See [COIN provenance and review gate](docs/COIN-MILESTONE.md).
 Never enter real secrets or fund test addresses. This is not a wallet, hardware
 signer, audited cryptographic product, or complete port of upstream EntropyLab.
+
+DICE accepts ASCII `1`–`6`, up to 1024 rolls, for all five word counts.
+Raw COLDCARD-style SHA256 and Coleman `6`→`0` before SHA256 are separate
+transcripts. Short input remains visibly `WEAK_INPUT_LAB_ONLY`; meeting the
+nominal count is not entropy assurance. See [DICE milestone](docs/DICE-MILESTONE.md)
+for the two short public hardware observations and source identity limits.
 
 ## What actually works
 

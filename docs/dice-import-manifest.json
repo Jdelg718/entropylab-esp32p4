@@ -1,0 +1,165 @@
+{
+  "schema": "dice-portable-import-v1",
+  "base_commit": "569bfadcfde6732da766c928cb8be65d8e00673e",
+  "frozen_source_sha256": "859dbd362dd77684ffdb570c8b37148d107bf1574a09b0dcf950761ed809b8e2",
+  "frozen_app_sha256": "ceb685d6d275712f502f975a8fc012c6e273f4005601581fb60a68cfa5c4cab9",
+  "entries": [
+    {
+      "source": "dice-firmware/app/main/main.c",
+      "destination": "fixture-firmware/app/main/main.c",
+      "source_sha256": "93dd295d736c65747a9273861e408efd6acf89ce44166e1f15ffaca75353e434",
+      "candidate_sha256": "93dd295d736c65747a9273861e408efd6acf89ce44166e1f15ffaca75353e434",
+      "exact": true
+    },
+    {
+      "source": "dice-firmware/app/main/compute.h",
+      "destination": "fixture-firmware/app/main/compute.h",
+      "source_sha256": "e0a06e53bdefbc07ab20d5b985ce5f6d9b6645abf8cd2a63948580b1e2f60846",
+      "candidate_sha256": "e0a06e53bdefbc07ab20d5b985ce5f6d9b6645abf8cd2a63948580b1e2f60846",
+      "exact": true
+    },
+    {
+      "source": "dice-firmware/app/main/gui.h",
+      "destination": "fixture-firmware/app/main/gui.h",
+      "source_sha256": "c5bf4c78ef0ea252dc8aa0cf46dc661940ed753ad0ed23f38136a67c05d4ef15",
+      "candidate_sha256": "0f9fe37e22bcd356ea8b542ffa1b027f80b8b6c9d5167d0a260d4ffa5b70c5e2",
+      "exact": false
+    },
+    {
+      "source": "dice-firmware/app/main/gui.c",
+      "destination": "fixture-firmware/app/main/gui.c",
+      "source_sha256": "5b6a39553b8c5d77ef9eac6a7b53784256a0f6cd37da18c42b23eb74bf36d67b",
+      "candidate_sha256": "6207e91d907c85dc791285bea0d13a4d4bdf944181ecfbe7f9449cbda1585983",
+      "exact": false
+    },
+    {
+      "source": "dice-firmware/app/main/dice_core.h",
+      "destination": "fixture-firmware/app/main/dice_core.h",
+      "source_sha256": "e64c66285cb7d481d3b636538bd5575356b8ad7f81f7f52fdfb1250dcd1a726e",
+      "candidate_sha256": "e64c66285cb7d481d3b636538bd5575356b8ad7f81f7f52fdfb1250dcd1a726e",
+      "exact": true
+    },
+    {
+      "source": "dice-firmware/tests/gui_host.c",
+      "destination": "fixture-firmware/tests/gui_host.c",
+      "source_sha256": "8128cd8adcec3fffe25b8e4f72ed0d52b01e67f30f28340db939d43c00d3d662",
+      "candidate_sha256": "037ae407e265f6c78635cc89c2ff5692e4844ebc4e2cd1d8a7335f3e9b0b186d",
+      "exact": false
+    },
+    {
+      "source": "dice-firmware/tests/dice_worker.c",
+      "destination": "fixture-firmware/tests/dice_worker.c",
+      "source_sha256": "5e7bb1ee8e3ccd8d554632a0da44d3d905b577c143498ac7b21e85077110b557",
+      "candidate_sha256": "5e7bb1ee8e3ccd8d554632a0da44d3d905b577c143498ac7b21e85077110b557",
+      "exact": true
+    },
+    {
+      "source": "dice-firmware/tests/dice_vectors.h",
+      "destination": "fixture-firmware/tests/dice_vectors.h",
+      "source_sha256": "387b62500331bcd1de6104884f8562dd1b816680330cef7f9ce3c6e82cfb2a09",
+      "candidate_sha256": "387b62500331bcd1de6104884f8562dd1b816680330cef7f9ce3c6e82cfb2a09",
+      "exact": true
+    },
+    {
+      "source": "dice-firmware/tests/dice_tests.inc",
+      "destination": "fixture-firmware/tests/dice_tests.inc",
+      "source_sha256": "671ee99d57f0c2c5f3f1cfa7976e9cdfe7e6ac0f2efc8fdca9894f0e217d2201",
+      "candidate_sha256": "671ee99d57f0c2c5f3f1cfa7976e9cdfe7e6ac0f2efc8fdca9894f0e217d2201",
+      "exact": true
+    },
+    {
+      "source": "dice-core/host-test.c",
+      "destination": "fixture-firmware/dice/host-test.c",
+      "source_sha256": "964540ecff991929c8bddb7024fbbb2ea344f8d131d45c17b0bf7d56d8a75413",
+      "candidate_sha256": "f60232a01b675467cd6ee15338f4b694136b27c45d2823ca6691566646143644",
+      "exact": false
+    },
+    {
+      "source": "dice-core/LICENSE-OOGA-BOOGA",
+      "destination": "fixture-firmware/dice/LICENSE-OOGA-BOOGA",
+      "source_sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116",
+      "candidate_sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116",
+      "exact": true
+    },
+    {
+      "source": "dice-core/Cargo.lock",
+      "destination": "fixture-firmware/dice/Cargo.lock",
+      "source_sha256": "1e5b76d2c8ff9681384e85a3710e8c5a8b89124c86c343c40ff04cae4da58db1",
+      "candidate_sha256": "870afcf761cc2ae30339189e610afc3bd1630e59978e23cf1b4bb874a4f03762",
+      "exact": false
+    },
+    {
+      "source": "dice-core/dice_core.h",
+      "destination": "fixture-firmware/dice/dice_core.h",
+      "source_sha256": "e64c66285cb7d481d3b636538bd5575356b8ad7f81f7f52fdfb1250dcd1a726e",
+      "candidate_sha256": "e64c66285cb7d481d3b636538bd5575356b8ad7f81f7f52fdfb1250dcd1a726e",
+      "exact": true
+    },
+    {
+      "source": "dice-core/Cargo.toml",
+      "destination": "fixture-firmware/dice/Cargo.toml",
+      "source_sha256": "131d3f2ed31745181f4e634655d123b1fbb1f62c1e21c1087da6050049a0742f",
+      "candidate_sha256": "0e73ebad13e23177a4b94f37872bf60067eb2cde4e8d3ca466d2c2bc2557ee54",
+      "exact": false
+    },
+    {
+      "source": "dice-core/LICENSE",
+      "destination": "fixture-firmware/dice/LICENSE",
+      "source_sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c",
+      "candidate_sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c",
+      "exact": true
+    },
+    {
+      "source": "dice-core/vectors/upstream-dice.json",
+      "destination": "fixture-firmware/dice/vectors/upstream-dice.json",
+      "source_sha256": "ec3edb6c7545c05f727459821463485742d347d4d68ee8e09b0b03e0160ab8c7",
+      "candidate_sha256": "ec3edb6c7545c05f727459821463485742d347d4d68ee8e09b0b03e0160ab8c7",
+      "exact": true
+    },
+    {
+      "source": "dice-core/vectors/dice.tsv",
+      "destination": "fixture-firmware/dice/vectors/dice.tsv",
+      "source_sha256": "aee266459359f20e22f2637a46ab2ac33b8dba35db135485d8c11eb119a3fd1e",
+      "candidate_sha256": "aee266459359f20e22f2637a46ab2ac33b8dba35db135485d8c11eb119a3fd1e",
+      "exact": true
+    },
+    {
+      "source": "dice-core/src/lib.rs",
+      "destination": "fixture-firmware/dice/src/lib.rs",
+      "source_sha256": "97c62eada4c985b126c1a052ec73def6b62e782ed432e2ea2799f085a74fb03b",
+      "candidate_sha256": "97c62eada4c985b126c1a052ec73def6b62e782ed432e2ea2799f085a74fb03b",
+      "exact": true
+    },
+    {
+      "source": "dice-core/tests/golden.rs",
+      "destination": "fixture-firmware/dice/tests/golden.rs",
+      "source_sha256": "976ff82e8885be4dd197dad3458c44cd528d0db4319736d0d4e765bfbb42bdda",
+      "candidate_sha256": "976ff82e8885be4dd197dad3458c44cd528d0db4319736d0d4e765bfbb42bdda",
+      "exact": true
+    },
+    {
+      "source": "dice-core/tests/adapter.rs",
+      "destination": "fixture-firmware/dice/tests/adapter.rs",
+      "source_sha256": "b8683013445c6e7c49c8b8dd08680c3739c90429de6e43db6e32cb8a9b3d0d62",
+      "candidate_sha256": "b8683013445c6e7c49c8b8dd08680c3739c90429de6e43db6e32cb8a9b3d0d62",
+      "exact": true
+    },
+    {
+      "source": "dice-core/tests/bounds.rs",
+      "destination": "fixture-firmware/dice/tests/bounds.rs",
+      "source_sha256": "5a72ee67230c0cbc613103eb7051c71f789bde703e3e0ccc20d0553ddd7c17e5",
+      "candidate_sha256": "3bc93b194f45dff7fbe2ad396309218864137cbe45de978b848c99196d149efe",
+      "exact": false
+    }
+  ],
+  "exceptions": {
+    "fixture-firmware/app/main/gui.h": "Retain public repository LVGL-free worker contract; omit source LVGL include.",
+    "fixture-firmware/app/main/gui.c": "Keep direct LVGL include, not transitive worker-header dependency. Remove one trailing-whitespace-only line.",
+    "fixture-firmware/tests/gui_host.c": "Include LVGL directly for real GUI renderer test.",
+    "fixture-firmware/dice/Cargo.toml": "Portable ../rust dependency replaces ../hex-core; direct version constraints unchanged. Effective transitive resolution is aligned separately in Cargo.lock.",
+    "fixture-firmware/dice/tests/bounds.rs": "Inherited contract path ../../rust/tests/contract.rs.",
+    "fixture-firmware/dice/host-test.c": "Header path ../rust/hex_core.h.",
+    "fixture-firmware/dice/Cargo.lock": "Intentional portability exception: precise offline downgrades restore all inherited HEX package versions, registry sources, checksums and dependency edges to fixture-firmware/rust/Cargo.lock. Not byte-identical to reviewed source; repository binary retesting mandatory, source hardware observations do not transfer."
+  },
+  "build_adaptations": "Repository source builds dice static archive with sole HEX runtime plus localized coin archive; no external prelinked inputs. Existing pins and component lock retained. Existing caches permitted, not clean-download reproducibility."
+}
