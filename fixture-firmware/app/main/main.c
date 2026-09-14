@@ -20,8 +20,7 @@ void *fixture_alloc(size_t n,size_t align) {
 void fixture_free(void *p) {heap_caps_free(p);}
 typedef struct {char mnemonic[128],fingerprint[9],address[64];int32_t rc;bool pass;} result_t;
 static QueueHandle_t requests,results;
-static lv_obj_t *button,*status_label,*mnemonic_label,*fingerprint_label,*address_label,*touch_label;
-static uint32_t touches;
+#include "gui.h"
 static void worker(void *unused) {
     (void)unused;
     for (;;) {
@@ -36,27 +35,14 @@ static void worker(void *unused) {
         xQueueOverwrite(results,&r);
     }
 }
-static void clicked(lv_event_t *e) {
-    (void)e;touches++;
-    lv_label_set_text_fmt(touch_label,"Touch count: %lu",(unsigned long)touches);
+static void clicked(void) {
     uint8_t req=1;
-    if(xQueueSend(requests,&req,0)==pdTRUE){
-        lv_obj_add_state(button,LV_STATE_DISABLED);
-        lv_label_set_text(status_label,"Computing public fixture...");
-    } else lv_label_set_text(status_label,"Worker busy; try again");
+    if(xQueueSend(requests,&req,0)==pdTRUE) gui_busy();
 }
 static void poll_result(lv_timer_t *timer) {
     (void)timer;result_t r;
-    if(xQueueReceive(results,&r,0)==pdTRUE){
-        lv_label_set_text(mnemonic_label,r.rc==0?r.mnemonic:"Calculation failed");
-        lv_label_set_text_fmt(fingerprint_label,"Fingerprint: %s",r.rc==0?r.fingerprint:"unavailable");
-        lv_label_set_text(address_label,r.rc==0?r.address:"Address unavailable");
-        lv_label_set_text(status_label,r.pass?"PASS - matches BIP39 / BIP84 fixture":"FAIL - do not use");
-        lv_obj_remove_state(button,LV_STATE_DISABLED);
-    }
-}
-static lv_obj_t *label(lv_obj_t *parent,const char *text) {
-    lv_obj_t *o=lv_label_create(parent);lv_obj_set_width(o,420);lv_label_set_long_mode(o,LV_LABEL_LONG_WRAP);lv_label_set_text(o,text);return o;
+    if(xQueueReceive(results,&r,0)==pdTRUE)
+        gui_result(r.pass,r.mnemonic,r.fingerprint,r.address);
 }
 void app_main(void) {
     bsp_display_cfg_t cfg={.lv_adapter_cfg=ESP_LV_ADAPTER_DEFAULT_CONFIG(),.rotation=ESP_LV_ADAPTER_ROTATE_0,.tear_avoid_mode=ESP_LV_ADAPTER_TEAR_AVOID_MODE_TRIPLE_PARTIAL,.touch_flags={.swap_xy=0,.mirror_x=0,.mirror_y=0}};
@@ -67,21 +53,7 @@ void app_main(void) {
     // ESP-IDF task stack size is bytes; explicit INTERNAL prohibits PSRAM stacks.
     if(xTaskCreateWithCaps(worker,"fixture_calc",32768,NULL,3,NULL,MALLOC_CAP_INTERNAL|MALLOC_CAP_8BIT)!=pdPASS){ESP_LOGE("fixture","Worker allocation failed");return;}
     if(bsp_display_lock(-1)!=ESP_OK){ESP_LOGE("fixture","Display lock failed");return;}
-    lv_obj_t *screen=lv_screen_active();
-    lv_obj_set_style_pad_all(screen,24,0);lv_obj_set_style_pad_row(screen,18,0);
-    lv_obj_set_flex_flow(screen,LV_FLEX_FLOW_COLUMN);
-    lv_obj_set_style_text_font(screen,&lv_font_montserrat_20,0);
-    label(screen,"EntropyLab");label(screen,"DEVELOPMENT TEST");
-    label(screen,"Public fixtures only - NEVER fund these addresses");
-    label(screen,"Zero entropy / empty passphrase\nm/84'/0'/0'/0/0");
-    mnemonic_label=label(screen,"Mnemonic: press Run Test");
-    fingerprint_label=label(screen,"Fingerprint: not calculated");
-    address_label=label(screen,"Address: not calculated");
-    status_label=label(screen,"Ready - computation runs on this device");
-    touch_label=label(screen,"Touch count: 0");
-    button=lv_button_create(screen);lv_obj_set_size(button,420,64);
-    lv_obj_t *t=lv_label_create(button);lv_label_set_text(t,"Run Test");lv_obj_center(t);
-    lv_obj_add_event_cb(button,clicked,LV_EVENT_CLICKED,NULL);
+    gui_create(clicked);
     lv_timer_create(poll_result,100,NULL);
     bsp_display_unlock();
 }

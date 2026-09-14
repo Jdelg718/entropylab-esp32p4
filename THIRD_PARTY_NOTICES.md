@@ -6,6 +6,9 @@ This is a mixed-license source distribution; not a blanket MIT relicensing.
   commit 6e1f39cc7da25942c7a1f51ea5837f4ac7ef8f51, exact custom
   THE OOGA BOOGA LICENSE (LICENSE-OOGA-BOOGA), not the Unlicense.
 - New wrappers/fixture/scripts/docs: LICENSE-MIT; original copyright retained.
+- `fixture-firmware/app/main/fonts/el_*.c`: derived Liberation font software,
+  SIL OFL 1.1, **not MIT**. Full upstream copyright/license and reproducible
+  source/converter provenance are retained in that directory.
 - `core-spike/vectors/bip39.json` and derived `bip39-english.tsv`:
   trezor/python-mnemonic, MIT; full upstream copyright and permission notice
   is reproduced byte-for-byte in [LICENSE-TREZOR-MIT](LICENSE-TREZOR-MIT),
