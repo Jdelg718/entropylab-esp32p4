@@ -15,7 +15,7 @@ headers=(r/'logs/archive-headers.txt').read_text()
 flags=re.findall(r'Flags:\s+(.*)',headers)
 assert flags and all('single-float ABI' in f for f in flags),set(flags)
 symbols=(r/'logs/symbols.txt').read_text()
-for symbol in ['fixture_run','fixture_alloc','fixture_free']:
+for symbol in ['el_hex_run','fixture_alloc','fixture_free']:
     assert re.search(r'\bT '+symbol+r'$',symbols,re.M),symbol
 # No application activation of networking, storage, signing or entropy acquisition.
 source=''.join(p.read_text() for p in (r/'app/main').glob('*.c'))+(r/'rust/src/lib.rs').read_text().split('#[cfg(test)]')[0]

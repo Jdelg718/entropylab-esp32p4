@@ -18,7 +18,7 @@ LOCK_SHA="$(sha256sum "$APP/dependencies.lock")"
 cd "$APP"
 idf.py -B "$ROOT/fixture-firmware/build" -D 'SDKCONFIG_DEFAULTS=sdkconfig.defaults;rev1_3.defaults' build
 mkdir -p "$ROOT/fixture-firmware/logs"
-riscv32-esp-elf-readelf -h "$ROOT/fixture-firmware/rust/target/riscv32imafc-esp-espidf/release/libentropylab_fixture.a" > "$ROOT/fixture-firmware/logs/archive-headers.txt"
+riscv32-esp-elf-readelf -h "$ROOT/fixture-firmware/rust/target/riscv32imafc-esp-espidf/release/libentropylab_hex_core.a" > "$ROOT/fixture-firmware/logs/archive-headers.txt"
 riscv32-esp-elf-nm "$ROOT/fixture-firmware/build/entropylab_fixture.elf" > "$ROOT/fixture-firmware/logs/symbols.txt"
 python3 "$ROOT/fixture-firmware/verify.py"
 # The build must not silently change the reviewed component resolution.
