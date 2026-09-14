@@ -1,6 +1,19 @@
 # EntropyLab for ESP32-P4
 
-**Unofficial experimental Bitcoin derivation calculator — public-test HEX + COIN source candidate.**
+**Unofficial offline seed/mnemonic + fingerprint generator for supported
+ general-purpose hardware — currently an experimental public-test HEX + COIN build.**
+
+The product direction is entropy-process assurance: traceable input handling,
+explicit entropy-source assumptions and independently checked derivation, not a
+transaction or signing tool. Public-test-only use reflects current readiness,
+not a permanent product limitation; real-secret use still needs an explicit
+threat-model and readiness review. Statistical tests cannot prove randomness or
+physical entropy provenance. Offline application operation does not establish a
+physical air gap; the board's C6 presence remains a hardware threat-model concern.
+See the [roadmap and acceptance gates](ROADMAP.md): hashed D6 is next, other
+upstream features await a traced inventory, and optional microSD seed export is
+deferred behind a design gate (explicit user action only, never automatic storage;
+no export implementation or SD writes now).
 
 COIN accepts strict raw ASCII `0`/`1` transcripts: **Heads = 0, Tails = 1**,
 MSB first, with exactly **128/160/192/224/256 bits** for **12/15/18/21/24 words**.
