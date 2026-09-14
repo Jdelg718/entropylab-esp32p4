@@ -1,5 +1,7 @@
 /* Real LVGL renderer/navigation test. Public test strings only. Not hardware evidence. */
 #include "gui.h"
+#include "lvgl.h"
+#include "compute.h"
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -20,7 +22,7 @@ static bool reject;
 static bool request(const hex_request_t *r){runs++;owned=*r;return !reject;}
 static hex_result_t compute(void){
     struct {unsigned pre;hex_result_t r;unsigned post;} g={.pre=0x12345678,.post=0xabcdef01};
-    g.r.rc=el_hex_run((const uint8_t*)owned.hex,owned.length,(uint8_t*)g.r.mnemonic,sizeof g.r.mnemonic,(uint8_t*)g.r.fingerprint,sizeof g.r.fingerprint,(uint8_t*)g.r.address,sizeof g.r.address);
+    el_compute(&owned,&g.r);
     assert(g.pre==0x12345678&&g.post==0xabcdef01);assert(g.r.rc==0);return g.r;
 }
 static void geometry(lv_obj_t *o){
@@ -48,7 +50,7 @@ static unsigned occurrences(lv_obj_t *o,const char *s){
 static void assert_words(const hex_result_t *r){
     char copy[216];memcpy(copy,r->mnemonic,sizeof copy);char *tokens[24];unsigned n=0;
     for(char *t=strtok(copy," ");t;t=strtok(NULL," ")){assert(n<24);tokens[n++]=t;}
-    assert(n==owned.length*3/8);
+    assert(n==owned.words);
     for(unsigned i=0;i<n;i++){unsigned expected=0;for(unsigned j=0;j<n;j++)expected+=!strcmp(tokens[i],tokens[j]);assert(occurrences(lv_screen_active(),tokens[i])==expected);}
 }
 static lv_obj_t *find_button(lv_obj_t *o,const char *s){
@@ -62,6 +64,7 @@ static void render(const char *name){
     lv_obj_invalidate(lv_screen_active());lv_refr_now(NULL);
     if(name){FILE *f=fopen(name,"wb");assert(f);fprintf(f,"P6\n480 800\n255\n");assert(fwrite(pixels,1,sizeof pixels,f)==sizeof pixels);fclose(f);}
 }
+#include "coin_tests.inc"
 int main(void){
     lv_init();lv_display_t *d=lv_display_create(480,800);assert(d);
     lv_display_set_color_format(d,LV_COLOR_FORMAT_RGB565);lv_display_set_flush_cb(d,flush);
@@ -101,5 +104,6 @@ int main(void){
     click("Load public zero");reject=true;click("Calculate");assert(!lv_obj_has_state(find(lv_screen_active(),"Calculate"),LV_STATE_DISABLED));reject=false;
     click("Calculate");r.rc=-3;gui_result(&r);render("failure-native.ppm");assert(!find(lv_screen_active(),r.fingerprint));click("Back to hex input");click("Calculate");r=compute();gui_result(&r);render(NULL);
     printf("PASS: keys 0-F, boundaries 1..65, owned copy, busy, invalidation/navigation, failure/retry, 12/15/18/21/24 real core words, sentinels; %u geometry checks\n",checked);
+    coin_tests();
     lv_deinit();return 0;
 }

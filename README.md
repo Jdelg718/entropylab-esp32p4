@@ -1,6 +1,15 @@
 # EntropyLab for ESP32-P4
 
-**Unofficial experimental Bitcoin derivation calculator — public-test HEX milestone.**
+**Unofficial experimental Bitcoin derivation calculator — public-test HEX + COIN source candidate.**
+
+COIN accepts strict raw ASCII `0`/`1` transcripts: **Heads = 0, Tails = 1**,
+MSB first, with exactly **128/160/192/224/256 bits** for **12/15/18/21/24 words**.
+No whitespace, alternate alphabet or excess/short input is accepted by the adapter.
+This is direct bit-to-hex conversion, **no hash conditioning and no entropy
+assurance**. A BIP39 checksum does not make biased or predictable input random.
+Never use real secrets or funds. Two public-zero presets were observed on the
+reviewed source image, not on a new repository binary; manual flips, Undo and
+mode isolation are host-tested only. See [COIN provenance and review gate](docs/COIN-MILESTONE.md).
 Never enter real secrets or fund test addresses. This is not a wallet, hardware
 signer, audited cryptographic product, or complete port of upstream EntropyLab.
 

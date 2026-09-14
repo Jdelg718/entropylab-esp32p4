@@ -32,6 +32,12 @@ This is a mixed-license source distribution; not a blanket MIT relicensing.
   retain their distributed licenses and notices. Full component resolution/hashes
   are in fixture-firmware/app/dependencies.lock. Registry sources are not bundled.
 
+- COIN adapter original MIT notice is retained verbatim in `fixture-firmware/coin/LICENSE`.
+  Its 22 upstream-derived raw-bit golden fixtures and expanded fixture source retain
+  the custom Ooga Booga license in that directory; see docs/COIN-MILESTONE.md
+  and docs/coin-import-manifest.json. Existing HEX dependency and OFL font
+  notices apply unchanged; adapter path dependency introduces no runtime crates.
+
 Before binary distribution, collect and review all applicable dependency license
 texts (including libsecp256k1, FreeType, libpng and zlib) from the exact resolved
 sources. This source preparation is not an exhaustive legal compliance opinion.

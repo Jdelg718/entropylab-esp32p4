@@ -1,0 +1,143 @@
+{
+  "source_image_sha256": "74061341e2ea3e680b228d0f647c32680973f35722375eab47e9decfa3965a6b",
+  "files": [
+    {
+      "source": "coin-firmware/app/main/main.c",
+      "destination": "fixture-firmware/app/main/main.c",
+      "source_sha256": "93dd295d736c65747a9273861e408efd6acf89ce44166e1f15ffaca75353e434",
+      "import_sha256": "93dd295d736c65747a9273861e408efd6acf89ce44166e1f15ffaca75353e434"
+    },
+    {
+      "source": "coin-firmware/app/main/gui.c",
+      "destination": "fixture-firmware/app/main/gui.c",
+      "source_sha256": "b57a348b22bb34fdc2ce15e5c3325e635f043531617b7f1d8bce34f12cad62ba",
+      "import_sha256": "17d0e1d80097e96fd9c7e889ef9a1be9bb9e4bba3bc482f7f920b7ae940ab4d0"
+    },
+    {
+      "source": "coin-firmware/app/main/gui.h",
+      "destination": "fixture-firmware/app/main/gui.h",
+      "source_sha256": "4fe785ede1640d26813cac3d109009ed88e161882baa4679aa518a8cb033dd0c",
+      "import_sha256": "53eab7220d050e52f88fabfeb6587214cf81e376b5157f0d8e4ef4366a471bd1"
+    },
+    {
+      "source": "coin-firmware/app/main/compute.h",
+      "destination": "fixture-firmware/app/main/compute.h",
+      "source_sha256": "f547e93039b625fd75b042f0bee64063cc9773b475f635aa99ac2525f76a281e",
+      "import_sha256": "f547e93039b625fd75b042f0bee64063cc9773b475f635aa99ac2525f76a281e"
+    },
+    {
+      "source": "coin-firmware/app/main/coin_core.h",
+      "destination": "fixture-firmware/app/main/coin_core.h",
+      "source_sha256": "013896554504d7bf30cf559d49a47569d216fb7edab10acf1dfaf2de10654dba",
+      "import_sha256": "013896554504d7bf30cf559d49a47569d216fb7edab10acf1dfaf2de10654dba"
+    },
+    {
+      "source": "coin-firmware/tests/gui_host.c",
+      "destination": "fixture-firmware/tests/gui_host.c",
+      "source_sha256": "7ff32a9198c62e00372fa47d8a46bea55e45a1f5e108ffd11760776ac488d84d",
+      "import_sha256": "1507c8e4b32875695be8f90dcdbbb319622c52676d6ca541531afb5fdb6accc8"
+    },
+    {
+      "source": "coin-firmware/tests/worker_host.c",
+      "destination": "fixture-firmware/tests/worker_host.c",
+      "source_sha256": "59d2d56cf66c8c16ef011153cde61f02e788b4a6896787ff626443111abf25f3",
+      "import_sha256": "75abce7497b56ff3b6409db819437c6f8c04b124bb151969a969a620f73be962"
+    },
+    {
+      "source": "coin-firmware/tests/coin_tests.inc",
+      "destination": "fixture-firmware/tests/coin_tests.inc",
+      "source_sha256": "39e53bce091acb6f7d730c22214472d9807f4b7c1e0ad947600d79f936d9becc",
+      "import_sha256": "39e53bce091acb6f7d730c22214472d9807f4b7c1e0ad947600d79f936d9becc"
+    },
+    {
+      "source": "coin-core/Cargo.toml",
+      "destination": "fixture-firmware/coin/Cargo.toml",
+      "source_sha256": "8ce0047dff209faa86ccef3825e48bcb2cb8962fcc786bced964f0c10de88e13",
+      "import_sha256": "b03e86df0a31f31e39bfeb0fb7654f7ec262a2f7cb82aab1cad58d3e5c23f37a"
+    },
+    {
+      "source": "coin-core/Cargo.lock",
+      "destination": "fixture-firmware/coin/Cargo.lock",
+      "source_sha256": "29ceccc9b55a9da13f25210d9c8a9252aba7ce68cd5e1f412041a3507b58a06f",
+      "import_sha256": "29ceccc9b55a9da13f25210d9c8a9252aba7ce68cd5e1f412041a3507b58a06f"
+    },
+    {
+      "source": "coin-core/LICENSE",
+      "destination": "fixture-firmware/coin/LICENSE",
+      "source_sha256": "69554bf693be0de4b280906651f1278a9f3757b27d5b6fcb60b4ff5fafaa4e24",
+      "import_sha256": "69554bf693be0de4b280906651f1278a9f3757b27d5b6fcb60b4ff5fafaa4e24"
+    },
+    {
+      "source": "coin-core/LICENSE-OOGA-BOOGA",
+      "destination": "fixture-firmware/coin/LICENSE-OOGA-BOOGA",
+      "source_sha256": "9a73c8216b8766e0882c9f03a5aec1b61504bd86bb8744d59ec6766831456358",
+      "import_sha256": "9a73c8216b8766e0882c9f03a5aec1b61504bd86bb8744d59ec6766831456358"
+    },
+    {
+      "source": "coin-core/coin_core.h",
+      "destination": "fixture-firmware/coin/coin_core.h",
+      "source_sha256": "013896554504d7bf30cf559d49a47569d216fb7edab10acf1dfaf2de10654dba",
+      "import_sha256": "013896554504d7bf30cf559d49a47569d216fb7edab10acf1dfaf2de10654dba"
+    },
+    {
+      "source": "coin-core/host-test.c",
+      "destination": "fixture-firmware/coin/host-test.c",
+      "source_sha256": "00db47c720098d3863f5313c9c77b76e0c7090180ff0304ca6782e1d7c8cd0b5",
+      "import_sha256": "00db47c720098d3863f5313c9c77b76e0c7090180ff0304ca6782e1d7c8cd0b5"
+    },
+    {
+      "source": "coin-core/verify-fixtures.py",
+      "destination": "fixture-firmware/coin/verify-fixtures.py",
+      "source_sha256": "9a4a8cdb16865fbd2cf8f855b024ff5ebad5da6bad355421f1b3cdfb7763a0df",
+      "import_sha256": "eaa700bbcada348d103d60b24c31276e1638e5c040fa4e1f3fcc393d6ec9885e"
+    },
+    {
+      "source": "coin-core/upstream-expanded.json",
+      "destination": "fixture-firmware/coin/upstream-expanded.json",
+      "source_sha256": "6483030af020ce693d7dc7cd4671adb01bad30ab99a7eddf26fab6a7cef18bbb",
+      "import_sha256": "6483030af020ce693d7dc7cd4671adb01bad30ab99a7eddf26fab6a7cef18bbb"
+    },
+    {
+      "source": "coin-core/src/lib.rs",
+      "destination": "fixture-firmware/coin/src/lib.rs",
+      "source_sha256": "16b0f7daacf55ff53679c262b88fb1463ec2137086ad8f94a7974618a740c165",
+      "import_sha256": "16b0f7daacf55ff53679c262b88fb1463ec2137086ad8f94a7974618a740c165"
+    },
+    {
+      "source": "coin-core/tests/golden.rs",
+      "destination": "fixture-firmware/coin/tests/golden.rs",
+      "source_sha256": "c938aa7da93110ed264f07c9478b94185e4c87dc779fa27d6888f6949091978f",
+      "import_sha256": "c938aa7da93110ed264f07c9478b94185e4c87dc779fa27d6888f6949091978f"
+    },
+    {
+      "source": "coin-core/tests/adapter.rs",
+      "destination": "fixture-firmware/coin/tests/adapter.rs",
+      "source_sha256": "d851e379a267b1d70bf437cb7f53c6796a81be74381a211b64a53164dc39b9c6",
+      "import_sha256": "d851e379a267b1d70bf437cb7f53c6796a81be74381a211b64a53164dc39b9c6"
+    },
+    {
+      "source": "coin-core/tests/inherited.rs",
+      "destination": "fixture-firmware/coin/tests/inherited.rs",
+      "source_sha256": "269e419cf78516db4a4505c9f4d9d0378e6567b7e043cd2b56915bef4281b5c2",
+      "import_sha256": "3d074bc1e4ec9cc927b0b41a62e2ece093dd91ef4d4e5fa30219fdaf176b9b1b"
+    },
+    {
+      "source": "coin-core/tests/bounds.rs",
+      "destination": "fixture-firmware/coin/tests/bounds.rs",
+      "source_sha256": "2145367037c9ad60bd61975d52c71a374302ac92f6f6e691de7c099430349efa",
+      "import_sha256": "2145367037c9ad60bd61975d52c71a374302ac92f6f6e691de7c099430349efa"
+    },
+    {
+      "source": "coin-core/vectors/raw-binary.tsv",
+      "destination": "fixture-firmware/coin/vectors/raw-binary.tsv",
+      "source_sha256": "75bd07cfc766091210a7a7c8dd72f7132b50ef1ad645cf36fe7400658784a431",
+      "import_sha256": "75bd07cfc766091210a7a7c8dd72f7132b50ef1ad645cf36fe7400658784a431"
+    },
+    {
+      "source": "coin-core/vectors/raw-binary.json",
+      "destination": "fixture-firmware/coin/vectors/raw-binary.json",
+      "source_sha256": "48e9f406b7ea64688d565f8e18b0691d4905cc66b9e1d3d4952fd3ceab4c86aa",
+      "import_sha256": "48e9f406b7ea64688d565f8e18b0691d4905cc66b9e1d3d4952fd3ceab4c86aa"
+    }
+  ]
+}

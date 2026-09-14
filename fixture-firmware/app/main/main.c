@@ -11,6 +11,7 @@
 #include "bsp/esp-bsp.h"
 #include "bsp/display.h"
 #include "gui.h"
+#include "compute.h"
 // Rust allocator: aligned internal 8-bit heap. NULL invokes Rust allocation abort;
 // panic/OOM reset rather than unwind. Public fixtures only, not secret-safe memory.
 void *fixture_alloc(size_t n,size_t align) {
@@ -26,7 +27,7 @@ static void worker(void *unused) {
         if(xQueueReceive(requests,&request,portMAX_DELAY)!=pdTRUE)continue;
         hex_result_t r={0};
         /* No LVGL access or lock in the compute task. Full owned queue copies. */
-        r.rc=el_hex_run((const uint8_t*)request.hex,request.length,(uint8_t*)r.mnemonic,sizeof r.mnemonic,(uint8_t*)r.fingerprint,sizeof r.fingerprint,(uint8_t*)r.address,sizeof r.address);
+        el_compute(&request,&r);
         xQueueOverwrite(results,&r);
         memset(&request,0,sizeof request);memset(&r,0,sizeof r);
         /* Best effort only: allocator/stack/queue copies are not securely erased. */
