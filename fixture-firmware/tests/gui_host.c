@@ -15,7 +15,14 @@ static void flush(lv_display_t *d,const lv_area_t *a,uint8_t *data){
         q[0]=((c>>11)&31)*255/31;q[1]=((c>>5)&63)*255/63;q[2]=(c&31)*255/31;
     }lv_display_flush_ready(d);
 }
-static void request(void){runs++;gui_busy();}
+static hex_request_t owned;
+static bool reject;
+static bool request(const hex_request_t *r){runs++;owned=*r;return !reject;}
+static hex_result_t compute(void){
+    struct {unsigned pre;hex_result_t r;unsigned post;} g={.pre=0x12345678,.post=0xabcdef01};
+    g.r.rc=el_hex_run((const uint8_t*)owned.hex,owned.length,(uint8_t*)g.r.mnemonic,sizeof g.r.mnemonic,(uint8_t*)g.r.fingerprint,sizeof g.r.fingerprint,(uint8_t*)g.r.address,sizeof g.r.address);
+    assert(g.pre==0x12345678&&g.post==0xabcdef01);assert(g.r.rc==0);return g.r;
+}
 static void geometry(lv_obj_t *o){
     if(lv_obj_has_flag(o,LV_OBJ_FLAG_HIDDEN))return;
     lv_area_t a;lv_obj_get_coords(o,&a);
@@ -32,7 +39,24 @@ static lv_obj_t *find(lv_obj_t *o,const char *s){
     if(lv_obj_check_type(o,&lv_label_class)&&strcmp(lv_label_get_text(o),s)==0)return lv_obj_get_parent(o);
     for(uint32_t i=0;i<lv_obj_get_child_count(o);i++){lv_obj_t *r=find(lv_obj_get_child(o,i),s);if(r)return r;}return NULL;
 }
-static void click(const char *s){lv_obj_t *b=find(lv_screen_active(),s);assert(b);assert(!lv_obj_has_state(b,LV_STATE_DISABLED));lv_obj_send_event(b,LV_EVENT_CLICKED,NULL);}
+static unsigned occurrences(lv_obj_t *o,const char *s){
+    if(lv_obj_has_flag(o,LV_OBJ_FLAG_HIDDEN))return 0;
+    unsigned n=lv_obj_check_type(o,&lv_label_class)&&!strcmp(lv_label_get_text(o),s);
+    for(uint32_t i=0;i<lv_obj_get_child_count(o);i++)n+=occurrences(lv_obj_get_child(o,i),s);
+    return n;
+}
+static void assert_words(const hex_result_t *r){
+    char copy[216];memcpy(copy,r->mnemonic,sizeof copy);char *tokens[24];unsigned n=0;
+    for(char *t=strtok(copy," ");t;t=strtok(NULL," ")){assert(n<24);tokens[n++]=t;}
+    assert(n==owned.length*3/8);
+    for(unsigned i=0;i<n;i++){unsigned expected=0;for(unsigned j=0;j<n;j++)expected+=!strcmp(tokens[i],tokens[j]);assert(occurrences(lv_screen_active(),tokens[i])==expected);}
+}
+static lv_obj_t *find_button(lv_obj_t *o,const char *s){
+    if(lv_obj_has_flag(o,LV_OBJ_FLAG_HIDDEN))return NULL;
+    if(lv_obj_check_type(o,&lv_label_class)&&!strcmp(lv_label_get_text(o),s)&&lv_obj_check_type(lv_obj_get_parent(o),&lv_button_class))return lv_obj_get_parent(o);
+    for(uint32_t i=0;i<lv_obj_get_child_count(o);i++){lv_obj_t *r=find_button(lv_obj_get_child(o,i),s);if(r)return r;}return NULL;
+}
+static void click(const char *s){lv_obj_t *b=find_button(lv_screen_active(),s);assert(b);assert(!lv_obj_has_state(b,LV_STATE_DISABLED));lv_obj_send_event(b,LV_EVENT_CLICKED,NULL);}
 static void render(const char *name){
     lv_obj_update_layout(lv_screen_active());geometry(lv_screen_active());
     lv_obj_invalidate(lv_screen_active());lv_refr_now(NULL);
@@ -42,16 +66,40 @@ int main(void){
     lv_init();lv_display_t *d=lv_display_create(480,800);assert(d);
     lv_display_set_color_format(d,LV_COLOR_FORMAT_RGB565);lv_display_set_flush_cb(d,flush);
     lv_display_set_buffers(d,buffer,NULL,sizeof buffer,LV_DISPLAY_RENDER_MODE_PARTIAL);
-    gui_create(request);render("input-native.ppm");
-    for(const char *p="0123456789ABCDEF";*p;p++){char k[2]={*p,0};lv_obj_t *b=find(lv_screen_active(),k);assert(b&&lv_obj_has_state(b,LV_STATE_DISABLED));}
-    click("Fixture results");render("empty-native.ppm");click("Back to hex input");
-    click("Run public fixture");assert(runs==1);assert(lv_obj_has_state(find(lv_screen_active(),"Run public fixture"),LV_STATE_DISABLED));render("busy-native.ppm");
-    gui_result(true,"abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about","73c5da0a","bc1qcr8te4kr609gcawutmrza0j4xv80jy8z306fyu");render("results-native.ppm");
-    assert(find(lv_screen_active(),"about"));assert(find(lv_screen_active(),"73c5da0a"));
-    click("Back to hex input");click("Run public fixture");assert(runs==2);
-    gui_result(false,"INVALID","INVALID","INVALID");render("failure-native.ppm");
-    assert(!find(lv_screen_active(),"73c5da0a"));assert(find(lv_screen_active(),"Unavailable"));
-    click("Hex input");assert(!lv_obj_has_state(find(lv_screen_active(),"Run public fixture"),LV_STATE_DISABLED));
-    printf("PASS: navigation, disabled keypad, busy/retry/failure, bounded labels, >=44px targets; %u controls checked across states\n",checked);
+    gui_create(request);render("empty-native.ppm");
+    assert(lv_obj_has_state(find(lv_screen_active(),"Calculate"),LV_STATE_DISABLED));
+    for(int i=1;i<=65;i++){
+        char k[2]={"0123456789ABCDEF"[(i-1)%16],0};click(k);
+        unsigned n=i>64?64:(unsigned)i;char c[64];snprintf(c,sizeof c,"%u / 64 chars  |  %u bits",n,n*4);
+        assert(find(lv_screen_active(),c));
+        assert(lv_obj_has_state(find(lv_screen_active(),"Calculate"),LV_STATE_DISABLED)!=(n>=32&&n%8==0));
+        render(NULL);
+    }
+    render("input-native.ppm");click("Calculate");assert(owned.length==64);
+    assert(strcmp(owned.hex,"0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF")==0);
+    assert(lv_obj_has_state(find(lv_screen_active(),"A"),LV_STATE_DISABLED));
+    click("Test results");assert(lv_obj_has_state(find_button(lv_screen_active(),"Clear"),LV_STATE_DISABLED));click("Hex input");
+    unsigned before=runs;lv_obj_send_event(find_button(lv_screen_active(),"Calculate"),LV_EVENT_CLICKED,NULL);assert(runs==before);
+    hex_request_t snapshot=owned;
+    const char *blocked[]={"Clear","Delete","A","Load public zero"};
+    for(unsigned i=0;i<sizeof blocked/sizeof blocked[0];i++)
+        lv_obj_send_event(find_button(lv_screen_active(),blocked[i]),LV_EVENT_CLICKED,NULL);
+    assert(!memcmp(&snapshot,&owned,sizeof owned));
+    assert(find(lv_screen_active(),"64 / 64 chars  |  256 bits"));
+    click("Test results");lv_obj_send_event(find_button(lv_screen_active(),"Clear"),LV_EVENT_CLICKED,NULL);click("Hex input");
+    assert(find(lv_screen_active(),"64 / 64 chars  |  256 bits"));
+    hex_result_t r=compute();gui_result(&r);render("results-native.ppm");
+    assert_words(&r);assert(find(lv_screen_active(),r.fingerprint));
+    click("Back to hex input");click("Delete");click("Test results");assert(!find(lv_screen_active(),r.fingerprint));render(NULL);
+    click("Back to hex input");click("Clear");click("Delete");
+    assert(find(lv_screen_active(),"0 / 64 chars  |  0 bits"));
+    for(int n=32;n<=64;n+=8){
+        click("Clear");for(int i=0;i<n;i++)click("F");click("Calculate");r=compute();gui_result(&r);render(NULL);assert_words(&r);assert(find(lv_screen_active(),r.fingerprint));click("Back to hex input");
+    }
+    click("Load public zero");click("Calculate");r=compute();gui_result(&r);render("zero24-native.ppm");assert(find(lv_screen_active(),"art"));
+    click("Clear");click("Test results");assert(!find(lv_screen_active(),r.fingerprint));click("Back to hex input");
+    click("Load public zero");reject=true;click("Calculate");assert(!lv_obj_has_state(find(lv_screen_active(),"Calculate"),LV_STATE_DISABLED));reject=false;
+    click("Calculate");r.rc=-3;gui_result(&r);render("failure-native.ppm");assert(!find(lv_screen_active(),r.fingerprint));click("Back to hex input");click("Calculate");r=compute();gui_result(&r);render(NULL);
+    printf("PASS: keys 0-F, boundaries 1..65, owned copy, busy, invalidation/navigation, failure/retry, 12/15/18/21/24 real core words, sentinels; %u geometry checks\n",checked);
     lv_deinit();return 0;
 }

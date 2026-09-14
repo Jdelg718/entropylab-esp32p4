@@ -1,9 +1,9 @@
 [package]
-name = "entropylab-fixture"
+name = "entropylab-hex-core"
 version = "0.1.0"
 edition = "2021"
 publish = false
-license-file = "LICENSE"
+license = "MIT"
 [lib]
 crate-type = ["staticlib", "rlib"]
 [dependencies]

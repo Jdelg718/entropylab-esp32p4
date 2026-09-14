@@ -20,6 +20,11 @@ This is a mixed-license source distribution; not a blanket MIT relicensing.
   no copyright year is inferred from the BIP assignment date.
 - `core-spike/vectors/bip-0084.mediawiki` retains its embedded public-domain
   dedication. All bundled vectors are public fixtures, not private data.
+- The duplicate BIP39 and BIP84 fixtures in `fixture-firmware/rust/vectors`
+  are byte-identical to the sources above and covered by those same full notices.
+  See docs/VECTOR-LICENSE-SOURCES.md for pinned source provenance.
+- Imported dependency license texts are retained in `fixture-firmware/rust/licenses`;
+  these notices are supplemental, not a claim of complete binary-license coverage.
 - Rust dependencies retain their original licenses. Exact resolved names, versions,
   registry checksums and license expressions are in docs/RUST-DEPENDENCIES.md
   and both Cargo.lock files. Libraries are fetched, not vendored here.

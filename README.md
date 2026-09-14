@@ -1,64 +1,69 @@
 # EntropyLab for ESP32-P4
 
-**Unofficial experimental Bitcoin derivation calculator — PUBLIC-FIXTURE milestone only.**
-Never enter real secrets or fund fixture addresses. This is not a wallet, hardware
+**Unofficial experimental Bitcoin derivation calculator — public-test HEX milestone.**
+Never enter real secrets or fund test addresses. This is not a wallet, hardware
 signer, audited cryptographic product, or complete port of upstream EntropyLab.
 
 ## What actually works
 
-A Rust `no_std` + `alloc` static library computes the standard BIP39 mnemonic
-from 16 compiled zero bytes, the BIP32 master fingerprint, and the BIP84 mainnet
-address at `m/84'/0'/0'/0/0`. A C ABI supplies bounded caller-owned buffers.
-An internal-RAM FreeRTOS worker computes outside LVGL callbacks, and an LVGL
-screen displays and compares the result. A touch button requests the calculation.
-No private-input UI, signing, persistence, networking initialization or application
-RNG is implemented. Volatile seed wiping does **not** guarantee erasure of library
-temporaries, keys or allocations. OOM/panic aborts rather than unwinding across C.
+The native 480×800 LVGL touchscreen accepts hexadecimal public test input with
+0–F keys, Delete, Clear, and Calculate. Supported lengths are **32/40/48/56/64
+hex characters** (128/160/192/224/256 bits), producing **12/15/18/21/24 BIP39
+English words**. `Load public zero` loads **64 zero hex characters, 256 bits**,
+not the older 128-bit fixture. The label is retained from the hardware-tested
+source; the counter shows the exact length and bit width.
 
-The source fixture was flashed and passed on a Waveshare ESP32-P4-WIFI6-Touch-LCD-4.3,
-chip Rev1.3, with 32 MB PSRAM at 200 MHz and working display/touch. The recorded
-calculation returned `rc=0 pass=1`. See [sanitized evidence](docs/HARDWARE-EVIDENCE.md).
-This is runtime evidence for the source milestone, not this checkout's new binary.
-A fresh target build from this checkout with reused external dependencies passed;
-no fresh dependency download, relocation test, or flash/runtime test of this new
-binary is claimed. Host checks run independently.
+A Rust `no_std` + `alloc` library computes the mnemonic, BIP32 master fingerprint,
+and **only the first mainnet BIP84 address** at `m/84'/0'/0'/0/0`, using the
+**empty BIP39 passphrase only**. The HEX parser rejects whitespace rather than
+trimming/normalizing it; this interface is deliberately narrower than upstream.
+A bounded C ABI uses caller-owned output capacities of **216/9/43 bytes**
+(mnemonic/fingerprint/address, including terminators). An internal-RAM FreeRTOS
+worker receives owned queue copies and computes outside LVGL callbacks.
+
+Editing invalidates prior results; busy-state controls prevent overlapping work.
+Clear removes input and prior displayed results. It does **not** prove secure
+erasure of stacks, queues, library temporaries, keys or allocations. Best-effort
+wiping is not a secret-safe memory guarantee. OOM/panic aborts rather than
+unwinding across C. There are no RNG, signing, storage, or networking application
+paths. **Public test inputs only**, despite the editable interface.
+
+The reviewed source HEX binary was exercised on hardware. See the exact
+[sanitized manual record](docs/HEX-MILESTONE.md), which distinguishes user screen
+observations from host comparison. That is not a flash/runtime claim for a new
+binary built from this checkout; no formal independent cryptographic oracle or
+secure-erasure verification is claimed. Previous fixture-only evidence remains
+historical in [HARDWARE-EVIDENCE](docs/HARDWARE-EVIDENCE.md) and
+[NATIVE-GUI-CHECKPOINT](docs/NATIVE-GUI-CHECKPOINT.md).
 
 ## Quick start (Linux host)
 
-Install Rust through rustup using the official Rust installation instructions,
-a C compiler, Python 3, and git. Then from a checkout:
+Install Rust through rustup, a C compiler, Python 3, and git:
 
 ```sh
 rustup toolchain install 1.95.0 --profile minimal
 bash scripts/test-host.sh
+bash scripts/test-gui-host.sh
 ```
 
-Host tests exercise the separate bounded upstream extraction (`core-spike/native`),
-public BIP39/BIP32/BIP84 vectors, malformed input, CLI guards, fixture ABI bounds,
-and real C-to-Rust static linkage. Host tests do not prove embedded startup.
-The host CLI accepts only its documented public-test interface: never supply secrets.
-
-See [BUILD](docs/BUILD.md) for pinned target setup, [RECOVERY](docs/RECOVERY.md)
-before flashing, [ROADMAP](ROADMAP.md), and [CONTRIBUTING](CONTRIBUTING.md).
-The native 480×800 dark GUI is integrated: orange public-fixture action, disabled
-hex keypad/Clear/Delete preview, real result navigation, and busy/failure/retry states.
-Hex entry remains future work: no editable input or hex-core API is added.
-The user confirmed Run public fixture on the reviewed source GUI hardware build;
-that is not a flash/runtime claim for this checkout. The same GUI/font sources pass
-the native LVGL host renderer (51 controls checked across states). Run
-`bash scripts/test-gui-host.sh` after target dependency setup, or set
-`LVGL_SOURCE_DIR` to an external LVGL 9.5.0 source checkout. Renders are host evidence only.
+The GUI test needs LVGL 9.5.0 sources from the target dependency setup or
+`LVGL_SOURCE_DIR`. It links the real HEX Rust core, not canned result strings.
+Host tests cover the separate bounded upstream extraction (`core-spike/native`),
+public vectors, malformed input, CLI guards, HEX contract bounds, real C-to-Rust
+linkage and the two public 256-bit regression inputs. Host rendering/geometry
+tests are not hardware evidence. See [BUILD](docs/BUILD.md) for pinned target
+setup, [RECOVERY](docs/RECOVERY.md) before any separately authorized flashing,
+and [CONTRIBUTING](CONTRIBUTING.md).
 
 ## Upstream and licensing
 
 Selective reuse, not a full fork: [OogaBoogaX/entropylab](https://github.com/OogaBoogaX/entropylab)
 commit `6e1f39cc7da25942c7a1f51ea5837f4ac7ef8f51`. The host extraction retains
-its exact custom Ooga Booga license; new wrappers are MIT. The target fixture is
+its exact custom Ooga Booga license; new wrappers are MIT. The target HEX core is
 a direct library adapter, **not** the 15-function host extraction ported to no_std.
-See [provenance](docs/PROVENANCE.md), LICENSE and THIRD_PARTY_NOTICES.md.
-
-This limited source-fixture release passed independent public-content and license
-review plus local host tests. A fresh target build from this checkout with reused
-external dependencies passed (see [checkpoint](docs/NATIVE-GUI-CHECKPOINT.md));
-fresh dependency download, relocation, and this new binary's flash/runtime remain
-unverified. No upstream endorsement or contributor affiliation is implied.
+The historical `fixture-firmware` directory name is retained for portable build
+compatibility. See [provenance](docs/PROVENANCE.md), LICENSE and
+THIRD_PARTY_NOTICES.md. Fonts retain their complete OFL notices and provenance;
+public vector source licenses are retained in full. No upstream endorsement or
+contributor affiliation is implied. This local milestone awaits independent
+repository review and publication; prior release reviews do not cover this delta.
