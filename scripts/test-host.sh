@@ -3,6 +3,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 CARGO="${CARGO:-cargo}"
 TOOLCHAIN="${HOST_TOOLCHAIN:-1.95.0}"
+python3 "$ROOT/scripts/test-coin-archive.py"
 python3 "$ROOT/core-spike/prepare_vectors.py"
 python3 "$ROOT/core-spike/test_drift.py"
 for profile in debug release; do
@@ -16,3 +17,5 @@ mkdir -p "$ROOT/fixture-firmware/build"
 "${CC:-cc}" -I"$ROOT/fixture-firmware/rust" -Wall -Wextra -Werror "$ROOT/fixture-firmware/host-test.c" "$ROOT/fixture-firmware/rust/target/release/libentropylab_hex_core.a" -ldl -lpthread -lm -o "$ROOT/fixture-firmware/build/host-test"
 "$ROOT/fixture-firmware/build/host-test" 00000000000000000000000000000000
 python3 "$ROOT/scripts/test-hex-integration.py"
+
+bash "$ROOT/scripts/test-coin-host.sh"
