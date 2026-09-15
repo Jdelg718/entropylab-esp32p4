@@ -1,0 +1,49 @@
+{
+  "schema": "words-import-successors-v1",
+  "historical_manifest": "docs/dice-import-manifest.json",
+  "historical_manifest_sha256": "df76366c5bc512994f8cb993d584eb918464d6c5f2c62766bb7774e873e75a5e",
+  "source_identity": "practice-cleanup-native/full-host-source-manifest.json",
+  "source_manifest_sha256": "e317b078cbea59ffb533e0d7c025a844e39e960a981ec0b77fa12a9cfc25e92e",
+  "entries": [
+    {
+      "destination": "fixture-firmware/app/main/compute.h",
+      "source": "app/main/compute.h",
+      "before_candidate_sha256": "e0a06e53bdefbc07ab20d5b985ce5f6d9b6645abf8cd2a63948580b1e2f60846",
+      "candidate_sha256": "c10a4d03dd13fecee85cad20f6faa34643bbe3a5957021596ec451a1f7f008a8",
+      "source_sha256": "c10a4d03dd13fecee85cad20f6faa34643bbe3a5957021596ec451a1f7f008a8",
+      "reason": "Add Words dispatch to the canonical four-core worker."
+    },
+    {
+      "destination": "fixture-firmware/app/main/gui.h",
+      "source": "app/main/gui.h",
+      "before_candidate_sha256": "0f9fe37e22bcd356ea8b542ffa1b027f80b8b6c9d5167d0a260d4ffa5b70c5e2",
+      "candidate_sha256": "3060d14c0e266b21f51a21b28caf5fab3fa77ae5ad9250daecc9d881f998ca50",
+      "source_sha256": "3060d14c0e266b21f51a21b28caf5fab3fa77ae5ad9250daecc9d881f998ca50",
+      "reason": "Words worker contract; reviewed source already retains LVGL-free header separation."
+    },
+    {
+      "destination": "fixture-firmware/app/main/gui.c",
+      "source": "app/main/gui.c",
+      "before_candidate_sha256": "6207e91d907c85dc791285bea0d13a4d4bdf944181ecfbe7f9449cbda1585983",
+      "candidate_sha256": "fc8eaa71649be0749a5b8bd63618ed6652d6679fd3737bdf60baa883d857c763",
+      "source_sha256": "fc8eaa71649be0749a5b8bd63618ed6652d6679fd3737bdf60baa883d857c763",
+      "reason": "Reviewed Words GUI and practice cleanup."
+    },
+    {
+      "destination": "fixture-firmware/tests/gui_host.c",
+      "source": "tests/gui_host.c",
+      "before_candidate_sha256": "037ae407e265f6c78635cc89c2ff5692e4844ebc4e2cd1d8a7335f3e9b0b186d",
+      "candidate_sha256": "6ab1cba7fd11217d7167a15c48c24fae052b9a086842cac8c4f09d46f3be12bf",
+      "source_sha256": "6ab1cba7fd11217d7167a15c48c24fae052b9a086842cac8c4f09d46f3be12bf",
+      "reason": "Reviewed four-mode GUI host acceptance harness."
+    },
+    {
+      "destination": "fixture-firmware/tests/dice_tests.inc",
+      "source": "tests/dice_tests.inc",
+      "before_candidate_sha256": "671ee99d57f0c2c5f3f1cfa7976e9cdfe7e6ac0f2efc8fdca9894f0e217d2201",
+      "candidate_sha256": "02f41296bd1405c1146194e7aa28901812bd5a3a51739690c312a3b358ae0a7d",
+      "source_sha256": "02f41296bd1405c1146194e7aa28901812bd5a3a51739690c312a3b358ae0a7d",
+      "reason": "Reviewed dice GUI assertions adapted to the four-mode interface."
+    }
+  ]
+}

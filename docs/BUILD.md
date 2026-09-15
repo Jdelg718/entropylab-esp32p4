@@ -1,6 +1,26 @@
 # Rebuilding
 
-Host: `bash scripts/test-host.sh` (Rust 1.95.0, Python 3, Linux C toolchain).
+## Host suite
+
+Requirements: Rust 1.95.0 through rustup, Python 3, C/C++ compilers and CMake.
+The full `bash scripts/test-host.sh` now includes Words and native GUI tests.
+GUI tests require LVGL **9.5.0 source**, not only installed headers. Either run
+component setup through the target build below, or provide an external source tree:
+
+```sh
+mkdir -p "$HOME/.cache/entropylab"
+git clone --depth 1 --branch v9.5.0 https://github.com/lvgl/lvgl.git "$HOME/.cache/entropylab/lvgl"
+git -C "$HOME/.cache/entropylab/lvgl" checkout 85aa60d18b3d5e5588d7b247abf90198f07c8a63
+export LVGL_SOURCE_DIR="$HOME/.cache/entropylab/lvgl"
+bash scripts/test-host.sh
+```
+
+The default source location is `fixture-firmware/app/managed_components/lvgl__lvgl`.
+`BUILD_JOBS` controls GUI build parallelism. Host GUI output is written beneath
+`fixture-firmware/logs/gui-host`. No simulator rendering is physical-device evidence.
+Words and GUI tests freshly compile `fixture-firmware/runtime`; older standalone
+HEX/Coins/Dice suites remain regression checks, not the target link graph.
+
 All Cargo invocations use `--locked`. Standard `CARGO_HOME` and `RUSTUP_HOME`
 can point to external caches; `CARGO` may name a rustup cargo proxy. Offline reuse
 is opt-in with `CARGO_NET_OFFLINE=true`; fresh users need network dependency access.
@@ -31,7 +51,12 @@ experiments or update baseline only in a separately reviewed change.
 
 Rust target: `riscv32imafc-esp-espidf`; nightly builds core and alloc using
 `-Zbuild-std=core,alloc`. C dependencies use `-march=rv32imafc -mabi=ilp32f`.
-Rust relocation is static. IDF's C linker performs final linkage of the Rust archive.
+Rust relocation is static. The script compiles `fixture-firmware/runtime` from the
+copied cores in `runtime-sources` and IDF's C linker links the freshly produced
+`libentropylab_runtime.a`. No old prebuilt runtime archive is distributed or linked.
+The unified runtime Cargo.lock governs this build; nested historical standalone
+locks are not its effective dependency graph. `scripts/test-runtime-lock.py`
+checks the unified graph and mismatch cases.
 Do not substitute the integer-only RISC-V ABI or default upstream Rev3 config.
 BSP 1.0.1 and LVGL 9.5.0, plus transitive component hashes, are fixed in
 fixture-firmware/app/dependencies.lock. CMake suppresses two known LVGL warning
@@ -39,8 +64,17 @@ classes only; it does not globally disable warnings-as-errors.
 
 The post-build verifier checks app and bootloader revision range 100..199,
 200 MHz PSRAM configuration, Rust archive single-float ABI and linked C ABI symbols.
-It does not prove timing, UI layout, RAM headroom or runtime success. No automatic
+`scripts/verify-runtime-elf.py` additionally checks the unified runtime/API symbols
+and ABI, not historical installed-image identity. These checks do not prove timing,
+UI layout, RAM headroom or runtime success. No automatic
 flashing is provided. Hardware recovery/authorization comes first.
 
-The portable target script/configuration has been inspected, but a complete clean
-target build of this layout is not claimed until separately run and recorded.
+The full host suite and published target build script passed for this milestone.
+Host checks use LVGL commit `85aa60d18b3d5e5588d7b247abf90198f07c8a63`.
+The target build compiled the runtime from source and passed revision, ABI,
+unique API/runtime ownership and component-lock checks; strict application
+`main.c`/`gui.c` compilation also passed. The inherited unknown LVGL demo-config
+symbol warnings remain disclosed, not described as a warning-free build.
+See [Words milestone](WORDS-MILESTONE.md) for the evidence boundaries.
+No new firmware has been flashed, and build success is not physical acceptance
+or a bit-for-bit reproducibility claim.

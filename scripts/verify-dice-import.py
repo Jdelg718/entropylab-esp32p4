@@ -3,10 +3,47 @@
 from pathlib import Path
 import hashlib,json
 r=Path(__file__).resolve().parents[1]
-m=json.loads((r/'docs/dice-import-manifest.json').read_text())
-for x in m['entries']:
- assert hashlib.sha256((r/x['destination']).read_bytes()).hexdigest()==x['candidate_sha256'],x['destination']
- assert x['exact'] or x['destination'] in m['exceptions']
+def verify_identities(root):
+ # Pin both reviewed records: a successor is not permission to rebaseline files.
+ historical=(root/'docs/dice-import-manifest.json').read_bytes()
+ successor=(root/'docs/words-import-manifest.json').read_bytes()
+ assert hashlib.sha256(historical).hexdigest()=='df76366c5bc512994f8cb993d584eb918464d6c5f2c62766bb7774e873e75a5e', 'historical manifest changed'
+ assert hashlib.sha256(successor).hexdigest()=='3cb686840b5a8805afd80ddd3fb3d3520bdba90e9ec3ee2087a0facffd20b091', 'unreviewed successor manifest'
+ native_bytes=(root/'docs/input-explanations-native-edit.json').read_bytes()
+ assert hashlib.sha256(native_bytes).hexdigest()=='dcd864bb86f0778b275e84379334c248eb4012bdd1c5467929ed1a05f8cc2599', 'unreviewed native edit manifest'
+ native=json.loads(native_bytes)
+ assert native['schema']=='native-edit-successors-v1'
+ assert native['prior_manifest']=='docs/words-import-manifest.json'
+ assert native['prior_manifest_sha256']==hashlib.sha256(successor).hexdigest()
+ assert len(native['entries'])==1
+ edit=native['entries'][0]
+ assert edit['destination']=='fixture-firmware/tests/gui_host.c'
+ assert edit['reason']
+ assert native['test_include']['destination']=='fixture-firmware/tests/explanation_tests.inc'
+ assert hashlib.sha256((root/native['test_include']['destination']).read_bytes()).hexdigest()==native['test_include']['sha256'], 'native test include changed'
+ m=json.loads(historical)
+ words=json.loads(successor)
+ assert words['historical_manifest_sha256']==hashlib.sha256(historical).hexdigest()
+ assert words['source_manifest_sha256']=='e317b078cbea59ffb533e0d7c025a844e39e960a981ec0b77fa12a9cfc25e92e'
+ successors={x['destination']:x for x in words['entries']}
+ assert len(successors)==len(words['entries'])
+ assert set(successors)<=set(x['destination'] for x in m['entries'])
+ for x in m['entries']:
+  expected=x['candidate_sha256']
+  if x['destination'] in successors:
+   update=successors[x['destination']]
+   assert update['before_candidate_sha256']==expected
+   assert update['source']==x['destination'].removeprefix('fixture-firmware/')
+   assert update['candidate_sha256']==update['source_sha256']
+   assert update['reason']
+   expected=update['candidate_sha256']
+  if x['destination']==edit['destination']:
+   assert x['destination'] in successors
+   assert edit['before_candidate_sha256']==expected
+   expected=edit['candidate_sha256']
+  assert hashlib.sha256((root/x['destination']).read_bytes()).hexdigest()==expected,x['destination']
+  assert x['exact'] or x['destination'] in m['exceptions']
+verify_identities(r)
 rows=[x.split('\t') for x in (r/'fixture-firmware/dice/vectors/dice.tsv').read_text().splitlines()]
 assert len(rows)==20 and sum(int(x[4])>=0 for x in rows)==14 and sum(int(x[4])<0 for x in rows)==6
 for bits,count in zip([128,160,192,224,256],[50,62,75,87,100]):assert 6**(count-1)<2**bits<=6**count

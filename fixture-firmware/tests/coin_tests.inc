@@ -23,7 +23,7 @@ static void coin_tests(void){
  click("Tails 1");assert(find(lv_screen_active(),"256 / 256 encoded bits"));
  click("12");assert(find(lv_screen_active(),"256 / 128 encoded bits"));assert(lv_obj_has_state(find_button(lv_screen_active(),"Calculate"),LV_STATE_DISABLED));render("coins-excess.ppm");
  click("24");reject=true;click("Calculate");reject=false;click("Calculate");
- hex_result_t r={.rc=-4};gui_result(&r);render("coins-failure.ppm");assert(find(lv_screen_active(),"--------"));click("Back to coin input");click("Calculate");r=compute();gui_result(&r);assert_words(&r);
+ hex_result_t r=compute();r.rc=-4;gui_result(&r);render("coins-failure.ppm");assert(find(lv_screen_active(),"--------"));click("Back to coin input");click("Calculate");r=compute();gui_result(&r);assert_words(&r);
  click("Clear");assert(find(lv_screen_active(),"0 / 256 encoded bits"));click("Test results");assert(!find(lv_screen_active(),r.fingerprint));click("Back to coin input");
  click("Hex");assert(find(lv_screen_active(),"64 / 64 chars  |  256 bits"));
  puts("PASS coins: all selectors, MSB/leading zero input, Heads/Tails, per-mode isolation, excess preserved, max256, invalidation, busy guards, retry, actual core outputs/geometry");
