@@ -10,7 +10,16 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           persist-credentials: false
+      - name: Check out pinned LVGL sources for native GUI tests
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          repository: lvgl/lvgl
+          ref: 85aa60d18b3d5e5588d7b247abf90198f07c8a63 # v9.5.0
+          path: .ci-deps/lvgl
+          persist-credentials: false
       - name: Install pinned host Rust
         run: rustup toolchain install 1.95.0 --profile minimal
       - name: Run real host tests and C ABI link
+        env:
+          LVGL_SOURCE_DIR: ${{ github.workspace }}/.ci-deps/lvgl
         run: bash scripts/test-host.sh

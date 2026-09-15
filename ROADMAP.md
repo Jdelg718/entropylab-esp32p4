@@ -1,79 +1,79 @@
 # Roadmap and acceptance gates
 
-## Product direction and assurance boundaries
+## Product direction
 
-EntropyLab aims to be an **offline seed/mnemonic + fingerprint generator on
-supported general-purpose hardware**, with entropy-process assurance through
-traceable input handling, explicit source assumptions and independently checked
-conversion/derivation. It is **not a transaction or signing tool**. The first
-BIP84 address is a derivation cross-check, not a transaction workflow.
+An unofficial offline seed/mnemonic and fingerprint generator/checker for supported
+general-purpose hardware, with entropy-process assurance and education. The default
+product is not a transaction signer. Statistical tests, encoded width, checksum
+validity and hashing do not establish source randomness. Offline app operation does
+not prove a physical air gap; C6 remains a hardware threat-model concern. Public-test
+use is the present maturity boundary, not the permanent product goal.
 
-Public-test-only use describes current test maturity, not a permanent product
-limitation. Real-secret use needs an explicit threat-model and readiness review;
-this roadmap does not authorize it. Statistical tests cannot prove randomness,
-unpredictability or physical entropy provenance, and hashing cannot create
-missing entropy. Offline application operation is not proof of a physical air
-gap: the board's C6 presence must remain explicit in hardware threat modeling.
+## Current checkpoint
 
-## Feature sequence
+This candidate imports Words prefix selection, a taller editor, practical Clear,
+common Safety/About and the authentic Orbit saver atop published HEX/Coins/Dice.
+The separately installed practice-cleanup source image has recorded app readback
+and boot verification; **its current physical UI/touch/computation acceptance is
+pending**. A new publication build has a distinct identity; historical observations
+do not establish its behavior. See [handoff](docs/HANDOFF.md).
 
-1. **Public fixture (historical):** compiled BIP39/BIP32/BIP84 computation,
-   LVGL touch trigger, bounded C ABI and recorded hardware evidence. Historical
-   source-image observations are not clean-checkout runtime verification.
-2. **HEX + Coins (implemented):** native LVGL input and 12–24 BIP39 words,
-   empty passphrase only, fingerprint and first mainnet BIP84 address. Coins
-   maps raw Heads = 0 / Tails = 1 bits directly, without hash conditioning.
-   HEX has recorded source-image hardware observations. Coins has exactly two
-   recorded public-zero hardware presets (12 words / 128 bits and 24 words /
-   256 bits); manual flips, Undo and mode isolation remain host-tested only.
-   See [HEX milestone](docs/HEX-MILESTONE.md) and
-   [COIN milestone](docs/COIN-MILESTONE.md) for source/build identities and actual
-   verification limits. A newly built repository binary is not thereby
-   hardware-verified.
-3. **Hashed D6 (local candidate, review gated):** original COLDCARD-style raw
-   digits and Coleman 6-to-0 before SHA256 remain distinct labeled modes with
-   separate transcripts. Strict ASCII 1–6, maximum 1024 rolls, all five word
-   counts. Exactly two short weak public source-image hardware tests were
-   reported; threshold, soak and readiness hardware coverage is not claimed.
-   See [DICE milestone](docs/DICE-MILESTONE.md). Hash output width and nominal
-   roll thresholds do not certify entropy.
-4. **Reliability and readiness (ongoing gates):** queue saturation, startup and
-   allocation failure injection, cancellation/reset semantics, soak tests,
-   stack/RAM headroom, secret-lifetime review and dependency review. Each feature
-   requires bounded input contracts, host tests and separately recorded hardware
-   tests; real-secret readiness requires a separate decision.
-5. **Other upstream features (inventory pending):** trace the pinned upstream
-   source and record implemented/partial/missing features, exact semantics,
-   provenance and verification dependencies before choosing subsequent work.
-   This is an inventory task, not a promise of untraced parity. Passphrase input
-   and broader derivation paths remain unimplemented future scope.
-6. **Optional microSD seed export (deferred design gate):** future export must be
-   an explicit user action only, never automatic seed storage, background saves
-   or implicit persistence. Before approval, decide the export format,
-   encryption and key/passphrase handling, interoperability with named consumers,
-   and a read-back verification procedure with failure/interruption behavior.
-   A plaintext card export is an additional secret copy; deleting its file is
-   **not secure erasure** of flash media. Warnings, secret lifetime and card
-   handling belong in the threat model. **No export implementation or SD writes
-   are authorized now.** This backlog item does not block other feature work.
+1. Retain completed cross-mode banner cleanup, Safety/About credits and practical
+   Clear. Preserve result-specific no-funds, checksum-not-quality, invalid/weak-input
+   and method warnings. Clear affects selected-mode owned inputs/results, not all
+   SRAM/PSRAM, compiler temporaries, crypto internals or old allocations.
+2. Separately close physical public-fixture scrolling, eligible Words idle,
+   wake-over-actions, held/overlapping contacts and next-contact checks. Measure
+   resource/performance budgets separately; host checks are not physical evidence.
+3. Clarify encoded width versus source randomness, raw Coins mapping, distinct D6
+   hashing transcripts, all-roll inclusion and fair-independent-source assumptions.
+   Words has no numeric randomness score. No seed recovery or forensic memory work.
+   Orbit begins after 60 seconds of eligible Words inactivity and consumes the
+   first wake contact; it preserves input and is not a lock or wipe.
+4. Optional separately reviewed memory-only fairness diagnostics and explicit
+   passphrase input require sample limits, canonicalization/length contracts,
+   independent vectors and clear-state handling. LifeHash alongside text and
+   bounded education are later work, not cleanup blockers.
 
-7. **EntropyLab logo screensaver (deferred design gate):** use the authentic
-   upstream website logo, not a recreation. Exact website asset provenance and
-   redistribution/license review are pending; bundle the approved asset locally
-   for offline use, with no runtime website fetch. Idle timeout and wake behavior
-   require future design review. Do not overlay a secrets screen or imply that
-   displaying the logo automatically erases secrets. No implementation is
-   authorized by this roadmap item.
+## Retained future proposals — not implementation approval
 
-## Change and release gates
+- Reliability: startup/allocation/queue failure injection, reset semantics, soak,
+  stack/RAM headroom and secret-lifetime/dependency review. Real-secret use requires
+  an explicit readiness decision and threat model.
+- [Pinned upstream feature map](docs/UPSTREAM-FEATURES.md): records present native
+  coverage and the next candidate features. Reinspect official source before each
+  implementation; broader paths remain deferred.
+- Optional microSD export: explicit user action only; never automatic storage.
+  Review format, encryption/key handling, named-consumer interoperability,
+  readback and failure/interruption behavior first. Deleting a plaintext export
+  is not flash secure erasure. No export implementation or SD writes now.
+- Educational videos/lessons: locally bundled, offline, public fixtures only;
+  verify entropy/checksum/seed-space claims independently. Gate source/media rights,
+  board playback/resources, readable captions and touch controls. No automatic
+  secret writes or required network connection.
+- Future opt-in developer mode: separately gated wallet/signing or microSD
+  interoperability; default generator operation remains isolated. Enabling a mode
+  must not itself save/export secrets, enable networking or sign. Require explicit
+  activation, visible status, acknowledgement and cleanup. Bitcoin Core/Sparrow
+  integration must distinguish mnemonic backups, descriptors/xpubs and PSBTs;
+  do not assume arbitrary mnemonic files are accepted. Signing requires reviewed
+  key lifecycle, transaction parsing, trustworthy confirmation and independent
+  public-fixture/test-network tests before any funded-wallet decision.
+- Transactions, PSBT, vanity, signing, storage/export and C6 hardening remain
+  separate deferred scopes, not prerequisites silently added to practice cleanup.
 
-Signing and transaction workflows are outside the product direction. Real-secret
-handling, storage/export, RNG and networking additions require a new threat model
-and explicit decision, not incremental UI additions. Current application paths
-remain without RNG, signing, storage or networking. Listing future export here
-does not grant implementation approval.
+## Credits, assets and release gates
 
-Public release requires independent content/privacy/license audit and explicit
-publication approval. Contributions are via reviewed changes, not automatic
-access. This local candidate includes code; commits and pushes
-remain gated on review and approval.
+Credit **EntropyLab — Team Ooga Booga**,
+[upstream](https://github.com/OogaBoogaX/entropylab), and Mr.Hodl's publicly
+reported [origin](https://x.com/mrHodl/status/2099170677245014304) and
+[calculator scope](https://x.com/mrHodl/status/2099506569931010421), without sole
+ownership/authorship or endorsement claims. Preserve exact custom Ooga Booga
+license and third-party/font notices. Authentic logo assets retain pinned
+provenance; repository-wide license coverage is an interpretation supported by
+upstream distribution and README, not a separate trademark grant or legal certainty.
+
+Source publication requires independent content/privacy/license review. Host,
+target build, installed identity and physical acceptance are separate gates.
+Future proposals grant no permission for hardware operations, secret handling,
+networking, RNG, persistence or signing additions.

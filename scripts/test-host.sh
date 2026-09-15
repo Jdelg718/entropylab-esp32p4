@@ -20,3 +20,5 @@ python3 "$ROOT/scripts/test-hex-integration.py"
 
 bash "$ROOT/scripts/test-coin-host.sh"
 bash "$ROOT/scripts/test-dice-host.sh"
+bash "$ROOT/scripts/test-words-host.sh"
+bash "$ROOT/scripts/test-gui-host.sh"

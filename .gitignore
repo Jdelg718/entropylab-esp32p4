@@ -6,6 +6,7 @@
 **/sdkconfig.old
 **/logs/
 .cache/
+.ci-deps/
 .tools/
 .env
 .env.*

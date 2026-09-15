@@ -1,0 +1,18 @@
+[package]
+name = "entropylab-runtime"
+version = "0.1.0"
+edition = "2021"
+publish = false
+[lib]
+crate-type = ["staticlib"]
+[dependencies]
+entropylab-hex-core = { path = "../runtime-sources/hex-core" }
+entropylab-dice-core = { path = "../runtime-sources/dice-core" }
+entropylab-mnemonic-core = { path = "../runtime-sources/mnemonic-core" }
+entropylab-coin-core = { path = "../runtime-sources/coin-core" }
+[dev-dependencies]
+# Integration-test oracle; match the production mnemonic dependency exactly.
+bip39 = { version = "=2.2.2", default-features = false }
+[profile.release]
+panic = "abort"
+opt-level = "s"

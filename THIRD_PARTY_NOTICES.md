@@ -27,9 +27,10 @@ This is a mixed-license source distribution; not a blanket MIT relicensing.
   these notices are supplemental, not a claim of complete binary-license coverage.
 - Rust dependencies retain their original licenses. Exact resolved names, versions,
   registry checksums and license expressions are in docs/RUST-DEPENDENCIES.md
-  and the preserved native/HEX locks. The Dice effective inherited graph is
-  checked against the HEX lock (including versions and checksums). Libraries
-  are fetched, not vendored here.
+  and the preserved native/HEX locks. The new target/GUI runtime graph is fixed
+  by `fixture-firmware/runtime/Cargo.lock` and checked by
+  `scripts/test-runtime-lock.py`; nested standalone locks do not govern it.
+  Registry libraries are fetched, not vendored here.
 - ESP-IDF (Apache-2.0), LVGL (MIT), Waveshare BSP and transitive managed components
   retain their distributed licenses and notices. Full component resolution/hashes
   are in fixture-firmware/app/dependencies.lock. Registry sources are not bundled.
@@ -56,3 +57,34 @@ HEX dependency versions/checksums, including both hex-conservative versions.
 `docs/RUST-DEPENDENCIES.md` already covers those versions and license expressions;
 no registry package or license delta is introduced relative to the HEX runtime.
 This does not replace the binary-distribution license review required above.
+
+## Words runtime, dictionary and Orbit
+
+- `fixture-firmware/runtime-sources/{hex-core,coin-core,dice-core,mnemonic-core}`
+  are copied source cores compiled by `fixture-firmware/runtime`. Their complete
+  local license files are retained: MIT for original native adapters and the
+  exact custom Ooga Booga text for upstream-derived material where applicable.
+  The HEX core's custom-license copy is attribution, not blanket dual licensing.
+  Existing vector/dependency notices also apply to copied tests and fixtures.
+- `fixture-firmware/app/main/bip39_dictionary.inc` identifies the English
+  dictionary from `@scure/bip39` 2.4.0. Its complete MIT notice is retained at
+  `fixture-firmware/LICENSE-dictionary.txt`; it is not covered merely by the
+  native project's MIT notice.
+- `fixture-firmware/app/main/assets` contains the authentic SVG, derived PNG and
+  packed RGB565/A8 logo. All are artwork, including the C pixel representation.
+  The exact `LICENSE-OOGA-BOOGA` is retained there. See the adjacent
+  [asset provenance](fixture-firmware/app/main/assets/PROVENANCE.md) and portable
+  hash manifest for origin and conversion scope.
+- Logo inclusion follows the repository-wide software-license coverage
+  interpretation supported by the pinned upstream README lines 570–575 and
+  integrated tracked logo. No separate restriction was found in the bounded
+  review; this is not an explicit separate artwork/trademark grant, a verified
+  individual authorship chain, or a legal guarantee.
+
+Credit **EntropyLab — Team Ooga Booga** and
+[OogaBoogaX/entropylab](https://github.com/OogaBoogaX/entropylab). Mr.Hodl's public
+[origin account](https://x.com/mrHodl/status/2099170677245014304) and
+[calculator scope](https://x.com/mrHodl/status/2099506569931010421) inform attribution,
+not a claim of sole authorship or logo ownership. This adaptation is unofficial;
+no endorsement, affiliation, security certification or separate trademark license
+is claimed. The exact custom license is not replaced by MIT or the Unlicense.
