@@ -42,6 +42,14 @@ It is not a lock/wipe. Current installed-source
 physical acceptance remains pending; a new repository build is a distinct image.
 See [Words milestone](docs/WORDS-MILESTONE.md) and [handoff](docs/HANDOFF.md).
 
+## On-demand input explanations
+
+From **Public test only / Safety**, open **About this input** for a compact
+explanation of the selected HEX, Coins, raw D6, Coleman D6 or Words method.
+The input screens stay unchanged; no randomness score or statistics engine is
+added. See [input explanations](docs/INPUT-EXPLANATIONS.md) for behavior and
+verification status.
+
 ## What actually works
 
 The native 480×800 LVGL touchscreen accepts hexadecimal public test input with

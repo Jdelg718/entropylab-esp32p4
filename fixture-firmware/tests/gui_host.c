@@ -168,12 +168,14 @@ static void saver_input_tests(lv_indev_t *dev){
 }
 #include "cleanup_tests.inc"
 #include "safety_cleanup_tests.inc"
+#include "explanation_tests.inc"
 int main(void){
     lv_init();lv_display_t *d=lv_display_create(480,800);assert(d);
     lv_display_set_color_format(d,LV_COLOR_FORMAT_RGB565);lv_display_set_flush_cb(d,flush);
     lv_display_set_buffers(d,buffer,NULL,sizeof buffer,LV_DISPLAY_RENDER_MODE_PARTIAL);
     lv_indev_t *dev=lv_indev_create();lv_indev_set_type(dev,LV_INDEV_TYPE_POINTER);lv_indev_set_read_cb(dev,touch_read);
     gui_create(request);render("empty-native.ppm");
+    explanation_tests(dev);if(getenv("EXPLANATION_ONLY")){lv_deinit();return 0;}
     cleanup_tests(dev);safety_cleanup_tests();if(getenv("CLEANUP_ONLY")){lv_deinit();return 0;}
     saver_tests();saver_input_tests(dev);if(getenv("SAVER_ONLY")){lv_deinit();return 0;}
     layout_tests();if(getenv("LAYOUT_ONLY")){lv_deinit();return 0;}

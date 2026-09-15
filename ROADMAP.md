@@ -25,8 +25,10 @@ do not establish its behavior. See [handoff](docs/HANDOFF.md).
 2. Separately close physical public-fixture scrolling, eligible Words idle,
    wake-over-actions, held/overlapping contacts and next-contact checks. Measure
    resource/performance budgets separately; host checks are not physical evidence.
-3. Clarify encoded width versus source randomness, raw Coins mapping, distinct D6
-   hashing transcripts, all-roll inclusion and fair-independent-source assumptions.
+3. [Compact input explanations](docs/INPUT-EXPLANATIONS.md) are the next bounded
+   native candidate: encoded width versus source randomness, raw Coins mapping,
+   distinct D6 hashing transcripts, all-roll inclusion and fair-independent-source
+   assumptions. Consult its verification status before treating it as shipped.
    Words has no numeric randomness score. No seed recovery or forensic memory work.
    Orbit begins after 60 seconds of eligible Words inactivity and consumes the
    first wake contact; it preserves input and is not a lock or wipe.

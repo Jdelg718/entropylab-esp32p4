@@ -1,4 +1,18 @@
-# Publication checkpoint — Words and practice cleanup
+# Public handoff — Words and input explanations
+
+## Input-explanation candidate
+
+The bounded follow-on to the published Words milestone adds **Safety → About
+this input** for HEX, Coins, raw D6, Coleman D6 and Words. It preserves the
+existing visual direction, input/results and Safety copy. No passphrase, score,
+statistics, derivation or storage feature is included.
+
+See [input explanations](INPUT-EXPLANATIONS.md) for this delta's verification
+status. Previous milestone test/build/review results below are historical and do
+not substitute for new-candidate checks. No new flash or hardware acceptance is
+claimed.
+
+## Previous published milestone — Words and practice cleanup
 
 This source candidate is based on the published Dice checkpoint
 `8e5e721c31e7d2aa09e093e7b4dd8d5bc39db1de`. It adds native Words validation,

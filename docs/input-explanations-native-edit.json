@@ -1,0 +1,17 @@
+{
+  "schema": "native-edit-successors-v1",
+  "prior_manifest": "docs/words-import-manifest.json",
+  "prior_manifest_sha256": "3cb686840b5a8805afd80ddd3fb3d3520bdba90e9ec3ee2087a0facffd20b091",
+  "entries": [
+    {
+      "destination": "fixture-firmware/tests/gui_host.c",
+      "before_candidate_sha256": "6ab1cba7fd11217d7167a15c48c24fae052b9a086842cac8c4f09d46f3be12bf",
+      "candidate_sha256": "52a57153745b5c42cdd887d6055233183a9ac62f383fed6c6c44383a95045264",
+      "reason": "Local native development only: include and invoke focused static input-explanation GUI tests; no external source import."
+    }
+  ],
+  "test_include": {
+    "destination": "fixture-firmware/tests/explanation_tests.inc",
+    "sha256": "894d26eea799f061df5fd455385ac1ac41603b6c453a0eb125dbca9959c207e8"
+  }
+}

@@ -15,6 +15,11 @@ static unsigned mn_confirm;
 static uint64_t mn_revision,mn_id,mn_pending;
 static bool mn_valid,mn_reviewing,mn_safety_open;
 static lv_obj_t *mn_safety,*mn_safety_close,*mn_safety_modal;
+static lv_obj_t *mn_safety_content,*mn_about_content,*mn_about,*mn_about_back,*mn_about_label,*mn_about_body,*mn_about_scroll;
+static bool mn_about_open;
+static el_mode_t mn_about_mode;
+static void mn_rebind(void);
+#include "input_explanations.inc"
 static lv_obj_t *mn_review,*mn_review_button,*mn_review_back,*mn_review_clear,*mn_review_list,*mn_review_rows[24];
 /* Payload is immutable by value, not a pointer to a reused candidate record.
  * 10 action bits + monotonic generation; never wrap, fail closed at exhaustion.
@@ -84,10 +89,20 @@ static void mn_action(lv_event_t *e){
  uintptr_t token=(uintptr_t)lv_event_get_user_data(e);
  if(mn_exhausted || (token>>10)!=mn_generation)return;
  unsigned k=token&1023u;
- if(mn_safety_open){if(k==801){mn_safety_open=false;saver_rebind_controls();mn_refresh();}return;}
- if(k==801)return;
+ if(mn_safety_open){
+  if(k==801)mn_safety_open=false;
+  else if(k==802&&!mn_about_open){
+   mn_about_open=true;
+   lv_label_set_text(mn_about_label,mn_explanation_names[mn_about_mode]);
+   lv_label_set_text(mn_about_body,mn_explanation_copy[mn_about_mode]);
+   lv_obj_scroll_to_y(mn_about_scroll,0,LV_ANIM_OFF);
+  }else if(k==803&&mn_about_open)mn_about_open=false;
+  else return;
+  saver_rebind_controls();mn_rebind();return;
+ }
+ if(k>=801&&k<=803)return;
  if(mode!=MODE_MNEMONIC && k!=800)return;
- if(k==800){if(mn_confirm)return;mn_safety_open=true;saver_rebind_controls();mn_refresh();return;}
+ if(k==800){if(mn_confirm)return;mn_safety_open=true;mn_about_open=false;mn_about_mode=mode;saver_rebind_controls();mn_rebind();return;}
  if(mn_confirm){
   if(k!=701&&k!=702)return;
   unsigned pending=mn_confirm;mn_confirm=0;
@@ -141,10 +156,13 @@ static void mn_bind(lv_obj_t *o,unsigned action){
  lv_obj_remove_event_cb(o,mn_action);
  if(!mn_exhausted)lv_obj_add_event_cb(o,mn_action,LV_EVENT_CLICKED,(void*)((mn_generation<<10)|action));
 }
-static void mn_refresh(void){
+/* Navigation only rebinds callbacks/visibility; never refreshes input or results. */
+static void mn_rebind(void){
  saver_activity();
  if(mn_generation==UINTPTR_MAX>>10)mn_exhausted=true;else mn_generation++;
- mn_bind(mn_safety,800);mn_bind(mn_safety_close,801);
+ mn_bind(mn_safety,800);mn_bind(mn_safety_close,801);mn_bind(mn_about,802);mn_bind(mn_about_back,803);
+ mn_visible(mn_safety_content,!mn_about_open);mn_visible(mn_about_content,mn_about_open);
+ mn_visible(mn_about,!mn_about_open);mn_visible(mn_about_back,mn_about_open);
  mn_visible(mn_safety,true);mn_enable(mn_safety,!busy&&!mn_confirm&&!mn_safety_open);mn_visible(mn_safety_modal,mn_safety_open);
  for(unsigned i=0;i<24;i++)mn_bind(mn_slots[i],600+i);
  for(unsigned i=0;i<26;i++)mn_bind(mn_keys[i],'a'+i);
@@ -154,6 +172,9 @@ static void mn_refresh(void){
  mn_bind(mn_prev,400);mn_bind(mn_next,401);mn_bind(mn_cancel,4);
  mn_bind(mn_delete,2);mn_bind(mn_clear,3);mn_bind(mn_validate,200);
  mn_bind(mn_reveal,300);mn_bind(mn_back,301);mn_bind(mn_no,701);mn_bind(mn_yes,702);
+}
+static void mn_refresh(void){
+ mn_rebind();
  char b[96];mn_lookup();
  snprintf(b,sizeof b,"MNEMONIC  %u/%u words  %u/215 bytes",mn_count,mn_target,(unsigned)strlen(mnemonic_transcript));lv_label_set_text(mn_status,b);
  if(busy)lv_label_set_text(mn_status,"Validating outside the display lock...");
@@ -195,7 +216,7 @@ static void mn_refresh(void){
  lv_label_set_text(mn_modal_text,!mn_confirm?"":mn_confirm==3?"Clear all selected words and draft?\nBest effort only; not secure erasure.":mn_confirm<=24?"Change target? Trailing words beyond\nthe target and draft will be discarded.":"Discard draft and edit another slot?\nSelected words are kept.");
 }
 static void mn_create(lv_obj_t *s){
- gui_owned_zero(mnemonic_transcript,sizeof mnemonic_transcript);gui_owned_zero(mn_words,sizeof mn_words);mn_reset_draft();mn_count=0;mn_target=12;mn_pending=0;mn_confirm=0;mn_safety_open=false;
+ gui_owned_zero(mnemonic_transcript,sizeof mnemonic_transcript);gui_owned_zero(mn_words,sizeof mn_words);mn_reset_draft();mn_count=0;mn_target=12;mn_pending=0;mn_confirm=0;mn_safety_open=false;mn_about_open=false;mn_about_mode=MODE_HEX;
  mn_panel=box(s,16,104,448,648,&card);
  lv_obj_set_style_border_width(mn_panel,0,0);
  mn_status=text(mn_panel,12,6,424,"MNEMONIC",&el_sans_14,0xff9900);
@@ -239,17 +260,29 @@ static void mn_create(lv_obj_t *s){
  lv_obj_set_height(mn_status,16);lv_obj_set_height(mn_draft_label,44);lv_obj_set_height(mn_hint,20);lv_obj_set_height(mn_pages,44);
  mn_safety=button(s,16,756,448,"Public test only / Safety",mn_action,(void*)800);
  mn_safety_modal=box(s,0,0,480,800,&base);
- text(mn_safety_modal,28,84,424,"PUBLIC TEST INPUT - NO FUNDS",&el_sans_16,0xff9900);
- text(mn_safety_modal,28,132,424,"No real secrets or funds. Never fund this address.",&el_sans_16,0xeeeeee);
- text(mn_safety_modal,28,196,424,"Checksum validity does not establish entropy quality.",&el_sans_16,0xeeeeee);
- text(mn_safety_modal,28,288,424,"Clearing is best effort, not secure erasure.",&el_sans_16,0xeeeeee);
- text(mn_safety_modal,28,28,424,"Safety / About",&el_serif_24,0xeeeeee);
- text(mn_safety_modal,28,244,424,"Encoded width is not measured randomness.",&el_sans_14,0xa3a3a3);
- text(mn_safety_modal,28,336,424,"Owned buffers are cleared best effort. Crypto and\nallocator copies may remain. Saver is not a lock.",&el_sans_14,0xa3a3a3);
- text(mn_safety_modal,28,400,424,"Unofficial native adaptation\nEntropyLab - Team Ooga Booga",&el_sans_16,0xeeeeee);
- text(mn_safety_modal,28,460,424,"Origin: Mr.Hodl (@mrhodl)\nNo upstream endorsement or affiliation.",&el_sans_14,0xa3a3a3);
- text(mn_safety_modal,28,516,424,"https://github.com/OogaBoogaX/entropylab",&el_sans_14,0xa3a3a3);
- text(mn_safety_modal,28,564,424,"THE OOGA BOOGA LICENSE retained.\nFull offline notices: THIRD_PARTY_NOTICES.md\nLogo: upstream asset, not sole-author credit.",&el_sans_14,0xa3a3a3);
+ mn_safety_content=box(mn_safety_modal,0,0,480,616,&base);
+ text(mn_safety_content,28,84,424,"PUBLIC TEST INPUT - NO FUNDS",&el_sans_16,0xff9900);
+ text(mn_safety_content,28,132,424,"No real secrets or funds. Never fund this address.",&el_sans_16,0xeeeeee);
+ text(mn_safety_content,28,196,424,"Checksum validity does not establish entropy quality.",&el_sans_16,0xeeeeee);
+ text(mn_safety_content,28,288,424,"Clearing is best effort, not secure erasure.",&el_sans_16,0xeeeeee);
+ text(mn_safety_content,28,28,424,"Safety / About",&el_serif_24,0xeeeeee);
+ text(mn_safety_content,28,244,424,"Encoded width is not measured randomness.",&el_sans_14,0xa3a3a3);
+ text(mn_safety_content,28,336,424,"Owned buffers are cleared best effort. Crypto and\nallocator copies may remain. Saver is not a lock.",&el_sans_14,0xa3a3a3);
+ text(mn_safety_content,28,400,424,"Unofficial native adaptation\nEntropyLab - Team Ooga Booga",&el_sans_16,0xeeeeee);
+ text(mn_safety_content,28,460,424,"Origin: Mr.Hodl (@mrhodl)\nNo upstream endorsement or affiliation.",&el_sans_14,0xa3a3a3);
+ text(mn_safety_content,28,516,424,"https://github.com/OogaBoogaX/entropylab",&el_sans_14,0xa3a3a3);
+ text(mn_safety_content,28,564,424,"THE OOGA BOOGA LICENSE retained.\nFull offline notices: THIRD_PARTY_NOTICES.md\nLogo: upstream asset, not sole-author credit.",&el_sans_14,0xa3a3a3);
+ mn_about_content=box(mn_safety_modal,0,0,480,616,&base);
+ text(mn_about_content,28,28,424,"About this input",&el_serif_24,0xeeeeee);
+ mn_about_label=text(mn_about_content,28,84,424,"",&el_sans_16,0xff9900);
+ mn_about_scroll=box(mn_about_content,28,120,424,496,&base);
+ lv_obj_add_flag(mn_about_scroll,LV_OBJ_FLAG_SCROLLABLE);lv_obj_set_scroll_dir(mn_about_scroll,LV_DIR_VER);
+ lv_obj_set_scrollbar_mode(mn_about_scroll,LV_SCROLLBAR_MODE_AUTO);
+ lv_obj_remove_flag(mn_about_scroll,LV_OBJ_FLAG_SCROLL_ELASTIC|LV_OBJ_FLAG_SCROLL_MOMENTUM);
+ lv_obj_set_style_width(mn_about_scroll,4,LV_PART_SCROLLBAR);lv_obj_set_style_bg_color(mn_about_scroll,lv_color_hex(0xff9900),LV_PART_SCROLLBAR);
+ mn_about_body=text(mn_about_scroll,0,0,424,"",&el_sans_16,0xeeeeee);
+ mn_about=button(mn_safety_modal,28,632,424,"About this input",mn_action,(void*)802);
+ mn_about_back=button(mn_safety_modal,28,632,424,"Back to Safety",mn_action,(void*)803);
  mn_safety_close=button(mn_safety_modal,28,706,424,"Close",mn_action,(void*)801);
  mn_invalidate();mn_refresh();lv_obj_add_flag(mn_panel,LV_OBJ_FLAG_HIDDEN);
 }
