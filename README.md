@@ -1,7 +1,18 @@
-# EntropyLab for ESP32-P4
+# EntropyLab for ESP32-P4 (unofficial)
 
 **Unofficial offline seed/mnemonic + fingerprint generator for supported
  general-purpose hardware — currently an experimental public-test HEX + COIN + DICE + WORDS candidate.**
+
+This is not the EntropyLab HTML product and is not shipped, audited, or endorsed
+by OogaBoogaX. Keep that line on Safety/About as well as here. Public-test only.
+Never enter real secrets or fund test addresses.
+
+Native contract (do not silently widen it):
+- user-supplied entropy only; no device-generated secret randomness
+- empty BIP39 passphrase only
+- first mainnet BIP84 receive address only (`m/84'/0'/0'/0/0`)
+- checksum / hash ≠ source quality
+- offline app ≠ physical air gap (the EV board still has a C6 radio)
 
 The product direction is entropy-process assurance: traceable input handling,
 explicit entropy-source assumptions and independently checked derivation, not a
