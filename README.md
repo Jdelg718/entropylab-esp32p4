@@ -1,5 +1,87 @@
 # EntropyLab for ESP32-P4 (unofficial)
 
+## UI preview branch — Omarchy quick start
+
+**This branch previews the installer interface, not installable firmware. No device
+is needed. Hardware connection, flashing, downloads, release and feedback submission
+are disabled. This source preview does not lift the firmware publication HOLD.**
+
+In an Omarchy terminal, clone this branch and start the local preview:
+
+```sh
+git clone --branch preview/installer-ui --single-branch https://github.com/Jdelg718/entropylab-esp32p4.git entropylab-ui-preview
+cd entropylab-ui-preview
+python3 scripts/serve-flash-ui.py --port 8765
+```
+
+Open **http://127.0.0.1:8765/flash/** in your Omarchy browser. Leave the terminal
+running; press **Ctrl+C** there to stop. After cloning, running the preview needs
+only **Python 3** and a modern browser: no Node, Rust, ESP-IDF, firmware build,
+board, USB cable or driver. The server binds only to loopback and serves five
+allowlisted UI files, never firmware or directory listings. The page makes no
+external requests; its strict CSP blocks connections. Do not expose this preview
+through a public proxy. If the port is busy, choose another `--port` and use the
+same port in the browser URL.
+
+### What to try (no device required)
+
+- Switch between **Install** (three-image explanation) and **Update** (app-only
+  explanation). These are UI states, not working installation paths.
+- Exercise the board/practice confirmations as a simulation and inspect the
+  **data-loss consent**. Changing mode clears that consent. Checking every box
+  still cannot enable hardware; these checkboxes are not device validation.
+- Expand **Source & image integrity**. It shows an exact metadata-only snapshot
+  of an integrity-verified, **unsigned private first-install candidate**, with its
+  original source commit/tree and manifest/image hashes. The public preview commit
+  is not that firmware's build identity. The snapshot remains **NOT APPROVED FOR
+  FLASHING**, built before merge, not rebuilt from merge, not reproducibly verified,
+  and first-install unexercised. Hash agreement is not authenticity or approval.
+  No BIN, package, private manifest file or firmware download is included here.
+- Expand **Feedback stays in your hands** and opt in to a fixed-choice local
+  preview. Opt out or reload to discard it. There is no free-text capture, storage,
+  clipboard access, telemetry or submission; Share remains disabled.
+- Verify **Preflight BLOCKED**, with transfer, readback and boot confirmation
+  separately **PENDING**. Connect, release/download and sharing stay disabled even
+  after all confirmations. Do not connect hardware for this preview.
+
+Never enter real seeds, mnemonics, passphrases, private keys or funded-wallet data.
+Mobile/unsupported-browser banners describe future installation constraints, not
+a claim that this UI can flash in another browser. Omarchy quick-start instructions
+are portable; automated Linux Chromium UI tests are not Omarchy OS or hardware
+acceptance.
+
+### Optional contributor tests (not needed to run the preview)
+
+```sh
+node --test tests/flash-ui/model.test.mjs
+python3 -m venv .venv
+.venv/bin/python -m pip install playwright
+.venv/bin/python -m playwright install chromium
+.venv/bin/python tests/flash-ui/browser.py
+```
+
+The browser test uses `FLASH_UI_CHROME` when set to a browser executable, otherwise
+an installed Chromium/Chrome or Playwright's Chromium. `FLASH_UI_EVIDENCE` can name
+an output directory outside the checkout; by default evidence goes into a new
+system temporary directory. These developer-only dependencies are separate from
+the Python-standard-library server. Tests exercise real loopback HTTP, UI behavior,
+security denials and responsive layouts; they do not test a hardware driver.
+
+### Firmware documentation below — separate scope
+
+The original native-firmware documentation, release HOLDs, historical evidence,
+licenses and provenance below are retained. Their candidate/branch identifiers
+refer to the native-firmware work, **not this UI-preview branch or a firmware
+release**. No merge, deployment, release, binary redistribution or hardware
+acceptance is implied. The preview adds no third-party runtime assets or fonts;
+existing [provenance](docs/PROVENANCE.md) and [license notices](THIRD_PARTY_NOTICES.md)
+remain unchanged. Credit **EntropyLab — Team Ooga Booga** and the original
+[upstream project](https://github.com/OogaBoogaX/entropylab). Preserve the exact
+custom Ooga Booga license and all third-party notices; this is not a blanket MIT
+license grant. Full firmware binary redistribution/license review remains open.
+
+---
+
 This unofficial adaptation is independently maintained native software, not the upstream HTML product; it is not shipped, audited, or endorsed by OogaBoogaX. Upstream naming guidance concerned a historical empty-passphrase milestone, not security review or endorsement of this unreleased extension. The implemented optional BIP39 passphrase flow and D6 transcript editing extend that milestone; they are not an empty-passphrase-only claim. Public practice only: entropy is user-supplied, not generated or certified by the application.
 
 EntropyLab is an experimental, offline-first educational application for entering public practice entropy, deriving BIP39 English mnemonics, and displaying a master fingerprint, first BIP84 receive address, and LifeHash-style visual fingerprint. It is intended to make input assumptions, encoding rules, checksum behavior, and common mistakes visible on a touchscreen.
