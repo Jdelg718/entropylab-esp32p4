@@ -1,12 +1,17 @@
 # EntropyLab for ESP32-P4 (unofficial)
 
-## UI preview branch — Omarchy quick start
+## Public UI preview quick start
 
-**This branch previews the installer interface, not installable firmware. No device
-is needed. Hardware connection, flashing, downloads, release and feedback submission
-are disabled. This source preview does not lift the firmware publication HOLD.**
+**This branch is a public-source UI preview, not a hosted web installer or
+installable firmware. It cannot connect to or flash a fresh board, and it provides
+no firmware downloads. No device is needed. Hardware connection, flashing,
+downloads, release and feedback submission are disabled. This source preview does
+not lift the firmware publication HOLD.**
 
-In an Omarchy terminal, clone this branch and start the local preview:
+Prerequisites: **Git**, **Python 3** and a **modern desktop browser**. Install Git
+and Python 3 first if they are not already available in your terminal.
+
+Clone this branch and start the local preview (Linux/macOS command example):
 
 ```sh
 git clone --branch preview/installer-ui --single-branch https://github.com/Jdelg718/entropylab-esp32p4.git entropylab-ui-preview
@@ -14,7 +19,14 @@ cd entropylab-ui-preview
 python3 scripts/serve-flash-ui.py --port 8765
 ```
 
-Open **http://127.0.0.1:8765/flash/** in your Omarchy browser. Leave the terminal
+On Windows, use the same clone and `cd` commands. If Python 3 is installed with
+the Windows Python launcher (`py`), replace the server command with:
+
+```powershell
+py -3 scripts/serve-flash-ui.py --port 8765
+```
+
+Open **http://127.0.0.1:8765/flash/** in your desktop browser. Leave the terminal
 running; press **Ctrl+C** there to stop. After cloning, running the preview needs
 only **Python 3** and a modern browser: no Node, Rust, ESP-IDF, firmware build,
 board, USB cable or driver. The server binds only to loopback and serves five
@@ -46,9 +58,9 @@ same port in the browser URL.
 
 Never enter real seeds, mnemonics, passphrases, private keys or funded-wallet data.
 Mobile/unsupported-browser banners describe future installation constraints, not
-a claim that this UI can flash in another browser. Omarchy quick-start instructions
-are portable; automated Linux Chromium UI tests are not Omarchy OS or hardware
-acceptance.
+a claim that this UI can flash in another browser. The macOS and Windows commands
+are untested examples, not exercised platform acceptance. Linux command checks
+and automated Linux Chromium UI tests are not OS or hardware acceptance.
 
 ### Optional contributor tests (not needed to run the preview)
 
