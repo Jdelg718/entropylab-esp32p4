@@ -1,0 +1,89 @@
+{
+  "historical_only": true,
+  "not_evidence_for_current_D6_candidate": true,
+  "current_mapping": "RELEASE-SOURCE-MAPPING.json",
+  "historical_record": {
+    "schema": "entropylab-combined-source-mapping-v3-public-docs",
+    "status": "COMPLETE_CANDIDATE_PENDING_INDEPENDENT_PUBLICATION_SECURITY_REVIEW",
+    "repository": "https://github.com/Jdelg718/entropylab-esp32p4.git",
+    "proposed_branch": "release/education-ui-20260917-docs147",
+    "base_commit": "889b1351a65cf419398ffe6fa8e3c3a57d7e5f7f",
+    "accepted_production_source": {
+      "manifest_sha256": "52b03b938e6f8aa172bb1219c851f77de3494cfea14e5ac28a78785960de1b35",
+      "entries": 402,
+      "verified_before_packaging": true,
+      "target_build_source_equal": true,
+      "installed_image_sha256": "f0c4edf1267470991d4750de027604c2e512ace943223ce42ca6c57b246afebe"
+    },
+    "accepted_test_successor": {
+      "manifest_sha256": "a3c90b2c05297263a4e1aa06f554d8ed39891bc3f52fdb210f602d1ed307e17d",
+      "entries": 402,
+      "delta_from_production": [
+        {
+          "path": "fixture-firmware/tests/modal_touch_tests.inc",
+          "classification": "host-test-only",
+          "production_behavior_changed": false,
+          "review_manifest_sha256": "578088083082a4ed60847b3cab4e7811103eb803684b9fca48ea7c1c1a23502c"
+        }
+      ],
+      "unchanged_entries": 401
+    },
+    "checkout_repair_candidate": {
+      "status": "PENDING_INDEPENDENT_EXACT_DELTA_AND_PUBLIC_AUDIT",
+      "successor_manifest": "docs/public-checkout-successors.json",
+      "successor_manifest_sha256": "1e2206cd513084284192a93e615bfe0bdf9e63db875517fc18a7b48ed18a5140",
+      "production_behavior_changed": false,
+      "production_equivalence_verified": true,
+      "production_equivalence_evidence": {
+        "path": "docs/PRODUCTION-SOURCE-EQUIVALENCE.json",
+        "sha256": "c011d78c0e4591f04d2e44de36fe18dc64f081e1255e9fca53196f91009014b9",
+        "production_files_verified": 145,
+        "production_drift": 0
+      },
+      "original_checkout_repair_edits": [
+        "scripts/verify-dice-import.py",
+        "scripts/test-dice-import.py",
+        "fixture-firmware/tests/explanation_tests.inc",
+        "fixture-firmware/tests/layout_tests.inc"
+      ],
+      "focused_publication_repair": [
+        "docs/public-checkout-successors.json",
+        "scripts/verify-dice-import.py",
+        "scripts/test-dice-import.py",
+        "docs/CHECKOUT-REPAIR-HANDOFF.md",
+        "docs/PRODUCTION-SOURCE-EQUIVALENCE.json",
+        "docs/COMBINED-SOURCE-MAPPING.json",
+        "docs/INSTALLED-SOURCE-MAPPING.json",
+        "docs/PUBLICATION-STATUS.md",
+        "docs/PACKAGE-SOURCE-MANIFEST.json"
+      ],
+      "clean_host_inner_exit": 0,
+      "clean_gui_inner_exit": 0,
+      "independently_approved": false
+    },
+    "publication_document_changes": [
+      "README.md",
+      "CONTRIBUTING.md",
+      "ROADMAP.md",
+      "docs/BUILD-FLASH.md",
+      "docs/HARDWARE.md",
+      "docs/COMBINED-SOURCE-MAPPING.json",
+      "docs/INSTALLED-SOURCE-MAPPING.json",
+      "docs/PACKAGE-SOURCE-MANIFEST.json",
+      "docs/PUBLICATION-STATUS.md",
+      "docs/public-checkout-successors.json",
+      "docs/CHECKOUT-REPAIR-HANDOFF.md"
+    ],
+    "claims": {
+      "production_bytes_match_accepted_target_source": true,
+      "accepted_modal_delta_is_test_only": true,
+      "reproducible_binary": false,
+      "binary_published": false,
+      "publication_approved": false,
+      "committed": false,
+      "pushed": false,
+      "merged": false,
+      "tagged": false
+    }
+  }
+}

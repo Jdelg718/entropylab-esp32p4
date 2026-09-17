@@ -4,15 +4,19 @@ version = "0.1.0"
 edition = "2021"
 publish = false
 [lib]
-crate-type = ["staticlib"]
+crate-type = ["staticlib", "rlib"]
 [dependencies]
 entropylab-hex-core = { path = "../runtime-sources/hex-core" }
 entropylab-dice-core = { path = "../runtime-sources/dice-core" }
 entropylab-mnemonic-core = { path = "../runtime-sources/mnemonic-core" }
 entropylab-coin-core = { path = "../runtime-sources/coin-core" }
+bip39 = { version = "=2.2.2", default-features = false }
+bitcoin = { version = "=0.32.11", default-features = false, features = ["secp-lowmemory"] }
+secp256k1 = { version = "=0.29.1", default-features = false, features = ["alloc", "lowmemory"] }
+unicode-normalization = { version = "=0.1.24", default-features = false }
 [dev-dependencies]
 # Integration-test oracle; match the production mnemonic dependency exactly.
-bip39 = { version = "=2.2.2", default-features = false }
+bip39 = { version = "=2.2.2", default-features = false, features = ["japanese"] }
 [profile.release]
 panic = "abort"
 opt-level = "s"

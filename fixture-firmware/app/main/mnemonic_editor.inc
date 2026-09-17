@@ -16,6 +16,7 @@ static uint64_t mn_revision,mn_id,mn_pending;
 static bool mn_valid,mn_reviewing,mn_safety_open;
 static lv_obj_t *mn_safety,*mn_safety_close,*mn_safety_modal;
 static lv_obj_t *mn_safety_content,*mn_about_content,*mn_about,*mn_about_back,*mn_about_label,*mn_about_body,*mn_about_scroll;
+static lv_obj_t *mn_about_practice,*mn_about_practice_body,*mn_about_after,*mn_about_extent;
 static bool mn_about_open;
 static el_mode_t mn_about_mode;
 static void mn_rebind(void);
@@ -74,18 +75,42 @@ static bool mn_serialize(unsigned replace,unsigned id,unsigned count,char out[21
  return true;
 }
 static void mn_apply(unsigned k){
- if(k==3){gui_owned_zero(mn_words,sizeof mn_words);gui_owned_zero(mnemonic_transcript,sizeof mnemonic_transcript);mn_count=0;mn_reset_draft();}
+ if(k==3){if(mn_count||mnemonic_transcript[0])pi_source_changed();gui_owned_zero(mn_words,sizeof mn_words);gui_owned_zero(mnemonic_transcript,sizeof mnemonic_transcript);mn_count=0;mn_reset_draft();}
  else if(k>=12&&k<=24&&k%3==0){
   char out[216];unsigned n=mn_count>k?k:mn_count;
   if(!mn_serialize(24,0,n,out))return;
   memcpy(mnemonic_transcript,out,sizeof out);gui_owned_zero(out,sizeof out);
   for(unsigned i=n;i<24;i++)mn_words[i]=0;
-  mn_count=n;mn_target=k;mn_reset_draft();
+  pi_source_changed();mn_count=n;mn_target=k;mn_reset_draft();
  }else if(k>=600&&k<624 && k-600<mn_count){mn_reset_draft();mn_edit=(int)(k-600);}
  mn_invalidate();
 }
+static void mn_about_text_style(lv_obj_t *label){
+ lv_label_set_recolor(label,true);lv_obj_set_style_text_font(label,&el_sans_16,0);
+ lv_obj_set_style_text_color(label,lv_color_hex(0xeeeeee),0);
+ lv_obj_set_style_text_line_space(label,22-(int)el_sans_16.line_height,0);
+}
+static void mn_about_present(void){
+ const education_document *doc=active_education_document();int y=0;
+ lv_label_set_text(mn_about_label,doc?doc->title:active_about_name());
+ lv_label_set_text(mn_about_body,doc?doc->before_practice:active_about_copy());
+ lv_obj_remove_flag(mn_about_body,LV_OBJ_FLAG_HIDDEN);lv_obj_update_layout(mn_about_scroll);
+ y=lv_obj_get_height(mn_about_body);
+ if(doc){
+  lv_obj_remove_flag(mn_about_practice,LV_OBJ_FLAG_HIDDEN);lv_obj_remove_flag(mn_about_after,LV_OBJ_FLAG_HIDDEN);
+  char practice[1024];snprintf(practice,sizeof practice,"#ff9900 PUBLIC PRACTICE - NEVER FUND#\n%s",doc->practice);
+  lv_label_set_text(mn_about_practice_body,practice);lv_obj_set_y(mn_about_practice,y+18);lv_obj_update_layout(mn_about_scroll);
+  lv_obj_set_height(mn_about_practice,lv_obj_get_height(mn_about_practice_body)+24);lv_obj_update_layout(mn_about_scroll);
+  y=lv_obj_get_y(mn_about_practice)+lv_obj_get_height(mn_about_practice);
+  lv_label_set_text(mn_about_after,doc->after_practice);lv_obj_set_y(mn_about_after,y+18);lv_obj_update_layout(mn_about_scroll);
+  y=lv_obj_get_y(mn_about_after)+lv_obj_get_height(mn_about_after);
+ }else{
+  lv_obj_add_flag(mn_about_practice,LV_OBJ_FLAG_HIDDEN);lv_obj_add_flag(mn_about_after,LV_OBJ_FLAG_HIDDEN);
+ }
+ lv_obj_set_y(mn_about_extent,y+20);lv_obj_scroll_to_y(mn_about_scroll,0,LV_ANIM_OFF);
+}
 static void mn_action(lv_event_t *e){
- if(saver_blocked()||busy)return;
+ if(saver_blocked()||busy||nav_open)return;
  uintptr_t token=(uintptr_t)lv_event_get_user_data(e);
  if(mn_exhausted || (token>>10)!=mn_generation)return;
  unsigned k=token&1023u;
@@ -93,16 +118,14 @@ static void mn_action(lv_event_t *e){
   if(k==801)mn_safety_open=false;
   else if(k==802&&!mn_about_open){
    mn_about_open=true;
-   lv_label_set_text(mn_about_label,mn_explanation_names[mn_about_mode]);
-   lv_label_set_text(mn_about_body,mn_explanation_copy[mn_about_mode]);
-   lv_obj_scroll_to_y(mn_about_scroll,0,LV_ANIM_OFF);
+   mn_about_present();
   }else if(k==803&&mn_about_open)mn_about_open=false;
   else return;
   saver_rebind_controls();mn_rebind();return;
  }
  if(k>=801&&k<=803)return;
  if(mode!=MODE_MNEMONIC && k!=800)return;
- if(k==800){if(mn_confirm)return;mn_safety_open=true;mn_about_open=false;mn_about_mode=mode;saver_rebind_controls();mn_rebind();return;}
+ if(k==800){if(nav_busy())return;mn_safety_open=true;mn_about_open=false;mn_about_mode=mode;saver_rebind_controls();mn_rebind();return;}
  if(mn_confirm){
   if(k!=701&&k!=702)return;
   unsigned pending=mn_confirm;mn_confirm=0;
@@ -119,6 +142,7 @@ static void mn_action(lv_event_t *e){
  if(k==301){mn_reset_draft();mn_invalidate();mn_refresh();return;}
  if(!lv_obj_has_flag(mn_output,LV_OBJ_FLAG_HIDDEN))return;
  if(k==200){
+  if(pi_enabled()&&mn_count==mn_target&&!mn_draft[0]&&mn_edit<0){pi_enter();return;}
   if(mn_count!=mn_target||mn_draft[0]||mn_edit>=0)return;
   hex_request_t q=snapshot(mnemonic_transcript,strlen(mnemonic_transcript),MODE_MNEMONIC,mn_target);
   mn_invalidate();q.revision=mn_revision;q.request_id=++mn_id;mn_pending=q.request_id;busy=true;mn_refresh();
@@ -146,7 +170,7 @@ static void mn_action(lv_event_t *e){
   unsigned slot=mn_edit<0?mn_count:(unsigned)mn_edit;
   unsigned n=mn_count+(mn_edit<0?1:0);char out[216];
   if(slot>=24||!mn_serialize(slot,id,n,out))return;
-  mn_reveal_slot=(int)slot;mn_words[slot]=id;mn_count=n;memcpy(mnemonic_transcript,out,sizeof out);gui_owned_zero(out,sizeof out);mn_reset_draft();
+  if(strcmp(mnemonic_transcript,out)){pi_source_changed();}mn_reveal_slot=(int)slot;mn_words[slot]=id;mn_count=n;memcpy(mnemonic_transcript,out,sizeof out);gui_owned_zero(out,sizeof out);mn_reset_draft();
  }else return;
  mn_invalidate();mn_refresh();
 }
@@ -164,6 +188,9 @@ static void mn_rebind(void){
  mn_visible(mn_safety_content,!mn_about_open);mn_visible(mn_about_content,mn_about_open);
  mn_visible(mn_about,!mn_about_open);mn_visible(mn_about_back,mn_about_open);
  mn_visible(mn_safety,true);mn_enable(mn_safety,!busy&&!mn_confirm&&!mn_safety_open);mn_visible(mn_safety_modal,mn_safety_open);
+ /* Feature panels are created after this modal; visibility alone leaves them
+  * above its About/Close controls and their safety guards then trap input. */
+ if(mn_safety_open)lv_obj_move_foreground(mn_safety_modal);
  for(unsigned i=0;i<24;i++)mn_bind(mn_slots[i],600+i);
  for(unsigned i=0;i<26;i++)mn_bind(mn_keys[i],'a'+i);
  for(unsigned i=0;i<5;i++)mn_bind(mn_targets[i],12+3*i);
@@ -174,6 +201,7 @@ static void mn_rebind(void){
  mn_bind(mn_reveal,300);mn_bind(mn_back,301);mn_bind(mn_no,701);mn_bind(mn_yes,702);
 }
 static void mn_refresh(void){
+ nav_refresh();
  mn_rebind();
  char b[96];mn_lookup();
  snprintf(b,sizeof b,"MNEMONIC  %u/%u words  %u/215 bytes",mn_count,mn_target,(unsigned)strlen(mnemonic_transcript));lv_label_set_text(mn_status,b);
@@ -212,6 +240,7 @@ static void mn_refresh(void){
  lv_label_set_text(mn_hint,mn_draft[0]?(mn_matches?"Choose a candidate explicitly":"No matching word"):(mn_edit>=0?"Original kept until selection":"Tap a selected word to replace"));
  for(unsigned i=0;i<5;i++){mn_enable(mn_targets[i],enabled);if(mn_target==12+3*i)lv_obj_add_state(mn_targets[i],LV_STATE_CHECKED);else lv_obj_remove_state(mn_targets[i],LV_STATE_CHECKED);}
  for(int i=0;i<GUI_MODE_COUNT;i++){if(mode==(el_mode_t)i)lv_obj_add_state(modes[i],LV_STATE_CHECKED);else lv_obj_remove_state(modes[i],LV_STATE_CHECKED);mn_enable(modes[i],!busy&&!mn_confirm);}
+ for(int i=0;i<4;i++)mn_enable(gui08_routes[i],!busy&&!mn_confirm);
  mn_visible(mn_modal,mn_confirm!=0);mn_enable(mn_no,!busy);mn_enable(mn_yes,!busy);
  lv_label_set_text(mn_modal_text,!mn_confirm?"":mn_confirm==3?"Clear all selected words and draft?\nBest effort only; not secure erasure.":mn_confirm<=24?"Change target? Trailing words beyond\nthe target and draft will be discarded.":"Discard draft and edit another slot?\nSelected words are kept.");
 }
@@ -258,7 +287,8 @@ static void mn_create(lv_obj_t *s){
  mn_modal_text=text(mn_modal,16,100,416,"",&el_sans_16,0xeeeeee);
  mn_no=button(mn_modal,16,260,200,"Cancel",mn_action,(void*)701);mn_yes=button(mn_modal,232,260,200,"Confirm",mn_action,(void*)702);
  lv_obj_set_height(mn_status,16);lv_obj_set_height(mn_draft_label,44);lv_obj_set_height(mn_hint,20);lv_obj_set_height(mn_pages,44);
- mn_safety=button(s,16,756,448,"Public test only / Safety",mn_action,(void*)800);
+ mn_safety=button(s,16,756,448,SAFETY_DOCK_TEXT,mn_action,(void*)800);
+ lv_obj_set_style_text_font(lv_obj_get_child(mn_safety,0),&el_sans_14,0);
  mn_safety_modal=box(s,0,0,480,800,&base);
  mn_safety_content=box(mn_safety_modal,0,0,480,616,&base);
  text(mn_safety_content,28,84,424,"PUBLIC TEST INPUT - NO FUNDS",&el_sans_16,0xff9900);
@@ -273,14 +303,17 @@ static void mn_create(lv_obj_t *s){
  text(mn_safety_content,28,516,424,"https://github.com/OogaBoogaX/entropylab",&el_sans_14,0xa3a3a3);
  text(mn_safety_content,28,564,424,"THE OOGA BOOGA LICENSE retained.\nFull offline notices: THIRD_PARTY_NOTICES.md\nLogo: upstream asset, not sole-author credit.",&el_sans_14,0xa3a3a3);
  mn_about_content=box(mn_safety_modal,0,0,480,616,&base);
- text(mn_about_content,28,28,424,"About this input",&el_serif_24,0xeeeeee);
- mn_about_label=text(mn_about_content,28,84,424,"",&el_sans_16,0xff9900);
- mn_about_scroll=box(mn_about_content,28,120,424,496,&base);
+ mn_about_label=text(mn_about_content,28,28,424,"",&el_serif_24,0xeeeeee);lv_obj_set_height(mn_about_label,36);
+ mn_about_scroll=box(mn_about_content,28,84,424,532,&base);
  lv_obj_add_flag(mn_about_scroll,LV_OBJ_FLAG_SCROLLABLE);lv_obj_set_scroll_dir(mn_about_scroll,LV_DIR_VER);
  lv_obj_set_scrollbar_mode(mn_about_scroll,LV_SCROLLBAR_MODE_AUTO);
- lv_obj_remove_flag(mn_about_scroll,LV_OBJ_FLAG_SCROLL_ELASTIC|LV_OBJ_FLAG_SCROLL_MOMENTUM);
- lv_obj_set_style_width(mn_about_scroll,4,LV_PART_SCROLLBAR);lv_obj_set_style_bg_color(mn_about_scroll,lv_color_hex(0xff9900),LV_PART_SCROLLBAR);
- mn_about_body=text(mn_about_scroll,0,0,424,"",&el_sans_16,0xeeeeee);
+ lv_obj_remove_flag(mn_about_scroll,LV_OBJ_FLAG_SCROLL_ELASTIC|LV_OBJ_FLAG_SCROLL_MOMENTUM|LV_OBJ_FLAG_SCROLL_CHAIN_VER);
+ lv_obj_set_style_width(mn_about_scroll,4,LV_PART_SCROLLBAR);lv_obj_set_style_bg_color(mn_about_scroll,lv_color_hex(0xff9900),LV_PART_SCROLLBAR);lv_obj_set_style_bg_opa(mn_about_scroll,LV_OPA_COVER,LV_PART_SCROLLBAR);lv_obj_set_style_pad_right(mn_about_scroll,4,LV_PART_SCROLLBAR);
+ mn_about_body=text(mn_about_scroll,0,0,416,"",&el_sans_16,0xeeeeee);mn_about_text_style(mn_about_body);
+ mn_about_practice=box(mn_about_scroll,8,0,408,44,&card);lv_obj_set_style_radius(mn_about_practice,8,0);lv_obj_set_style_bg_color(mn_about_practice,lv_color_hex(0x141414),0);lv_obj_set_style_border_width(mn_about_practice,1,0);lv_obj_remove_flag(mn_about_practice,LV_OBJ_FLAG_CLICKABLE);
+ mn_about_practice_body=text(mn_about_practice,12,12,384,"#ff9900 PUBLIC PRACTICE - NEVER FUND#\n",&el_sans_16,0xeeeeee);mn_about_text_style(mn_about_practice_body);
+ mn_about_after=text(mn_about_scroll,0,0,416,"",&el_sans_16,0xeeeeee);mn_about_text_style(mn_about_after);
+ mn_about_extent=box(mn_about_scroll,0,0,1,1,&base);lv_obj_remove_flag(mn_about_extent,LV_OBJ_FLAG_CLICKABLE);
  mn_about=button(mn_safety_modal,28,632,424,"About this input",mn_action,(void*)802);
  mn_about_back=button(mn_safety_modal,28,632,424,"Back to Safety",mn_action,(void*)803);
  mn_safety_close=button(mn_safety_modal,28,706,424,"Close",mn_action,(void*)801);

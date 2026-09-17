@@ -20,7 +20,7 @@ static uintptr_t saver_epoch;
 static bool saver_epoch_exhausted;
 static void saver_rebind_controls(void);
 static bool saver_event_blocked(lv_event_t *e){
- return saver_blocked()||mn_safety_open||saver_epoch_exhausted||((uintptr_t)lv_event_get_user_data(e)>>10)!=saver_epoch;
+ return saver_blocked()||mn_safety_open||nav_open||saver_epoch_exhausted||((uintptr_t)lv_event_get_user_data(e)>>10)!=saver_epoch;
 }
 static uintptr_t saver_payload(lv_event_t *e){return (uintptr_t)lv_event_get_user_data(e)&1023u;}
 static lv_indev_t *saver_indev;
@@ -61,7 +61,7 @@ static void saver_read(lv_indev_t *dev,lv_indev_data_t *data){
  }
 }
 static void saver_tick(lv_timer_t *timer){
- (void)timer;
+ (void)timer;nav_refresh();
  if(saver_active){
   uint32_t now=lv_tick_get(),elapsed=(uint32_t)(now-saver_motion_last);
   if(elapsed>=100){saver_phase=(saver_phase+elapsed%12000u)%12000u;saver_motion_last=now;saver_orbit_position();}
@@ -69,7 +69,7 @@ static void saver_tick(lv_timer_t *timer){
  }
  if(wake_latch)return;
  lv_indev_t *device=lv_indev_get_next(NULL);
- if(lv_screen_active()!=lv_obj_get_screen(app_content)||lv_display_get_screen_loading(NULL)||lv_display_get_screen_prev(NULL)||!device||device!=saver_indev||lv_indev_get_next(device)||lv_indev_get_read_cb(device)!=saver_read||saver_scrolling||lv_obj_is_scrolling(mn_list)||saver_finger||mode!=MODE_MNEMONIC||busy||mn_confirm||mn_safety_open||mn_reviewing||mn_valid||mn_draft[0]||mn_edit>=0||mn_settling||!lv_obj_has_flag(mn_output,LV_OBJ_FLAG_HIDDEN)){saver_eligible_last=false;return;}
+ if(lv_screen_active()!=lv_obj_get_screen(app_content)||lv_display_get_screen_loading(NULL)||lv_display_get_screen_prev(NULL)||!device||device!=saver_indev||lv_indev_get_next(device)||lv_indev_get_read_cb(device)!=saver_read||saver_scrolling||lv_obj_is_scrolling(mn_list)||saver_finger||mode!=MODE_MNEMONIC||lv_obj_has_flag(mn_panel,LV_OBJ_FLAG_HIDDEN)||nav_open||busy||mn_confirm||mn_safety_open||mn_reviewing||mn_valid||mn_draft[0]||mn_edit>=0||mn_settling||!lv_obj_has_flag(mn_output,LV_OBJ_FLAG_HIDDEN)){saver_eligible_last=false;return;}
  uint32_t now=lv_tick_get();
  if(!saver_eligible_last){saver_since=now;saver_eligible_last=true;return;}
  if((uint32_t)(now-saver_since)<60000)return;
@@ -94,7 +94,7 @@ static void saver_create(lv_obj_t *root){
  saver_dot=box(saver_screen,237,181,6,6,&base);lv_obj_remove_flag(saver_dot,LV_OBJ_FLAG_CLICKABLE);lv_obj_set_style_radius(saver_dot,LV_RADIUS_CIRCLE,0);lv_obj_set_style_bg_color(saver_dot,lv_color_hex(0xd8892b),0);
  lv_obj_t *logo=lv_image_create(saver_screen);lv_image_set_src(logo,&saver_logo);lv_obj_set_pos(logo,150,222);lv_obj_remove_flag(logo,LV_OBJ_FLAG_CLICKABLE);
  lv_obj_t *idle=text(saver_screen,40,144,400,"DISPLAY IDLE",&el_sans_14,0x737373);lv_obj_set_style_text_align(idle,LV_TEXT_ALIGN_CENTER,0);lv_obj_set_style_text_letter_space(idle,2,0);
- lv_obj_t *brand=text(saver_screen,40,560,400,"EntropyLab",&el_serif_24,0xeeeeee);lv_obj_set_style_text_align(brand,LV_TEXT_ALIGN_CENTER,0);
+ lv_obj_t *brand=text(saver_screen,40,560,400,"EntropyLab (unofficial)",&el_serif_24,0xeeeeee);lv_obj_set_style_text_align(brand,LV_TEXT_ALIGN_CENTER,0);
  lv_obj_t *hint=text(saver_screen,40,704,400,"Touch to return",&el_sans_14,0xa3a3a3);lv_obj_set_style_text_align(hint,LV_TEXT_ALIGN_CENTER,0);
  lv_obj_add_flag(saver_screen,LV_OBJ_FLAG_HIDDEN);
  saver_rebind_controls();saver_timer=lv_timer_create(saver_tick,100,NULL);

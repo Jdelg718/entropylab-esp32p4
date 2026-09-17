@@ -13,9 +13,9 @@ static void layout_tests(void){
  lv_obj_get_coords(mn_list,&a);assert(a.x1==28&&a.y1==182);
  assert(lv_obj_get_style_border_width(mn_list,0)==0&&lv_obj_get_style_radius(mn_list,0)==0);
  assert(lv_obj_get_height(mn_draft_label)==44&&lv_obj_get_height(mn_pages)==44&&lv_obj_get_height(mn_hint)==20&&lv_obj_get_height(mn_status)==16);
- lv_obj_get_coords(header_title,&a);assert(a.x1==16&&a.y1==8&&lv_obj_get_width(header_title)==260&&lv_obj_get_height(header_title)==36);
+ lv_obj_get_coords(header_title,&a);assert(a.x1==44&&a.y1==8&&lv_obj_get_width(header_title)==232&&lv_obj_get_height(header_title)==36);
  lv_obj_get_coords(mn_validate,&a);assert(a.x1==316&&a.y1==706&&a.y2==749);
- lv_obj_get_coords(modes[0],&a);assert(a.y1==56);
+ lv_obj_get_coords(nav_family,&a);assert(a.y1==56);
  assert(!find(lv_screen_active(),"PUBLIC TEST INPUT - NO FUNDS"));
  assert(lv_obj_get_height(mn_review)==648&&lv_obj_get_height(mn_output)==648);
  assert(lv_obj_get_style_pad_bottom(mn_list,0)==0);
@@ -48,15 +48,15 @@ static void layout_tests(void){
   clear_words();assert(lv_obj_get_scroll_y(mn_list)==0);
  }
  click("12");
- lv_obj_t *safety=find_button(lv_screen_active(),"Public test only / Safety");assert(safety);
+ lv_obj_t *safety=find_button(lv_screen_active(),SAFETY_DOCK_TEXT);assert(safety);
  lv_obj_update_layout(lv_screen_active());lv_obj_get_coords(safety,&a);assert(a.x1==16&&a.y1==756&&a.y2==799);
- void *oldkey=saved_action(mn_keys[0]);click("Public test only / Safety");
+ void *oldkey=saved_action(mn_keys[0]);click(SAFETY_DOCK_TEXT);
  assert(find(lv_screen_active(),"Checksum validity does not establish entropy quality."));
  render("layout-safety.ppm");replay_action(oldkey);lv_obj_send_event(modes[0],LV_EVENT_CLICKED,NULL);
  lv_obj_send_event(mn_keys[0],LV_EVENT_CLICKED,NULL);lv_obj_send_event(mn_clear,LV_EVENT_CLICKED,NULL);lv_obj_send_event(mn_targets[1],LV_EVENT_CLICKED,NULL);assert(!mn_confirm&&mn_target==12);
  assert(mode==MODE_MNEMONIC&&!mn_draft[0]);click("Close");replay_action(oldkey);assert(!mn_draft[0]);
- click("Hex");assert(find_button(lv_screen_active(),"Public test only / Safety"));
+ click("Hex");assert(find_button(lv_screen_active(),SAFETY_DOCK_TEXT));
  assert(!find(lv_screen_active(),"PUBLIC TEST INPUT - NO FUNDS"));
- lv_obj_update_layout(lv_screen_active());lv_obj_get_coords(modes[0],&a);assert(a.y1==56);
+ lv_obj_update_layout(lv_screen_active());lv_obj_get_coords(nav_family,&a);assert(a.y1==56);
  puts("PASS layout whole-row viewport");
 }

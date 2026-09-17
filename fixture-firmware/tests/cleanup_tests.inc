@@ -4,8 +4,8 @@ static void cleanup_tests(lv_indev_t *dev){
  lv_obj_clean(lv_screen_active());gui_create(request);
  click("Coins");click("Tails 1");click("Words");type_word("abstract");
  for(unsigned m=0;m<4;m++){
-  click(names[m]);click("Clear");
-  if(m<2)click("Load public zero");else for(unsigned j=0;j<50;j++)click("6");
+  click(names[m]);reset_legacy_input();
+  if(m<2)click("Load public zero");else for(unsigned j=0;j<50;j++)roll_face(6);
   click("Calculate");hex_result_t r=compute();gui_result(&r);assert(valid_result);
   char image[64];snprintf(image,sizeof image,"cleanup-result-%u.ppm",m);render(image);
   click("Clear");

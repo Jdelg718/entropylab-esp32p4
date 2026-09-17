@@ -1,0 +1,98 @@
+{
+  "schema": "ui-repair-successors-v1",
+  "identity": "New uninstalled UI repair; not exact installed source or binary reproducibility",
+  "prior_manifest": "docs/combined-import-successors.json",
+  "prior_manifest_sha256": "6175826b90922c266f8fa59940436cf814162213fb38b0f06c656f4fdd902480",
+  "entries": [
+    {
+      "destination": "fixture-firmware/app/main/extra_dice_native.c",
+      "before_sha256": "4d0bde37562973828ffda784535c17c9757f935b4431805c5c7bebcf708a63f8",
+      "candidate_sha256": "b6e5b704c413ef242b72e4624b68f945ac27d9ff534079e650a086ef6e0ab8be",
+      "reason": "Reviewed native UI repair and regression coverage; distinct from installed combined source."
+    },
+    {
+      "destination": "fixture-firmware/app/main/fingerprint_view.c",
+      "before_sha256": "85861910bad01c3734413fa3f5c00f74515d0981b121636f7bf5839b9bd0137e",
+      "candidate_sha256": "0a851637ef317b4b7ace7f7ac46699f2029ca3053c2290e2a70fe3da30ca2cda",
+      "reason": "Reviewed native UI repair and regression coverage; distinct from installed combined source."
+    },
+    {
+      "destination": "fixture-firmware/app/main/gui.c",
+      "before_sha256": "e943025b31a3783a983a6de6bd1b9db6431bc1fa8deea8ef3680906e09b0726f",
+      "candidate_sha256": "c8aff7f17e08ce74616174721f737ded35ca54e43c3c3c579b56d7d4649ec845",
+      "reason": "Reviewed native UI repair and regression coverage; distinct from installed combined source."
+    },
+    {
+      "destination": "fixture-firmware/app/main/gui08_native.c",
+      "before_sha256": "5ebd9facdfa0f5308fc217a8171b2783c2b2819956701d45249280afe4e2106b",
+      "candidate_sha256": "0905ef730aef6a07c831c53e6fdd985aec52a1e5415c41c90998168ecff6e689",
+      "reason": "Reviewed native UI repair and regression coverage; distinct from installed combined source."
+    },
+    {
+      "destination": "fixture-firmware/app/main/mnemonic_editor.inc",
+      "before_sha256": "372f7925e8c8916d20b17efff335f739be7ec2338aa37d09be8dfa973cf1d927",
+      "candidate_sha256": "b26c5ab1f81afc76d8942f05ea2377bf4374ea850aa27395232ad061adfb2d3d",
+      "reason": "Reviewed native UI repair and regression coverage; distinct from installed combined source."
+    },
+    {
+      "destination": "fixture-firmware/app/main/native_theme.h",
+      "before_sha256": null,
+      "candidate_sha256": "33f38020b2ab5368959a614f17b8d2d5a4138377f07d9a9e8812d27c80d5bb5a",
+      "reason": "Reviewed native UI repair and regression coverage; distinct from installed combined source."
+    },
+    {
+      "destination": "fixture-firmware/app/main/navigation.inc",
+      "before_sha256": null,
+      "candidate_sha256": "a5e85805f74dc371c5a0963b905a5850bd6b4041cf4f6f4447b7fe54218abefc",
+      "reason": "Reviewed native UI repair and regression coverage; distinct from installed combined source."
+    },
+    {
+      "destination": "fixture-firmware/app/main/saver.inc",
+      "before_sha256": "be2e982b783beb75740d28f4b5ab86d064b2cb9974204897d9866c424367ffe3",
+      "candidate_sha256": "b331649aa1898d73e623b78e27e6d158a41a82ce4cdac01ac892a1963a2ff34d",
+      "reason": "Reviewed native UI repair and regression coverage; distinct from installed combined source."
+    },
+    {
+      "destination": "fixture-firmware/app/main/seed_native.c",
+      "before_sha256": "7ddad6d983de0c6046e14972d21887e97fc3e8aa536bd959cb3a9ad974c45ed3",
+      "candidate_sha256": "ba7164604ee821a4bff08a18581adedd92adfdebba02681ee58f5fab8e044665",
+      "reason": "Reviewed native UI repair and regression coverage; distinct from installed combined source."
+    },
+    {
+      "destination": "fixture-firmware/tests/coin_tests.inc",
+      "before_sha256": "98774a511be0bd7afb0290e118f1b0e9a99b9b7d47907202d6ac4b270a5d0466",
+      "candidate_sha256": "93958a966a9d1545675ffbdb7b5b9f52d8e52d9c21092e1d61b5dd37d657208c",
+      "reason": "Reviewed native UI repair and regression coverage; distinct from installed combined source."
+    },
+    {
+      "destination": "fixture-firmware/tests/dice_tests.inc",
+      "before_sha256": "02f41296bd1405c1146194e7aa28901812bd5a3a51739690c312a3b358ae0a7d",
+      "candidate_sha256": "72c1a5b3518088e78c98b5a3fbb25aa2dd8d031fd5dde5d1872515c63848e8ae",
+      "reason": "Reviewed native UI repair and regression coverage; distinct from installed combined source."
+    },
+    {
+      "destination": "fixture-firmware/tests/gui_host.c",
+      "before_sha256": "940983fcb36017ae8d1a808219c16aed4563e7c7cf4947b10ce1698da2af761e",
+      "candidate_sha256": "2ff2cf7d691732d48b2a4afa671e213dd2d58dab3c1bdd474fd7a5c3a8fee469",
+      "reason": "Reviewed native UI repair and regression coverage; distinct from installed combined source."
+    },
+    {
+      "destination": "fixture-firmware/tests/layout_tests.inc",
+      "before_sha256": "61c9727f789ae6ae58b0d5b1c01a56819dfb0dd037f72294fe10ee89f87d4a85",
+      "candidate_sha256": "87d3c2857fe14e9c35d1d914fb5e33291d6a2ccbf9d0480f4fdbe7fd7f8d3082",
+      "reason": "Reviewed native UI repair and regression coverage; distinct from installed combined source."
+    },
+    {
+      "destination": "fixture-firmware/tests/modal_touch_tests.inc",
+      "before_sha256": null,
+      "candidate_sha256": "882a1f68f502f4ec1f9f12d95129d2255d9f71bcfacff2194c4103824fa15f76",
+      "reason": "Reviewed native UI repair and regression coverage; distinct from installed combined source."
+    },
+    {
+      "destination": "scripts/test-gui-host.sh",
+      "before_sha256": "c80c33c63297e65ecf36d9d030e2785e0821e3e1a082b6fbd929cd89007389be",
+      "candidate_sha256": "ebe8a2345269d694756b65f9dc7d719f4689c1030a940a8f30d0272301aad504",
+      "reason": "Reviewed native UI repair and regression coverage; distinct from installed combined source."
+    }
+  ]
+}

@@ -4,8 +4,8 @@ static void editor(unsigned m){if(m==4){lv_obj_t *b=find_button(lv_screen_active
 static void seed_mode(unsigned m){
  click(mode_names[m]);editor(m);
  if(m==4){clear_words();click("12");for(int i=0;i<11;i++)type_word("abandon");type_word("about");}
- else {click("Clear");if(m<2){if(m==1)click("12");click("Load public zero");if(m==0){click("Delete");click("F");}else {click("Undo");click("Tails 1");}}
- else {click("12");for(int i=0;i<50;i++)click(m==2?"2":"6");}}
+ else {reset_legacy_input();if(m<2){if(m==1)click("12");click("Load public zero");if(m==0){click("Delete");click("F");}else {click("Undo");click("Tails 1");}}
+ else {click("12");for(int i=0;i<50;i++)roll_face(m==2?2:6);}}
 }
 static void submit_mode(unsigned m){click(m==4?"Validate":"Calculate");assert(owned.mode==m);}
 static lv_obj_t *panel_of(lv_obj_t *o){while(lv_obj_get_parent(o)!=app_content)o=lv_obj_get_parent(o);return o;}

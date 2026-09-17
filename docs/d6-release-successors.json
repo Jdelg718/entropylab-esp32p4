@@ -1,0 +1,69 @@
+{
+  "schema": "d6-release-successors-v1",
+  "prior_manifest_sha256": "1e2206cd513084284192a93e615bfe0bdf9e63db875517fc18a7b48ed18a5140",
+  "entries": [
+    {
+      "destination": "fixture-firmware/app/main/gui.c",
+      "before_sha256": "498e4b8b85849dfef163d412d165e1dcce6e4363502413a47c5fd8a0e8da64f1",
+      "candidate_sha256": "057b9b07d25eff22db9b0c40ad6eecd2ba5f635e1567bed565fcd6b8adf363ac",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/navigation.inc",
+      "before_sha256": "5d167b51f152bf2c90db32652acd928622971f5eb9d0b687f149bf474d4dbb36",
+      "candidate_sha256": "c76e36c9774766a6f8318fe92e605e7a91b016b9724d0d646df42a0fb6e030dd",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/cleanup_tests.inc",
+      "before_sha256": "ccab617cd8cebc1c9c6aa02b53625d2632cdb213ede23c76f2da1d910a18d068",
+      "candidate_sha256": "765efd8466a7e2b6011b02b6241ffc8aa3019f334f54b9c1d00893a1fa527b40",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/coin_tests.inc",
+      "before_sha256": "93958a966a9d1545675ffbdb7b5b9f52d8e52d9c21092e1d61b5dd37d657208c",
+      "candidate_sha256": "d1e714752e1d4bbc33c8dc6dcd8e962d6b0d5a5188b7d2e45eef5f811a30518c",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/dice_tests.inc",
+      "before_sha256": "72c1a5b3518088e78c98b5a3fbb25aa2dd8d031fd5dde5d1872515c63848e8ae",
+      "candidate_sha256": "7dfd5387ef0bf2ba10e34d1172de2a8f4eeed70fbde305d78c018c722c0144e8",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/gui_acceptance.inc",
+      "before_sha256": "cf9977a3786425b8acc33693afe99adf5e446a8ac04965bc7194eb03e1418ab9",
+      "candidate_sha256": "419f4bbb772f548f04591431a674a20bb8ce3560ab38a49106a1f0671230ea06",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/gui_host.c",
+      "before_sha256": "029a73f700f99d7c943199ad85feae26413be87c089db102520c4091400ad756",
+      "candidate_sha256": "498de1a5a04164ed5dfe4c1874d362fd5d613ba9775bf7d8ac31aeb6cb4c9378",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/passphrase_integration_tests.inc",
+      "before_sha256": "7f8d347a07520c6dd9ab41674df651bea33ab672d0eaba42f64c6bb92ce14ea5",
+      "candidate_sha256": "e794e9a4ac457abb5a3dd0eb90891551f0f985fb4f719f025604c23719e8e874",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/seed_panel_tests.inc",
+      "before_sha256": "b55f3478b566d4a24938b9a1b02b1d801e52e27c3e3c5502854401655f629c31",
+      "candidate_sha256": "b49b0e516372f02343b18610a71fa20f9f8c8eb03190c8c8443fb275c4ce81b1",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    }
+  ]
+}

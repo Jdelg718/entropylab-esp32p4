@@ -11,3 +11,10 @@ cmake --build "$BUILD" --parallel "${BUILD_JOBS:-4}"
 mkdir -p "$ROOT/fixture-firmware/logs/gui-host"
 cd "$ROOT/fixture-firmware/logs/gui-host"
 "$BUILD/gui_host"
+# Exercise real pointer hit testing, not callback-only navigation, for every
+# family. Keep MODAL_TOUCH_ONLY=1 available as the tight single-family repro.
+if [[ "${MODAL_TOUCH_ONLY:-}" != 1 ]]; then
+  for family in Hex Coins 'D6 raw' 'D6 6->0' Words Seed Cards Bases 'Dice+' 'D++'; do
+    MODAL_TOUCH_ONLY=1 MODAL_TOUCH_FAMILY="$family" "$BUILD/gui_host"
+  done
+fi

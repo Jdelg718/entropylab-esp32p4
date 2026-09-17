@@ -2,6 +2,15 @@
 
 This is a mixed-license source distribution; not a blanket MIT relicensing.
 
+The combined candidate additionally contains adapted Blockchain Commons
+bc-lifehash sources (BSD-2-Clause-Patent, with the separate SHA256 notices
+preserved in its `binary-notices` directory). See that subtree's provenance and
+the exact combined source mapping. Runtime registry dependencies remain fetched,
+not vendored; supplemental license texts and declared license expressions for
+the exact expanded graph are inventoried in `docs/COMBINED-RUST-LICENSES.json`.
+Some published crates contain no standalone license file, explicitly shown by
+an empty notices list. This is not complete binary-distribution clearance.
+
 - `core-spike/native/src/upstream_core.rs`: OogaBoogaX/entropylab,
   commit 6e1f39cc7da25942c7a1f51ea5837f4ac7ef8f51, exact custom
   THE OOGA BOOGA LICENSE (LICENSE-OOGA-BOOGA), not the Unlicense.

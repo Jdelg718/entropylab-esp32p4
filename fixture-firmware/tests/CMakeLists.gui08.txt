@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.16)
+project(gui08_focused C)
+add_executable(gui08_editor_tests
+    gui08_editor_tests.c
+    ../app/main/gui08_editor.c
+    ../integrated-lanes/bases/core/number_bases.c)
+target_include_directories(gui08_editor_tests PRIVATE
+    ../app/main
+    ../integrated-lanes/bases/core)
+target_compile_options(gui08_editor_tests PRIVATE -std=c11 -Wall -Wextra -Werror -UNDEBUG)

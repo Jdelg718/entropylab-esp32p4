@@ -1,5 +1,9 @@
 # Security boundary
 
+This unofficial adaptation is independently maintained native software, not the upstream HTML product; it is not shipped, audited, or endorsed by OogaBoogaX. Upstream naming guidance concerned a historical empty-passphrase milestone, not security review or endorsement of this unreleased extension. The implemented optional BIP39 passphrase flow and D6 transcript editing extend that milestone; they are not an empty-passphrase-only claim. Public practice only: entropy is user-supplied, not generated or certified by the application.
+
+The supported board profile is Waveshare ESP32-P4-WIFI6-Touch-LCD-4.3. Outputs are the BIP39 English mnemonic, master fingerprint and only the first mainnet BIP84 receive address at `m/84'/0'/0'/0/0`. Empty passphrase is the default; the explicit optional passphrase flow is implemented but unreleased. The board contains an ESP32-C6 wireless coprocessor: an offline application is not a proven physical air gap.
+
 DEVELOPMENT TEST ONLY. No production security support or secret-safety guarantees.
 Never use real funds, mnemonic phrases, passphrases or private keys. The compiled
 fixture is publicly known. Never fund any displayed address.

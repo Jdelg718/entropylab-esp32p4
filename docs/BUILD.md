@@ -8,6 +8,7 @@ GUI tests require LVGL **9.5.0 source**, not only installed headers. Either run
 component setup through the target build below, or provide an external source tree:
 
 ```sh
+rustup toolchain install 1.95.0 --profile minimal
 mkdir -p "$HOME/.cache/entropylab"
 git clone --depth 1 --branch v9.5.0 https://github.com/lvgl/lvgl.git "$HOME/.cache/entropylab/lvgl"
 git -C "$HOME/.cache/entropylab/lvgl" checkout 85aa60d18b3d5e5588d7b247abf90198f07c8a63
@@ -69,12 +70,10 @@ and ABI, not historical installed-image identity. These checks do not prove timi
 UI layout, RAM headroom or runtime success. No automatic
 flashing is provided. Hardware recovery/authorization comes first.
 
-The full host suite and published target build script passed for this milestone.
-Host checks use LVGL commit `85aa60d18b3d5e5588d7b247abf90198f07c8a63`.
-The target build compiled the runtime from source and passed revision, ABI,
-unique API/runtime ownership and component-lock checks; strict application
-`main.c`/`gui.c` compilation also passed. The inherited unknown LVGL demo-config
-symbol warnings remain disclosed, not described as a warning-free build.
-See [Words milestone](WORDS-MILESTONE.md) for the evidence boundaries.
-No new firmware has been flashed, and build success is not physical acceptance
-or a bit-for-bit reproducibility claim.
+## Current candidate verification boundary
+
+The complete `bash scripts/test-host.sh` gate passed (inner exit 0) on a fresh source-only copy of combined manifest `0c11e6fd9fcccc260f78918367c588c5095c755382cad35920a5c88a3ff7de10`. It compiled fresh host artifacts, ran the default GUI and all ten pointer-family slices, and continued through the combined native suite. Rust 1.95.0, GCC 14.2.0 and CMake 3.31.6 were inspected; existing LVGL sources and an isolated copy of the dependency registry were reused. This is clean-source/build-directory host assurance, not a fresh-network dependency test, ESP32-P4 build, binary reproducibility certification or hardware acceptance. Upstream dependency compiler warnings were retained, not represented as warning-free success.
+
+The same combined source received bounded independent source review: 37 focused tests and 74 independent semantic probes (three accepted valid controls, 71 rejected invalid mutations). All original findings are closed for that reviewed code. This package changes documentation/status only after those gates; `HOST-VERIFICATION.json` binds the tested manifest and stream hashes. Production, tests, scripts, lockfiles and historical successor manifests remain byte-identical to the tested package.
+
+Complete target image/ELF/map/resource/layout verification, exact pushed-SHA CI, first-install/update/recovery tests, physical acceptance and release/flasher review remain separate pending gates. No release, download URL, installed identity or publication approval is conveyed.

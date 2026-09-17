@@ -1,0 +1,59 @@
+{
+  "scope": "historical predecessor only; no successor first-install approval",
+  "flash_metadata_sha256": "854993a4bad86bae45674100cc79ebe2da4915c6378916dca6f343f35ce5eb82",
+  "settings": {
+    "flash_mode": "dio",
+    "flash_size": "32MB",
+    "flash_freq": "80m"
+  },
+  "partitions": [
+    {
+      "name": "nvs",
+      "offset": "0x9000",
+      "size": 24576,
+      "type": 1,
+      "subtype": 2
+    },
+    {
+      "name": "phy_init",
+      "offset": "0xf000",
+      "size": 4096,
+      "type": 1,
+      "subtype": 1
+    },
+    {
+      "name": "factory",
+      "offset": "0x10000",
+      "size": 8388608,
+      "type": 0,
+      "subtype": 0
+    },
+    {
+      "name": "storage",
+      "offset": "0x810000",
+      "size": 7340032,
+      "type": 1,
+      "subtype": 130
+    }
+  ],
+  "assets": [
+    {
+      "offset": "0x2000",
+      "file": "bootloader/bootloader.bin",
+      "sha256": "c95bb9487b00465b4802c0d253f0982dd749de00c8fc81851b21852a53fd1d3f",
+      "bytes": 21264
+    },
+    {
+      "offset": "0x10000",
+      "file": "entropylab_fixture.bin",
+      "sha256": "3a83989d5ef221b0081230c5a7a0b030ed2c652db09e1e0817dee037ecd5432e",
+      "bytes": 1514192
+    },
+    {
+      "offset": "0x8000",
+      "file": "partition_table/partition-table.bin",
+      "sha256": "d3e6663d9cbd407623c82f215df58a5c9bd1e353fd937ad519018c06fd9298fb",
+      "bytes": 3072
+    }
+  ]
+}

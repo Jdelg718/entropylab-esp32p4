@@ -4,6 +4,44 @@
 #include "dice_core.h"
 #include "mnemonic_core.h"
 #include <string.h>
+#include "passphrase_core.h"
+/* Best effort owned-buffer cleanup, not forensic erasure. */
+static inline void el_compute_clear(void *p,size_t n){volatile uint8_t *b=p;while(n--)*b++=0;}
+/* All objects live and disjoint; source/passphrase stable during this call.
+ * Destination is stationary writable storage, never an alias of either input. */
+static inline bool el_passphrase_snapshot(el_passphrase_request_t *out,const hex_request_t *src,const uint8_t *pass,size_t n){
+ if(!out)return false;
+ el_compute_clear(out,sizeof *out);
+ if(!src || src->length>1024 || n>256 || (!pass && n))return false;
+ memcpy(out->source.hex,src->hex,src->length);
+ out->source.length=src->length;out->source.mode=src->mode;out->source.words=src->words;
+ out->source.request_id=src->request_id;out->source.revision=src->revision;
+ if(n)memcpy(out->passphrase,pass,n);
+ out->passphrase_len=n;return true;
+}
+/* Caller owns q for the full call and clears it upon release. r is live,
+ * writable and disjoint from q. No borrowed pointers escape; no LVGL/KDF
+ * until successful conversion. Fixed capacities cannot be caller reduced. */
+static inline void el_compute_passphrase(const el_passphrase_request_t *q,hex_result_t *r){
+ char mnemonic[216]={0};hex_result_t staged={0};
+ if(!r)return;
+ el_compute_clear(r,sizeof *r);r->rc=-1;
+ if(!q)return;
+ r->mode=q->source.mode;r->words=q->source.words;
+ r->request_id=q->source.request_id;r->revision=q->source.revision;
+ if(q->source.length>1024 || q->passphrase_len>256)return;
+ int32_t converted=el_input_to_mnemonic((const uint8_t*)q->source.hex,q->source.length,q->source.mode,q->source.words,(uint8_t*)mnemonic,sizeof mnemonic);
+ if(converted<0){r->rc=converted;goto done;}
+ r->rc=el_bip39_passphrase_run((const uint8_t*)mnemonic,strlen(mnemonic),q->passphrase,q->passphrase_len,(uint8_t*)staged.entropy,sizeof staged.entropy,(uint8_t*)staged.fingerprint,sizeof staged.fingerprint,(uint8_t*)staged.address,sizeof staged.address);
+ if(r->rc<0)goto done;
+ memcpy(r->entropy,staged.entropy,sizeof r->entropy);
+ memcpy(r->mnemonic,mnemonic,sizeof r->mnemonic);
+ memcpy(r->fingerprint,staged.fingerprint,sizeof r->fingerprint);
+ memcpy(r->address,staged.address,sizeof r->address);
+ r->weak=converted==1;r->rc=r->weak?1:0;
+ done:el_compute_clear(mnemonic,sizeof mnemonic);el_compute_clear(&staged,sizeof staged);
+}
+
 /* Single worker, disjoint owned buffers, no LVGL, storage or logging. */
 static inline void el_compute(const hex_request_t *q,hex_result_t *r){
  char converted[65]={0};
