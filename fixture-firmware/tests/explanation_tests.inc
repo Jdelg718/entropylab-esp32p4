@@ -16,9 +16,13 @@ static const char *const expected_explanation_copy[GUI_MODE_COUNT]={
  "For 12, 15, 18, 21 or 24 words, the first 16, 20, 24, 28 or 32 bytes of the hash are used, respectively.\n\n"
  "Nominal roll counts assume fair, independent dice. WEAK_INPUT_LAB_ONLY means the input is below the nominal count; meeting that count does not prove fairness or randomness quality.\n\n"
  "Hashing cannot manufacture entropy. A predictable roll sequence remains predictable after hashing. Hash output width is not measured randomness.",
- "Validation checks the English BIP39 dictionary, the selected word count and the checksum. Supported counts are 12, 15, 18, 21 or 24 words.\n\n"
- "A valid checksum does not establish entropy quality or prove ownership of a wallet. Dictionary membership and word count do not show how the words were generated.\n\n"
- "Recovered entropy is the data encoded by the words, not a measurement of randomness or proof that the input is safe to use."
+ "#ff9900 What it does#\nWords accepts typed BIP39 English words and validates the selected count, dictionary membership, and checksum.\n\n"
+ "#ff9900 When to choose it#\nUse it to import or review a phrase produced elsewhere. This route does not generate randomness.\n\n"
+ "#ff9900 What you need#\nA public practice phrase or an existing phrase from an external process. Never enter a funded phrase in this laboratory build.\n\n"
+ "#ff9900 Steps#\n1. Choose 12, 15, 18, 21, or 24 words.\n2. Type a prefix with the letter keys.\n3. Select a displayed dictionary candidate.\n4. Review committed words; replace a word if needed.\n5. Tap Validate when the selected count is complete.\n\n"
+ "#ff9900 Where unpredictability comes from#\nOnly from the external process that produced the phrase. Typing and dictionary lookup add none.\n\n"
+ "#ff9900 What adds no entropy#\nDictionary checks, checksum validation, hashing, PBKDF2, and LifeHash are deterministic and add no entropy.\n\n"
+ "#ff9900 Accepted input, discards, and limits#\nOnly displayed BIP39 English dictionary candidates can be committed. Supported counts are 12, 15, 18, 21, and 24. Words accepts words; Seed accepts word-list numbers and has number preview and a final-candidate helper. Both import existing entropy; neither invents it."
 };
 
 static void explanation_rect(lv_obj_t *o,int x,int y,int w,int h){
@@ -38,7 +42,7 @@ static void explanation_preserved(void){
  bool valid=mn_valid,reviewing=mn_reviewing,legacy_valid=valid_result;
  char fingerprint[32],address[128],entropy[65];strcpy(fingerprint,lv_label_get_text(mn_fp));strcpy(address,lv_label_get_text(mn_addr));strcpy(entropy,lv_label_get_text(mn_entropy));
  const char *legacy_fp=lv_label_get_text(fp),*legacy_addr=lv_label_get_text(addr);
- click("Public test only / Safety");click("About this input");
+ click(SAFETY_DOCK_TEXT);click("About this input");
  lv_obj_send_event(mn_keys[0],LV_EVENT_CLICKED,NULL);lv_obj_send_event(mn_clear,LV_EVENT_CLICKED,NULL);
  lv_obj_send_event(mn_validate,LV_EVENT_CLICKED,NULL);lv_obj_send_event(mn_targets[4],LV_EVENT_CLICKED,NULL);
  lv_obj_send_event(modes[0],LV_EVENT_CLICKED,NULL);lv_obj_send_event(run,LV_EVENT_CLICKED,NULL);
@@ -60,7 +64,7 @@ static void explanation_tests(lv_indev_t *dev){
   click(names[m]);
   void *oldedit=saved_callback(edits[0],edit),*oldmode=saved_callback(modes[(m+1)%5],switch_mode),*oldcalc=saved_callback(run,calculate),*oldkey=saved_action(mn_keys[0]);
   unsigned before=runs;uint64_t rev=mn_revision,lr=legacy_revision;
-  click("Public test only / Safety");
+  click(SAFETY_DOCK_TEXT);
   assert(find_button(mn_safety_modal,"About this input"));
   render(m==0?"explanation-safety-entry.ppm":NULL);
   explanation_rect(mn_about,28,632,424,44);explanation_rect(mn_safety_close,28,706,424,44);
@@ -73,9 +77,11 @@ static void explanation_tests(lv_indev_t *dev){
   assert(lv_obj_get_style_bg_opa(modal,0)==LV_OPA_COVER);
   assert(!strcmp(lv_label_get_text(mn_about_label),expected_explanation_names[m]));
   assert(!strcmp(lv_label_get_text(mn_about_body),expected_explanation_copy[m]));
-  assert(find(mn_safety_modal,"About this input")&&!find(mn_safety_modal,"Safety / About"));
+  /* Both pages retain their objects; only the selected page is visible. */
+  assert(lv_obj_is_visible(mn_about_content)&&!lv_obj_is_visible(mn_safety_content));
+  assert(!lv_obj_is_visible(mn_about)&&lv_obj_is_visible(mn_about_back)&&lv_obj_is_visible(mn_safety_close));
   char image[64];snprintf(image,sizeof image,"explanation-%u.ppm",m);render(image);
-  explanation_rect(mn_about_label,28,84,424,lv_obj_get_height(mn_about_label));
+  explanation_rect(mn_about_label,28,28,424,36);
   explanation_rect(mn_about_back,28,632,424,44);explanation_rect(mn_safety_close,28,706,424,44);
   assert(lv_obj_get_style_text_font(mn_about_body,0)==&el_sans_16);
   assert(lv_obj_get_scroll_dir(mn_about_scroll)==LV_DIR_VER);
@@ -91,9 +97,9 @@ static void explanation_tests(lv_indev_t *dev){
   explanation_rect(mn_safety_close,28,706,424,44);assert(lv_obj_is_visible(mn_safety_close));click("Close");
   replay_action(about);replay_action(back_token);replay_action(about_close);replay_callback(edit,oldedit);replay_callback(switch_mode,oldmode);replay_callback(calculate,oldcalc);replay_action(oldkey);
   assert(!mn_safety_open&&mode==(el_mode_t)m&&runs==before&&mn_revision==rev&&legacy_revision==lr);
-  click("Public test only / Safety");assert(!mn_about_open);click("About this input");
+  click(SAFETY_DOCK_TEXT);assert(!mn_about_open);click("About this input");
   assert(lv_obj_get_scroll_y(mn_about_scroll)==0);click("Close");
-  click("Public test only / Safety");assert(find(mn_safety_modal,"Safety / About"));click("Close");
+  click(SAFETY_DOCK_TEXT);assert(find(mn_safety_modal,"Safety / About"));click("Close");
  }
  /* Legacy result and full transcript survive navigation. */
  click("Hex");click("Load public zero");click("Calculate");
@@ -112,12 +118,12 @@ static void explanation_tests(lv_indev_t *dev){
  touch_at(dev,250,770,true);touch_at(dev,250,770,false);assert(!saver_active&&wake_latch&&!mn_safety_open);
  touch_at(dev,250,770,true);touch_at(dev,250,770,false);assert(mn_safety_open&&!mn_about_open);click("About this input");
  void *stale=saved_action(mn_about_back);lv_obj_clean(lv_screen_active());gui_create(request);replay_action(stale);assert(!mn_safety_open&&!mn_about_open);
- click("Public test only / Safety");assert(!mn_about_open);click("Close");
+ click(SAFETY_DOCK_TEXT);assert(!mn_about_open);click("Close");
  /* Synthetic boundary injection, not billions of real UI transitions. Exercise
   * real LVGL controls and matching-generation queued actions after exhaustion;
   * restore the injected counter/flag and bindings before continuing the suite. */
  for(unsigned page=0;page<2;page++){
-  click("Public test only / Safety");if(page)click("About this input");
+  click(SAFETY_DOCK_TEXT);if(page)click("About this input");
   uintptr_t generation_save=mn_generation;bool exhausted_save=mn_exhausted;
   assert(!exhausted_save&&generation_save>0);
   mn_generation=(UINTPTR_MAX>>10)-1;mn_rebind();

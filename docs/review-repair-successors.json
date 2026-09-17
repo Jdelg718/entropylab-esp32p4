@@ -1,0 +1,30 @@
+{
+  "schema": "review-repair-successors-v1",
+  "prior_manifest": "docs/d6-release-successors.json",
+  "prior_manifest_sha256": "92c9b8343f023ace5b5d29e685b334f209993bb2b1ba50a3c67accd24e58ed5a",
+  "predecessor_package_manifest_sha256": "6ce7c83d707147d7991bafde71cbc125b75a13983542094d7d12c9b3b32a69f2",
+  "status": "pending-independent-review",
+  "entries": [
+    {
+      "destination": "fixture-firmware/app/main/gui.c",
+      "before_sha256": "057b9b07d25eff22db9b0c40ad6eecd2ba5f635e1567bed565fcd6b8adf363ac",
+      "candidate_sha256": "6ae1c147cba8a1a8969a6acbf4c58914ec8a4126b7f911b388247140a8c1e850",
+      "classification": "production-source",
+      "reason": "R3: exact independently reviewed one-line index buffer 5 to 11; compiler range-proof correction, no runtime-range change."
+    },
+    {
+      "destination": "fixture-firmware/app/main/saver.inc",
+      "before_sha256": "b331649aa1898d73e623b78e27e6d158a41a82ce4cdac01ac892a1963a2ff34d",
+      "candidate_sha256": "46d83f97ba99d8c61c13dd46149d8359fff5693f7d578aaeff1204be20bf9f5c",
+      "classification": "production-source",
+      "reason": "R2: minimal unofficial designation on the existing idle saver; no geometry or behavior redesign. Independent combined review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/saver_tests.inc",
+      "before_sha256": "c0210718bb6223e81c7ea2150bba482658b7dbac15230d915f6d89d2230e83d0",
+      "candidate_sha256": "d4f2412ac1ad62aa50fe51c89c8ef8e6e0e966a274b049d5235e954ad810d3b6",
+      "classification": "host-test-only",
+      "reason": "R2: align existing saver brand assertion and assert one-line contained layout; no modal test changes."
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+> Historical predecessor evidence only. Not current D6 build, installed identity or publication approval. See [current status](PUBLICATION-STATUS.md).
+
 # Sanitized source-milestone evidence
 
 Recorded source fixture run on ESP32-P4 Rev1.3, Waveshare 4.3-inch display/touch board:

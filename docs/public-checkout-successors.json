@@ -1,0 +1,67 @@
+{
+  "schema": "public-checkout-successors-v1",
+  "prior_manifest": "docs/ui-repair-successors.json",
+  "prior_manifest_sha256": "5770532b54d8c6e9f3cc43515158c9a98b4e3d06254c722e82ffe0f550141513",
+  "native_manifest_sha256": "dcd864bb86f0778b275e84379334c248eb4012bdd1c5467929ed1a05f8cc2599",
+  "frozen_package_manifest_sha256": "004956925b17ee55b26bee34653ae3bc5a21b9c636e6a30436c2e96f32425cfa",
+  "production_source_mapping_sha256": "52b03b938e6f8aa172bb1219c851f77de3494cfea14e5ac28a78785960de1b35",
+  "identity": "Explicit successor of historical import chain, pending independent review; source equivalence is not a new firmware build or binary reproduction.",
+  "entries": [
+    {
+      "destination": "fixture-firmware/app/main/gui.c",
+      "before_sha256": "c8aff7f17e08ce74616174721f737ded35ca54e43c3c3c579b56d7d4649ec845",
+      "candidate_sha256": "498e4b8b85849dfef163d412d165e1dcce6e4363502413a47c5fd8a0e8da64f1",
+      "classification": "production-source",
+      "reason": "Frozen docs147 installed education source / accepted host test successor; no production edit in checkout repair."
+    },
+    {
+      "destination": "fixture-firmware/app/main/gui08_native.c",
+      "before_sha256": "0905ef730aef6a07c831c53e6fdd985aec52a1e5415c41c90998168ecff6e689",
+      "candidate_sha256": "89863dbf122e8b4c336aa5347ce9aaa987a1ca9019c6422c0069b2edc5f4f5d3",
+      "classification": "production-source",
+      "reason": "Frozen docs147 installed education source / accepted host test successor; no production edit in checkout repair."
+    },
+    {
+      "destination": "fixture-firmware/app/main/mnemonic_editor.inc",
+      "before_sha256": "b26c5ab1f81afc76d8942f05ea2377bf4374ea850aa27395232ad061adfb2d3d",
+      "candidate_sha256": "30e34b2abe53d4ab9b257549727f12170356f45b2cedb6bca473a35f797eba0f",
+      "classification": "production-source",
+      "reason": "Frozen docs147 installed education source / accepted host test successor; no production edit in checkout repair."
+    },
+    {
+      "destination": "fixture-firmware/app/main/navigation.inc",
+      "before_sha256": "a5e85805f74dc371c5a0963b905a5850bd6b4041cf4f6f4447b7fe54218abefc",
+      "candidate_sha256": "5d167b51f152bf2c90db32652acd928622971f5eb9d0b687f149bf474d4dbb36",
+      "classification": "production-source",
+      "reason": "Frozen docs147 installed education source / accepted host test successor; no production edit in checkout repair."
+    },
+    {
+      "destination": "fixture-firmware/tests/gui_host.c",
+      "before_sha256": "2ff2cf7d691732d48b2a4afa671e213dd2d58dab3c1bdd474fd7a5c3a8fee469",
+      "candidate_sha256": "029a73f700f99d7c943199ad85feae26413be87c089db102520c4091400ad756",
+      "classification": "host-test-only",
+      "reason": "Frozen docs147 installed education source / accepted host test successor; no production edit in checkout repair."
+    },
+    {
+      "destination": "fixture-firmware/tests/layout_tests.inc",
+      "before_sha256": "87d3c2857fe14e9c35d1d914fb5e33291d6a2ccbf9d0480f4fdbe7fd7f8d3082",
+      "candidate_sha256": "b9f99d90a377974a0c6313aa4697482abb993d96ed598ad4d3b519111403451b",
+      "classification": "host-test-only",
+      "reason": "Frozen docs147 installed education source / accepted host test successor; no production edit in checkout repair."
+    },
+    {
+      "destination": "fixture-firmware/tests/modal_touch_tests.inc",
+      "before_sha256": "882a1f68f502f4ec1f9f12d95129d2255d9f71bcfacff2194c4103824fa15f76",
+      "candidate_sha256": "7ef627450bae0b17cdaceecd93745d7ee57e6bfd3004a917e08518abb8a84e55",
+      "classification": "host-test-only",
+      "reason": "Frozen docs147 installed education source / accepted host test successor; no production edit in checkout repair."
+    },
+    {
+      "destination": "fixture-firmware/tests/explanation_tests.inc",
+      "before_sha256": "894d26eea799f061df5fd455385ac1ac41603b6c453a0eb125dbca9959c207e8",
+      "candidate_sha256": "ff340da1ca827d36b3d5a2b83f323fe4b61cfec504c562b9daba4b7a8cebbd7a",
+      "classification": "host-test-only",
+      "reason": "Host-only assertions reflect retained hidden Safety page and current title geometry; exact body, state and navigation checks retained."
+    }
+  ]
+}

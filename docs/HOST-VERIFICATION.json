@@ -1,0 +1,18 @@
+{
+  "tested_source_manifest_sha256": "0c11e6fd9fcccc260f78918367c588c5095c755382cad35920a5c88a3ff7de10",
+  "command": [
+    "bash",
+    "scripts/test-host.sh"
+  ],
+  "inner_exit": 0,
+  "source_files": 427,
+  "fresh_source_and_build_outputs": true,
+  "dependency_downloads": "isolated local registry copy; existing read-only LVGL and Rust sources",
+  "stdout_sha256": "17e322376a6abeecf0da1e8a167f172618f619eb407be8cdb8a272fe1a7175d1",
+  "stderr_sha256": "5868e0a4af6efb3820af17dea3349b563a90f9509b8f450df35132dcce787611",
+  "parent_and_build_source_unchanged": true,
+  "shared_dependency_bytes_unchanged": true,
+  "review_scope": "bounded independent source PASS; 37 focused tests; 74 probes including 3 valid controls and 71 rejected invalid mutations",
+  "target_device_release": "pending; no claim",
+  "post_gate_changes": "documentation/status only; exact delta retained by preparation owner"
+}

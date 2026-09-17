@@ -1,0 +1,22 @@
+{
+  "schema": "modal-successors-v1",
+  "prior_manifest": "docs/review-repair-successors.json",
+  "prior_manifest_sha256": "7b027a35dbed6e6324229e98369ba4e96a293638213b2235c6b27b28fa7afbb1",
+  "predecessor_package_manifest_sha256": "cda11abec9a33c49044bf7baa52fea5ec1298cf3d5c884a9cd8d2542121ad82f",
+  "entries": [
+    {
+      "destination": "fixture-firmware/app/main/navigation.inc",
+      "before_sha256": "c76e36c9774766a6f8318fe92e605e7a91b016b9724d0d646df42a0fb6e030dd",
+      "candidate_sha256": "582a7607275d905af0d79b465089b2b0859fd627ab8987b1ac8d1f0a14764d74",
+      "classification": "production-source",
+      "reason": "Independently host-reviewed visible Dice family-to-method pointer navigation repair; combined execution pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/modal_touch_tests.inc",
+      "before_sha256": "7ef627450bae0b17cdaceecd93745d7ee57e6bfd3004a917e08518abb8a84e55",
+      "candidate_sha256": "97213a63899db09514502e588cce9b5a44278650fa4b2cd7db09f1bc56b4fc1a",
+      "classification": "host-test-only",
+      "reason": "Independently host-reviewed visible Dice family-to-method pointer navigation repair; combined execution pending."
+    }
+  ]
+}

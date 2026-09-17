@@ -1,0 +1,32 @@
+{
+  "schema": "combined-import-successors-v1",
+  "base_commit": "889b1351a65cf419398ffe6fa8e3c3a57d7e5f7f",
+  "source_manifest_sha256": "5e4f07df6c06c560288b0242b2784dc661c866a159479fe17fcfea13efa260f5",
+  "entries": [
+    {
+      "destination": "fixture-firmware/app/main/main.c",
+      "before_sha256": "93dd295d736c65747a9273861e408efd6acf89ce44166e1f15ffaca75353e434",
+      "candidate_sha256": "f666f06524a10ff67e1d1b5bfbd7f43701950e5e42f07eefd8e085bbc0e81cec"
+    },
+    {
+      "destination": "fixture-firmware/app/main/compute.h",
+      "before_sha256": "c10a4d03dd13fecee85cad20f6faa34643bbe3a5957021596ec451a1f7f008a8",
+      "candidate_sha256": "14f481663d118a41de4b25dedcaecc21a809e74855daf01d561f15dea0400842"
+    },
+    {
+      "destination": "fixture-firmware/app/main/gui.h",
+      "before_sha256": "3060d14c0e266b21f51a21b28caf5fab3fa77ae5ad9250daecc9d881f998ca50",
+      "candidate_sha256": "5cced730fbdc2598d00bb0df6d159a1d24d1342ff80c3c7e5dc898c0c88af839"
+    },
+    {
+      "destination": "fixture-firmware/app/main/gui.c",
+      "before_sha256": "fc8eaa71649be0749a5b8bd63618ed6652d6679fd3737bdf60baa883d857c763",
+      "candidate_sha256": "e943025b31a3783a983a6de6bd1b9db6431bc1fa8deea8ef3680906e09b0726f"
+    },
+    {
+      "destination": "fixture-firmware/tests/gui_host.c",
+      "before_sha256": "52a57153745b5c42cdd887d6055233183a9ac62f383fed6c6c44383a95045264",
+      "candidate_sha256": "940983fcb36017ae8d1a808219c16aed4563e7c7cf4947b10ce1698da2af761e"
+    }
+  ]
+}

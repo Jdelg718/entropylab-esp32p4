@@ -1,0 +1,678 @@
+{
+  "schema": "release-source-mapping-v1",
+  "status": "prepared-not-released",
+  "entries": [
+    {
+      "destination": "fixture-firmware/app/main/CMakeLists.txt",
+      "before_sha256": "45c7b537e4b546504c8f58b1b9813cf2ee7ec1a98f564ba1bc09cbd20bb14b59",
+      "candidate_sha256": "45c7b537e4b546504c8f58b1b9813cf2ee7ec1a98f564ba1bc09cbd20bb14b59",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/all_features_application.cpp",
+      "before_sha256": "3427967d8de7bb00967edb82efae8d232e03e4fbdba7ac3305c2c0185276b7c6",
+      "candidate_sha256": "3427967d8de7bb00967edb82efae8d232e03e4fbdba7ac3305c2c0185276b7c6",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/all_features_application.h",
+      "before_sha256": "d14f65b9284dd4b0104c280efb26284cd9ea8c786352fe2c9777df90e98ac68a",
+      "candidate_sha256": "d14f65b9284dd4b0104c280efb26284cd9ea8c786352fe2c9777df90e98ac68a",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/all_features_dispatch.cpp",
+      "before_sha256": "c5317cf1062aef527fd0414629ac4109129a1ed7fef316c81c1139bc48e9a5a9",
+      "candidate_sha256": "c5317cf1062aef527fd0414629ac4109129a1ed7fef316c81c1139bc48e9a5a9",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/all_features_dispatch.h",
+      "before_sha256": "b5a26759acb690e51afae175e4916c5abc73e67532ee79313c502680c2171176",
+      "candidate_sha256": "b5a26759acb690e51afae175e4916c5abc73e67532ee79313c502680c2171176",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/assets/LICENSE-OOGA-BOOGA",
+      "before_sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116",
+      "candidate_sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/assets/PROVENANCE.md",
+      "before_sha256": "5c1775e444c9788d7fe39a07024ef28e46824994bf32ea9d5ee0ee9d52015363",
+      "candidate_sha256": "5c1775e444c9788d7fe39a07024ef28e46824994bf32ea9d5ee0ee9d52015363",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/assets/logo-dark-180x270.png",
+      "before_sha256": "79eeecc898c04f313bd98bce11e90aab9fd3a1ed3a1360bb81db4cc8a8553842",
+      "candidate_sha256": "79eeecc898c04f313bd98bce11e90aab9fd3a1ed3a1360bb81db4cc8a8553842",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/assets/logo-provenance.json",
+      "before_sha256": "af210b5280e0af867adddce474cc866813d534503283471f017066cc12286e02",
+      "candidate_sha256": "af210b5280e0af867adddce474cc866813d534503283471f017066cc12286e02",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/assets/logo_rgb565a8.inc",
+      "before_sha256": "479969199140989cacba1d2231b249f5de0efcede7e3ce25046f087bc27d5f28",
+      "candidate_sha256": "479969199140989cacba1d2231b249f5de0efcede7e3ce25046f087bc27d5f28",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/assets/site-logo-dark.svg",
+      "before_sha256": "f269bcda164493e546982875a6a4867dc88605c1937145157c31715bc81408f9",
+      "candidate_sha256": "f269bcda164493e546982875a6a4867dc88605c1937145157c31715bc81408f9",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/bip39_dictionary.inc",
+      "before_sha256": "166c98e799bdcef576b608411b8b47f20c0bf12afe1bc2692f40d54ef2d3b100",
+      "candidate_sha256": "166c98e799bdcef576b608411b8b47f20c0bf12afe1bc2692f40d54ef2d3b100",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/coin_core.h",
+      "before_sha256": "013896554504d7bf30cf559d49a47569d216fb7edab10acf1dfaf2de10654dba",
+      "candidate_sha256": "013896554504d7bf30cf559d49a47569d216fb7edab10acf1dfaf2de10654dba",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/compute.h",
+      "before_sha256": "14f481663d118a41de4b25dedcaecc21a809e74855daf01d561f15dea0400842",
+      "candidate_sha256": "14f481663d118a41de4b25dedcaecc21a809e74855daf01d561f15dea0400842",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/dice_core.h",
+      "before_sha256": "e64c66285cb7d481d3b636538bd5575356b8ad7f81f7f52fdfb1250dcd1a726e",
+      "candidate_sha256": "e64c66285cb7d481d3b636538bd5575356b8ad7f81f7f52fdfb1250dcd1a726e",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/education_content.inc",
+      "before_sha256": "0db37c218825e778b2c22aaf178128afc127ed720b99ffe754b89f9301065cf4",
+      "candidate_sha256": "0db37c218825e778b2c22aaf178128afc127ed720b99ffe754b89f9301065cf4",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/extra_dice_native.c",
+      "before_sha256": "b6e5b704c413ef242b72e4624b68f945ac27d9ff534079e650a086ef6e0ab8be",
+      "candidate_sha256": "b6e5b704c413ef242b72e4624b68f945ac27d9ff534079e650a086ef6e0ab8be",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/extra_dice_native.h",
+      "before_sha256": "c1f7fa7a6844a4f87ca4a01829e7a3effafbd4cb38eb3bb84579f04d83f22716",
+      "candidate_sha256": "c1f7fa7a6844a4f87ca4a01829e7a3effafbd4cb38eb3bb84579f04d83f22716",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/fingerprint_view.c",
+      "before_sha256": "0a851637ef317b4b7ace7f7ac46699f2029ca3053c2290e2a70fe3da30ca2cda",
+      "candidate_sha256": "0a851637ef317b4b7ace7f7ac46699f2029ca3053c2290e2a70fe3da30ca2cda",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/fingerprint_view.h",
+      "before_sha256": "2c2039d3bee92f5b4687d757dc5e8a49629c2d8160da8e195197fcbadc00e032",
+      "candidate_sha256": "2c2039d3bee92f5b4687d757dc5e8a49629c2d8160da8e195197fcbadc00e032",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/fonts/LICENSE-Liberation.txt",
+      "before_sha256": "f32df582a2aab128c07b2f7e36e7b928dc5f6bd82657b905c04f91459f9e5cf9",
+      "candidate_sha256": "f32df582a2aab128c07b2f7e36e7b928dc5f6bd82657b905c04f91459f9e5cf9",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/fonts/LICENSE-OFL-1.1",
+      "before_sha256": "93fed46019c38bbe566b479d22148e2e8a1e85ada614accb0211c37b2c61c19b",
+      "candidate_sha256": "93fed46019c38bbe566b479d22148e2e8a1e85ada614accb0211c37b2c61c19b",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/fonts/PROVENANCE.md",
+      "before_sha256": "c8f5a253c56ecd13ae9d8ba94822934122f05910ddc0965da6b4f984ca2c7845",
+      "candidate_sha256": "c8f5a253c56ecd13ae9d8ba94822934122f05910ddc0965da6b4f984ca2c7845",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/fonts/el_mono_16.c",
+      "before_sha256": "7cc94bfa12e3c61ae1b7416e904266b49cdc097df3aebcd870c87a39bb05a770",
+      "candidate_sha256": "7cc94bfa12e3c61ae1b7416e904266b49cdc097df3aebcd870c87a39bb05a770",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/fonts/el_mono_20.c",
+      "before_sha256": "ec514f609212da505acd8fb984d0849aee8e8f60a5a620a4069cc14fb57354fb",
+      "candidate_sha256": "ec514f609212da505acd8fb984d0849aee8e8f60a5a620a4069cc14fb57354fb",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/fonts/el_sans_14.c",
+      "before_sha256": "a46195ff785fc32b6f4d47f7e2ea8ac9e253658d03dd09b85b894ee11a4fc05a",
+      "candidate_sha256": "a46195ff785fc32b6f4d47f7e2ea8ac9e253658d03dd09b85b894ee11a4fc05a",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/fonts/el_sans_16.c",
+      "before_sha256": "29b052a98f3ef8fe110624b6006def9f63de3ea5f59fc3ba78c5884962d2acce",
+      "candidate_sha256": "29b052a98f3ef8fe110624b6006def9f63de3ea5f59fc3ba78c5884962d2acce",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/fonts/el_serif_24.c",
+      "before_sha256": "c5255e48326ff045b77b658c44b465264c0da441e9573cab827140abb57f64bb",
+      "candidate_sha256": "c5255e48326ff045b77b658c44b465264c0da441e9573cab827140abb57f64bb",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/gui.c",
+      "before_sha256": "498e4b8b85849dfef163d412d165e1dcce6e4363502413a47c5fd8a0e8da64f1",
+      "candidate_sha256": "057b9b07d25eff22db9b0c40ad6eecd2ba5f635e1567bed565fcd6b8adf363ac",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/gui.h",
+      "before_sha256": "5cced730fbdc2598d00bb0df6d159a1d24d1342ff80c3c7e5dc898c0c88af839",
+      "candidate_sha256": "5cced730fbdc2598d00bb0df6d159a1d24d1342ff80c3c7e5dc898c0c88af839",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/gui08_editor.c",
+      "before_sha256": "69409b13d43fe32f20a9531cd2b7869b505daa2bc44ba961e35fc62ce4ed374e",
+      "candidate_sha256": "69409b13d43fe32f20a9531cd2b7869b505daa2bc44ba961e35fc62ce4ed374e",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/gui08_editor.h",
+      "before_sha256": "94df3e08c31a1cb403ededfc42644bc9f40fb354131fc267d7e1a42cbacb4019",
+      "candidate_sha256": "94df3e08c31a1cb403ededfc42644bc9f40fb354131fc267d7e1a42cbacb4019",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/gui08_native.c",
+      "before_sha256": "89863dbf122e8b4c336aa5347ce9aaa987a1ca9019c6422c0069b2edc5f4f5d3",
+      "candidate_sha256": "89863dbf122e8b4c336aa5347ce9aaa987a1ca9019c6422c0069b2edc5f4f5d3",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/gui08_native.h",
+      "before_sha256": "21914043898d5be844cd2adde455d56523363fdc45329af944e502420b28b276",
+      "candidate_sha256": "21914043898d5be844cd2adde455d56523363fdc45329af944e502420b28b276",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/hex_core.h",
+      "before_sha256": "b254bc9ff090ee1f882e227645db903613f20e43bb07c41c06d0b80f79dd5fc2",
+      "candidate_sha256": "b254bc9ff090ee1f882e227645db903613f20e43bb07c41c06d0b80f79dd5fc2",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/idf_component.yml",
+      "before_sha256": "059af85af5638e62ef23fa2da24d07aa2665d605b19ced0f15269aef1815e520",
+      "candidate_sha256": "059af85af5638e62ef23fa2da24d07aa2665d605b19ced0f15269aef1815e520",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/input_explanations.inc",
+      "before_sha256": "220505e79416b87b862713e2935b506e771d0984a2b3d2e1711056a21474b6cb",
+      "candidate_sha256": "220505e79416b87b862713e2935b506e771d0984a2b3d2e1711056a21474b6cb",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/main.c",
+      "before_sha256": "f666f06524a10ff67e1d1b5bfbd7f43701950e5e42f07eefd8e085bbc0e81cec",
+      "candidate_sha256": "f666f06524a10ff67e1d1b5bfbd7f43701950e5e42f07eefd8e085bbc0e81cec",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/mnemonic_core.h",
+      "before_sha256": "687b2c9c41e5b55c139118e94ac1e6a22c914beb523715cfa3fa630796b726fb",
+      "candidate_sha256": "687b2c9c41e5b55c139118e94ac1e6a22c914beb523715cfa3fa630796b726fb",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/mnemonic_editor.inc",
+      "before_sha256": "30e34b2abe53d4ab9b257549727f12170356f45b2cedb6bca473a35f797eba0f",
+      "candidate_sha256": "30e34b2abe53d4ab9b257549727f12170356f45b2cedb6bca473a35f797eba0f",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/mnemonic_gui.inc",
+      "before_sha256": "e69687f578d0aa5526adc2ee2174eed0204cb68c45e729b885d5ed798d175c20",
+      "candidate_sha256": "e69687f578d0aa5526adc2ee2174eed0204cb68c45e729b885d5ed798d175c20",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/native_theme.h",
+      "before_sha256": "33f38020b2ab5368959a614f17b8d2d5a4138377f07d9a9e8812d27c80d5bb5a",
+      "candidate_sha256": "33f38020b2ab5368959a614f17b8d2d5a4138377f07d9a9e8812d27c80d5bb5a",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/navigation.inc",
+      "before_sha256": "5d167b51f152bf2c90db32652acd928622971f5eb9d0b687f149bf474d4dbb36",
+      "candidate_sha256": "c76e36c9774766a6f8318fe92e605e7a91b016b9724d0d646df42a0fb6e030dd",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/passphrase_core.h",
+      "before_sha256": "182ad90aa34a97643647ce136d3aefac13e56b91d4af3bd1ae7ebdb8cdb2aa2e",
+      "candidate_sha256": "182ad90aa34a97643647ce136d3aefac13e56b91d4af3bd1ae7ebdb8cdb2aa2e",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/passphrase_dispatch.h",
+      "before_sha256": "ab70836405d11eb8c116f038e8cd30bdc8e8812da92898cc004a6f66ec9450c2",
+      "candidate_sha256": "ab70836405d11eb8c116f038e8cd30bdc8e8812da92898cc004a6f66ec9450c2",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/passphrase_gui.h",
+      "before_sha256": "5fd24ad0861e713655a68823cd906ca026473f622ed0f578d77c8a56f4220cf8",
+      "candidate_sha256": "5fd24ad0861e713655a68823cd906ca026473f622ed0f578d77c8a56f4220cf8",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/passphrase_gui.inc",
+      "before_sha256": "7586a9fbd5838c653606f7b2579f9535e822db6356993046fe4e21b1b75e9573",
+      "candidate_sha256": "7586a9fbd5838c653606f7b2579f9535e822db6356993046fe4e21b1b75e9573",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/passphrase_integration.inc",
+      "before_sha256": "27af1da5fc572c46eec944ba9129a9f7fcffd1a1d237ba13962a1f09fe1684c9",
+      "candidate_sha256": "27af1da5fc572c46eec944ba9129a9f7fcffd1a1d237ba13962a1f09fe1684c9",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/saver.inc",
+      "before_sha256": "b331649aa1898d73e623b78e27e6d158a41a82ce4cdac01ac892a1963a2ff34d",
+      "candidate_sha256": "b331649aa1898d73e623b78e27e6d158a41a82ce4cdac01ac892a1963a2ff34d",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/seed_native.c",
+      "before_sha256": "ba7164604ee821a4bff08a18581adedd92adfdebba02681ee58f5fab8e044665",
+      "candidate_sha256": "ba7164604ee821a4bff08a18581adedd92adfdebba02681ee58f5fab8e044665",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/app/main/seed_native.h",
+      "before_sha256": "9c079a6eefd2b79124baf537ff50bb156bf48ee4a0f597856d371ab386507762",
+      "candidate_sha256": "9c079a6eefd2b79124baf537ff50bb156bf48ee4a0f597856d371ab386507762",
+      "classification": "production-source",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/CMakeLists.gui08-native.txt",
+      "before_sha256": "5ec06cebb54104faf555700932646d52a0ed72ddf97b882710d6a7cc0f881e22",
+      "candidate_sha256": "5ec06cebb54104faf555700932646d52a0ed72ddf97b882710d6a7cc0f881e22",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/CMakeLists.gui08.txt",
+      "before_sha256": "00c256a7db893ad6b16c27c797613ac95b8bc8f7966203fa0159330a3f9f9a77",
+      "candidate_sha256": "00c256a7db893ad6b16c27c797613ac95b8bc8f7966203fa0159330a3f9f9a77",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/CMakeLists.txt",
+      "before_sha256": "509c0bfb292b681f3b9a395d17b7a86bfca426e1b94c57cfd5c51c22bb00795a",
+      "candidate_sha256": "509c0bfb292b681f3b9a395d17b7a86bfca426e1b94c57cfd5c51c22bb00795a",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/cleanup_tests.inc",
+      "before_sha256": "ccab617cd8cebc1c9c6aa02b53625d2632cdb213ede23c76f2da1d910a18d068",
+      "candidate_sha256": "765efd8466a7e2b6011b02b6241ffc8aa3019f334f54b9c1d00893a1fa527b40",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/coin_tests.inc",
+      "before_sha256": "93958a966a9d1545675ffbdb7b5b9f52d8e52d9c21092e1d61b5dd37d657208c",
+      "candidate_sha256": "d1e714752e1d4bbc33c8dc6dcd8e962d6b0d5a5188b7d2e45eef5f811a30518c",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/dice_tests.inc",
+      "before_sha256": "72c1a5b3518088e78c98b5a3fbb25aa2dd8d031fd5dde5d1872515c63848e8ae",
+      "candidate_sha256": "7dfd5387ef0bf2ba10e34d1172de2a8f4eeed70fbde305d78c018c722c0144e8",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/dice_vectors.h",
+      "before_sha256": "387b62500331bcd1de6104884f8562dd1b816680330cef7f9ce3c6e82cfb2a09",
+      "candidate_sha256": "387b62500331bcd1de6104884f8562dd1b816680330cef7f9ce3c6e82cfb2a09",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/dice_worker.c",
+      "before_sha256": "5e7bb1ee8e3ccd8d554632a0da44d3d905b577c143498ac7b21e85077110b557",
+      "candidate_sha256": "5e7bb1ee8e3ccd8d554632a0da44d3d905b577c143498ac7b21e85077110b557",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/education_tests.inc",
+      "before_sha256": "99e43a09c685a49524e7ee981fea8c1eaccadafa7ea45af73d1136839341467b",
+      "candidate_sha256": "99e43a09c685a49524e7ee981fea8c1eaccadafa7ea45af73d1136839341467b",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/explanation_tests.inc",
+      "before_sha256": "ff340da1ca827d36b3d5a2b83f323fe4b61cfec504c562b9daba4b7a8cebbd7a",
+      "candidate_sha256": "ff340da1ca827d36b3d5a2b83f323fe4b61cfec504c562b9daba4b7a8cebbd7a",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/gui08-native/CMakeLists.txt",
+      "before_sha256": "ca4879a26ea31529717d034ce9a973cd315317777fb99e3fa7397fbbd4f65f6e",
+      "candidate_sha256": "ca4879a26ea31529717d034ce9a973cd315317777fb99e3fa7397fbbd4f65f6e",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/gui08_editor_tests.c",
+      "before_sha256": "47f5e0204b8526dfed8d2981bb906d763291952c77df953be9bff5055df9f963",
+      "candidate_sha256": "47f5e0204b8526dfed8d2981bb906d763291952c77df953be9bff5055df9f963",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/gui08_native_tests.c",
+      "before_sha256": "c6a2321ce60ea3eceaeb0bfefbcc2fc18e96fc509f0bdd8a0c89a5aeb5949153",
+      "candidate_sha256": "c6a2321ce60ea3eceaeb0bfefbcc2fc18e96fc509f0bdd8a0c89a5aeb5949153",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/gui_acceptance.inc",
+      "before_sha256": "cf9977a3786425b8acc33693afe99adf5e446a8ac04965bc7194eb03e1418ab9",
+      "candidate_sha256": "419f4bbb772f548f04591431a674a20bb8ce3560ab38a49106a1f0671230ea06",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/gui_host.c",
+      "before_sha256": "029a73f700f99d7c943199ad85feae26413be87c089db102520c4091400ad756",
+      "candidate_sha256": "498de1a5a04164ed5dfe4c1874d362fd5d613ba9775bf7d8ac31aeb6cb4c9378",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/hex_worker.c",
+      "before_sha256": "17560e431be0bcdcdb8d2a373a50aa7ec66b7631319201fa5a0b584cb0dcada7",
+      "candidate_sha256": "17560e431be0bcdcdb8d2a373a50aa7ec66b7631319201fa5a0b584cb0dcada7",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/integration20/dispatcher_test.cpp",
+      "before_sha256": "144e3b4dbbf7bd400039d1c90acde77d9077709710d98d4683d86848ae546b42",
+      "candidate_sha256": "144e3b4dbbf7bd400039d1c90acde77d9077709710d98d4683d86848ae546b42",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/integration22/CMakeLists.txt",
+      "before_sha256": "d702b6271797afedeb3027f3fd2ec6d71ae948c3d48f581c408e4feef26ff49e",
+      "candidate_sha256": "d702b6271797afedeb3027f3fd2ec6d71ae948c3d48f581c408e4feef26ff49e",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/integration22/application_gui_test.cpp",
+      "before_sha256": "118f480c61daa065f7b7d13db6baaa43ed578634b1aa972d64184be275ddf4c8",
+      "candidate_sha256": "118f480c61daa065f7b7d13db6baaa43ed578634b1aa972d64184be275ddf4c8",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/integration23/cards_application_test.cpp",
+      "before_sha256": "af8e27b7e19faeb3746a73e306f696ceda66d948263f322e01441b6e7ff49e41",
+      "candidate_sha256": "af8e27b7e19faeb3746a73e306f696ceda66d948263f322e01441b6e7ff49e41",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/integration25/bases_application_test.cpp",
+      "before_sha256": "485e3434b3f70f50193daf45dcacb8d93a8f16237e85fbf7661aa7f319337799",
+      "candidate_sha256": "485e3434b3f70f50193daf45dcacb8d93a8f16237e85fbf7661aa7f319337799",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/integration26/derivation_application_test.cpp",
+      "before_sha256": "4933c5de8bbbb688efb403c434f2c2100c54fb63f33f305f627493f5c9934612",
+      "candidate_sha256": "4933c5de8bbbb688efb403c434f2c2100c54fb63f33f305f627493f5c9934612",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/integration28/seed_application_test.cpp",
+      "before_sha256": "7f8c7f4a54e15188c1fab1bfdeb8f0c55da95b4abb784c522a81c388081a6711",
+      "candidate_sha256": "7f8c7f4a54e15188c1fab1bfdeb8f0c55da95b4abb784c522a81c388081a6711",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/integration37/CMakeLists.txt",
+      "before_sha256": "9ae1730f6e5694aeaab05ae449bb8d480b133ff5367a1b107d8c50c3eace6f9b",
+      "candidate_sha256": "9ae1730f6e5694aeaab05ae449bb8d480b133ff5367a1b107d8c50c3eace6f9b",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/integration37/lifehash_application_test.cpp",
+      "before_sha256": "00764968a2affb53f5860e37f1b4c08c633367c346566fcfc3900c2f699db7a5",
+      "candidate_sha256": "00764968a2affb53f5860e37f1b4c08c633367c346566fcfc3900c2f699db7a5",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/integration41/CMakeLists.txt",
+      "before_sha256": "6456cf204eab9f0e00ac299769be16a76470013d6dece7da5c618f9796b07a89",
+      "candidate_sha256": "6456cf204eab9f0e00ac299769be16a76470013d6dece7da5c618f9796b07a89",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/integration41/extra_dice_application_test.cpp",
+      "before_sha256": "035b1109213d66b1e0de9624bf4a301c42463c5f573f8db4825976da45e3825b",
+      "candidate_sha256": "035b1109213d66b1e0de9624bf4a301c42463c5f573f8db4825976da45e3825b",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/integration41-native/CMakeLists.txt",
+      "before_sha256": "e2be8d7ffd325366752beab9f90b8169c07077271f46e549e8d4a80a8fb9b933",
+      "candidate_sha256": "e2be8d7ffd325366752beab9f90b8169c07077271f46e549e8d4a80a8fb9b933",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/integration41-native/extra_dice_native_test.cpp",
+      "before_sha256": "f63bb5f628d6cf916bd4419ce80da36cb09e2e632e5eadbc7a418c83fa78b7c2",
+      "candidate_sha256": "f63bb5f628d6cf916bd4419ce80da36cb09e2e632e5eadbc7a418c83fa78b7c2",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/layout_tests.inc",
+      "before_sha256": "b9f99d90a377974a0c6313aa4697482abb993d96ed598ad4d3b519111403451b",
+      "candidate_sha256": "b9f99d90a377974a0c6313aa4697482abb993d96ed598ad4d3b519111403451b",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/lv_conf.h",
+      "before_sha256": "8a23ed4ce0775aa0d78e68cd8d8cbfb7dbb620c1e93bae69ecfb89676f4bf180",
+      "candidate_sha256": "8a23ed4ce0775aa0d78e68cd8d8cbfb7dbb620c1e93bae69ecfb89676f4bf180",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/mnemonic_bounds.c",
+      "before_sha256": "7955a3bd8eb3b44171e8cbc4b65baf27c86b84d1e53579cd9577535a4c63c9b8",
+      "candidate_sha256": "7955a3bd8eb3b44171e8cbc4b65baf27c86b84d1e53579cd9577535a4c63c9b8",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/mnemonic_bridge.c",
+      "before_sha256": "b153627419e6846d20a1f417a56e67cb391a08d38d006d6b552ad1396435f818",
+      "candidate_sha256": "b153627419e6846d20a1f417a56e67cb391a08d38d006d6b552ad1396435f818",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/mnemonic_gui_tests.inc",
+      "before_sha256": "1465be62ca37ab5900949f258af44861f1d5df6456c6ac025af8ac811ec29458",
+      "candidate_sha256": "1465be62ca37ab5900949f258af44861f1d5df6456c6ac025af8ac811ec29458",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/mnemonic_red.c",
+      "before_sha256": "c13766a73fabea8e7f5db28ef320ab11b8be98f10e764e2abea12862a3572b46",
+      "candidate_sha256": "c13766a73fabea8e7f5db28ef320ab11b8be98f10e764e2abea12862a3572b46",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/modal_touch_tests.inc",
+      "before_sha256": "7ef627450bae0b17cdaceecd93745d7ee57e6bfd3004a917e08518abb8a84e55",
+      "candidate_sha256": "7ef627450bae0b17cdaceecd93745d7ee57e6bfd3004a917e08518abb8a84e55",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/passphrase_compute.c",
+      "before_sha256": "ee59c6e878f16971bf09021eeb6dbbee992c3a8ba6ed9a68d529db3d04d57536",
+      "candidate_sha256": "ee59c6e878f16971bf09021eeb6dbbee992c3a8ba6ed9a68d529db3d04d57536",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/passphrase_dispatch.c",
+      "before_sha256": "b2353d764ab2099e7a17cf8a504aeb43f1170bf73ba97eb46a027696e1d00054",
+      "candidate_sha256": "b2353d764ab2099e7a17cf8a504aeb43f1170bf73ba97eb46a027696e1d00054",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/passphrase_gui_tests.inc",
+      "before_sha256": "5c90bb34943abe9c8a59a7b53aa28df7c09bf3ca0558532f759a8ecdb805c074",
+      "candidate_sha256": "5c90bb34943abe9c8a59a7b53aa28df7c09bf3ca0558532f759a8ecdb805c074",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/passphrase_integration_tests.inc",
+      "before_sha256": "7f8d347a07520c6dd9ab41674df651bea33ab672d0eaba42f64c6bb92ce14ea5",
+      "candidate_sha256": "e794e9a4ac457abb5a3dd0eb90891551f0f985fb4f719f025604c23719e8e874",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/prefix_tests.inc",
+      "before_sha256": "d021bab5aa6c68a3f20168db7d3336bdbe497a0bc25913f8fc3e5b1b130fab59",
+      "candidate_sha256": "d021bab5aa6c68a3f20168db7d3336bdbe497a0bc25913f8fc3e5b1b130fab59",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/safety_cleanup_tests.inc",
+      "before_sha256": "c266ff4a072283aa54ac1e241eb50a38b9eee2c77e7c2416f2a8b6fa73a75df6",
+      "candidate_sha256": "c266ff4a072283aa54ac1e241eb50a38b9eee2c77e7c2416f2a8b6fa73a75df6",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/saver_tests.inc",
+      "before_sha256": "c0210718bb6223e81c7ea2150bba482658b7dbac15230d915f6d89d2230e83d0",
+      "candidate_sha256": "c0210718bb6223e81c7ea2150bba482658b7dbac15230d915f6d89d2230e83d0",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/seed_panel_tests.inc",
+      "before_sha256": "b55f3478b566d4a24938b9a1b02b1d801e52e27c3e3c5502854401655f629c31",
+      "candidate_sha256": "b49b0e516372f02343b18610a71fa20f9f8c8eb03190c8c8443fb275c4ce81b1",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    },
+    {
+      "destination": "fixture-firmware/tests/worker_host.c",
+      "before_sha256": "75abce7497b56ff3b6409db819437c6f8c04b124bb151969a969a620f73be962",
+      "candidate_sha256": "75abce7497b56ff3b6409db819437c6f8c04b124bb151969a969a620f73be962",
+      "classification": "host-test-only",
+      "reason": "Exact frozen D6 indexed transcript review/edit successor; independent publication review pending."
+    }
+  ]
+}

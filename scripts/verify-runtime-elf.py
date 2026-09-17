@@ -16,10 +16,10 @@ for name in ['gui.c', 'main.c']:
     assert 'RVC, single-float ABI' in run('readelf', '-h', obj)
 s = run('nm', '--defined-only', elf)
 archive_symbols = run('nm', '--defined-only', archive)
-apis = ['el_dice_to_hex', 'el_dice_required_rolls', 'el_coin_to_hex', 'el_hex_run', 'el_mnemonic_run']
+apis = ['el_dice_to_hex', 'el_dice_required_rolls', 'el_coin_to_hex', 'el_input_to_mnemonic', 'el_bip39_passphrase_run']
 for name in apis + ['fixture_alloc', 'fixture_free', 'abort']:
     assert len(re.findall(r'\bT ' + name + r'$', s, re.M)) == 1, name
-for name in apis:
+for name in apis + ['el_hex_run', 'el_mnemonic_run']:
     assert len(re.findall(r'\bT ' + name + r'$', archive_symbols, re.M)) == 1, name
 panic = [x.split()[-1] for x in s.splitlines() if ' T ' in x and 'rust_begin_unwind' in x]
 assert len(panic) == 1

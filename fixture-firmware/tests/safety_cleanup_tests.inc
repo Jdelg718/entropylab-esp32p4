@@ -8,7 +8,7 @@ static void safety_cleanup_tests(void){
   char image[64];snprintf(image,sizeof image,"cleanup-mode-%u.ppm",m);render(image);
   void *oldedit=saved_callback(edits[0],edit),*oldmode=saved_callback(modes[(m+1)%5],switch_mode);
   void *oldopen=saved_action(mn_safety);
-  click("Public test only / Safety");assert(mn_safety_open);
+  click(SAFETY_DOCK_TEXT);assert(mn_safety_open);
   assert(lv_obj_get_width(mn_safety_modal)==480&&lv_obj_get_height(mn_safety_modal)==800);
   assert(lv_obj_get_style_bg_opa(mn_safety_modal,0)==LV_OPA_COVER);
   unsigned before=runs;size_t len=lengths[m];
@@ -18,7 +18,7 @@ static void safety_cleanup_tests(void){
   fprintf(stderr,"Safety close rejects old legacy callbacks in mode %u\n",m);
   assert(mode==(el_mode_t)m&&lengths[m]==len);
   replay_action(oldopen);assert(!mn_safety_open);
-  click("Public test only / Safety");
+  click(SAFETY_DOCK_TEXT);
   assert(find(lv_screen_active(),"Safety / About"));
   assert(find(lv_screen_active(),"Unofficial native adaptation\nEntropyLab - Team Ooga Booga"));
   assert(find(lv_screen_active(),"Origin: Mr.Hodl (@mrhodl)\nNo upstream endorsement or affiliation."));

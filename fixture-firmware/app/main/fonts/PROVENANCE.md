@@ -25,3 +25,10 @@ comment (which contains the local invocation path); every generated payload matc
 The checked-in source milestone files remain unchanged. No converter is needed
 for normal builds. `el_*` derivative names avoid the reserved font names.
 No upstream endorsement is implied.
+
+For the bounded native selector-content correction, the 14px and 16px sans
+derivatives retain ASCII 0x20–0x7e and additionally include U+00B7 MIDDLE DOT,
+U+2013 EN DASH, and U+2192 RIGHTWARDS ARROW from the same pinned Liberation Sans
+source. This makes the contract's exact public selector labels render as glyphs
+rather than missing-character boxes. Size, bpp, format, compression setting,
+license, source family, and all non-sans generated fonts are unchanged.

@@ -1,3 +1,5 @@
+> Historical predecessor evidence only. Not current D6 build, installed identity or publication approval. See [current status](PUBLICATION-STATUS.md).
+
 # Native GUI integration checkpoint
 
 Local feature branch `native-gui`, based on public main

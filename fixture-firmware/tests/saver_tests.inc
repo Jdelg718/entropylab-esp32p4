@@ -13,7 +13,11 @@ static void saver_tests(void){
  fprintf(stderr,"approved saver must contain static authentic 180x270 image\n");assert(logo);
  lv_obj_update_layout(lv_screen_active());lv_area_t artwork;lv_obj_get_coords(logo,&artwork);
  assert(artwork.x1==150&&artwork.y1==222&&lv_obj_get_width(logo)==180&&lv_obj_get_height(logo)==270);
- assert(find(saver_screen,"EntropyLab")&&find(saver_screen,"DISPLAY IDLE"));
+ assert(find(saver_screen,"EntropyLab (unofficial)")&&find(saver_screen,"DISPLAY IDLE"));
+ lv_obj_t *brand=find_label_object(saver_screen,"EntropyLab (unofficial)");assert(brand);
+ lv_area_t brand_area;lv_obj_get_coords(brand,&brand_area);
+ assert(brand_area.x1==40&&brand_area.x2==439&&brand_area.y1==560&&brand_area.y2<704);
+ assert(lv_obj_get_height(brand)==lv_font_get_line_height(&el_serif_24));
  lv_obj_t *ring=NULL,*dot=NULL;
  for(unsigned i=0;i<lv_obj_get_child_count(saver_screen);i++){lv_obj_t *o=lv_obj_get_child(saver_screen,i);if(lv_obj_get_width(o)==352&&lv_obj_get_height(o)==352&&!lv_obj_check_type(o,&lv_arc_class))ring=o;if(lv_obj_get_width(o)==6&&lv_obj_get_height(o)==6)dot=o;}
  fprintf(stderr,"approved orbit needs static 352px ring and 6px moving marker\n");assert(ring&&dot);
@@ -55,7 +59,7 @@ static void saver_tests(void){
   saver_time(100);saver_time(59900);assert(!saver_active);saver_time(100);assert(saver_active);
  }
  lv_obj_clean(lv_screen_active());gui_create(request);click("Words");saver_time(100);saver_time(59000);
- click("Public test only / Safety");click("Close");saver_time(1000);
+ click(SAFETY_DOCK_TEXT);click("Close");saver_time(1000);
  assert(!saver_active);saver_time(59900);assert(!saver_active);saver_time(100);assert(saver_active);
  lv_obj_clean(lv_screen_active());gui_create(request);
  puts("PASS saver eligibility exclusions and fresh interval after brief activity");

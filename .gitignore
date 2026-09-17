@@ -33,3 +33,4 @@ backups/
 recovery/
 private/
 **/host-test
+**/integrated-lanes/lifehash/core/evidence/

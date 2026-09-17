@@ -1,0 +1,74 @@
+{
+  "historical_only": true,
+  "not_evidence_for_current_D6_candidate": true,
+  "current_mapping": "RELEASE-SOURCE-MAPPING.json",
+  "historical_record": {
+    "schema": "entropylab-installed-source-mapping-prepublication-v1",
+    "status": "PENDING_INDEPENDENT_PUBLICATION_REVIEW",
+    "release_source": {
+      "production_manifest_sha256": "52b03b938e6f8aa172bb1219c851f77de3494cfea14e5ac28a78785960de1b35",
+      "production_entry_count": 402,
+      "freeze_manifest_of_manifests_sha256": "f08a6f8ca4cabc66303f552c42be83e9d769e300269beae00bdc7ad850534b0c",
+      "package_test_manifest_sha256": "a3c90b2c05297263a4e1aa06f554d8ed39891bc3f52fdb210f602d1ed307e17d",
+      "dedicated_branch": "release/education-ui-20260917-docs147",
+      "test_only_delta": "fixture-firmware/tests/modal_touch_tests.inc"
+    },
+    "target_build": {
+      "source_manifest_sha256": "52b03b938e6f8aa172bb1219c851f77de3494cfea14e5ac28a78785960de1b35",
+      "prepare_receipt_sha256": "908c57185a1b65cc730a8eca17cb46f5e5b76dc1da1e94c97c4e292b4620be4a",
+      "command_receipt_sha256": "fdcedb86de13da9accf4ecfb299b131a6706f225caff61af4befc099895d0950",
+      "result_receipt_sha256": "d6a739df1d9e4a03a7017d22aef25210188734101bc314d6aa5757d397a2e852",
+      "image_sha256": "f0c4edf1267470991d4750de027604c2e512ace943223ce42ca6c57b246afebe",
+      "elf_sha256": "600a87c840dd707936a6e76b0935c265604205ba4dfcbfdf393ccebfdd7c7781",
+      "runtime_archive_sha256": "143f8f8f6f7b7e4a088a0ddbccefb9167ca16f3d7147b301444775c62be01a3c",
+      "inner_exit": 0
+    },
+    "installation": {
+      "image_sha256": "f0c4edf1267470991d4750de027604c2e512ace943223ce42ca6c57b246afebe",
+      "application_readback_sha256": "f0c4edf1267470991d4750de027604c2e512ace943223ce42ca6c57b246afebe",
+      "execution_audit_sha256": "095fb875e7117fdccfe413bf9ed0f12b151f4c302b8beb9a48be3bd1e40873e9",
+      "state_receipt_sha256": "07ed6cb5c0b6e023a55149a0f383bef858b72b19c4f444b45b209cf393f530fa",
+      "final_output_manifest_sha256": "1cdfdfb26bf5d717b2358b1fb197553fa654d7080dc58efbf4b6ada217c674ef",
+      "boot_verified": true,
+      "boot_receipt_sha256": "653e46866c0bf1e77c6eb5660dd927b8e5ef3cac5a6e6c647315dd52884821c6",
+      "bootloader_unchanged": true,
+      "partitions_unchanged": true
+    },
+    "mapping": {
+      "source_equals_build": true,
+      "build_image_equals_installed": true,
+      "installed_readback_equals_image": true,
+      "production_source_equals_packaged_production_source": true,
+      "test_only_equivalence_documented": true
+    },
+    "checkout_repair_candidate": {
+      "status": "PENDING_INDEPENDENT_EXACT_DELTA_AND_PUBLIC_AUDIT",
+      "successor_manifest_sha256": "1e2206cd513084284192a93e615bfe0bdf9e63db875517fc18a7b48ed18a5140",
+      "production_source_changed": false,
+      "installed_image_changed": false,
+      "clean_host_inner_exit": 0,
+      "clean_gui_inner_exit": 0,
+      "source_equivalence_evidence": {
+        "path": "docs/PRODUCTION-SOURCE-EQUIVALENCE.json",
+        "sha256": "c011d78c0e4591f04d2e44de36fe18dc64f081e1255e9fca53196f91009014b9",
+        "production_files_verified": 145,
+        "production_drift": 0
+      }
+    },
+    "reviews": {
+      "visual_receipt_sha256": "ad391be8c07e020beb3a9f85b59e7376ebce2d1845ff86e88686d9787c2e5f9e",
+      "spec_receipt_sha256": "20290501628a47437563b85d3e3252d718ba9367b3309e96061324ee6a009c03",
+      "security_receipt_sha256": "639b707cc317ab6969bb8e89028ca2f2447fd09d5bc92c4787a1a620766606e6",
+      "test_delta_writer_manifest_sha256": "e2c58fe90cbc6ebd36c89b25c28a52e0d67447d1b2ecd709eba1ead54a4a1978",
+      "test_delta_reviewer_manifest_sha256": "578088083082a4ed60847b3cab4e7811103eb803684b9fca48ea7c1c1a23502c",
+      "public_safety_review": "PENDING_INDEPENDENT_REVIEW",
+      "public_safety_receipt_sha256": null
+    },
+    "limitations": [
+      "This receipt maps independently verified source, build, install, readback, and boot evidence; it does not claim reproducible binary builds.",
+      "The packaged test fixture contains one independently approved host-test-only correction not present in the installed production source manifest; production source bytes are unchanged.",
+      "The package is frozen but not publication-approved, committed, pushed, merged, tagged, or released.",
+      "No physical-security, side-channel, secure-erasure, or binary-license legal opinion is claimed."
+    ]
+  }
+}

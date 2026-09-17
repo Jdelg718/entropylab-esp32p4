@@ -1,0 +1,32 @@
+[
+  {
+    "path": "fixture-firmware/integrated-lanes/lifehash/core/evidence/SHA256SUMS",
+    "sha256": "6937795e72f131482c4e418298e0fe1897855629f114186ec1c3e7c19d67df2f",
+    "bytes": 391,
+    "disposition": "Intentionally excluded historical generated evidence, not source; not current repair test evidence."
+  },
+  {
+    "path": "fixture-firmware/integrated-lanes/lifehash/core/evidence/lifehash-73c5da0a.ppm",
+    "sha256": "31baa5ecc084d2a71c07fde7e75a38023e0c4baed82335c55b4fb1784ac6ed35",
+    "bytes": 3085,
+    "disposition": "Intentionally excluded historical generated evidence, not source; not current repair test evidence."
+  },
+  {
+    "path": "fixture-firmware/integrated-lanes/lifehash/core/evidence/lifehash-deadbeef.rgb",
+    "sha256": "cb5c61fdbab952cd54b86824291d14e36255df58c80d25f7463db369e2d1ccf6",
+    "bytes": 3072,
+    "disposition": "Intentionally excluded historical generated evidence, not source; not current repair test evidence."
+  },
+  {
+    "path": "fixture-firmware/integrated-lanes/lifehash/core/evidence/linux-host-resources.json",
+    "sha256": "a31af684ba79d11968696af4f2677cd760202b5bfdd987b5aa623e4ac2f8c890",
+    "bytes": 311,
+    "disposition": "Intentionally excluded historical generated evidence, not source; not current repair test evidence."
+  },
+  {
+    "path": "fixture-firmware/integrated-lanes/lifehash/core/evidence/sanitizer-status.txt",
+    "sha256": "004e9002ddf9d345f3737618f7962fc14e7e90948d5ec62ea25f226c313f68c1",
+    "bytes": 54,
+    "disposition": "Intentionally excluded historical generated evidence, not source; not current repair test evidence."
+  }
+]

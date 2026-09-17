@@ -7,12 +7,12 @@ static void coin_tests(void){
  click("Coins");assert(find(lv_screen_active(),"2 / 128 encoded bits"));click("Clear");
  for(unsigned w=12;w<=24;w+=3){
   char selector[4];snprintf(selector,sizeof selector,"%u",w);click(selector);
-  unsigned n=w*32/3;click("Clear");
+  unsigned n=w*32/3;reset_legacy_input();
   for(unsigned i=0;i<n;i++)click(i==n-1?"Tails 1":"Heads 0");
   render("coins-input.ppm");click("Calculate");
   assert(owned.mode==1&&owned.words==w&&owned.length==n);
   assert(owned.hex[0]=='0'&&owned.hex[n-1]=='1'&&owned.hex[n]==0);
-  const char *blocked[]={"Hex","Coins","12","24","Heads 0","Tails 1","Clear","Undo"};
+  const char *blocked[]={"Input family   Coins   v","12","24","Heads 0","Tails 1","Clear","Undo"};
   for(unsigned i=0;i<sizeof blocked/sizeof blocked[0];i++){
    lv_obj_t *b=find_button(lv_screen_active(),blocked[i]);assert(b&&lv_obj_has_state(b,LV_STATE_DISABLED));lv_obj_send_event(b,LV_EVENT_CLICKED,NULL);
   }

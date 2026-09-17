@@ -1,3 +1,17 @@
+> **Current combined successor — publication HOLD.** This tree combines the exact review-repair package with the independently host-reviewed two-file modal repair. Combined full host, default+10 GUI, target build and device gates have **not been run** on this tree. Individual predecessor PASS evidence is not combined execution evidence. Current identity suites pass; see `docs/MODAL-COMBINED-STATUS.md` and `docs/MODAL-COMBINED-SOURCE-MAPPING.json`. Statements below describing the prior modal failure or review-repair-only identities are preserved historical predecessor evidence, not current-tree results. Historical manifests/mappings are not rebaselined.
+
+# Release priority — current candidate
+
+1. Independent source/content/license review of the exact candidate.
+2. Complete clean-checkout host/CI pass and sole integration target identity/resource gate.
+3. Public-fixture physical D6 and regression acceptance.
+4. Validate complete first-install kit separately from compatible app-only updates; publish immutable source-bound checksums and preserve tested recovery.
+5. Reviewed board-selecting browser flasher for the exact Waveshare model, with fail-closed compatibility checks, explicit overwrite consent, pinned dependencies and manual fallback. No promised automatic board detection or broad browser support.
+
+Unrelated feature expansion is not a release prerequisite. Diagnostics expansion, new wallet tools, additional hardware/layout targets and secure-storage/signing features remain separate work. No timeline or shipped functionality is implied by the historical roadmap below.
+
+---
+
 # Roadmap and acceptance gates
 
 ## Product direction
@@ -8,6 +22,20 @@ product is not a transaction signer. Statistical tests, encoded width, checksum
 validity and hashing do not establish source randomness. Offline app operation does
 not prove a physical air gap; C6 remains a hardware threat-model concern. Public-test
 use is the present maturity boundary, not the permanent product goal.
+
+## Future screens and devices — planned, not supported today
+
+The only hardware profile historically exercised with predecessor firmware is the Waveshare ESP32-P4-WIFI6-Touch-LCD-4.3,
+480 × 800, on the accepted Rev1.x profile. Other screen sizes, orientations,
+panels, touch controllers, ESP32-P4 revisions, and hardware devices are future work.
+There is no promised date or compatibility matrix.
+
+Contributions are welcome for portable layout metrics, display/touch adapter
+boundaries, board profiles, public-fixture host tests, target-build checks, and
+hardware test plans. Compilation or a mockup alone does not establish support. Each
+new target needs exact hardware identification, source review, pinned dependencies,
+target build, and separately authorized physical acceptance before it can move from
+experimental to supported.
 
 ## Current checkpoint
 

@@ -6,8 +6,25 @@ set(CONFIG_LV_USE_THORVG_INTERNAL OFF CACHE BOOL "" FORCE)
 set(LV_BUILD_CONF_PATH "${CMAKE_CURRENT_SOURCE_DIR}/lv_conf.h" CACHE PATH "" FORCE)
 set(LVGL_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/../app/managed_components/lvgl__lvgl" CACHE PATH "LVGL 9.5.0 source checkout")
 add_subdirectory("${LVGL_SOURCE_DIR}" lvgl)
+add_subdirectory(../integrated-lanes/lifehash/core lifehash-core)
 file(GLOB FONTS "../app/main/fonts/*.c")
-add_executable(gui_host gui_host.c ${FONTS})
-target_include_directories(gui_host PRIVATE ../app/main)
-target_link_libraries(gui_host PRIVATE lvgl "${CMAKE_CURRENT_SOURCE_DIR}/../runtime/target/release/libentropylab_runtime.a" m dl pthread)
+add_executable(gui_host
+    gui_host.c
+    ../app/main/gui08_native.c
+    ../app/main/gui08_editor.c
+    ../app/main/seed_native.c
+    ../app/main/extra_dice_native.c
+    ../app/main/fingerprint_view.c
+    ../input-methods/extra-dice/extra_dice.c
+    ../integrated-lanes/seedhelpers/target-adapter/seed_helpers_target.c
+    ../integrated-lanes/bases/core/number_bases.c
+    ${FONTS})
+target_include_directories(gui_host PRIVATE
+    ../app/main
+    ../input-methods/extra-dice
+    ../integrated-lanes/bases/core
+    ../integrated-lanes/seedhelpers/target-adapter
+    ../integrated-lanes/playingcards/adapter/include
+    ../integrated-lanes/lifehash/core/include)
+target_link_libraries(gui_host PRIVATE lvgl entropylab_lifehash "${CMAKE_CURRENT_SOURCE_DIR}/../runtime/target/release/libentropylab_runtime.a" m dl pthread)
 target_compile_options(gui_host PRIVATE -Wall -Wextra -Werror -UNDEBUG)
