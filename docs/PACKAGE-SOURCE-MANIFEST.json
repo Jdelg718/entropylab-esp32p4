@@ -1,7 +1,8 @@
 {
-  "schema": "prepared-publication-closeout-v1",
-  "tested_predecessor_manifest_sha256": "0c11e6fd9fcccc260f78918367c588c5095c755382cad35920a5c88a3ff7de10",
-  "status": "source-and-host-reviewed; no publication or firmware-release approval",
+  "schema": "release-hygiene-candidate-v1",
+  "predecessor_manifest_sha256": "aa8debfce0c14d6e479a8bde8a7cd7d18673101ff3f22d15eb462937dddea464",
+  "recipe": "h2",
+  "status": "candidate; target rebuild and independent review required; distribution HOLD",
   "entries": [
     {
       "path": ".gitattributes",
@@ -324,6 +325,11 @@
       "sha256": "0c44ecccd9453f6fbb00d55de81f9cd8281d5122b048cac517b54b1f4d37d4e9"
     },
     {
+      "path": "docs/RELEASE-BUILD-HYGIENE.md",
+      "bytes": 2667,
+      "sha256": "46d3013a494ae67b19a6004e2a59a3b49b11ac6a9929705d14641a64e1ea583c"
+    },
+    {
       "path": "docs/RELEASE-SOURCE-MAPPING.json",
       "bytes": 41162,
       "sha256": "085d1c52285474b28275a9abd42d5bcb20b46c02e34d08fa9e097fb8654bdc22"
@@ -420,8 +426,8 @@
     },
     {
       "path": "fixture-firmware/app/CMakeLists.txt",
-      "bytes": 115,
-      "sha256": "e0f21acf53ade8bab6669fe03d392303d50c791ffc6037756ab9037799ed56bf"
+      "bytes": 1033,
+      "sha256": "1a222a48ad4f90fc94876b8d8162028b167aa9756ff72f20766ac831dd791484"
     },
     {
       "path": "fixture-firmware/app/dependencies.lock",
@@ -2045,13 +2051,23 @@
     },
     {
       "path": "scripts/build-firmware.sh",
-      "bytes": 1898,
-      "sha256": "8774802e3eddee4807a648b628cb9710b3b88cef764b2ed37cfe4f11fdffacb0"
+      "bytes": 2892,
+      "sha256": "96778c283974f5c2a889e6920c60c4a0fd6681fd1adc5c5e10384a172b5dcc0a"
+    },
+    {
+      "path": "scripts/check-idf-remaps.py",
+      "bytes": 4236,
+      "sha256": "1731c98a9d608d708acbb9baccb813b29b7343bc7a19c0c9fbccdac58d1badb6"
     },
     {
       "path": "scripts/localize-coin.py",
       "bytes": 3105,
       "sha256": "0455444e19ab7064e6b05ced30ae0195b46b6dfc6439802c1d95a80bf916b6d7"
+    },
+    {
+      "path": "scripts/release-hygiene.py",
+      "bytes": 4675,
+      "sha256": "3bf8d790dccfaee282932879144100b813ce6149e5e0458f6057a8f0b68a6703"
     },
     {
       "path": "scripts/test-coin-archive.py",
