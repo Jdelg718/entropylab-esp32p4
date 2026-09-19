@@ -7,8 +7,10 @@ Run the local browser installer at `flash/first-install/`; the separate `flash/`
 retention updater is unchanged and remains held. No automatic backup is provided.
 The exact accepted source/provenance archive is `release/retention-public-source.tar.gz`.
 This is not a full application qualification or reproducible firmware-build claim.
-The inherited full host runner currently rejects the successor identity; see the
-installation document before using older build instructions below.
+Use `python3 scripts/retention-host.py --check` for accepted-source verification
+and `python3 scripts/retention-host.py` for the complete current host gate.
+See [the portable retention host recipe](docs/retention-host/README.md).
+Older runners below intentionally retain predecessor-only identities.
 
 > **Historical documentation below:** its status, branch, build and acceptance statements describe the earlier source candidate, not this release. For current install policy, exact firmware tuple, source archive, remaining limitations and publication hold, use [PUBLIC-FIRST-INSTALL.md](docs/PUBLIC-FIRST-INSTALL.md).
 
