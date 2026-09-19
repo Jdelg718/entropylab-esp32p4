@@ -7,13 +7,17 @@ Unknown boards, revisions and profiles must not be accepted by assumption.
 
 ## Run locally
 
-Install Git and Python 3. Clone this repository, enter it, then:
+Install Python 3. Either clone this repository with Git, or verify the release ZIP's
+published SHA-256 and extract it (Git is not required for the ZIP). Enter the
+repository or extracted directory, then:
 
 - Linux/macOS: `python3 scripts/serve-public.py`
 - Windows: `py -3 scripts/serve-public.py`
 
-This loopback-only server allows tracked public files only; Git metadata, directory
-listings and untracked backups are refused. Run from a clean clone. Native Windows
+This loopback-only server allows tracked public files only (using the packaged
+`release/inventory.json` allowlist when Git metadata is absent); Git metadata,
+directory listings and added backups are refused. Use a clean clone or verified
+release ZIP, and do not edit its allowlist. Native Windows
 and macOS execution has not been independently tested.
 
 Open http://localhost:8000/flash/first-install/ in desktop Chrome or Edge with Web Serial.

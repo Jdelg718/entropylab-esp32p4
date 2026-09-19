@@ -12,4 +12,9 @@ try:
   except urllib.error.HTTPError as e:code=e.code
   assert code==want,(path,code)
  print('PASS eight public-server allow/deny regressions')
+ for asset in sorted((m.ROOT/'flash/first-install').rglob('*')):
+  if asset.is_file() and asset.relative_to(m.ROOT).as_posix() in m.ALLOWED:
+   with urllib.request.urlopen(f'http://127.0.0.1:{s.server_port}/'+asset.relative_to(m.ROOT).as_posix()) as r:
+    assert r.status == 200 and r.read() == asset.read_bytes(), asset
+ print('PASS all installer assets served byte-identically')
 finally:s.shutdown();s.server_close()

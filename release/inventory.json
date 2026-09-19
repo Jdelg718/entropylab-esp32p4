@@ -4,12 +4,12 @@
     "sha256": "e64669dec6d9828785f27bfdcc1de44e7ed1d9868c36fc5b2a30dd25e9339514"
   },
   ".github/workflows/host.yml": {
-    "bytes": 905,
-    "sha256": "f435b4953619c74edd0c4d7de9ad04a0bc0c95371fe6dc4fdd1725659814bd21"
+    "bytes": 913,
+    "sha256": "ac2814040e3214ee4c30ad477e9ccfdb75346a11131558f476bd800cfa7d65f0"
   },
   ".github/workflows/public-installer.yml": {
-    "bytes": 515,
-    "sha256": "1f0cbd96753f214d869f421e8f320e7a2d482ec65a760032dbd787d56b49047a"
+    "bytes": 618,
+    "sha256": "5182252ee2644241dcfed1122eb4fcce9a465eb91d7ae4f250c0a14d3a3ef93b"
   },
   ".gitignore": {
     "bytes": 437,
@@ -48,8 +48,8 @@
     "sha256": "d5e3c7c62a84e80073201e2f6e5130e9e6804fa05f8ac4f8b26a13c7d3969697"
   },
   "README.md": {
-    "bytes": 11544,
-    "sha256": "fb37d9bd98f0e717025da16821411572bfb4b8c330556ec64d650e5e025a1799"
+    "bytes": 11696,
+    "sha256": "cfec06ae0ac99007bb3d82007879a2170e55839b4e72d26563925530e1fd668e"
   },
   "ROADMAP.md": {
     "bytes": 7689,
@@ -256,8 +256,8 @@
     "sha256": "59779ae389601fa7b08ccf85b9f708730ee73a534fcdcad07e389c61d750b953"
   },
   "docs/PUBLIC-FIRST-INSTALL.md": {
-    "bytes": 5396,
-    "sha256": "c79d4aa0b60a1fe6bd5865c7845c296c857088db0101035d3c7ee5e7b23f553c"
+    "bytes": 5665,
+    "sha256": "3a8118adec9387adda3c126b8391076eabb05daf5f7ec5df70d7bc07802e754e"
   },
   "docs/PUBLIC-INSTALLER-REVIEW.md": {
     "bytes": 3540,
@@ -1534,6 +1534,46 @@
   "docs/release-notices/toolchain/newlib/COPYING3.LIB": {
     "bytes": 7639,
     "sha256": "a853c2ffec17057872340eee242ae4d96cbf2b520ae27d903e1b2fef1a5f9d1c"
+  },
+  "docs/retention-host/README.md": {
+    "bytes": 3689,
+    "sha256": "39b589325c1b10dc1f67e239fd65d08a268c1c76cf96a7e41008ea4304fa0b6f"
+  },
+  "docs/retention-host/historical.json": {
+    "bytes": 53146,
+    "sha256": "d6c299b13ac854425abafc5e77cdc85ab53b5832b2ebe53fe88ef696dfea083e"
+  },
+  "docs/retention-host/inputs/fixture-firmware/app/main/CMakeLists.txt": {
+    "bytes": 1792,
+    "sha256": "45c7b537e4b546504c8f58b1b9813cf2ee7ec1a98f564ba1bc09cbd20bb14b59"
+  },
+  "docs/retention-host/inputs/fixture-firmware/app/main/gui.c": {
+    "bytes": 37267,
+    "sha256": "98db499ddfd502f402016de46968857edf8e388f266ed821e647bbf35af8dd61"
+  },
+  "docs/retention-host/inputs/fixture-firmware/app/main/main.c": {
+    "bytes": 8885,
+    "sha256": "f666f06524a10ff67e1d1b5bfbd7f43701950e5e42f07eefd8e085bbc0e81cec"
+  },
+  "docs/retention-host/inputs/fixture-firmware/app/main/passphrase_gui.inc": {
+    "bytes": 19522,
+    "sha256": "7586a9fbd5838c653606f7b2579f9535e822db6356993046fe4e21b1b75e9573"
+  },
+  "docs/retention-host/inputs/fixture-firmware/app/main/passphrase_integration.inc": {
+    "bytes": 11780,
+    "sha256": "27af1da5fc572c46eec944ba9129a9f7fcffd1a1d237ba13962a1f09fe1684c9"
+  },
+  "docs/retention-host/inputs/fixture-firmware/runtime-sources/hex-core/src/lib.rs": {
+    "bytes": 3252,
+    "sha256": "9c003045fbd8b036bd6a550e06ec129230b49b39dac234751c5ffa304dcf90a6"
+  },
+  "docs/retention-host/inputs/fixture-firmware/tests/gui_host.c": {
+    "bytes": 29259,
+    "sha256": "991792ef78011558a88b474a25ec75f6a9b09cf3f6ebc074344d48c32b695aa2"
+  },
+  "docs/retention-host/inputs/fixture-firmware/tests/passphrase_gui_tests.inc": {
+    "bytes": 20207,
+    "sha256": "5c90bb34943abe9c8a59a7b53aa28df7c09bf3ca0558532f759a8ecdb805c074"
   },
   "docs/review-repair-successors.json": {
     "bytes": 1683,
@@ -3039,13 +3079,21 @@
     "bytes": 4675,
     "sha256": "3bf8d790dccfaee282932879144100b813ce6149e5e0458f6057a8f0b68a6703"
   },
+  "scripts/retention-host.py": {
+    "bytes": 5412,
+    "sha256": "c58a2b2860eb511e7ed0c16545fdb991626146232290dec6964fa407025cf7a6"
+  },
+  "scripts/retention-no-captures.c": {
+    "bytes": 755,
+    "sha256": "1059df3501ff56883e52b0a365d12cde51d204b7c24590a34b62fffb3109e78f"
+  },
   "scripts/review-public.py": {
-    "bytes": 932,
-    "sha256": "6e35811f1b9a83fccf76cf27267eed039939581a67cfbbdae41959418872fa22"
+    "bytes": 1316,
+    "sha256": "96118e473d3502a119c142fdccc2be0aff57eb22a82b608986935122346b0db2"
   },
   "scripts/serve-public.py": {
-    "bytes": 1119,
-    "sha256": "62841c9b1ad8017ed589efe227657f4506d7fbddf9b61b250e0ddd7734eeabf7"
+    "bytes": 1447,
+    "sha256": "e5c78c86afd15d6df9a1be9900f2e9c138ad8c15fc091b1c4fee07ab38a6dd6d"
   },
   "scripts/test-coin-archive.py": {
     "bytes": 5428,
@@ -3095,6 +3143,10 @@
     "bytes": 2984,
     "sha256": "75777f28c0e62fe3b33a11bc3527b6aaeff5aaa7896defef9198e5751434f9aa"
   },
+  "scripts/test-public-zip.py": {
+    "bytes": 725,
+    "sha256": "e6f8d536cd0fb1a7625138d86378c501e235f52273c9fed8daa53c285971bc33"
+  },
   "scripts/test-review-repair-import.py": {
     "bytes": 1509,
     "sha256": "75cd58af78a64260a060792b557e994e218a6d90de713f44df1664158e4fd1a4"
@@ -3104,8 +3156,8 @@
     "sha256": "e42309b7fe4e6634a0d11e59a98043a72e8bd7b2af36bc47ae24430d9fe8e0c5"
   },
   "scripts/test-serve-public.py": {
-    "bytes": 898,
-    "sha256": "f2a1a3c9103d346730eca2d1d60857c43ff596778ee9ac32bef83c34f97ebc58"
+    "bytes": 1280,
+    "sha256": "c2238bc2fb3ade31baac33763d4929a92f3bcc7df3c13c426546a0856069757f"
   },
   "scripts/test-words-host.sh": {
     "bytes": 1052,

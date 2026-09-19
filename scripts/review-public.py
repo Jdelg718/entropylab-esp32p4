@@ -10,11 +10,18 @@ for name, pin in m['files'].items():
     assert hashlib.sha256(data).hexdigest() == pin['sha256'], name
     assert data in notices, name
 print('PASS exact notice hashes and concatenation:', len(m['files']))
-archive_root = root/'.review-source/retention-public-source/source'
-if archive_root.is_dir():
+import tarfile
+with tarfile.open(root/'release/retention-public-source.tar.gz') as archive:
+    prefix = 'retention-public-source/source/'
     count = 0
-    for p in (archive_root/'fixture-firmware').rglob('*'):
-        if p.is_file():
-            assert p.read_bytes() == (root/p.relative_to(archive_root)).read_bytes(), p
+    for member in archive.getmembers():
+        if member.isfile() and member.name.startswith(prefix + 'fixture-firmware/'):
+            name = member.name[len(prefix):]
+            data = archive.extractfile(member)
+            assert data is not None, name
+            assert data.read() == (root/name).read_bytes(), name
             count += 1
+    assert count == 330, count
     print('PASS accepted fixture source byte equality:', count)
+# This is the fixture subtree only, not the 437 target-identity paths or the
+# complete 745-file archive; retention-host.py --check verifies those scopes.
