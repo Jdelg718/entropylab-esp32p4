@@ -8,8 +8,8 @@
     "sha256": "f435b4953619c74edd0c4d7de9ad04a0bc0c95371fe6dc4fdd1725659814bd21"
   },
   ".github/workflows/public-installer.yml": {
-    "bytes": 419,
-    "sha256": "f35d189ee1d1d7d85766f0ca5541d3de04cc3bc59ce3adf83cfc3a7a3666bd78"
+    "bytes": 515,
+    "sha256": "1f0cbd96753f214d869f421e8f320e7a2d482ec65a760032dbd787d56b49047a"
   },
   ".gitignore": {
     "bytes": 437,
@@ -48,8 +48,8 @@
     "sha256": "d5e3c7c62a84e80073201e2f6e5130e9e6804fa05f8ac4f8b26a13c7d3969697"
   },
   "README.md": {
-    "bytes": 11277,
-    "sha256": "326b5a2f9bd34eae856fe0375ca2e04c4265f2d994d373e89202c4791ae11910"
+    "bytes": 11544,
+    "sha256": "fb37d9bd98f0e717025da16821411572bfb4b8c330556ec64d650e5e025a1799"
   },
   "ROADMAP.md": {
     "bytes": 7689,
@@ -256,8 +256,12 @@
     "sha256": "59779ae389601fa7b08ccf85b9f708730ee73a534fcdcad07e389c61d750b953"
   },
   "docs/PUBLIC-FIRST-INSTALL.md": {
-    "bytes": 5199,
-    "sha256": "964cf2d29410079f8525d3d269d2c3b9e04900a2189720bb73b5dd562e213b63"
+    "bytes": 5396,
+    "sha256": "c79d4aa0b60a1fe6bd5865c7845c296c857088db0101035d3c7ee5e7b23f553c"
+  },
+  "docs/PUBLIC-INSTALLER-REVIEW.md": {
+    "bytes": 3540,
+    "sha256": "ef096711b1949b2d31a83428784b7a5f0cc76496ac6ba01a04d20fb78d01e5ac"
   },
   "docs/PUBLICATION-STATUS.md": {
     "bytes": 2966,
@@ -2955,6 +2959,10 @@
     "bytes": 307921,
     "sha256": "dbdb0d1115f672ec865896a841b13ef7a081a35a914e0158afcc3a6d14f33871"
   },
+  "flash/first-install/wire.test.mjs": {
+    "bytes": 7373,
+    "sha256": "57f9ba944739f72b4b200a0fdada8ad22948a2f8f070ef78a17864af5fd0afd8"
+  },
   "flash/index.html": {
     "bytes": 8058,
     "sha256": "746c6338bc70dd95aba7b1cf0342cfb446f2dd70e90a22a05d39feffe83c2f53"
@@ -3031,6 +3039,14 @@
     "bytes": 4675,
     "sha256": "3bf8d790dccfaee282932879144100b813ce6149e5e0458f6057a8f0b68a6703"
   },
+  "scripts/review-public.py": {
+    "bytes": 932,
+    "sha256": "6e35811f1b9a83fccf76cf27267eed039939581a67cfbbdae41959418872fa22"
+  },
+  "scripts/serve-public.py": {
+    "bytes": 1119,
+    "sha256": "62841c9b1ad8017ed589efe227657f4506d7fbddf9b61b250e0ddd7734eeabf7"
+  },
   "scripts/test-coin-archive.py": {
     "bytes": 5428,
     "sha256": "bda9237e4e7bb3e8c408d37db72b45332d1ded28bdc7a1952b64ab001edba4ca"
@@ -3086,6 +3102,10 @@
   "scripts/test-runtime-lock.py": {
     "bytes": 2778,
     "sha256": "e42309b7fe4e6634a0d11e59a98043a72e8bd7b2af36bc47ae24430d9fe8e0c5"
+  },
+  "scripts/test-serve-public.py": {
+    "bytes": 898,
+    "sha256": "f2a1a3c9103d346730eca2d1d60857c43ff596778ee9ac32bef83c34f97ebc58"
   },
   "scripts/test-words-host.sh": {
     "bytes": 1052,

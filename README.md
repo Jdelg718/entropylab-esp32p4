@@ -10,7 +10,7 @@ This is not a full application qualification or reproducible firmware-build clai
 The inherited full host runner currently rejects the successor identity; see the
 installation document before using older build instructions below.
 
-<!-- Historical project documentation follows. -->
+> **Historical documentation below:** its status, branch, build and acceptance statements describe the earlier source candidate, not this release. For current install policy, exact firmware tuple, source archive, remaining limitations and publication hold, use [PUBLIC-FIRST-INSTALL.md](docs/PUBLIC-FIRST-INSTALL.md).
 
 # EntropyLab for ESP32-P4 (unofficial)
 

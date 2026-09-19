@@ -9,8 +9,12 @@ Unknown boards, revisions and profiles must not be accepted by assumption.
 
 Install Git and Python 3. Clone this repository, enter it, then:
 
-- Linux/macOS: `python3 -m http.server 8000 --bind 127.0.0.1`
-- Windows: `py -3 -m http.server 8000 --bind 127.0.0.1`
+- Linux/macOS: `python3 scripts/serve-public.py`
+- Windows: `py -3 scripts/serve-public.py`
+
+This loopback-only server allows tracked public files only; Git metadata, directory
+listings and untracked backups are refused. Run from a clean clone. Native Windows
+and macOS execution has not been independently tested.
 
 Open http://localhost:8000/flash/first-install/ in desktop Chrome or Edge with Web Serial.
 Use localhost or HTTPS, not file URLs or an insecure remote HTTP host. Safari/Firefox

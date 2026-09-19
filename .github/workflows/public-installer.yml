@@ -11,5 +11,7 @@ jobs:
         with:
           node-version: '22'
       - run: node --test flash/first-install/*.test.mjs
+      - run: python3 scripts/test-serve-public.py
+      - run: python3 scripts/review-public.py
       - run: python3 scripts/package-public.py
       - run: git diff --exit-code -- release/inventory.json
