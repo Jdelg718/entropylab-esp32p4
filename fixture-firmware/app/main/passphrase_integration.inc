@@ -2,8 +2,23 @@
  * Worker entry uses only transition locking and compute, never LVGL. */
 #include "passphrase_dispatch.h"
 #include "compute.h"
+#include "passphrase_gui.h"
+static void pi_completed_invalidate(passphrase_ui_t *u);
+#define PP_INVALIDATE_OWNER(u) pi_completed_invalidate(u)
 #include "passphrase_gui.inc"
+#undef PP_INVALIDATE_OWNER
 static passphrase_ui_t pi_ui;
+/* GUI/display-serialized owner, never aliased by worker transfer storage. */
+static struct {
+ hex_result_t full;
+ passphrase_ui_completion_t identity;
+ uint8_t rgb[FINGERPRINT_VIEW_RGB_SIZE];
+ int lifehash_status;
+ bool valid;
+} pi_completed;
+static void pi_completed_invalidate(passphrase_ui_t *u){
+ if(u==&pi_ui)el_dispatch_clear(&pi_completed,sizeof pi_completed);
+}
 static lv_obj_t *pi_safety_dock;
 static el_dispatch_t pi_dispatch;
 static el_dispatch_clock_t pi_clock;
@@ -64,6 +79,7 @@ void gui_passphrase_lifehash_configure(gui_passphrase_lifehash_render_fn render)
 }
 void gui_passphrase_dispose(void){
  if(pi_lock){pi_lock();el_dispatch_detach(&pi_dispatch);el_dispatch_clear(&pi_full_result,sizeof pi_full_result);pi_full_token=0;pi_lifehash_clear();pi_unlock();}
+ pi_completed_invalidate(&pi_ui);
  pi_token=0;el_dispatch_clear(&pi_pending,sizeof pi_pending);
  el_dispatch_clear(&pi_gui08_source,sizeof pi_gui08_source);pi_owner=PI_OWNER_NONE;
  passphrase_ui_destroy(&pi_ui);pi_safety_dock=NULL;
@@ -79,6 +95,7 @@ static void pi_deleted(lv_event_t *e){
  if(target!=app_content&&target!=pi_ui.root)return;
  if(target==pi_ui.root)pi_safety_dock=NULL;
  if(pi_lock){pi_lock();el_dispatch_detach(&pi_dispatch);el_dispatch_clear(&pi_full_result,sizeof pi_full_result);pi_full_token=0;pi_lifehash_clear();pi_unlock();}
+ pi_completed_invalidate(&pi_ui);
  pi_token=0;el_dispatch_clear(&pi_pending,sizeof pi_pending);
 }
 static bool pi_submit(const passphrase_ui_request_t *r,void *unused){
@@ -116,7 +133,7 @@ static bool pi_submit(const passphrase_ui_request_t *r,void *unused){
  if(ok){pi_pending=m;pi_token=token;passphrase_ui_lifehash_rendering(&pi_ui);}return ok;
 }
 static void pi_back_event(lv_event_t *e){
- (void)e;if(pi_owner==PI_OWNER_LEGACY&&pi_lock){pi_lock();el_dispatch_cancel(&pi_dispatch,pi_token);pi_lifehash_clear();pi_unlock();}
+ (void)e;if(pi_owner==PI_OWNER_LEGACY&&pi_lock){pi_lock();el_dispatch_cancel(&pi_dispatch,pi_token);el_dispatch_clear(&pi_full_result,sizeof pi_full_result);pi_full_token=0;pi_lifehash_clear();pi_unlock();}
  pi_token=0;if(pi_ui.root)lv_obj_add_flag(pi_ui.root,LV_OBJ_FLAG_HIDDEN);
 }
 static void pi_cancel_event(lv_event_t *e){passphrase_ui_cancel(&pi_ui);pi_back_event(e);}
@@ -138,13 +155,29 @@ static bool pi_ensure_ui(void){
  }
  return pi_ui.live;
 }
+static bool pi_completed_matches(void){
+ const passphrase_ui_completion_t *c=&pi_completed.identity;
+ return pi_completed.valid&&pi_ui.live&&!pi_ui.pending&&pi_ui.result_visible&&
+  c->request_id==pi_ui.next_id&&c->generation==pi_ui.generation&&
+  pp_context_equal(c->context,pi_ui.context)&&c->marker==passphrase_ui_snapshot_marker(&pi_ui);
+}
+static void pi_completed_render(void){
+ if(!pi_completed_matches()){pi_completed_invalidate(&pi_ui);return;}
+ const hex_result_t *full=&pi_completed.full;
+ lv_label_set_text(pi_ui.result_marker_label,pi_completed.identity.marker==PASSPHRASE_UI_ACTIVE?"Snapshot: Active passphrase":"Snapshot: Empty passphrase");
+ lv_label_set_text(pi_ui.result_fp,full->fingerprint);lv_label_set_text(pi_ui.result_addr,full->address);
+ lv_label_set_text(pi_mnemonic_label,full->mnemonic);lv_label_set_text(pi_entropy_label,full->entropy);
+ lv_obj_remove_flag(pi_ui.result,LV_OBJ_FLAG_HIDDEN);
+ if(full->weak)lv_label_set_text(pi_ui.status,"WEAK_INPUT_LAB_ONLY - count is not randomness quality. NEVER fund.");
+ if(pi_completed.lifehash_status==0){if(!passphrase_ui_lifehash_publish(&pi_ui,full->fingerprint,pi_completed.rgb,sizeof pi_completed.rgb))passphrase_ui_lifehash_failed(&pi_ui);}else passphrase_ui_lifehash_failed(&pi_ui);
+}
 static void pi_enter(void){
  if(!pi_lock||pi_exhausted)return;
  pi_lock();if(!pi_dispatch.route)(void)el_dispatch_open(&pi_dispatch,&pi_clock);pi_unlock();
  if(!pi_ensure_ui())return;
  pi_owner=PI_OWNER_LEGACY;el_dispatch_clear(&pi_gui08_source,sizeof pi_gui08_source);
  passphrase_ui_context_t c={mode,pi_revision,mode==MODE_MNEMONIC?mn_target:mode==MODE_HEX?(uint32_t)(lengths[mode]*3/8):selector,0};
- passphrase_ui_set_context(&pi_ui,c);lv_obj_remove_flag(pi_ui.root,LV_OBJ_FLAG_HIDDEN);lv_obj_move_foreground(pi_ui.root);
+ passphrase_ui_set_context(&pi_ui,c);pi_completed_render();lv_obj_remove_flag(pi_ui.root,LV_OBJ_FLAG_HIDDEN);lv_obj_move_foreground(pi_ui.root);
 }
 static bool pi_enter_gui08(const gui08_request *source){
  if(!source||!source->request_id||!feature_ready(source->method)||
@@ -188,9 +221,10 @@ void gui_passphrase_poll(void){
   c.context=(passphrase_ui_context_t){r.meta.mode,r.meta.revision,r.meta.words,r.meta.derivation_context};c.marker=r.meta.marker;c.rc=(r.rc==1&&full.weak&&el_mode_is_dice(r.meta.mode))?0:r.rc;
   memcpy(c.fingerprint,r.fingerprint,sizeof c.fingerprint);memcpy(c.address,r.address,sizeof c.address);
   if(passphrase_ui_complete(&pi_ui,&c)&&passphrase_ui_result_visible(&pi_ui)){
-   lv_label_set_text(pi_mnemonic_label,full.mnemonic);lv_label_set_text(pi_entropy_label,full.entropy);
-   if(full.weak)lv_label_set_text(pi_ui.status,"WEAK_INPUT_LAB_ONLY - count is not randomness quality. NEVER fund.");
-   if(lifehash_status==0){if(!passphrase_ui_lifehash_publish(&pi_ui,full.fingerprint,rgb,sizeof rgb))passphrase_ui_lifehash_failed(&pi_ui);}else passphrase_ui_lifehash_failed(&pi_ui);
+   pi_completed.full=full;pi_completed.identity=c;
+   memcpy(pi_completed.rgb,rgb,sizeof pi_completed.rgb);
+   pi_completed.lifehash_status=lifehash_status;pi_completed.valid=true;
+   pi_completed_render();
   }
   el_dispatch_clear(&c,sizeof c);
  }

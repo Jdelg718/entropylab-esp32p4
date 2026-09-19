@@ -257,6 +257,7 @@ static void saver_input_tests(lv_indev_t *dev){
  lv_obj_clean(lv_screen_active());gui_create(request);
  puts("PASS real LVGL read/hit-test/release pipeline wake over Clear/Validate/slot/mode");
 }
+#include "global_saver_tests.inc"
 #include "modal_touch_tests.inc"
 #include "education_tests.inc"
 #include "cleanup_tests.inc"
@@ -264,6 +265,7 @@ static void saver_input_tests(lv_indev_t *dev){
 #include "explanation_tests.inc"
 #include "passphrase_gui_tests.inc"
 #include "passphrase_integration_tests.inc"
+#include "dice_navigation_tests.inc"
 #include "seed_panel_tests.inc"
 static unsigned reflow_cancel_calls;
 static uint64_t reflow_cancel_id;
@@ -353,6 +355,7 @@ static void cards_bases_reflow_matrix(void){
     puts("PASS reflow52 actual gui_create Cards/Bases native state matrix");
 }
 int main(void){
+    if(getenv("DICE_NAV_ONLY")){lv_init();lv_display_t *d=lv_display_create(480,800);assert(d);lv_display_set_color_format(d,LV_COLOR_FORMAT_RGB565);lv_display_set_flush_cb(d,flush);lv_display_set_buffers(d,buffer,NULL,sizeof buffer,LV_DISPLAY_RENDER_MODE_PARTIAL);gui_create(request);dice_navigation_tests();lv_deinit();return 0;}
     lv_init();lv_display_t *d=lv_display_create(480,800);assert(d);
     lv_display_set_color_format(d,LV_COLOR_FORMAT_RGB565);lv_display_set_flush_cb(d,flush);
     lv_display_set_buffers(d,buffer,NULL,sizeof buffer,LV_DISPLAY_RENDER_MODE_PARTIAL);
@@ -360,7 +363,7 @@ int main(void){
     gui_create(request);if(getenv("EDUCATION_ONLY")){education_matrix(dev);lv_deinit();return 0;}if(getenv("MODAL_TOUCH_ONLY")){modal_touch_tests(dev);lv_deinit();return 0;}if(getenv("CARDS_BASES_REFLOW_ONLY")){cards_bases_reflow_matrix();lv_deinit();return 0;}d6_indexed_cell_regression();if(getenv("D6_CELL_ONLY")){lv_deinit();return 0;}integrated_dice_visuals();lv_obj_clean(lv_screen_active());gui_create(request);passphrase_gui_tests();passphrase_integration_tests();seed_panel_event_test();if(getenv("SEED_PANEL_ONLY")){lv_deinit();return 0;}if(getenv("PASSPHRASE_ONLY")){lv_deinit();return 0;}render("empty-native.ppm");
     explanation_tests(dev);if(getenv("EXPLANATION_ONLY")){lv_deinit();return 0;}
     cleanup_tests(dev);safety_cleanup_tests();if(getenv("CLEANUP_ONLY")){lv_deinit();return 0;}
-    saver_tests();saver_input_tests(dev);if(getenv("SAVER_ONLY")){lv_deinit();return 0;}
+    global_saver_tests(dev);saver_tests();saver_input_tests(dev);if(getenv("SAVER_ONLY")){lv_deinit();return 0;}
     layout_tests();if(getenv("LAYOUT_ONLY")){lv_deinit();return 0;}
     assert(lv_obj_has_state(find(lv_screen_active(),"Calculate"),LV_STATE_DISABLED));
     for(int i=1;i<=65;i++){

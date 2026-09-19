@@ -68,11 +68,44 @@ def verify_identities(root):
  repair_classifications={'fixture-firmware/app/main/gui.c': 'production-source', 'fixture-firmware/app/main/saver.inc': 'production-source', 'fixture-firmware/tests/saver_tests.inc': 'host-test-only'}
  assert tuple(e['destination'] for e in repair_manifest['entries'])==tuple(repair_predecessors), 'review-repair destination/order mismatch'
  repair_updates={e['destination']:e for e in repair_manifest['entries']}
+ # Exact independently reviewed terminal delta; never authorize general additions.
+ global_bytes=(root/'docs/global-saver-successors.json').read_bytes()
+ assert hashlib.sha256(global_bytes).hexdigest()=='1ca9ca82cba083adfd74d17dfba0c916c81bbb3aaddf249fea35240c583e5edd', 'unreviewed global-saver manifest'
+ global_manifest=json.loads(global_bytes)
+ assert set(global_manifest)=={'schema','prior_manifest','prior_manifest_sha256','entries'}, 'global-saver fields mismatch'
+ assert global_manifest['schema']=='global-saver-successors-v1', 'global-saver schema mismatch'
+ assert global_manifest['prior_manifest']=='docs/modal-successors.json', 'global-saver prior manifest mismatch'
+ # destination: (classification, operation, reviewed predecessor, reviewed candidate)
+ global_expected={
+  'fixture-firmware/app/main/gui.c': ('production-source','modify','6ae1c147cba8a1a8969a6acbf4c58914ec8a4126b7f911b388247140a8c1e850','98db499ddfd502f402016de46968857edf8e388f266ed821e647bbf35af8dd61'),
+  'fixture-firmware/app/main/saver.inc': ('production-source','modify','46d83f97ba99d8c61c13dd46149d8359fff5693f7d578aaeff1204be20bf9f5c','91dc5a3b97f6f98efc380f078b9ebcf001c454a7a94b7199cb56c7fc2e65feee'),
+  'fixture-firmware/tests/global_saver_tests.inc': ('host-test-only','add',None,'3a3d20a9717fc0f1e679e561e22c9a21a49e6d1791a8d00bd888b961fd2f126e'),
+  'fixture-firmware/tests/gui_host.c': ('host-test-only','modify','498de1a5a04164ed5dfe4c1874d362fd5d613ba9775bf7d8ac31aeb6cb4c9378','991792ef78011558a88b474a25ec75f6a9b09cf3f6ebc074344d48c32b695aa2'),
+ }
+ assert tuple(e['destination'] for e in global_manifest['entries'])==tuple(global_expected), 'global-saver destination/order mismatch'
+ global_updates={e['destination']:e for e in global_manifest['entries']}
+ for path,e in global_updates.items():
+  assert set(e)=={'destination','classification','operation','before_sha256','candidate_sha256','reason'}, 'global-saver entry fields mismatch'
+  classification,operation,before,candidate=global_expected[path]
+  assert e['classification']==classification, f'global-saver classification mismatch: {path}'
+  assert e['operation']==operation, f'global-saver operation mismatch: {path}'
+  assert e['before_sha256']==before, f'global-saver predecessor mismatch: {path}'
+  assert e['candidate_sha256']==candidate, f'global-saver reviewed candidate mismatch: {path}'
+  assert isinstance(e['reason'],str) and e['reason'].strip(), f'global-saver reason required: {path}'
+ global_traversed=set()
+ def global_saver_hash(path,predecessor):
+  if path in global_updates:
+   e=global_updates[path]
+   assert e['operation']=='modify', f'global-saver addition cannot replace predecessor: {path}'
+   assert e['before_sha256']==predecessor, f'global-saver chain discontinuity: {path}'
+   global_traversed.add(path)
+   return e['candidate_sha256']
+  return predecessor
  for path,e in repair_updates.items():
   assert e['classification']==repair_classifications[path], f'classification/path mismatch: {path}'
   assert e['reason'], 'review-repair reason required'
   assert e['before_sha256']==repair_predecessors[path], f'review-repair chain discontinuity: {path}'
-  assert hashlib.sha256((root/path).read_bytes()).hexdigest()==e['candidate_sha256'], f'review-repair current mismatch: {path}'
+  assert hashlib.sha256((root/path).read_bytes()).hexdigest()==global_saver_hash(path,e['candidate_sha256']), f'review-repair current mismatch: {path}'
  modal_bytes=(root/'docs/modal-successors.json').read_bytes()
  assert hashlib.sha256(modal_bytes).hexdigest()=='9e1d69da912c3dc592419a77cab6179f5876efe2eb1abe4ce6946a834a553c9c', 'unreviewed modal successor manifest'
  modal=json.loads(modal_bytes)
@@ -88,7 +121,8 @@ def verify_identities(root):
   assert e['before_sha256']==modal_predecessors[path], f'modal chain discontinuity: {path}'
   assert e['classification']==modal_classes[path], f'classification/path mismatch: {path}'
   assert e['reason'], 'modal reason required'
-  assert hashlib.sha256((root/path).read_bytes()).hexdigest()==e['candidate_sha256'], f'modal current mismatch: {path}'
+  assert hashlib.sha256((root/path).read_bytes()).hexdigest()==global_saver_hash(path,e['candidate_sha256']), f'modal current mismatch: {path}'
+ assert global_manifest['prior_manifest_sha256']==hashlib.sha256(modal_bytes).hexdigest(), 'global-saver prior manifest mismatch'
  def modal_hash(path,expected):
   if path in modal_updates:
    e=modal_updates[path]
@@ -99,8 +133,8 @@ def verify_identities(root):
   if path in repair_updates:
    e=repair_updates[path]
    assert e['before_sha256']==expected, f'review-repair chain discontinuity: {path}'
-   return modal_hash(path,e['candidate_sha256'])
-  return modal_hash(path,expected)
+   expected=e['candidate_sha256']
+  return global_saver_hash(path,modal_hash(path,expected))
  for path,e in release_updates.items():
   assert hashlib.sha256((root/path).read_bytes()).hexdigest()==current_hash(path,e['candidate_sha256']), path
  def release_hash(path,expected):
@@ -175,6 +209,11 @@ def verify_identities(root):
    expected=repair['candidate_sha256']
   assert hashlib.sha256((root/x['destination']).read_bytes()).hexdigest()==final_hash(x['destination'],expected),x['destination']
   assert x['exact'] or x['destination'] in m['exceptions']
+ # Each modification must be reached through the preserved predecessor chain.
+ assert global_traversed=={p for p,e in global_updates.items() if e['operation']=='modify'}, 'global-saver chain coverage mismatch'
+ for path,e in global_updates.items():
+  assert (root/path).is_file(), f'global-saver missing file: {path}'
+  assert hashlib.sha256((root/path).read_bytes()).hexdigest()==e['candidate_sha256'], f'global-saver current mismatch: {path}'
 verify_identities(r)
 rows=[x.split('\t') for x in (r/'fixture-firmware/dice/vectors/dice.tsv').read_text().splitlines()]
 assert len(rows)==20 and sum(int(x[4])>=0 for x in rows)==14 and sum(int(x[4])<0 for x in rows)==6

@@ -47,6 +47,8 @@ class ImportIdentityTests(unittest.TestCase):
         paths.append('docs/d6-release-successors.json')
         paths.append('docs/review-repair-successors.json')
         paths.append('docs/modal-successors.json')
+        paths.append('docs/global-saver-successors.json')
+        paths += [x['destination'] for x in json.loads((ROOT / 'docs/global-saver-successors.json').read_text())['entries']]
         paths += [x['destination'] for x in json.loads((ROOT / 'docs/review-repair-successors.json').read_text())['entries']]
         paths += [x['destination'] for x in json.loads((ROOT / 'docs/d6-release-successors.json').read_text())['entries']]
         paths += [x['destination'] for x in json.loads((ROOT / 'docs/ui-repair-successors.json').read_text())['entries']]

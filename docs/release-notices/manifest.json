@@ -1,0 +1,3300 @@
+{
+  "candidate_identity_sha256": "07d03ba6f421a25316e5b73662f1a6f9d79243c7bdaba8119c3cd27a16573d4d",
+  "files": {
+    "docs/release-notices/esp-idf/LICENSE": {
+      "bytes": 11358,
+      "origin": "ESP-IDF b774170ff46c393eeb5e495ea37936038d3f4f4f/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc/LICENSE.txt": {
+      "bytes": 1300,
+      "origin": "esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc/LICENSE.txt",
+      "sha256": "ffd8b033d2df7568c25a98866bd92b1656f7da82d7f813c0b2eb85ec36611193"
+    },
+    "docs/release-notices/esp-idf/components/bt/common/tinycrypt/LICENSE": {
+      "bytes": 3254,
+      "origin": "esp-idf/components/bt/common/tinycrypt/LICENSE",
+      "sha256": "270e0b63ce74421f1ccaaf03f9c7daa430cdb16c9856259ca4c2e3c74880d589"
+    },
+    "docs/release-notices/esp-idf/components/bt/controller/lib_esp32/LICENSE": {
+      "bytes": 11358,
+      "origin": "esp-idf/components/bt/controller/lib_esp32/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/esp-idf/components/bt/controller/lib_esp32c2/esp32c2-bt-lib/NOTICE": {
+      "bytes": 320,
+      "origin": "esp-idf/components/bt/controller/lib_esp32c2/esp32c2-bt-lib/NOTICE",
+      "sha256": "9db49cb1e535c496d7655dd54d5481404e7634353dc3bc0817c7d07767acc6e8"
+    },
+    "docs/release-notices/esp-idf/components/bt/controller/lib_esp32c3_family/LICENSE": {
+      "bytes": 11358,
+      "origin": "esp-idf/components/bt/controller/lib_esp32c3_family/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/esp-idf/components/bt/controller/lib_esp32c5/esp32c5-bt-lib/NOTICE": {
+      "bytes": 320,
+      "origin": "esp-idf/components/bt/controller/lib_esp32c5/esp32c5-bt-lib/NOTICE",
+      "sha256": "ebd002217a1a76e3cce23cd89d0916477da6c7907a6a46c8a7f1fb209e3cb333"
+    },
+    "docs/release-notices/esp-idf/components/bt/controller/lib_esp32c6/esp32c6-bt-lib/NOTICE": {
+      "bytes": 320,
+      "origin": "esp-idf/components/bt/controller/lib_esp32c6/esp32c6-bt-lib/NOTICE",
+      "sha256": "ebd002217a1a76e3cce23cd89d0916477da6c7907a6a46c8a7f1fb209e3cb333"
+    },
+    "docs/release-notices/esp-idf/components/bt/controller/lib_esp32h2/esp32h2-bt-lib/NOTICE": {
+      "bytes": 321,
+      "origin": "esp-idf/components/bt/controller/lib_esp32h2/esp32h2-bt-lib/NOTICE",
+      "sha256": "a1a74b78d60bf3feb4f493f058ac8ee4022e40387783085171670e34b001d8dd"
+    },
+    "docs/release-notices/esp-idf/components/bt/esp_ble_mesh/lib/lib/LICENSE": {
+      "bytes": 11358,
+      "origin": "esp-idf/components/bt/esp_ble_mesh/lib/lib/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/esp-idf/components/bt/host/nimble/nimble/LICENSE": {
+      "bytes": 12514,
+      "origin": "esp-idf/components/bt/host/nimble/nimble/LICENSE",
+      "sha256": "0deb15bc7df50b1d009c644b008f92e1062909e9521328d337c5fad3a5d4921c"
+    },
+    "docs/release-notices/esp-idf/components/bt/host/nimble/nimble/NOTICE": {
+      "bytes": 321,
+      "origin": "esp-idf/components/bt/host/nimble/nimble/NOTICE",
+      "sha256": "b838c4733a5020cd8e2bafbe70842acd8c8dc7816012965b77d10c1f4c0727f6"
+    },
+    "docs/release-notices/esp-idf/components/bt/host/nimble/nimble/ext/tinycrypt/LICENSE": {
+      "bytes": 3313,
+      "origin": "esp-idf/components/bt/host/nimble/nimble/ext/tinycrypt/LICENSE",
+      "sha256": "b2d451fcba3577b118741d733d37ebd15bdd0b6b381e554a7345bdbfa3743108"
+    },
+    "docs/release-notices/esp-idf/components/cmock/CMock/LICENSE.txt": {
+      "bytes": 1092,
+      "origin": "esp-idf/components/cmock/CMock/LICENSE.txt",
+      "sha256": "a228c2871b9a779a6542a49470c5b567f2806dddcbcf90af861bb4d39291626c"
+    },
+    "docs/release-notices/esp-idf/components/cmock/CMock/vendor/unity/LICENSE.txt": {
+      "bytes": 1123,
+      "origin": "esp-idf/components/cmock/CMock/vendor/unity/LICENSE.txt",
+      "sha256": "3ed9b51da86f52c729c96cc99fdde6444b2297c788a9cf4ad1d3649dc34c4985"
+    },
+    "docs/release-notices/esp-idf/components/console/argtable3/LICENSE": {
+      "bytes": 8379,
+      "origin": "esp-idf/components/console/argtable3/LICENSE",
+      "sha256": "a97df648b7db77f9f6f5e1ef5fe44eb6b154ecb8ae26ad39c92ea44201cce45c"
+    },
+    "docs/release-notices/esp-idf/components/console/linenoise/LICENSE": {
+      "bytes": 1408,
+      "origin": "esp-idf/components/console/linenoise/LICENSE",
+      "sha256": "efe1692aa5b869edaa0ac88f95eb0276c1125304ffc636a299db3ebbab47f62b"
+    },
+    "docs/release-notices/esp-idf/components/driver/test_apps/components/esp_serial_slave_link/LICENSE": {
+      "bytes": 11358,
+      "origin": "esp-idf/components/driver/test_apps/components/esp_serial_slave_link/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/esp-idf/components/esp_coex/lib/LICENSE": {
+      "bytes": 11358,
+      "origin": "esp-idf/components/esp_coex/lib/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/esp-idf/components/esp_phy/lib/LICENSE": {
+      "bytes": 11358,
+      "origin": "esp-idf/components/esp_phy/lib/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/esp-idf/components/esp_wifi/lib/LICENSE": {
+      "bytes": 11358,
+      "origin": "esp-idf/components/esp_wifi/lib/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/esp-idf/components/esptool_py/LICENSE": {
+      "bytes": 18092,
+      "origin": "esp-idf/components/esptool_py/LICENSE",
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    "docs/release-notices/esp-idf/components/freertos/FreeRTOS-Kernel/LICENSE.md": {
+      "bytes": 1036,
+      "origin": "esp-idf/components/freertos/FreeRTOS-Kernel/LICENSE.md",
+      "sha256": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1"
+    },
+    "docs/release-notices/esp-idf/components/http_parser/LICENSE.txt": {
+      "bytes": 1298,
+      "origin": "esp-idf/components/http_parser/LICENSE.txt",
+      "sha256": "3aced2d086d3f59cafb6589770c30c1e45a5bdf50c1d4375060b81a615db604c"
+    },
+    "docs/release-notices/esp-idf/components/json/cJSON/LICENSE": {
+      "bytes": 1084,
+      "origin": "esp-idf/components/json/cJSON/LICENSE",
+      "sha256": "a36dda207c36db5818729c54e7ad4e8b0c6fba847491ba64f372c1a2037b6d5c"
+    },
+    "docs/release-notices/esp-idf/components/json/cJSON/tests/unity/docs/license.txt": {
+      "bytes": 1123,
+      "origin": "esp-idf/components/json/cJSON/tests/unity/docs/license.txt",
+      "sha256": "3ed9b51da86f52c729c96cc99fdde6444b2297c788a9cf4ad1d3649dc34c4985"
+    },
+    "docs/release-notices/esp-idf/components/lwip/lwip/COPYING": {
+      "bytes": 1425,
+      "origin": "esp-idf/components/lwip/lwip/COPYING",
+      "sha256": "ef4aac92e05e87cd1cdc140870ed52206ba03d4a7fe46c1e11d7ffa6c87d252b"
+    },
+    "docs/release-notices/esp-idf/components/lwip/lwip/contrib/apps/LwipMibCompiler/SharpSnmpLib/license.txt": {
+      "bytes": 24383,
+      "origin": "esp-idf/components/lwip/lwip/contrib/apps/LwipMibCompiler/SharpSnmpLib/license.txt",
+      "sha256": "ef1f7505cfdff240e72602bc50ef1cdba37c681c84611cdf30e4371320c70942"
+    },
+    "docs/release-notices/esp-idf/components/mbedtls/mbedtls/LICENSE": {
+      "bytes": 29852,
+      "origin": "esp-idf/components/mbedtls/mbedtls/LICENSE",
+      "sha256": "9b405ef4c89342f5eae1dd828882f931747f71001cfba7d114801039b52ad09b"
+    },
+    "docs/release-notices/esp-idf/components/mbedtls/mbedtls/framework/LICENSE": {
+      "bytes": 29861,
+      "origin": "esp-idf/components/mbedtls/mbedtls/framework/LICENSE",
+      "sha256": "11402351e38392230bb8934ba1095c0c0049a296c0f8821f76e4672dff54b490"
+    },
+    "docs/release-notices/esp-idf/components/mqtt/esp-mqtt/LICENSE": {
+      "bytes": 11339,
+      "origin": "esp-idf/components/mqtt/esp-mqtt/LICENSE",
+      "sha256": "20ed622a5f1a273258b415097609f6a236fb2f23f8c593c63e29e6cc77de0032"
+    },
+    "docs/release-notices/esp-idf/components/newlib/COPYING.NEWLIB": {
+      "bytes": 46295,
+      "origin": "esp-idf/components/newlib/COPYING.NEWLIB",
+      "sha256": "0681089a556e93791da82718d68011ba452de245f7f59c3846936304756ac0c0"
+    },
+    "docs/release-notices/esp-idf/components/newlib/COPYING.picolibc": {
+      "bytes": 234687,
+      "origin": "esp-idf/components/newlib/COPYING.picolibc",
+      "sha256": "fa72ebf6e3c9b3d674f89da06648b0c17d3bcb1ce05ed5956cc102fba1e6964d"
+    },
+    "docs/release-notices/esp-idf/components/openthread/lib/LICENSE": {
+      "bytes": 11358,
+      "origin": "esp-idf/components/openthread/lib/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/esp-idf/components/openthread/openthread/LICENSE": {
+      "bytes": 1506,
+      "origin": "esp-idf/components/openthread/openthread/LICENSE",
+      "sha256": "e164182fc3e6378533ba706800087469a14dcd5913ee55e2e8ae3fb14f3cdbbb"
+    },
+    "docs/release-notices/esp-idf/components/openthread/openthread/NOTICE": {
+      "bytes": 1325,
+      "origin": "esp-idf/components/openthread/openthread/NOTICE",
+      "sha256": "1b37f4fbb95506a0529a15c007aa53053e0e2bf03b1547fb244fdebacf49374f"
+    },
+    "docs/release-notices/esp-idf/components/openthread/openthread/third_party/jlink/SEGGER_RTT_V640/License.txt": {
+      "bytes": 1759,
+      "origin": "esp-idf/components/openthread/openthread/third_party/jlink/SEGGER_RTT_V640/License.txt",
+      "sha256": "9a160ebc4406ed363f5fb397cc8cd201613ab29e67a2439474f7bafd77e3ce07"
+    },
+    "docs/release-notices/esp-idf/components/openthread/openthread/third_party/mbedtls/repo/LICENSE": {
+      "bytes": 29852,
+      "origin": "esp-idf/components/openthread/openthread/third_party/mbedtls/repo/LICENSE",
+      "sha256": "9b405ef4c89342f5eae1dd828882f931747f71001cfba7d114801039b52ad09b"
+    },
+    "docs/release-notices/esp-idf/components/openthread/openthread/third_party/mbedtls/repo/framework/LICENSE": {
+      "bytes": 29861,
+      "origin": "esp-idf/components/openthread/openthread/third_party/mbedtls/repo/framework/LICENSE",
+      "sha256": "11402351e38392230bb8934ba1095c0c0049a296c0f8821f76e4672dff54b490"
+    },
+    "docs/release-notices/esp-idf/components/openthread/openthread/tools/otci/LICENSE": {
+      "bytes": 1506,
+      "origin": "esp-idf/components/openthread/openthread/tools/otci/LICENSE",
+      "sha256": "d29b8f5c1c666698dfe7717c53e10f82981e0889a06f8a3ebc093d9dccc35aa4"
+    },
+    "docs/release-notices/esp-idf/components/protobuf-c/protobuf-c/LICENSE": {
+      "bytes": 1613,
+      "origin": "esp-idf/components/protobuf-c/protobuf-c/LICENSE",
+      "sha256": "b8999cb392cc5bbe8cd679de59584ad8d2f26033123e76f1d662fa14b9d4f287"
+    },
+    "docs/release-notices/esp-idf/components/spiffs/spiffs/LICENSE": {
+      "bytes": 1117,
+      "origin": "esp-idf/components/spiffs/spiffs/LICENSE",
+      "sha256": "d19257540156a51ed50c2378e7159066415d8bbbe147779f8deb0d3e73f1b0a7"
+    },
+    "docs/release-notices/esp-idf/components/unity/unity/LICENSE.txt": {
+      "bytes": 1123,
+      "origin": "esp-idf/components/unity/unity/LICENSE.txt",
+      "sha256": "7d710553eaf7174f383699ed4eebac67fe7cda7971cbe892f700cd0e087f860f"
+    },
+    "docs/release-notices/esp-idf/components/wpa_supplicant/COPYING": {
+      "bytes": 965,
+      "origin": "esp-idf/components/wpa_supplicant/COPYING",
+      "sha256": "a87ac4e333d0f120408a9d814e40c3672cd27f365af89b4f2f6631f7a9338953"
+    },
+    "docs/release-notices/managed/espressif__button/license.txt": {
+      "bytes": 11358,
+      "origin": "managed/espressif__button/license.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/managed/espressif__cmake_utilities/license.txt": {
+      "bytes": 11358,
+      "origin": "managed/espressif__cmake_utilities/license.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/managed/espressif__esp_codec_dev/LICENSE": {
+      "bytes": 11358,
+      "origin": "managed/espressif__esp_codec_dev/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/managed/espressif__esp_codec_dev/device/zl38063/LICENSE.txt": {
+      "bytes": 1074,
+      "origin": "managed/espressif__esp_codec_dev/device/zl38063/LICENSE.txt",
+      "sha256": "d8023d14377b7e734064165e0ddf5961d0bfc1ab037bc63ad682cf295369964d"
+    },
+    "docs/release-notices/managed/espressif__esp_lcd_st7701/license.txt": {
+      "bytes": 11358,
+      "origin": "managed/espressif__esp_lcd_st7701/license.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/managed/espressif__esp_lcd_touch/license.txt": {
+      "bytes": 11358,
+      "origin": "managed/espressif__esp_lcd_touch/license.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/managed/espressif__esp_lcd_touch_gt911/license.txt": {
+      "bytes": 11358,
+      "origin": "managed/espressif__esp_lcd_touch_gt911/license.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/managed/espressif__esp_lv_decoder/license.txt": {
+      "bytes": 11358,
+      "origin": "managed/espressif__esp_lv_decoder/license.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/managed/espressif__esp_lv_fs/license.txt": {
+      "bytes": 11358,
+      "origin": "managed/espressif__esp_lv_fs/license.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/managed/espressif__esp_lvgl_adapter/LICENSE": {
+      "bytes": 11363,
+      "origin": "managed/espressif__esp_lvgl_adapter/LICENSE",
+      "sha256": "862f600b4c27954a54933f5c00fe4d92bae02bab216d795876ebd76aa6f5538d"
+    },
+    "docs/release-notices/managed/espressif__esp_mmap_assets/license.txt": {
+      "bytes": 11358,
+      "origin": "managed/espressif__esp_mmap_assets/license.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/managed/espressif__esp_new_jpeg/LICENSE": {
+      "bytes": 1186,
+      "origin": "managed/espressif__esp_new_jpeg/LICENSE",
+      "sha256": "0bf7f2018fffa1caff5ecbf10d79707b218eea4e26b8c705d744de4556552815"
+    },
+    "docs/release-notices/managed/espressif__freetype/LICENSE": {
+      "bytes": 2073,
+      "origin": "managed/espressif__freetype/LICENSE",
+      "sha256": "594cbe9628b6681596b8ade0ca01c79a39ed3c768da46ae35cddebac63cd6f6d"
+    },
+    "docs/release-notices/managed/espressif__freetype/examples/color-emoji-example/main/assets/LICENSE-OFL.txt": {
+      "bytes": 4301,
+      "origin": "managed/espressif__freetype/examples/color-emoji-example/main/assets/LICENSE-OFL.txt",
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+    },
+    "docs/release-notices/managed/espressif__freetype/freetype/LICENSE.TXT": {
+      "bytes": 2149,
+      "origin": "managed/espressif__freetype/freetype/LICENSE.TXT",
+      "sha256": "bd36c8b474855fa294c2ec5c184544478ef3720aad37d65a6296a4f264fd2d3b"
+    },
+    "docs/release-notices/managed/espressif__freetype/freetype/docs/FTL.TXT": {
+      "bytes": 6743,
+      "origin": "managed/espressif__freetype/freetype/docs/FTL.TXT",
+      "sha256": "5a5ee54c5001bbad1cdc1a57cc3dd4c42199b2da09d39c7ee41fab002d02967f"
+    },
+    "docs/release-notices/managed/espressif__freetype/freetype/docs/GPLv2.TXT": {
+      "bytes": 17994,
+      "origin": "managed/espressif__freetype/freetype/docs/GPLv2.TXT",
+      "sha256": "c4120c6752c910c299e3bd9cb3a46ff262c268303ca2069b61f92f10a5656c18"
+    },
+    "docs/release-notices/managed/espressif__freetype/freetype/subprojects/dlg/LICENSE": {
+      "bytes": 1338,
+      "origin": "managed/espressif__freetype/freetype/subprojects/dlg/LICENSE",
+      "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+    },
+    "docs/release-notices/managed/espressif__freetype/supplemental/include/freetype/internal/fthash.h.txt": {
+      "bytes": 4055,
+      "origin": "espressif/freetype 2.14.3~1 freetype/include/freetype/internal/fthash.h complete notice-bearing file",
+      "sha256": "023d88d49d29ecf3833db7717a3f7ae223c17ec2012bdb5bf33bb67abaf616c4"
+    },
+    "docs/release-notices/managed/espressif__freetype/supplemental/src/autofit/ft-hb.c.txt": {
+      "bytes": 4492,
+      "origin": "espressif/freetype 2.14.3~1 freetype/src/autofit/ft-hb.c complete notice-bearing file",
+      "sha256": "b6fbcc6a2a7b6c291326b24de313ad21edf2c7bbfd82e6844f0c90b20802040a"
+    },
+    "docs/release-notices/managed/espressif__freetype/supplemental/src/autofit/ft-hb.h.txt": {
+      "bytes": 1800,
+      "origin": "espressif/freetype 2.14.3~1 freetype/src/autofit/ft-hb.h complete notice-bearing file",
+      "sha256": "e1ca76cbe0df2850f38b974dbff58f0322d19bafecc4125f52077f0c82411534"
+    },
+    "docs/release-notices/managed/espressif__freetype/supplemental/src/base/fthash.c.txt": {
+      "bytes": 8406,
+      "origin": "espressif/freetype 2.14.3~1 freetype/src/base/fthash.c complete notice-bearing file",
+      "sha256": "693e5a54b3ce30140975a94a3369dbe706eb1f280c69e80da426d39cc45b94ef"
+    },
+    "docs/release-notices/managed/espressif__freetype/supplemental/src/bdf/README.txt": {
+      "bytes": 5972,
+      "origin": "espressif/freetype 2.14.3~1 freetype/src/bdf/README complete notice-bearing file",
+      "sha256": "7984455e7e5a9faba3797c8bf095fbe10cc846316b7320aff8c58402e22b82fe"
+    },
+    "docs/release-notices/managed/espressif__freetype/supplemental/src/gzip/zlib.h.txt": {
+      "bytes": 97499,
+      "origin": "espressif/freetype 2.14.3~1 freetype/src/gzip/zlib.h complete notice-bearing file",
+      "sha256": "c86a25c27f74cb97b8fa07b175f479f063d5064ace9995b4684063643c81cf1b"
+    },
+    "docs/release-notices/managed/espressif__freetype/supplemental/src/pcf/README.txt": {
+      "bytes": 3311,
+      "origin": "espressif/freetype 2.14.3~1 freetype/src/pcf/README complete notice-bearing file",
+      "sha256": "18d9782898d9eac04476e2f744678137b2a889689ed3e923e052fc396a86f86b"
+    },
+    "docs/release-notices/managed/espressif__knob/license.txt": {
+      "bytes": 11358,
+      "origin": "managed/espressif__knob/license.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/managed/espressif__libpng/LICENSE": {
+      "bytes": 5345,
+      "origin": "managed/espressif__libpng/LICENSE",
+      "sha256": "bf5e22b9dce8464064ae17a48ea1133c3369ac9e1d80ef9e320e5219aa14ea9b"
+    },
+    "docs/release-notices/managed/espressif__libpng/libpng/LICENSE": {
+      "bytes": 5345,
+      "origin": "managed/espressif__libpng/libpng/LICENSE",
+      "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526"
+    },
+    "docs/release-notices/managed/espressif__libpng/libpng/ci/LICENSE_MIT.txt": {
+      "bytes": 1036,
+      "origin": "managed/espressif__libpng/libpng/ci/LICENSE_MIT.txt",
+      "sha256": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1"
+    },
+    "docs/release-notices/managed/espressif__libpng/libpng/contrib/gregbook/COPYING": {
+      "bytes": 18097,
+      "origin": "managed/espressif__libpng/libpng/contrib/gregbook/COPYING",
+      "sha256": "d6cb0e9e560f51085556949a84af12b79a00f10ab8b66c752537faf7cd665572"
+    },
+    "docs/release-notices/managed/espressif__libpng/libpng/contrib/gregbook/LICENSE": {
+      "bytes": 2373,
+      "origin": "managed/espressif__libpng/libpng/contrib/gregbook/LICENSE",
+      "sha256": "b6a03c1803eb58ffb1f1278d5c7d4096c4c116e66dce8a7553e8c77d163c3438"
+    },
+    "docs/release-notices/managed/espressif__libpng/libpng/contrib/pngexif/LICENSE_MIT.txt": {
+      "bytes": 1036,
+      "origin": "managed/espressif__libpng/libpng/contrib/pngexif/LICENSE_MIT.txt",
+      "sha256": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1"
+    },
+    "docs/release-notices/managed/espressif__libpng/libpng/contrib/pngminus/LICENSE.txt": {
+      "bytes": 1164,
+      "origin": "managed/espressif__libpng/libpng/contrib/pngminus/LICENSE.txt",
+      "sha256": "1806f1f10d393e9e377b3a8d1b968452b54f1a90378f14eeef45426946ace330"
+    },
+    "docs/release-notices/managed/espressif__zlib/LICENSE": {
+      "bytes": 1002,
+      "origin": "managed/espressif__zlib/LICENSE",
+      "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243"
+    },
+    "docs/release-notices/managed/espressif__zlib/zlib/LICENSE": {
+      "bytes": 1002,
+      "origin": "managed/espressif__zlib/zlib/LICENSE",
+      "sha256": "e32ff4e00d9d94930537635291da39e7e612703334bf6fde8c7f1686fe8a45a2"
+    },
+    "docs/release-notices/managed/espressif__zlib/zlib/contrib/dotzlib/LICENSE_1_0.txt": {
+      "bytes": 1359,
+      "origin": "managed/espressif__zlib/zlib/contrib/dotzlib/LICENSE_1_0.txt",
+      "sha256": "36266a8fd073568394cb81cdb2b124f7fdae2c64c1a7ed09db34b4d22efa2951"
+    },
+    "docs/release-notices/managed/espressif__zlib/zlib/contrib/minizip/LICENSE.Info-Zip": {
+      "bytes": 3509,
+      "origin": "managed/espressif__zlib/zlib/contrib/minizip/LICENSE.Info-Zip",
+      "sha256": "fc686023047ce5ce3a18a9b8a777156f0e475929d3de06bac279f3c025d2b2ca"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/COPYRIGHTS.md": {
+      "bytes": 1914,
+      "origin": "managed/lvgl__lvgl/COPYRIGHTS.md",
+      "sha256": "18dff80ab6d19cca167018a2883b73f5575ccf1e6dff60a58b1f99425b666439"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/LICENCE.txt": {
+      "bytes": 1072,
+      "origin": "managed/lvgl__lvgl/LICENCE.txt",
+      "sha256": "27a80bd36832ab42d35ad60c08b2b230a807a9bc0d58e94ec1531543dc49cbe8"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/docs/src/introduction/license.rst": {
+      "bytes": 951,
+      "origin": "managed/lvgl__lvgl/docs/src/introduction/license.rst",
+      "sha256": "75c5bbce99ab35522e48ef29d5be352f35c428a385cfed69231ae0ac865fecca"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/docs/src/xml/editor/license.rst": {
+      "bytes": 256,
+      "origin": "managed/lvgl__lvgl/docs/src/xml/editor/license.rst",
+      "sha256": "4bd5f7689f0bf38ba2ecd59ea457e7263fb74c3ff6840c48e38589b02196f09b"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/docs/src/xml/xml/license.rst": {
+      "bytes": 3874,
+      "origin": "managed/lvgl__lvgl/docs/src/xml/xml/license.rst",
+      "sha256": "b97009a52d7c7d61ed1053326331e4daf976449064f352be820715b834f08ac6"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/examples/libs/freetype/OFL.txt": {
+      "bytes": 4351,
+      "origin": "managed/lvgl__lvgl/examples/libs/freetype/OFL.txt",
+      "sha256": "3200a0abfc0ceba649de8ee433cfe5a7cb8c441cdf32b9e1a4a070e38621cef2"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/DejaVuSans/LICENSE": {
+      "bytes": 4816,
+      "origin": "managed/lvgl__lvgl/scripts/built_in_font/font_license/DejaVuSans/LICENSE",
+      "sha256": "d75938dec098f06f0ac3c00853065d94f020be1c3c62ef1dc2975ba15b4d9b0e"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/FontAwesome/LICENSE.txt": {
+      "bytes": 7427,
+      "origin": "managed/lvgl__lvgl/scripts/built_in_font/font_license/FontAwesome/LICENSE.txt",
+      "sha256": "9b914eae88817d63b576eab5aafde7068c7a1abae125d7cdfb034f1da43a9afc"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/FontAwesome5/LICENSE.txt": {
+      "bytes": 7427,
+      "origin": "managed/lvgl__lvgl/scripts/built_in_font/font_license/FontAwesome5/LICENSE.txt",
+      "sha256": "de784a808496d49f5f80dd9d1d6e9a51cff712cfbc339e7c25155631ae3cdb5d"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/Lato/OFL.txt": {
+      "bytes": 4409,
+      "origin": "managed/lvgl__lvgl/scripts/built_in_font/font_license/Lato/OFL.txt",
+      "sha256": "a8e9b45e643f6939f3cc19b27c9c1d4c562db65e8931516e77f12194293da689"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/Montserrat/OFL.txt": {
+      "bytes": 4392,
+      "origin": "managed/lvgl__lvgl/scripts/built_in_font/font_license/Montserrat/OFL.txt",
+      "sha256": "41f82bb4d24b304f30f7136bc47abdd083782e4265c984160f5649d1e78ea49c"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/NotoColorEmoji/OFL.txt": {
+      "bytes": 4353,
+      "origin": "managed/lvgl__lvgl/scripts/built_in_font/font_license/NotoColorEmoji/OFL.txt",
+      "sha256": "9d242e02bf26e61e6baccea03ab3de47c81202a18f07e3e190c17cbf0e9f8bd7"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/NotoSansSC/OFL.txt": {
+      "bytes": 4389,
+      "origin": "managed/lvgl__lvgl/scripts/built_in_font/font_license/NotoSansSC/OFL.txt",
+      "sha256": "fb97f1ad83b5aa2ef1e9f7e65bc705b5aa391ee62560fedcaf70f49319ca2079"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/SourceHanSansSC/LICENSE.txt": {
+      "bytes": 4463,
+      "origin": "managed/lvgl__lvgl/scripts/built_in_font/font_license/SourceHanSansSC/LICENSE.txt",
+      "sha256": "f55c2d43dd905011515f5e46ba78d180027e314ef8ccaaf53a9e88fe316767cd"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/FT800-FT813/LICENSE": {
+      "bytes": 1076,
+      "origin": "managed/lvgl__lvgl/src/libs/FT800-FT813/LICENSE",
+      "sha256": "862e06968462faf8ff2066fffaf7c4522aa48ddafd11fe9c578248aa4b013729"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/barcode/LICENSE.txt": {
+      "bytes": 1299,
+      "origin": "managed/lvgl__lvgl/src/libs/barcode/LICENSE.txt",
+      "sha256": "bc9492ba4839f81fed80aa4b966e7078b18fc7f0d81cf47aa3c04a86047099f1"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/frogfs/LICENSE.txt": {
+      "bytes": 15921,
+      "origin": "managed/lvgl__lvgl/src/libs/frogfs/LICENSE.txt",
+      "sha256": "af175b9d96ee93c21a036152e1b905b0b95304d4ae8c2c921c7609100ba8df7e"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/gif/LICENSE": {
+      "bytes": 11419,
+      "origin": "managed/lvgl__lvgl/src/libs/gif/LICENSE",
+      "sha256": "63fefff6dd199d109389e0f413579387e9ca9cfdeeae961ecdbcb120d08432e0"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/lodepng/LICENSE.txt": {
+      "bytes": 882,
+      "origin": "managed/lvgl__lvgl/src/libs/lodepng/LICENSE.txt",
+      "sha256": "f43c59ae0979ea7c08b24a56cfe7816f3c82141d13f5866a2040f66b02589771"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/lz4/LICENSE.txt": {
+      "bytes": 1311,
+      "origin": "managed/lvgl__lvgl/src/libs/lz4/LICENSE.txt",
+      "sha256": "8b58c446121a109ccf32edc094bba3010a3d85e4ee3702950db55e4d3e87736c"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/nanovg/LICENSE.txt": {
+      "bytes": 877,
+      "origin": "managed/lvgl__lvgl/src/libs/nanovg/LICENSE.txt",
+      "sha256": "45185a6680ed83863bef33e1055f9fd76374df4b81c957802c19a286c982dfd2"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/qrcode/LICENSE.txt": {
+      "bytes": 1125,
+      "origin": "managed/lvgl__lvgl/src/libs/qrcode/LICENSE.txt",
+      "sha256": "4d3b92a5e730466508ed46e8632140dfb96221bacfa18c95355cee161e7a22c8"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/thorvg/LICENSE.txt": {
+      "bytes": 1099,
+      "origin": "managed/lvgl__lvgl/src/libs/thorvg/LICENSE.txt",
+      "sha256": "861eb0197d1b43e3c904c433b605cf38be3c4bc447bb9752dfad74c704e36af7"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/tiny_ttf/LICENSE.txt": {
+      "bytes": 3669,
+      "origin": "managed/lvgl__lvgl/src/libs/tiny_ttf/LICENSE.txt",
+      "sha256": "f214b427f12e19d68f65e2e30a3c9a1f59ee4a09d4c684931971a8f3bfdd7a1f"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/tjpgd/LICENSE.txt": {
+      "bytes": 873,
+      "origin": "managed/lvgl__lvgl/src/libs/tjpgd/LICENSE.txt",
+      "sha256": "e85563f195d82708ca334e85c63d0352c980ccc66dca2052e9fd05f7823df51c"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/vg_lite_driver/LICENSE.txt": {
+      "bytes": 1399,
+      "origin": "managed/lvgl__lvgl/src/libs/vg_lite_driver/LICENSE.txt",
+      "sha256": "928c166e5324bd40709174aae078010aa8206ce056aa199fb98126b062ecbd64"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/stdlib/builtin/LICENSE_SPRINTF.txt": {
+      "bytes": 1135,
+      "origin": "managed/lvgl__lvgl/src/stdlib/builtin/LICENSE_SPRINTF.txt",
+      "sha256": "ec49d3c5a052dba6392f3e5e6d51134d102624c19afab6b3dd9ff8921d85403d"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/stdlib/builtin/LICENSE_TLSF.txt": {
+      "bytes": 32,
+      "origin": "managed/lvgl__lvgl/src/stdlib/builtin/LICENSE_TLSF.txt",
+      "sha256": "2b32f144050a1236599765ed1ca2c88d5b99e8e3364eadbb547ab0fbc4b01220"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/tests/src/test_files/fonts/noto/OFL.txt": {
+      "bytes": 4480,
+      "origin": "managed/lvgl__lvgl/tests/src/test_files/fonts/noto/OFL.txt",
+      "sha256": "1778d919f28e548adab94a9dc3cf05549124e53d204c2f4c8164617734dc1a3a"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/tests/src/test_libs/rnd_unicodes/rnd_unicodes/LICENSE": {
+      "bytes": 1065,
+      "origin": "managed/lvgl__lvgl/tests/src/test_libs/rnd_unicodes/rnd_unicodes/LICENSE",
+      "sha256": "ad4feab161c3e1f5b12ec323eb5c69688523b32f643684236af765c8931fecd1"
+    },
+    "docs/release-notices/managed/waveshare__esp32_p4_wifi6_touch_lcd_4_3/LICENSE": {
+      "bytes": 11358,
+      "origin": "managed/waveshare__esp32_p4_wifi6_touch_lcd_4_3/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/project/LICENSE": {
+      "bytes": 715,
+      "origin": "candidate-source/LICENSE",
+      "sha256": "5307fe2aeebf3d03c6cd3101fb21b9d9cd463efd521b8029f3c1409d43b3df9e"
+    },
+    "docs/release-notices/project/LICENSE-BIP32-BSD-2-CLAUSE": {
+      "bytes": 1659,
+      "origin": "candidate-source/LICENSE-BIP32-BSD-2-CLAUSE",
+      "sha256": "590dae39d4da41b2f4a0bdeac738bb226f42caaea050292d2024bc3f1e6ec9a2"
+    },
+    "docs/release-notices/project/LICENSE-MIT": {
+      "bytes": 1093,
+      "origin": "candidate-source/LICENSE-MIT",
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "docs/release-notices/project/LICENSE-OOGA-BOOGA": {
+      "bytes": 700,
+      "origin": "candidate-source/LICENSE-OOGA-BOOGA",
+      "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+    },
+    "docs/release-notices/project/LICENSE-TREZOR-MIT": {
+      "bytes": 1084,
+      "origin": "candidate-source/LICENSE-TREZOR-MIT",
+      "sha256": "d5e3c7c62a84e80073201e2f6e5130e9e6804fa05f8ac4f8b26a13c7d3969697"
+    },
+    "docs/release-notices/project/core-spike/native/LICENSE": {
+      "bytes": 2396,
+      "origin": "candidate-source/core-spike/native/LICENSE",
+      "sha256": "7399dfd5bb35370fd5d190296ce4738528b9b601707545c09f30795157d1aa48"
+    },
+    "docs/release-notices/project/core-spike/native/LICENSE-MIT": {
+      "bytes": 1093,
+      "origin": "candidate-source/core-spike/native/LICENSE-MIT",
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "docs/release-notices/project/core-spike/native/LICENSE-OOGA-BOOGA": {
+      "bytes": 700,
+      "origin": "candidate-source/core-spike/native/LICENSE-OOGA-BOOGA",
+      "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+    },
+    "docs/release-notices/project/fixture-firmware/LICENSE-dictionary.txt": {
+      "bytes": 1122,
+      "origin": "candidate-source/fixture-firmware/LICENSE-dictionary.txt",
+      "sha256": "1565efd0ec4580bfaa96c7eeaaa9af3791baa1cc562c3bde62d0a055910b9ec7"
+    },
+    "docs/release-notices/project/fixture-firmware/app/main/assets/LICENSE-OOGA-BOOGA": {
+      "bytes": 700,
+      "origin": "candidate-source/fixture-firmware/app/main/assets/LICENSE-OOGA-BOOGA",
+      "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+    },
+    "docs/release-notices/project/fixture-firmware/app/main/fonts/LICENSE-Liberation.txt": {
+      "bytes": 5756,
+      "origin": "candidate-source/fixture-firmware/app/main/fonts/LICENSE-Liberation.txt",
+      "sha256": "f32df582a2aab128c07b2f7e36e7b928dc5f6bd82657b905c04f91459f9e5cf9"
+    },
+    "docs/release-notices/project/fixture-firmware/app/main/fonts/LICENSE-OFL-1.1": {
+      "bytes": 4414,
+      "origin": "candidate-source/fixture-firmware/app/main/fonts/LICENSE-OFL-1.1",
+      "sha256": "93fed46019c38bbe566b479d22148e2e8a1e85ada614accb0211c37b2c61c19b"
+    },
+    "docs/release-notices/project/fixture-firmware/coin/LICENSE": {
+      "bytes": 1094,
+      "origin": "candidate-source/fixture-firmware/coin/LICENSE",
+      "sha256": "69554bf693be0de4b280906651f1278a9f3757b27d5b6fcb60b4ff5fafaa4e24"
+    },
+    "docs/release-notices/project/fixture-firmware/coin/LICENSE-OOGA-BOOGA": {
+      "bytes": 701,
+      "origin": "candidate-source/fixture-firmware/coin/LICENSE-OOGA-BOOGA",
+      "sha256": "9a73c8216b8766e0882c9f03a5aec1b61504bd86bb8744d59ec6766831456358"
+    },
+    "docs/release-notices/project/fixture-firmware/dice/LICENSE": {
+      "bytes": 1093,
+      "origin": "candidate-source/fixture-firmware/dice/LICENSE",
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "docs/release-notices/project/fixture-firmware/dice/LICENSE-OOGA-BOOGA": {
+      "bytes": 700,
+      "origin": "candidate-source/fixture-firmware/dice/LICENSE-OOGA-BOOGA",
+      "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+    },
+    "docs/release-notices/project/fixture-firmware/integrated-lanes/lifehash/core/binary-notices/BSD-2-Clause-Patent.md": {
+      "bytes": 2854,
+      "origin": "candidate-source/fixture-firmware/integrated-lanes/lifehash/core/binary-notices/BSD-2-Clause-Patent.md",
+      "sha256": "ff4648e9a492f4bbb4ad89982cd65cbf5d3f7414e4981344671fcccdd38745de"
+    },
+    "docs/release-notices/project/fixture-firmware/integrated-lanes/lifehash/core/binary-notices/SHA256-Gifford-Rusnak.txt": {
+      "bytes": 1609,
+      "origin": "candidate-source/fixture-firmware/integrated-lanes/lifehash/core/binary-notices/SHA256-Gifford-Rusnak.txt",
+      "sha256": "19b8de4e86f35dca825d47ced9d70600316c19472d65a1115818e4e987e17b80"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime-sources/coin-core/LICENSE": {
+      "bytes": 1094,
+      "origin": "candidate-source/fixture-firmware/runtime-sources/coin-core/LICENSE",
+      "sha256": "69554bf693be0de4b280906651f1278a9f3757b27d5b6fcb60b4ff5fafaa4e24"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime-sources/coin-core/LICENSE-OOGA-BOOGA": {
+      "bytes": 701,
+      "origin": "candidate-source/fixture-firmware/runtime-sources/coin-core/LICENSE-OOGA-BOOGA",
+      "sha256": "9a73c8216b8766e0882c9f03a5aec1b61504bd86bb8744d59ec6766831456358"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime-sources/dice-core/LICENSE": {
+      "bytes": 1093,
+      "origin": "candidate-source/fixture-firmware/runtime-sources/dice-core/LICENSE",
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime-sources/dice-core/LICENSE-OOGA-BOOGA": {
+      "bytes": 700,
+      "origin": "candidate-source/fixture-firmware/runtime-sources/dice-core/LICENSE-OOGA-BOOGA",
+      "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime-sources/hex-core/LICENSE": {
+      "bytes": 281,
+      "origin": "candidate-source/fixture-firmware/runtime-sources/hex-core/LICENSE",
+      "sha256": "a802642344476b2ff7ae691e94635b8f5cbd57c255a0e07fa78210d4fcae735c"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime-sources/hex-core/LICENSE-MIT": {
+      "bytes": 1093,
+      "origin": "candidate-source/fixture-firmware/runtime-sources/hex-core/LICENSE-MIT",
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime-sources/hex-core/LICENSE-OOGA-BOOGA": {
+      "bytes": 700,
+      "origin": "candidate-source/fixture-firmware/runtime-sources/hex-core/LICENSE-OOGA-BOOGA",
+      "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime-sources/mnemonic-core/LICENSE": {
+      "bytes": 1093,
+      "origin": "candidate-source/fixture-firmware/runtime-sources/mnemonic-core/LICENSE",
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/LICENSE": {
+      "bytes": 1093,
+      "origin": "candidate-source/fixture-firmware/runtime/LICENSE",
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/arrayvec-0.7.8/LICENSE-APACHE": {
+      "bytes": 10847,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/arrayvec-0.7.8/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/arrayvec-0.7.8/LICENSE-MIT": {
+      "bytes": 1071,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/arrayvec-0.7.8/LICENSE-MIT",
+      "sha256": "4da95ec4ecb65b738d470b7d762894ad9c97da93e6cbfb18b570fc2c96f4b871"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/bech32-0.11.1/LICENSE-MIT": {
+      "bytes": 1055,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/bech32-0.11.1/LICENSE-MIT",
+      "sha256": "9877c7b48cde1462f4e8688263aa96f3f1bd9717250718d3d2d9ebb031414fb9"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/bip39-2.2.2/LICENSE": {
+      "bytes": 7049,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/bip39-2.2.2/LICENSE",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/cc-1.4.4/LICENSE-APACHE": {
+      "bytes": 10847,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/cc-1.4.4/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/cc-1.4.4/LICENSE-MIT": {
+      "bytes": 1057,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/cc-1.4.4/LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/find-msvc-tools-0.1.11/LICENSE-APACHE": {
+      "bytes": 10847,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/find-msvc-tools-0.1.11/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/find-msvc-tools-0.1.11/LICENSE-MIT": {
+      "bytes": 1057,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/find-msvc-tools-0.1.11/LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/hex-conservative-0.2.2/LICENSE": {
+      "bytes": 7049,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/hex-conservative-0.2.2/LICENSE",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/hex-conservative-1.2.0/LICENSE": {
+      "bytes": 7049,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/hex-conservative-1.2.0/LICENSE",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/proc-macro2-1.0.107/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/proc-macro2-1.0.107/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/proc-macro2-1.0.107/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/proc-macro2-1.0.107/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/quote-1.0.47/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/quote-1.0.47/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/quote-1.0.47/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/quote-1.0.47/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/secp256k1-0.29.1/LICENSE": {
+      "bytes": 7049,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/secp256k1-0.29.1/LICENSE",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/secp256k1-sys-0.10.1/LICENSE": {
+      "bytes": 7049,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/secp256k1-sys-0.10.1/LICENSE",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/serde-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/serde-1.0.229/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/serde-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/serde-1.0.229/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/serde_core-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/serde_core-1.0.229/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/serde_core-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/serde_core-1.0.229/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/serde_derive-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/serde_derive-1.0.229/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/serde_derive-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/serde_derive-1.0.229/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/shlex-2.0.1/LICENSE-APACHE": {
+      "bytes": 566,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/shlex-2.0.1/LICENSE-APACHE",
+      "sha256": "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/shlex-2.0.1/LICENSE-MIT": {
+      "bytes": 1092,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/shlex-2.0.1/LICENSE-MIT",
+      "sha256": "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/syn-3.0.4/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/syn-3.0.4/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/syn-3.0.4/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/syn-3.0.4/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/tinyvec-1.13.3/LICENSE-APACHE.md": {
+      "bytes": 11358,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/tinyvec-1.13.3/LICENSE-APACHE.md",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/tinyvec-1.13.3/LICENSE-MIT.md": {
+      "bytes": 1023,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/tinyvec-1.13.3/LICENSE-MIT.md",
+      "sha256": "fd80a26fbb3f644af1fa994134446702932968519797227e07a1368dea80f0bc"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/tinyvec-1.13.3/LICENSE-ZLIB.md": {
+      "bytes": 851,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/tinyvec-1.13.3/LICENSE-ZLIB.md",
+      "sha256": "84b34dd7608f7fb9b17bd588a6bf392bf7de504e2716f024a77d89f1b145a151"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/unicode-ident-1.0.24/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/unicode-ident-1.0.24/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/unicode-ident-1.0.24/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/unicode-ident-1.0.24/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/unicode-ident-1.0.24/LICENSE-UNICODE": {
+      "bytes": 1995,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/unicode-ident-1.0.24/LICENSE-UNICODE",
+      "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/unicode-normalization-0.1.24/LICENSE-APACHE": {
+      "bytes": 10847,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/unicode-normalization-0.1.24/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/unicode-normalization-0.1.24/LICENSE-MIT": {
+      "bytes": 1071,
+      "origin": "candidate-source/fixture-firmware/runtime/licenses/unicode-normalization-0.1.24/LICENSE-MIT",
+      "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/LICENSE": {
+      "bytes": 275,
+      "origin": "candidate-source/fixture-firmware/rust/LICENSE",
+      "sha256": "89041f4ce3a47f7629fea4443980b978335059142ea0664897f097249b83021f"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/LICENSE-MIT": {
+      "bytes": 1093,
+      "origin": "candidate-source/fixture-firmware/rust/LICENSE-MIT",
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/LICENSE-OOGA-BOOGA": {
+      "bytes": 700,
+      "origin": "candidate-source/fixture-firmware/rust/LICENSE-OOGA-BOOGA",
+      "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/arrayvec-0.7.8/LICENSE-APACHE": {
+      "bytes": 10847,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/arrayvec-0.7.8/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/arrayvec-0.7.8/LICENSE-MIT": {
+      "bytes": 1071,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/arrayvec-0.7.8/LICENSE-MIT",
+      "sha256": "4da95ec4ecb65b738d470b7d762894ad9c97da93e6cbfb18b570fc2c96f4b871"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/bech32-0.11.1/LICENSE-MIT": {
+      "bytes": 1055,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/bech32-0.11.1/LICENSE-MIT",
+      "sha256": "9877c7b48cde1462f4e8688263aa96f3f1bd9717250718d3d2d9ebb031414fb9"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/bip39-2.2.2/LICENSE": {
+      "bytes": 7049,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/bip39-2.2.2/LICENSE",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/cc-1.4.4/LICENSE-APACHE": {
+      "bytes": 10847,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/cc-1.4.4/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/cc-1.4.4/LICENSE-MIT": {
+      "bytes": 1057,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/cc-1.4.4/LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/find-msvc-tools-0.1.11/LICENSE-APACHE": {
+      "bytes": 10847,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/find-msvc-tools-0.1.11/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/find-msvc-tools-0.1.11/LICENSE-MIT": {
+      "bytes": 1057,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/find-msvc-tools-0.1.11/LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/hex-conservative-0.2.2/LICENSE": {
+      "bytes": 7049,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/hex-conservative-0.2.2/LICENSE",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/hex-conservative-1.2.0/LICENSE": {
+      "bytes": 7049,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/hex-conservative-1.2.0/LICENSE",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/proc-macro2-1.0.107/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/proc-macro2-1.0.107/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/proc-macro2-1.0.107/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/proc-macro2-1.0.107/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/quote-1.0.47/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/quote-1.0.47/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/quote-1.0.47/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/quote-1.0.47/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/secp256k1-0.29.1/LICENSE": {
+      "bytes": 7049,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/secp256k1-0.29.1/LICENSE",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/secp256k1-sys-0.10.1/LICENSE": {
+      "bytes": 7049,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/secp256k1-sys-0.10.1/LICENSE",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/serde-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/serde-1.0.229/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/serde-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/serde-1.0.229/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/serde_core-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/serde_core-1.0.229/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/serde_core-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/serde_core-1.0.229/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/serde_derive-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/serde_derive-1.0.229/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/serde_derive-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/serde_derive-1.0.229/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/shlex-2.0.1/LICENSE-APACHE": {
+      "bytes": 566,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/shlex-2.0.1/LICENSE-APACHE",
+      "sha256": "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/shlex-2.0.1/LICENSE-MIT": {
+      "bytes": 1092,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/shlex-2.0.1/LICENSE-MIT",
+      "sha256": "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/syn-3.0.4/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/syn-3.0.4/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/syn-3.0.4/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/syn-3.0.4/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/unicode-ident-1.0.24/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/unicode-ident-1.0.24/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/unicode-ident-1.0.24/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/unicode-ident-1.0.24/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/unicode-ident-1.0.24/LICENSE-UNICODE": {
+      "bytes": 1995,
+      "origin": "candidate-source/fixture-firmware/rust/licenses/unicode-ident-1.0.24/LICENSE-UNICODE",
+      "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1"
+    },
+    "docs/release-notices/rust-toolchain/COPYRIGHT-library.html": {
+      "bytes": 425651,
+      "origin": "nightly-2026-04-15/share/doc/rust/COPYRIGHT-library.html",
+      "sha256": "4751c5f8d3ddaf1601512d691ed565444f471553c0e0293864153809b2ad8c42"
+    },
+    "docs/release-notices/rust-toolchain/LICENSE.txt": {
+      "bytes": 15078,
+      "origin": "nightly-2026-04-15/lib/rustlib/src/rust/library/compiler-builtins/LICENSE.txt",
+      "sha256": "ab6eec6caf0fa5775e411c7a8bc6a45c4ef2956b0980b157ab74fc5cd62a928b"
+    },
+    "docs/release-notices/rust-toolchain/licenses/Apache-2.0.txt": {
+      "bytes": 10280,
+      "origin": "nightly-2026-04-15/share/doc/rust/licenses/Apache-2.0.txt",
+      "sha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff"
+    },
+    "docs/release-notices/rust-toolchain/licenses/BSD-2-Clause.txt": {
+      "bytes": 1267,
+      "origin": "nightly-2026-04-15/share/doc/rust/licenses/BSD-2-Clause.txt",
+      "sha256": "f32fb3b417a194167cfad068223fc975ba96c5960513a10f66a3c28720aec1df"
+    },
+    "docs/release-notices/rust-toolchain/licenses/CC-BY-SA-4.0.txt": {
+      "bytes": 20137,
+      "origin": "nightly-2026-04-15/share/doc/rust/licenses/CC-BY-SA-4.0.txt",
+      "sha256": "23ee78c8bae49cf08ea2f0c84945c66b987ebe4520881fb51b3dad4fb43d07c2"
+    },
+    "docs/release-notices/rust-toolchain/licenses/GCC-exception-3.1.txt": {
+      "bytes": 3320,
+      "origin": "nightly-2026-04-15/share/doc/rust/licenses/GCC-exception-3.1.txt",
+      "sha256": "a3966c9410ef94a1efbfa9ec04e9c1994026a70623fbf0885ce36737bfba3b54"
+    },
+    "docs/release-notices/rust-toolchain/licenses/GPL-2.0-only.txt": {
+      "bytes": 17642,
+      "origin": "nightly-2026-04-15/share/doc/rust/licenses/GPL-2.0-only.txt",
+      "sha256": "54b212ba1f97f6948fa5486239ab505dd820b02e50cbfd296b4062c8609a70af"
+    },
+    "docs/release-notices/rust-toolchain/licenses/GPL-3.0-or-later.txt": {
+      "bytes": 34795,
+      "origin": "nightly-2026-04-15/share/doc/rust/licenses/GPL-3.0-or-later.txt",
+      "sha256": "05315fce6c35f79b8a35454828995fa26336f235895ac64557abc028f4ffcea2"
+    },
+    "docs/release-notices/rust-toolchain/licenses/ISC.txt": {
+      "bytes": 730,
+      "origin": "nightly-2026-04-15/share/doc/rust/licenses/ISC.txt",
+      "sha256": "0ff61769b238634e042ab759dddfd104a8e69d091e3600ae3410e401a6164381"
+    },
+    "docs/release-notices/rust-toolchain/licenses/LLVM-exception.txt": {
+      "bytes": 919,
+      "origin": "nightly-2026-04-15/share/doc/rust/licenses/LLVM-exception.txt",
+      "sha256": "e34c58338bd89d43e709e226610d8f32b3e3c47f4ad9a99a8dc1d4ac7842488e"
+    },
+    "docs/release-notices/rust-toolchain/licenses/MIT.txt": {
+      "bytes": 1078,
+      "origin": "nightly-2026-04-15/share/doc/rust/licenses/MIT.txt",
+      "sha256": "b85dcd3e453d05982552c52b5fc9e0bdd6d23c6f8e844b984a88af32570b0cc0"
+    },
+    "docs/release-notices/rust-toolchain/licenses/NCSA.txt": {
+      "bytes": 1676,
+      "origin": "nightly-2026-04-15/share/doc/rust/licenses/NCSA.txt",
+      "sha256": "39cb0234065c92b9e6cee3830cbb52b1aa289aa8fe9ba2e66730fec5cf05c630"
+    },
+    "docs/release-notices/rust-toolchain/licenses/OFL-1.1.txt": {
+      "bytes": 4016,
+      "origin": "nightly-2026-04-15/share/doc/rust/licenses/OFL-1.1.txt",
+      "sha256": "8eea8287e5876b539670cadb82e99f9a7afddec6f6730811be1daf25d2e9bcfd"
+    },
+    "docs/release-notices/rust-toolchain/licenses/Unicode-3.0.txt": {
+      "bytes": 1995,
+      "origin": "nightly-2026-04-15/share/doc/rust/licenses/Unicode-3.0.txt",
+      "sha256": "f5062c9a188d81dfe66b56db4182dcf9e4b17c0d9b0d311a8e20b3a1b075c443"
+    },
+    "docs/release-notices/rust/arrayvec-0.7.8/LICENSE-APACHE": {
+      "bytes": 10847,
+      "origin": "rust/arrayvec-0.7.8/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/rust/arrayvec-0.7.8/LICENSE-MIT": {
+      "bytes": 1071,
+      "origin": "rust/arrayvec-0.7.8/LICENSE-MIT",
+      "sha256": "4da95ec4ecb65b738d470b7d762894ad9c97da93e6cbfb18b570fc2c96f4b871"
+    },
+    "docs/release-notices/rust/base58ck-0.1.101/CC0-1.0.txt": {
+      "bytes": 7049,
+      "origin": "standard CC0-1.0 full text from bip39-2.2.2; applicability declared by exact package Cargo.toml",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/bech32-0.11.1/LICENSE-MIT": {
+      "bytes": 1055,
+      "origin": "rust/bech32-0.11.1/LICENSE-MIT",
+      "sha256": "9877c7b48cde1462f4e8688263aa96f3f1bd9717250718d3d2d9ebb031414fb9"
+    },
+    "docs/release-notices/rust/bip39-2.2.2/LICENSE": {
+      "bytes": 7049,
+      "origin": "rust/bip39-2.2.2/LICENSE",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/bitcoin-0.32.11/CC0-1.0.txt": {
+      "bytes": 7049,
+      "origin": "standard CC0-1.0 full text from bip39-2.2.2; applicability declared by exact package Cargo.toml",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/bitcoin-consensus-encoding-1.2.0/CC0-1.0.txt": {
+      "bytes": 7049,
+      "origin": "standard CC0-1.0 full text from bip39-2.2.2; applicability declared by exact package Cargo.toml",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/bitcoin-internals-0.6.0/CC0-1.0.txt": {
+      "bytes": 7049,
+      "origin": "standard CC0-1.0 full text from bip39-2.2.2; applicability declared by exact package Cargo.toml",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/bitcoin-io-0.1.101/CC0-1.0.txt": {
+      "bytes": 7049,
+      "origin": "standard CC0-1.0 full text from bip39-2.2.2; applicability declared by exact package Cargo.toml",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/bitcoin-units-0.1.101/CC0-1.0.txt": {
+      "bytes": 7049,
+      "origin": "standard CC0-1.0 full text from bip39-2.2.2; applicability declared by exact package Cargo.toml",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/bitcoin_hashes-0.14.101/CC0-1.0.txt": {
+      "bytes": 7049,
+      "origin": "standard CC0-1.0 full text from bip39-2.2.2; applicability declared by exact package Cargo.toml",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/cc-1.4.4/LICENSE-APACHE": {
+      "bytes": 10847,
+      "origin": "rust/cc-1.4.4/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/rust/cc-1.4.4/LICENSE-MIT": {
+      "bytes": 1057,
+      "origin": "rust/cc-1.4.4/LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "docs/release-notices/rust/cc-1.4.6/LICENSE-APACHE": {
+      "bytes": 10847,
+      "origin": "rust/cc-1.4.6/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/rust/cc-1.4.6/LICENSE-MIT": {
+      "bytes": 1057,
+      "origin": "rust/cc-1.4.6/LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "docs/release-notices/rust/find-msvc-tools-0.1.11/LICENSE-APACHE": {
+      "bytes": 10847,
+      "origin": "rust/find-msvc-tools-0.1.11/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/rust/find-msvc-tools-0.1.11/LICENSE-MIT": {
+      "bytes": 1057,
+      "origin": "rust/find-msvc-tools-0.1.11/LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "docs/release-notices/rust/find-msvc-tools-0.1.12/LICENSE-APACHE": {
+      "bytes": 10847,
+      "origin": "rust/find-msvc-tools-0.1.12/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/rust/find-msvc-tools-0.1.12/LICENSE-MIT": {
+      "bytes": 1057,
+      "origin": "rust/find-msvc-tools-0.1.12/LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "docs/release-notices/rust/hex-conservative-0.2.2/LICENSE": {
+      "bytes": 7049,
+      "origin": "rust/hex-conservative-0.2.2/LICENSE",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/hex-conservative-0.2.3/LICENSE": {
+      "bytes": 7049,
+      "origin": "rust/hex-conservative-0.2.3/LICENSE",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/hex-conservative-1.2.0/LICENSE": {
+      "bytes": 7049,
+      "origin": "rust/hex-conservative-1.2.0/LICENSE",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/hex-conservative-1.3.0/LICENSE": {
+      "bytes": 7049,
+      "origin": "rust/hex-conservative-1.3.0/LICENSE",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/hex_lit-0.1.1/MITNFA.txt": {
+      "bytes": 1531,
+      "origin": "https://raw.githubusercontent.com/spdx/license-list-data/main/text/MITNFA.txt; standard license text, exact package declares MITNFA; not a reconstructed copyright grant",
+      "sha256": "d436716f7a05466f52443893079761c8a88f4967d0ef490fabc0a1c9ef1c3a1d"
+    },
+    "docs/release-notices/rust/proc-macro2-1.0.107/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "rust/proc-macro2-1.0.107/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/rust/proc-macro2-1.0.107/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "rust/proc-macro2-1.0.107/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/rust/quote-1.0.47/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "rust/quote-1.0.47/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/rust/quote-1.0.47/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "rust/quote-1.0.47/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/rust/secp256k1-0.29.1/LICENSE": {
+      "bytes": 7049,
+      "origin": "rust/secp256k1-0.29.1/LICENSE",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/secp256k1-sys-0.10.1/LICENSE": {
+      "bytes": 7049,
+      "origin": "rust/secp256k1-sys-0.10.1/LICENSE",
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/secp256k1-sys-0.10.1/depend/secp256k1/COPYING": {
+      "bytes": 1057,
+      "origin": "rust/secp256k1-sys-0.10.1/depend/secp256k1/COPYING",
+      "sha256": "a735999c7e5649df6fcda6fb06ab97435851c392b1b93494ae8725f37441632f"
+    },
+    "docs/release-notices/rust/serde-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "rust/serde-1.0.229/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/rust/serde-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "rust/serde-1.0.229/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/rust/serde_core-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "rust/serde_core-1.0.229/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/rust/serde_core-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "rust/serde_core-1.0.229/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/rust/serde_derive-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "rust/serde_derive-1.0.229/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/rust/serde_derive-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "rust/serde_derive-1.0.229/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/rust/shlex-2.0.1/LICENSE-APACHE": {
+      "bytes": 566,
+      "origin": "rust/shlex-2.0.1/LICENSE-APACHE",
+      "sha256": "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583"
+    },
+    "docs/release-notices/rust/shlex-2.0.1/LICENSE-MIT": {
+      "bytes": 1092,
+      "origin": "rust/shlex-2.0.1/LICENSE-MIT",
+      "sha256": "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1"
+    },
+    "docs/release-notices/rust/syn-3.0.4/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "rust/syn-3.0.4/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/rust/syn-3.0.4/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "rust/syn-3.0.4/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/rust/syn-3.0.5/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "rust/syn-3.0.5/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/rust/syn-3.0.5/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "rust/syn-3.0.5/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/rust/tinyvec-1.13.3/LICENSE-APACHE.md": {
+      "bytes": 11358,
+      "origin": "rust/tinyvec-1.13.3/LICENSE-APACHE.md",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/rust/tinyvec-1.13.3/LICENSE-MIT.md": {
+      "bytes": 1023,
+      "origin": "rust/tinyvec-1.13.3/LICENSE-MIT.md",
+      "sha256": "fd80a26fbb3f644af1fa994134446702932968519797227e07a1368dea80f0bc"
+    },
+    "docs/release-notices/rust/tinyvec-1.13.3/LICENSE-ZLIB.md": {
+      "bytes": 851,
+      "origin": "rust/tinyvec-1.13.3/LICENSE-ZLIB.md",
+      "sha256": "84b34dd7608f7fb9b17bd588a6bf392bf7de504e2716f024a77d89f1b145a151"
+    },
+    "docs/release-notices/rust/unicode-ident-1.0.24/LICENSE-APACHE": {
+      "bytes": 9723,
+      "origin": "rust/unicode-ident-1.0.24/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/rust/unicode-ident-1.0.24/LICENSE-MIT": {
+      "bytes": 1023,
+      "origin": "rust/unicode-ident-1.0.24/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/rust/unicode-ident-1.0.24/LICENSE-UNICODE": {
+      "bytes": 1995,
+      "origin": "rust/unicode-ident-1.0.24/LICENSE-UNICODE",
+      "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1"
+    },
+    "docs/release-notices/rust/unicode-normalization-0.1.24/COPYRIGHT": {
+      "bytes": 321,
+      "origin": "rust/unicode-normalization-0.1.24/COPYRIGHT",
+      "sha256": "23860c2a7b5d96b21569afedf033469bab9fe14a1b24a35068b8641c578ce24d"
+    },
+    "docs/release-notices/rust/unicode-normalization-0.1.24/LICENSE-APACHE": {
+      "bytes": 10847,
+      "origin": "rust/unicode-normalization-0.1.24/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/rust/unicode-normalization-0.1.24/LICENSE-MIT": {
+      "bytes": 1071,
+      "origin": "rust/unicode-normalization-0.1.24/LICENSE-MIT",
+      "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+    },
+    "docs/release-notices/toolchain/gcc/COPYING": {
+      "bytes": 18002,
+      "origin": "esp-14.2.0_20260121/share/licenses/gcc/COPYING",
+      "sha256": "231f7edcc7352d7734a96eef0b8030f77982678c516876fcb81e25b32d68564c"
+    },
+    "docs/release-notices/toolchain/gcc/COPYING.LIB": {
+      "bytes": 26527,
+      "origin": "esp-14.2.0_20260121/share/licenses/gcc/COPYING.LIB",
+      "sha256": "a9bdde5616ecdd1e980b44f360600ee8783b1f99b8cc83a2beb163a0a390e861"
+    },
+    "docs/release-notices/toolchain/gcc/COPYING.RUNTIME": {
+      "bytes": 3324,
+      "origin": "esp-14.2.0_20260121/share/licenses/gcc/COPYING.RUNTIME",
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+    },
+    "docs/release-notices/toolchain/gcc/COPYING3": {
+      "bytes": 35147,
+      "origin": "esp-14.2.0_20260121/share/licenses/gcc/COPYING3",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    "docs/release-notices/toolchain/gcc/COPYING3.LIB": {
+      "bytes": 7639,
+      "origin": "esp-14.2.0_20260121/share/licenses/gcc/COPYING3.LIB",
+      "sha256": "a853c2ffec17057872340eee242ae4d96cbf2b520ae27d903e1b2fef1a5f9d1c"
+    },
+    "docs/release-notices/toolchain/newlib/COPYING": {
+      "bytes": 18002,
+      "origin": "esp-14.2.0_20260121/share/licenses/newlib/COPYING",
+      "sha256": "231f7edcc7352d7734a96eef0b8030f77982678c516876fcb81e25b32d68564c"
+    },
+    "docs/release-notices/toolchain/newlib/COPYING.LIB": {
+      "bytes": 26527,
+      "origin": "esp-14.2.0_20260121/share/licenses/newlib/COPYING.LIB",
+      "sha256": "a9bdde5616ecdd1e980b44f360600ee8783b1f99b8cc83a2beb163a0a390e861"
+    },
+    "docs/release-notices/toolchain/newlib/COPYING.LIBGLOSS": {
+      "bytes": 23586,
+      "origin": "esp-14.2.0_20260121/share/licenses/newlib/COPYING.LIBGLOSS",
+      "sha256": "f3b7f3e4426b1fa6f60198dae7adfedd94b77b28db2d108adc0253575011e0ff"
+    },
+    "docs/release-notices/toolchain/newlib/COPYING.NEWLIB": {
+      "bytes": 63318,
+      "origin": "esp-14.2.0_20260121/share/licenses/newlib/COPYING.NEWLIB",
+      "sha256": "422aa40293093fb54fc66e692a0d68fd0b24ed5602e5d1d33ad05ba3909057e9"
+    },
+    "docs/release-notices/toolchain/newlib/COPYING3": {
+      "bytes": 35147,
+      "origin": "esp-14.2.0_20260121/share/licenses/newlib/COPYING3",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    "docs/release-notices/toolchain/newlib/COPYING3.LIB": {
+      "bytes": 7639,
+      "origin": "esp-14.2.0_20260121/share/licenses/newlib/COPYING3.LIB",
+      "sha256": "a853c2ffec17057872340eee242ae4d96cbf2b520ae27d903e1b2fef1a5f9d1c"
+    }
+  },
+  "packages": [
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "d3fb67a6e08acf24fdeccbac2cb6ac4305825bd1f117462e0e6f2f193345ad56",
+      "kind": "rust",
+      "license": "MIT OR Apache-2.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "arrayvec",
+      "notices": [
+        "docs/release-notices/rust/arrayvec-0.7.8/LICENSE-APACHE",
+        "docs/release-notices/rust/arrayvec-0.7.8/LICENSE-MIT"
+      ],
+      "repository": "https://github.com/bluss/arrayvec",
+      "version": "0.7.8"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "365c0acd5b2e8dd0111a46c4faea83fb3cfb6e39a49a7c73a06e090db7b2eff0",
+      "kind": "rust",
+      "license": "CC0-1.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "base58ck",
+      "notices": [
+        "docs/release-notices/rust/base58ck-0.1.101/CC0-1.0.txt"
+      ],
+      "repository": "https://github.com/rust-bitcoin/rust-bitcoin/",
+      "version": "0.1.101"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "32637268377fc7b10a8c6d51de3e7fba1ce5dd371a96e342b34e6078db558e7f",
+      "kind": "rust",
+      "license": "MIT",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "bech32",
+      "notices": [
+        "docs/release-notices/rust/bech32-0.11.1/LICENSE-MIT"
+      ],
+      "repository": "https://github.com/rust-bitcoin/rust-bech32",
+      "version": "0.11.1"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "90dbd31c98227229239363921e60fcf5e558e43ec69094d46fc4996f08d1d5bc",
+      "kind": "rust",
+      "license": "CC0-1.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "bip39",
+      "notices": [
+        "docs/release-notices/rust/bip39-2.2.2/LICENSE"
+      ],
+      "repository": "https://github.com/rust-bitcoin/rust-bip39/",
+      "version": "2.2.2"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "7ca0f87890d2398219d15182cb6af9681722bd891758dab4ca01896e2038a510",
+      "kind": "rust",
+      "license": "CC0-1.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "bitcoin",
+      "notices": [
+        "docs/release-notices/rust/bitcoin-0.32.11/CC0-1.0.txt"
+      ],
+      "repository": "https://github.com/rust-bitcoin/rust-bitcoin/",
+      "version": "0.32.11"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "6712f9c6fd6785b3b270884e57c441c403dc5d7e19ca45368c97c7a1de3000ec",
+      "kind": "rust",
+      "license": "CC0-1.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "bitcoin-consensus-encoding",
+      "notices": [
+        "docs/release-notices/rust/bitcoin-consensus-encoding-1.2.0/CC0-1.0.txt"
+      ],
+      "repository": "https://github.com/rust-bitcoin/rust-bitcoin/",
+      "version": "1.2.0"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "d573f4cf32996a8dce612e4348cece65a241f1882ed594047c9ba348e8869fa5",
+      "kind": "rust",
+      "license": "CC0-1.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "bitcoin-internals",
+      "notices": [
+        "docs/release-notices/rust/bitcoin-internals-0.6.0/CC0-1.0.txt"
+      ],
+      "repository": "https://github.com/rust-bitcoin/rust-bitcoin/",
+      "version": "0.6.0"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "bb5de036369d1ac59d3c1819ebc4d850f89466f5401c571a285b6ed564a4cb78",
+      "kind": "rust",
+      "license": "CC0-1.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "bitcoin-io",
+      "notices": [
+        "docs/release-notices/rust/bitcoin-io-0.1.101/CC0-1.0.txt"
+      ],
+      "repository": "https://github.com/rust-bitcoin/rust-bitcoin",
+      "version": "0.1.101"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "9cb95693f371d089a4b5b6fc41c6f3ea6e01ee8c15388335dfac8ea685173b51",
+      "kind": "rust",
+      "license": "CC0-1.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "bitcoin-units",
+      "notices": [
+        "docs/release-notices/rust/bitcoin-units-0.1.101/CC0-1.0.txt"
+      ],
+      "repository": "https://github.com/rust-bitcoin/rust-bitcoin/",
+      "version": "0.1.101"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "bca4c7abb40c8817d77403c880988cfd484f23ab2365726afb2f798363e2c4a2",
+      "kind": "rust",
+      "license": "CC0-1.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "bitcoin_hashes",
+      "notices": [
+        "docs/release-notices/rust/bitcoin_hashes-0.14.101/CC0-1.0.txt"
+      ],
+      "repository": "https://github.com/rust-bitcoin/rust-bitcoin",
+      "version": "0.14.101"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "0ad534f4357a5264cce5019c989cf66a4f0dc4e0d1b1d15f8aacec0ff7360273",
+      "kind": "rust",
+      "license": "MIT OR Apache-2.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "cc",
+      "notices": [
+        "docs/release-notices/rust/cc-1.4.4/LICENSE-APACHE",
+        "docs/release-notices/rust/cc-1.4.4/LICENSE-MIT"
+      ],
+      "repository": "https://github.com/rust-lang/cc-rs",
+      "version": "1.4.4"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "a3eb0f42d6c360dc3f8a821f6bf2fdea7f72bfd36b3076eb0e6d1e9e0752fff4",
+      "kind": "rust",
+      "license": "MIT OR Apache-2.0",
+      "locks": [
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock"
+      ],
+      "name": "cc",
+      "notices": [
+        "docs/release-notices/rust/cc-1.4.6/LICENSE-APACHE",
+        "docs/release-notices/rust/cc-1.4.6/LICENSE-MIT"
+      ],
+      "repository": "https://github.com/rust-lang/cc-rs",
+      "version": "1.4.6"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "d45db016d36b838f563236e9193d0ee6ce38f3f68b6c94e914b4929c96bbb890",
+      "kind": "rust",
+      "license": "MIT OR Apache-2.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "find-msvc-tools",
+      "notices": [
+        "docs/release-notices/rust/find-msvc-tools-0.1.11/LICENSE-APACHE",
+        "docs/release-notices/rust/find-msvc-tools-0.1.11/LICENSE-MIT"
+      ],
+      "repository": "https://github.com/rust-lang/cc-rs",
+      "version": "0.1.11"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "3e0f1c7c3a72c66fd80abe965175f7523475c0489a87d3ff9d6e8c87d87a9d2d",
+      "kind": "rust",
+      "license": "MIT OR Apache-2.0",
+      "locks": [
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock"
+      ],
+      "name": "find-msvc-tools",
+      "notices": [
+        "docs/release-notices/rust/find-msvc-tools-0.1.12/LICENSE-APACHE",
+        "docs/release-notices/rust/find-msvc-tools-0.1.12/LICENSE-MIT"
+      ],
+      "repository": "https://github.com/rust-lang/cc-rs",
+      "version": "0.1.12"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "fda06d18ac606267c40c04e41b9947729bf8b9efe74bd4e82b61a5f26a510b9f",
+      "kind": "rust",
+      "license": "CC0-1.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "hex-conservative",
+      "notices": [
+        "docs/release-notices/rust/hex-conservative-0.2.2/LICENSE"
+      ],
+      "repository": "https://github.com/rust-bitcoin/hex-conservative",
+      "version": "0.2.2"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "db3fef046dca3ca91ee1408a8c1b80ab777e80a4d308d1bf4e7adb3fcb047e08",
+      "kind": "rust",
+      "license": "CC0-1.0",
+      "locks": [
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock"
+      ],
+      "name": "hex-conservative",
+      "notices": [
+        "docs/release-notices/rust/hex-conservative-0.2.3/LICENSE"
+      ],
+      "repository": "https://github.com/rust-bitcoin/hex-conservative",
+      "version": "0.2.3"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "35431185f361ccf3ffc58254628af5f1f5d5f28531da2e02e5d6c82bbc282a10",
+      "kind": "rust",
+      "license": "CC0-1.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "hex-conservative",
+      "notices": [
+        "docs/release-notices/rust/hex-conservative-1.2.0/LICENSE"
+      ],
+      "repository": "https://github.com/rust-bitcoin/hex-conservative",
+      "version": "1.2.0"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "271e0d19bcb473b6675739a2b536076b24a082316cb5199ad918edce10c599e8",
+      "kind": "rust",
+      "license": "CC0-1.0",
+      "locks": [
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock"
+      ],
+      "name": "hex-conservative",
+      "notices": [
+        "docs/release-notices/rust/hex-conservative-1.3.0/LICENSE"
+      ],
+      "repository": "https://github.com/rust-bitcoin/hex-conservative",
+      "version": "1.3.0"
+    },
+    {
+      "blocker": "Package/upstream supplies no separate copyright notice; review attribution sufficiency. Complete declared MITNFA standard text included, no invented year or grant.",
+      "cached_crate_checksum_verified": true,
+      "checksum": "3011d1213f159867b13cfd6ac92d2cd5f1345762c63be3554e84092d85a50bbd",
+      "kind": "rust",
+      "license": "MITNFA",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "hex_lit",
+      "notices": [
+        "docs/release-notices/rust/hex_lit-0.1.1/MITNFA.txt"
+      ],
+      "repository": "https://github.com/Kixunil/hex_lit",
+      "version": "0.1.1"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9",
+      "kind": "rust",
+      "license": "MIT OR Apache-2.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "proc-macro2",
+      "notices": [
+        "docs/release-notices/rust/proc-macro2-1.0.107/LICENSE-APACHE",
+        "docs/release-notices/rust/proc-macro2-1.0.107/LICENSE-MIT"
+      ],
+      "repository": "https://github.com/dtolnay/proc-macro2",
+      "version": "1.0.107"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "1fbf4db142a473a8d80c26bbf18454ed458bf8d26c8219c331daecfdbd079001",
+      "kind": "rust",
+      "license": "MIT OR Apache-2.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "quote",
+      "notices": [
+        "docs/release-notices/rust/quote-1.0.47/LICENSE-APACHE",
+        "docs/release-notices/rust/quote-1.0.47/LICENSE-MIT"
+      ],
+      "repository": "https://github.com/dtolnay/quote",
+      "version": "1.0.47"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "9465315bc9d4566e1724f0fffcbcc446268cb522e60f9a27bcded6b19c108113",
+      "kind": "rust",
+      "license": "CC0-1.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "secp256k1",
+      "notices": [
+        "docs/release-notices/rust/secp256k1-0.29.1/LICENSE"
+      ],
+      "repository": "https://github.com/rust-bitcoin/rust-secp256k1/",
+      "version": "0.29.1"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "d4387882333d3aa8cb20530a17c69a3752e97837832f34f6dccc760e715001d9",
+      "kind": "rust",
+      "license": "CC0-1.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "secp256k1-sys",
+      "notices": [
+        "docs/release-notices/rust/secp256k1-sys-0.10.1/LICENSE",
+        "docs/release-notices/rust/secp256k1-sys-0.10.1/depend/secp256k1/COPYING"
+      ],
+      "repository": "https://github.com/rust-bitcoin/rust-secp256k1/",
+      "version": "0.10.1"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "4148590afebada386688f18773da617792bf2ef03ffc1e4cbd2b1d45b023e0ba",
+      "kind": "rust",
+      "license": "MIT OR Apache-2.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "serde",
+      "notices": [
+        "docs/release-notices/rust/serde-1.0.229/LICENSE-APACHE",
+        "docs/release-notices/rust/serde-1.0.229/LICENSE-MIT"
+      ],
+      "repository": "https://github.com/serde-rs/serde",
+      "version": "1.0.229"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "67dca2c9c51e58a4791a4b1ed58308b39c64224d349a935ab5039aa360942a48",
+      "kind": "rust",
+      "license": "MIT OR Apache-2.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "serde_core",
+      "notices": [
+        "docs/release-notices/rust/serde_core-1.0.229/LICENSE-APACHE",
+        "docs/release-notices/rust/serde_core-1.0.229/LICENSE-MIT"
+      ],
+      "repository": "https://github.com/serde-rs/serde",
+      "version": "1.0.229"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "e7a5d71263a5a7d47b41f6b3f06ba276f10cc18b0931f1799f710578e2309348",
+      "kind": "rust",
+      "license": "MIT OR Apache-2.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "serde_derive",
+      "notices": [
+        "docs/release-notices/rust/serde_derive-1.0.229/LICENSE-APACHE",
+        "docs/release-notices/rust/serde_derive-1.0.229/LICENSE-MIT"
+      ],
+      "repository": "https://github.com/serde-rs/serde",
+      "version": "1.0.229"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "f8fadd59c855ef2080decdef8ff161eb6661b86933c9d82e5ba29dc602a55aba",
+      "kind": "rust",
+      "license": "MIT OR Apache-2.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "shlex",
+      "notices": [
+        "docs/release-notices/rust/shlex-2.0.1/LICENSE-APACHE",
+        "docs/release-notices/rust/shlex-2.0.1/LICENSE-MIT"
+      ],
+      "repository": "https://github.com/comex/rust-shlex",
+      "version": "2.0.1"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "e6275cddf4610d1775e6d1fe9469b2e77d0f39fd98fb7450901b821e0c53649f",
+      "kind": "rust",
+      "license": "MIT OR Apache-2.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "syn",
+      "notices": [
+        "docs/release-notices/rust/syn-3.0.4/LICENSE-APACHE",
+        "docs/release-notices/rust/syn-3.0.4/LICENSE-MIT"
+      ],
+      "repository": "https://github.com/dtolnay/syn",
+      "version": "3.0.4"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "12df2e0110f65b775f769bb17ef989067a1d931b2eb822bd4346631eeada89f9",
+      "kind": "rust",
+      "license": "MIT OR Apache-2.0",
+      "locks": [
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock"
+      ],
+      "name": "syn",
+      "notices": [
+        "docs/release-notices/rust/syn-3.0.5/LICENSE-APACHE",
+        "docs/release-notices/rust/syn-3.0.5/LICENSE-MIT"
+      ],
+      "repository": "https://github.com/dtolnay/syn",
+      "version": "3.0.5"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "fd3ca314f692efd6c868f8408f53fe444634a845f96c028b97d35f6a1f79f0ee",
+      "kind": "rust",
+      "license": "Zlib OR Apache-2.0 OR MIT",
+      "locks": [
+        "fixture-firmware/runtime/Cargo.lock"
+      ],
+      "name": "tinyvec",
+      "notices": [
+        "docs/release-notices/rust/tinyvec-1.13.3/LICENSE-APACHE.md",
+        "docs/release-notices/rust/tinyvec-1.13.3/LICENSE-MIT.md",
+        "docs/release-notices/rust/tinyvec-1.13.3/LICENSE-ZLIB.md"
+      ],
+      "repository": "https://github.com/Lokathor/tinyvec",
+      "version": "1.13.3"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "e6e4313cd5fcd3dad5cafa179702e2b244f760991f45397d14d4ebf38247da75",
+      "kind": "rust",
+      "license": "(MIT OR Apache-2.0) AND Unicode-3.0",
+      "locks": [
+        "core-spike/native/Cargo.lock",
+        "fixture-firmware/coin/Cargo.lock",
+        "fixture-firmware/dice/Cargo.lock",
+        "fixture-firmware/runtime-sources/dice-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/hex-core/Cargo.lock",
+        "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock",
+        "fixture-firmware/runtime/Cargo.lock",
+        "fixture-firmware/rust/Cargo.lock"
+      ],
+      "name": "unicode-ident",
+      "notices": [
+        "docs/release-notices/rust/unicode-ident-1.0.24/LICENSE-APACHE",
+        "docs/release-notices/rust/unicode-ident-1.0.24/LICENSE-MIT",
+        "docs/release-notices/rust/unicode-ident-1.0.24/LICENSE-UNICODE"
+      ],
+      "repository": "https://github.com/dtolnay/unicode-ident",
+      "version": "1.0.24"
+    },
+    {
+      "cached_crate_checksum_verified": true,
+      "checksum": "5033c97c4262335cded6d6fc3e5c18ab755e1a3dc96376350f3d8e9f009ad956",
+      "kind": "rust",
+      "license": "MIT/Apache-2.0",
+      "locks": [
+        "fixture-firmware/runtime/Cargo.lock"
+      ],
+      "name": "unicode-normalization",
+      "notices": [
+        "docs/release-notices/rust/unicode-normalization-0.1.24/COPYRIGHT",
+        "docs/release-notices/rust/unicode-normalization-0.1.24/LICENSE-APACHE",
+        "docs/release-notices/rust/unicode-normalization-0.1.24/LICENSE-MIT"
+      ],
+      "repository": "https://github.com/unicode-rs/unicode-normalization",
+      "version": "0.1.24"
+    },
+    {
+      "component_hash": "a1f34e8ed2e61ffef1a230fd9477005c2db335c7e1f6a239f43e5f119dcbe1b0",
+      "kind": "managed",
+      "name": "espressif/button",
+      "notices": [
+        "docs/release-notices/managed/espressif__button/license.txt"
+      ],
+      "version": "4.2.1"
+    },
+    {
+      "component_hash": "351350613ceafba240b761b4ea991e0f231ac7a9f59a9ee901f751bddc0bb18f",
+      "kind": "managed",
+      "name": "espressif/cmake_utilities",
+      "notices": [
+        "docs/release-notices/managed/espressif__cmake_utilities/license.txt"
+      ],
+      "version": "0.5.3"
+    },
+    {
+      "component_hash": "df70f10af8d7b922add7b9d07372c9c97ab356e58d72b7a892050227c2d44348",
+      "kind": "managed",
+      "name": "espressif/esp_codec_dev",
+      "notices": [
+        "docs/release-notices/managed/espressif__esp_codec_dev/LICENSE",
+        "docs/release-notices/managed/espressif__esp_codec_dev/device/zl38063/LICENSE.txt"
+      ],
+      "version": "1.5.11"
+    },
+    {
+      "component_hash": "924f346e36da39aaa38177e21bd360b5442abc792338fb64ad1e644481255898",
+      "kind": "managed",
+      "name": "espressif/esp_lcd_st7701",
+      "notices": [
+        "docs/release-notices/managed/espressif__esp_lcd_st7701/license.txt"
+      ],
+      "version": "2.0.2~2"
+    },
+    {
+      "component_hash": "3f85a7d95af876f1a6ecca8eb90a81614890d0f03a038390804e5a77e2caf862",
+      "kind": "managed",
+      "name": "espressif/esp_lcd_touch",
+      "notices": [
+        "docs/release-notices/managed/espressif__esp_lcd_touch/license.txt"
+      ],
+      "version": "1.2.1"
+    },
+    {
+      "component_hash": "737bdf29e0823eacf041381e81db2aaf5d378f3b5417df7f415f83319e3e790b",
+      "kind": "managed",
+      "name": "espressif/esp_lcd_touch_gt911",
+      "notices": [
+        "docs/release-notices/managed/espressif__esp_lcd_touch_gt911/license.txt"
+      ],
+      "version": "1.2.1"
+    },
+    {
+      "component_hash": "331d23c304cea5d1aed0ad3cea7774874dbaeebb2217e8db6bf3cc8485ac9f9f",
+      "kind": "managed",
+      "name": "espressif/esp_lv_decoder",
+      "notices": [
+        "docs/release-notices/managed/espressif__esp_lv_decoder/license.txt"
+      ],
+      "version": "0.4.3"
+    },
+    {
+      "component_hash": "66896007884b817df34c964f9a114fff538ee2674e99fee7159162498b93f94b",
+      "kind": "managed",
+      "name": "espressif/esp_lv_fs",
+      "notices": [
+        "docs/release-notices/managed/espressif__esp_lv_fs/license.txt"
+      ],
+      "version": "1.0.1"
+    },
+    {
+      "component_hash": "bcb316bedda9e934d32567082a969a8e8f8f406dd32d23c359a299249dc18e81",
+      "kind": "managed",
+      "name": "espressif/esp_lvgl_adapter",
+      "notices": [
+        "docs/release-notices/managed/espressif__esp_lvgl_adapter/LICENSE"
+      ],
+      "version": "0.6.4"
+    },
+    {
+      "component_hash": "42310c362596de2a37248c2937b1754bc29cd0356b9839e2a77cf791e6bcdde1",
+      "kind": "managed",
+      "name": "espressif/esp_mmap_assets",
+      "notices": [
+        "docs/release-notices/managed/espressif__esp_mmap_assets/license.txt"
+      ],
+      "version": "2.0.1"
+    },
+    {
+      "component_hash": "e1e7e6991193c41ed6c9fc386702aa7821433319e7aa9c3147cd3236310cd69c",
+      "kind": "managed",
+      "name": "espressif/esp_new_jpeg",
+      "notices": [
+        "docs/release-notices/managed/espressif__esp_new_jpeg/LICENSE"
+      ],
+      "version": "1.0.2"
+    },
+    {
+      "component_hash": "aa9f7657a69b2b1c1f49044017fc424081d4e0fe6e97834cb43883548d44e3ca",
+      "kind": "managed",
+      "name": "espressif/freetype",
+      "notices": [
+        "docs/release-notices/managed/espressif__freetype/LICENSE",
+        "docs/release-notices/managed/espressif__freetype/examples/color-emoji-example/main/assets/LICENSE-OFL.txt",
+        "docs/release-notices/managed/espressif__freetype/freetype/LICENSE.TXT",
+        "docs/release-notices/managed/espressif__freetype/freetype/docs/FTL.TXT",
+        "docs/release-notices/managed/espressif__freetype/freetype/docs/GPLv2.TXT",
+        "docs/release-notices/managed/espressif__freetype/freetype/subprojects/dlg/LICENSE",
+        "docs/release-notices/managed/espressif__freetype/supplemental/src/bdf/README.txt",
+        "docs/release-notices/managed/espressif__freetype/supplemental/src/pcf/README.txt",
+        "docs/release-notices/managed/espressif__freetype/supplemental/src/gzip/zlib.h.txt",
+        "docs/release-notices/managed/espressif__freetype/supplemental/src/autofit/ft-hb.c.txt",
+        "docs/release-notices/managed/espressif__freetype/supplemental/src/autofit/ft-hb.h.txt",
+        "docs/release-notices/managed/espressif__freetype/supplemental/src/base/fthash.c.txt",
+        "docs/release-notices/managed/espressif__freetype/supplemental/include/freetype/internal/fthash.h.txt"
+      ],
+      "version": "2.14.3~1"
+    },
+    {
+      "component_hash": "b56694054cd34a683ac2a6f3661963ba00b1dab741a4f3bb59ed6666cbc9f3fb",
+      "kind": "managed",
+      "name": "espressif/knob",
+      "notices": [
+        "docs/release-notices/managed/espressif__knob/license.txt"
+      ],
+      "version": "1.1.0"
+    },
+    {
+      "component_hash": "b8c715f76b79a127d9b1b632e09acc23e7b29d2194af890a837adc2be5a2804b",
+      "kind": "managed",
+      "name": "espressif/libpng",
+      "notices": [
+        "docs/release-notices/managed/espressif__libpng/LICENSE",
+        "docs/release-notices/managed/espressif__libpng/libpng/LICENSE",
+        "docs/release-notices/managed/espressif__libpng/libpng/ci/LICENSE_MIT.txt",
+        "docs/release-notices/managed/espressif__libpng/libpng/contrib/gregbook/COPYING",
+        "docs/release-notices/managed/espressif__libpng/libpng/contrib/gregbook/LICENSE",
+        "docs/release-notices/managed/espressif__libpng/libpng/contrib/pngexif/LICENSE_MIT.txt",
+        "docs/release-notices/managed/espressif__libpng/libpng/contrib/pngminus/LICENSE.txt"
+      ],
+      "version": "1.6.58~1"
+    },
+    {
+      "component_hash": "9083cada65f1c9d298ef92266232d071c6f2f335164e2799554b3eae73aedc55",
+      "kind": "managed",
+      "name": "espressif/zlib",
+      "notices": [
+        "docs/release-notices/managed/espressif__zlib/LICENSE",
+        "docs/release-notices/managed/espressif__zlib/zlib/LICENSE",
+        "docs/release-notices/managed/espressif__zlib/zlib/contrib/dotzlib/LICENSE_1_0.txt",
+        "docs/release-notices/managed/espressif__zlib/zlib/contrib/minizip/LICENSE.Info-Zip"
+      ],
+      "version": "1.3.2~1"
+    },
+    {
+      "component_hash": "184e532558c1c45fefed631f3e235423d22582aafb4630f3e8885c35281a49ae",
+      "kind": "managed",
+      "name": "lvgl/lvgl",
+      "notices": [
+        "docs/release-notices/managed/lvgl__lvgl/COPYRIGHTS.md",
+        "docs/release-notices/managed/lvgl__lvgl/LICENCE.txt",
+        "docs/release-notices/managed/lvgl__lvgl/docs/src/introduction/license.rst",
+        "docs/release-notices/managed/lvgl__lvgl/docs/src/xml/editor/license.rst",
+        "docs/release-notices/managed/lvgl__lvgl/docs/src/xml/xml/license.rst",
+        "docs/release-notices/managed/lvgl__lvgl/examples/libs/freetype/OFL.txt",
+        "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/DejaVuSans/LICENSE",
+        "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/FontAwesome/LICENSE.txt",
+        "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/FontAwesome5/LICENSE.txt",
+        "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/Lato/OFL.txt",
+        "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/Montserrat/OFL.txt",
+        "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/NotoColorEmoji/OFL.txt",
+        "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/NotoSansSC/OFL.txt",
+        "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/SourceHanSansSC/LICENSE.txt",
+        "docs/release-notices/managed/lvgl__lvgl/src/libs/FT800-FT813/LICENSE",
+        "docs/release-notices/managed/lvgl__lvgl/src/libs/barcode/LICENSE.txt",
+        "docs/release-notices/managed/lvgl__lvgl/src/libs/frogfs/LICENSE.txt",
+        "docs/release-notices/managed/lvgl__lvgl/src/libs/gif/LICENSE",
+        "docs/release-notices/managed/lvgl__lvgl/src/libs/lodepng/LICENSE.txt",
+        "docs/release-notices/managed/lvgl__lvgl/src/libs/lz4/LICENSE.txt",
+        "docs/release-notices/managed/lvgl__lvgl/src/libs/nanovg/LICENSE.txt",
+        "docs/release-notices/managed/lvgl__lvgl/src/libs/qrcode/LICENSE.txt",
+        "docs/release-notices/managed/lvgl__lvgl/src/libs/thorvg/LICENSE.txt",
+        "docs/release-notices/managed/lvgl__lvgl/src/libs/tiny_ttf/LICENSE.txt",
+        "docs/release-notices/managed/lvgl__lvgl/src/libs/tjpgd/LICENSE.txt",
+        "docs/release-notices/managed/lvgl__lvgl/src/libs/vg_lite_driver/LICENSE.txt",
+        "docs/release-notices/managed/lvgl__lvgl/src/stdlib/builtin/LICENSE_SPRINTF.txt",
+        "docs/release-notices/managed/lvgl__lvgl/src/stdlib/builtin/LICENSE_TLSF.txt",
+        "docs/release-notices/managed/lvgl__lvgl/tests/src/test_files/fonts/noto/OFL.txt",
+        "docs/release-notices/managed/lvgl__lvgl/tests/src/test_libs/rnd_unicodes/rnd_unicodes/LICENSE"
+      ],
+      "version": "9.5.0"
+    },
+    {
+      "component_hash": "e08ef6c49a79b044712f578b321bbd8c65003061875b4673409c2ec0d7c5b657",
+      "kind": "managed",
+      "name": "waveshare/esp32_p4_wifi6_touch_lcd_4_3",
+      "notices": [
+        "docs/release-notices/managed/waveshare__esp32_p4_wifi6_touch_lcd_4_3/LICENSE"
+      ],
+      "version": "1.0.1"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "app_trace",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "app_update",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "bootloader",
+      "notices": [
+        "docs/release-notices/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc/LICENSE.txt"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "bootloader_support",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "bt",
+      "notices": [
+        "docs/release-notices/esp-idf/components/bt/common/tinycrypt/LICENSE",
+        "docs/release-notices/esp-idf/components/bt/controller/lib_esp32/LICENSE",
+        "docs/release-notices/esp-idf/components/bt/controller/lib_esp32c2/esp32c2-bt-lib/NOTICE",
+        "docs/release-notices/esp-idf/components/bt/controller/lib_esp32c3_family/LICENSE",
+        "docs/release-notices/esp-idf/components/bt/controller/lib_esp32c5/esp32c5-bt-lib/NOTICE",
+        "docs/release-notices/esp-idf/components/bt/controller/lib_esp32c6/esp32c6-bt-lib/NOTICE",
+        "docs/release-notices/esp-idf/components/bt/controller/lib_esp32h2/esp32h2-bt-lib/NOTICE",
+        "docs/release-notices/esp-idf/components/bt/esp_ble_mesh/lib/lib/LICENSE",
+        "docs/release-notices/esp-idf/components/bt/host/nimble/nimble/LICENSE",
+        "docs/release-notices/esp-idf/components/bt/host/nimble/nimble/NOTICE",
+        "docs/release-notices/esp-idf/components/bt/host/nimble/nimble/ext/tinycrypt/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "cmock",
+      "notices": [
+        "docs/release-notices/esp-idf/components/cmock/CMock/LICENSE.txt",
+        "docs/release-notices/esp-idf/components/cmock/CMock/vendor/unity/LICENSE.txt"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "console",
+      "notices": [
+        "docs/release-notices/esp-idf/components/console/argtable3/LICENSE",
+        "docs/release-notices/esp-idf/components/console/linenoise/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "cxx",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "driver",
+      "notices": [
+        "docs/release-notices/esp-idf/components/driver/test_apps/components/esp_serial_slave_link/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "efuse",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp-tls",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_adc",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_app_format",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_bootloader_format",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_coex",
+      "notices": [
+        "docs/release-notices/esp-idf/components/esp_coex/lib/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_common",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_ana_cmpr",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_bitscrambler",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_cam",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_dac",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_gpio",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_gptimer",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_i2c",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_i2s",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_isp",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_jpeg",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_ledc",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_mcpwm",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_parlio",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_pcnt",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_ppa",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_rmt",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_sdio",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_sdm",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_sdmmc",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_sdspi",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_spi",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_touch_sens",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_tsens",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_twai",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_uart",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_driver_usb_serial_jtag",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_eth",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_event",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_gdbstub",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_hal_ieee802154",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_hid",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_http_client",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_http_server",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_https_ota",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_https_server",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_hw_support",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_lcd",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_local_ctrl",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_mm",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_netif",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_netif_stack",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_partition",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_phy",
+      "notices": [
+        "docs/release-notices/esp-idf/components/esp_phy/lib/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_pm",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_psram",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_ringbuf",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_rom",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_security",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_system",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_timer",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_vfs_console",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esp_wifi",
+      "notices": [
+        "docs/release-notices/esp-idf/components/esp_wifi/lib/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "espcoredump",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "esptool_py",
+      "notices": [
+        "docs/release-notices/esp-idf/components/esptool_py/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "fatfs",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "freertos",
+      "notices": [
+        "docs/release-notices/esp-idf/components/freertos/FreeRTOS-Kernel/LICENSE.md"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "hal",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "heap",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "http_parser",
+      "notices": [
+        "docs/release-notices/esp-idf/components/http_parser/LICENSE.txt"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "idf_test",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "ieee802154",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "json",
+      "notices": [
+        "docs/release-notices/esp-idf/components/json/cJSON/LICENSE",
+        "docs/release-notices/esp-idf/components/json/cJSON/tests/unity/docs/license.txt"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "log",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "lwip",
+      "notices": [
+        "docs/release-notices/esp-idf/components/lwip/lwip/COPYING",
+        "docs/release-notices/esp-idf/components/lwip/lwip/contrib/apps/LwipMibCompiler/SharpSnmpLib/license.txt"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "mbedtls",
+      "notices": [
+        "docs/release-notices/esp-idf/components/mbedtls/mbedtls/LICENSE",
+        "docs/release-notices/esp-idf/components/mbedtls/mbedtls/framework/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "mqtt",
+      "notices": [
+        "docs/release-notices/esp-idf/components/mqtt/esp-mqtt/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "newlib",
+      "notices": [
+        "docs/release-notices/esp-idf/components/newlib/COPYING.NEWLIB",
+        "docs/release-notices/esp-idf/components/newlib/COPYING.picolibc"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "nvs_flash",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "nvs_sec_provider",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "openthread",
+      "notices": [
+        "docs/release-notices/esp-idf/components/openthread/lib/LICENSE",
+        "docs/release-notices/esp-idf/components/openthread/openthread/LICENSE",
+        "docs/release-notices/esp-idf/components/openthread/openthread/NOTICE",
+        "docs/release-notices/esp-idf/components/openthread/openthread/third_party/jlink/SEGGER_RTT_V640/License.txt",
+        "docs/release-notices/esp-idf/components/openthread/openthread/third_party/mbedtls/repo/LICENSE",
+        "docs/release-notices/esp-idf/components/openthread/openthread/third_party/mbedtls/repo/framework/LICENSE",
+        "docs/release-notices/esp-idf/components/openthread/openthread/tools/otci/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "partition_table",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "protobuf-c",
+      "notices": [
+        "docs/release-notices/esp-idf/components/protobuf-c/protobuf-c/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "protocomm",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "pthread",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "riscv",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "rt",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "sdmmc",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "soc",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "spi_flash",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "spiffs",
+      "notices": [
+        "docs/release-notices/esp-idf/components/spiffs/spiffs/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "tcp_transport",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "ulp",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "unity",
+      "notices": [
+        "docs/release-notices/esp-idf/components/unity/unity/LICENSE.txt"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "usb",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "vfs",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "wear_levelling",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "wifi_provisioning",
+      "notices": [
+        "docs/release-notices/esp-idf/LICENSE"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "idf_commit": "b774170ff46c393eeb5e495ea37936038d3f4f4f",
+      "kind": "idf-component",
+      "name": "wpa_supplicant",
+      "notices": [
+        "docs/release-notices/esp-idf/components/wpa_supplicant/COPYING"
+      ],
+      "review": "Root Apache-2.0 plus discovered component notices; embedded per-file exceptions require review"
+    },
+    {
+      "kind": "target-toolchain-runtime",
+      "name": "newlib",
+      "notices": [
+        "docs/release-notices/toolchain/newlib/COPYING",
+        "docs/release-notices/toolchain/newlib/COPYING.LIB",
+        "docs/release-notices/toolchain/newlib/COPYING.LIBGLOSS",
+        "docs/release-notices/toolchain/newlib/COPYING.NEWLIB",
+        "docs/release-notices/toolchain/newlib/COPYING3",
+        "docs/release-notices/toolchain/newlib/COPYING3.LIB"
+      ],
+      "scope": "includes GCC runtime exception; compiler itself is not distributed",
+      "toolchain": "esp-14.2.0_20260121"
+    },
+    {
+      "kind": "target-toolchain-runtime",
+      "name": "gcc",
+      "notices": [
+        "docs/release-notices/toolchain/gcc/COPYING",
+        "docs/release-notices/toolchain/gcc/COPYING.LIB",
+        "docs/release-notices/toolchain/gcc/COPYING.RUNTIME",
+        "docs/release-notices/toolchain/gcc/COPYING3",
+        "docs/release-notices/toolchain/gcc/COPYING3.LIB"
+      ],
+      "scope": "includes GCC runtime exception; compiler itself is not distributed",
+      "toolchain": "esp-14.2.0_20260121"
+    },
+    {
+      "kind": "rust-toolchain-runtime",
+      "name": "Rust core/alloc/compiler-builtins",
+      "notices": [
+        "docs/release-notices/rust-toolchain/licenses/Apache-2.0.txt",
+        "docs/release-notices/rust-toolchain/licenses/BSD-2-Clause.txt",
+        "docs/release-notices/rust-toolchain/licenses/CC-BY-SA-4.0.txt",
+        "docs/release-notices/rust-toolchain/licenses/GCC-exception-3.1.txt",
+        "docs/release-notices/rust-toolchain/licenses/GPL-2.0-only.txt",
+        "docs/release-notices/rust-toolchain/licenses/GPL-3.0-or-later.txt",
+        "docs/release-notices/rust-toolchain/licenses/ISC.txt",
+        "docs/release-notices/rust-toolchain/licenses/LLVM-exception.txt",
+        "docs/release-notices/rust-toolchain/licenses/MIT.txt",
+        "docs/release-notices/rust-toolchain/licenses/NCSA.txt",
+        "docs/release-notices/rust-toolchain/licenses/OFL-1.1.txt",
+        "docs/release-notices/rust-toolchain/licenses/Unicode-3.0.txt",
+        "docs/release-notices/rust-toolchain/COPYRIGHT-library.html",
+        "docs/release-notices/rust-toolchain/LICENSE.txt"
+      ],
+      "version": "nightly-2026-04-15"
+    }
+  ],
+  "schema": "d6-binary-notices-v1",
+  "status": "Collected exact local notices; see CHECKLIST.md for unresolved closure"
+}

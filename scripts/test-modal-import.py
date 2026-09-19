@@ -20,7 +20,9 @@ class ModalIdentityTests(unittest.TestCase):
   with self.assertRaisesRegex(AssertionError,error):self.verify(True)
  def test_exact(self):self.verify()
  def test_serialization_control(self):
-  (self.root/MANIFEST).write_text(json.dumps(json.loads(self.original),sort_keys=True));self.verify(True)
+  # A refreshed predecessor pin cannot disconnect the exact terminal successor.
+  (self.root/MANIFEST).write_text(json.dumps(json.loads(self.original),sort_keys=True))
+  with self.assertRaisesRegex(AssertionError,'global-saver prior manifest mismatch'):self.verify(True)
  def test_pin(self):
   (self.root/MANIFEST).write_bytes(self.original+b'\n')
   with self.assertRaisesRegex(AssertionError,'unreviewed modal'):self.verify()

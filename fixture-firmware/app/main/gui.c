@@ -313,7 +313,7 @@ static void switch_mode(lv_event_t *e){if(saver_event_blocked(e))return;if(busy|
 static void select_words(lv_event_t *e){if(saver_event_blocked(e))return;if(busy||!el_mode_is_legacy(mode))return;if(selector==saver_payload(e))return;pi_source_changed();selector=saver_payload(e);invalidate();refresh();show(false);}
 static void flip(lv_event_t *e){if(saver_event_blocked(e))return;if(busy||mode!=MODE_COINS||length>=256)return;pi_source_changed();hex[length++]=saver_payload(e)?'1':'0';hex[length]=0;invalidate();refresh();show(false);}
 static void roll(lv_event_t *e){if(saver_event_blocked(e))return;if(busy||!d6_mode()||length>=1024)return;pi_source_changed();hex[length++]='0'+saver_payload(e);hex[length]=0;d6_selection[mode]=length;invalidate();refresh();show(false);d6_make_visible(length);}
-static void navigate(lv_event_t *e){if(saver_event_blocked(e))return;if(busy||!el_mode_is_legacy(mode))return;bool results=saver_payload(e)!=0;show(results);if(!results&&d6_mode())d6_make_visible(d6_selection[mode]);}
+static void navigate(lv_event_t *e){if(saver_event_blocked(e))return;if(busy||!el_mode_is_legacy(mode))return;bool results=saver_payload(e)!=0;if(results&&pi_enabled()){pi_enter();return;}show(results);if(!results&&d6_mode())d6_make_visible(d6_selection[mode]);}
 static void edit(lv_event_t *e) {if(saver_event_blocked(e))return;
     if(busy||!el_mode_is_legacy(mode))return;
     uintptr_t k=saver_payload(e);
@@ -349,6 +349,35 @@ static void saver_rebind_controls(void){
 #undef length
 #undef hex
 #include "navigation.inc"
+/* Explicit visible-owner allowlist: mode remains a legacy value when native
+ * panels are selected, so it cannot identify the foreground view. New routes
+ * idle only at empty input; no concealment of pending/secret/result flows. */
+static bool saver_view_eligible(void){
+ if(nav_open||mn_safety_open||nav_busy()||legacy_pending||pi_ui.live)return false;
+ unsigned visible=!lv_obj_has_flag(legacy_panel,LV_OBJ_FLAG_HIDDEN)+
+                  !lv_obj_has_flag(mn_panel,LV_OBJ_FLAG_HIDDEN)+
+                  gui08_native_visible(&gui08_ui)+seed_native_visible(&seed_ui)+
+                  extra_dice_native_visible(&extra_dice_ui);
+ if(visible!=1)return false; /* unknown or overlapping owner: fail closed */
+ if(gui08_native_visible(&gui08_ui))
+  return (gui08_ui.editor.method==GUI08_CARDS||gui08_ui.editor.method==GUI08_BASES)&&
+         !gui08_ui.editor.length&&!gui08_ui.editor.result_visible;
+ if(seed_native_visible(&seed_ui))
+  return seed_ui.editor.method==GUI08_SEED&&!seed_ui.editor.length&&
+         !seed_ui.editor.result_visible&&!seed_ui.committed&&!seed_ui.draft_len&&
+         !seed_ui.candidate_count;
+ if(extra_dice_native_visible(&extra_dice_ui))
+  return extra_dice_ui.editor.method==GUI08_DICE&&
+         (extra_dice_ui.method==GUI08_DICE_BITBOX||extra_dice_ui.method==GUI08_DICE_DPLUS)&&
+         !extra_dice_ui.editor.length&&!extra_dice_ui.editor.result_visible&&
+         !extra_dice_ui.final_length&&!extra_dice_ui.final_selected;
+ if(!lv_obj_has_flag(mn_panel,LV_OBJ_FLAG_HIDDEN))
+  return mode==MODE_MNEMONIC&&!mn_reviewing&&!mn_valid&&!mn_draft[0]&&
+         mn_edit<0&&!mn_settling&&lv_obj_has_flag(mn_output,LV_OBJ_FLAG_HIDDEN);
+ return el_mode_is_legacy(mode)&&!lengths[mode]&&!valid_result&&
+        !d6_selection[mode]&&!d6_rebinding&&!lv_obj_is_scrolling(d6_viewport)&&
+        !lv_obj_has_flag(input,LV_OBJ_FLAG_HIDDEN)&&lv_obj_has_flag(output,LV_OBJ_FLAG_HIDDEN);
+}
 #define hex transcripts[mode]
 #define length lengths[mode]
 void gui_result(const hex_result_t *r) {

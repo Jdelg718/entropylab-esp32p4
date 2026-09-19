@@ -185,8 +185,10 @@ static void passphrase_gui_tests(void) {
     assert(!passphrase_ui_complete(&ui,&done));
     assert(passphrase_ui_result_visible(&ui) && passphrase_ui_result_marker(&ui)==PASSPHRASE_UI_ACTIVE);
 
+    /* Approved successor contract: completed Back retains; pending Back cancels.
+     * Original Back-discard characterization remains in the immutable baseline. */
     passphrase_ui_back(&ui);
-    assert(!passphrase_ui_result_visible(&ui) && passphrase_ui_raw_len(&ui)==6 && passphrase_ui_is_masked(&ui));
+    assert(passphrase_ui_result_visible(&ui) && passphrase_ui_raw_len(&ui)==6 && passphrase_ui_is_masked(&ui));
     pp_click(passphrase_ui_control(&ui,PASSPHRASE_UI_CONTROL_CONTINUE));
     done.request_id=pp_owned_request.request_id; done.generation=pp_owned_request.generation; done.context=pp_owned_request.context; done.marker=pp_owned_request.marker; done.rc=-3;
     assert(passphrase_ui_complete(&ui,&done)); assert(!passphrase_ui_result_visible(&ui)); assert(strstr(passphrase_ui_status(&ui),"failed"));

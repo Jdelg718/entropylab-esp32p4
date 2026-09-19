@@ -22,4 +22,4 @@ jobs:
       - name: Run real host tests and C ABI link
         env:
           LVGL_SOURCE_DIR: ${{ github.workspace }}/.ci-deps/lvgl
-        run: bash scripts/test-host.sh
+        run: python3 scripts/retention-host.py

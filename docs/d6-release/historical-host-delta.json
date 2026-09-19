@@ -1,0 +1,14 @@
+{
+  "fixture-firmware/app/main/CMakeLists.txt": {
+    "candidate_sha256": "a84e1d01e58438ccbe885cfa131380b61904a374ef25036b9c3fefd1edc1554f",
+    "historical_sha256": "45c7b537e4b546504c8f58b1b9813cf2ee7ec1a98f564ba1bc09cbd20bb14b59"
+  },
+  "fixture-firmware/app/main/main.c": {
+    "candidate_sha256": "3cfff0a119fb512fdf9aed351bd8c8fd6d396bdf49001dbb5c7e955fffdf1837",
+    "historical_sha256": "f666f06524a10ff67e1d1b5bfbd7f43701950e5e42f07eefd8e085bbc0e81cec"
+  },
+  "fixture-firmware/runtime-sources/hex-core/src/lib.rs": {
+    "candidate_sha256": "b029b9cf9ab459ad6c24c6c32973b95f866a4d55d4f98bdb1575ed93d6f4e6e3",
+    "historical_sha256": "9c003045fbd8b036bd6a550e06ec129230b49b39dac234751c5ffa304dcf90a6"
+  }
+}
