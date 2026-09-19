@@ -22,8 +22,8 @@ function profileCopy(profile) {
 // after the final cumulative ACK. Finish that transaction before ANY command.
 // SHA-256 against the trusted pin below remains the integrity authority; this
 // trailer is mandatory framing, not an alternative integrity/authentication check.
-export async function readFlashComplete(loader, address, length) {
-  const data = await loader.readFlash(address, length);
+export async function readFlashComplete(loader, address, length, onProgress) {
+  const data = await loader.readFlash(address, length, onProgress);
   if (!(data instanceof Uint8Array) || data.length !== length) fail('READBACK_MISMATCH');
   const trailer = await loader.transport.read(loader.FLASH_READ_TIMEOUT);
   if (!(trailer instanceof Uint8Array) || trailer.length !== 16) fail('READBACK_TRAILER_REFUSED');
@@ -79,16 +79,22 @@ export async function readSecurityInfo(loader) {
 export class GuardedSession {
   #p; #Loader; #Transport; #P4; #state; #used = false; #abort = new AbortController();
   #transport; #port; #writer; #cleanup; #closed = false; #opening; #deadline;
+  #progress; #startedAt;
   #lastPhase = 'validation'; #phaseStart = performance.now(); #writeEntered = false;
   #timedOut = false; #endsAt; #phaseEndsAt; #securityDiagnostic;
-  constructor({profile, Loader, Transport, ESP32P4ROM, onState = () => {}, phaseTimeoutMs, cleanupTimeoutMs = 5000}) {
-    this.#p = profileCopy(profile); this.#Loader = Loader; this.#Transport = Transport; this.#P4 = ESP32P4ROM; this.#state = onState;
+  constructor({profile, Loader, Transport, ESP32P4ROM, onState = () => {}, onProgress = () => {}, phaseTimeoutMs, cleanupTimeoutMs = 5000}) {
+    this.#p = profileCopy(profile); this.#Loader = Loader; this.#Transport = Transport; this.#P4 = ESP32P4ROM; this.#state = onState; this.#progress = onProgress;
     const maximum = this.#p === FACTORY_PROFILE ? 900000 : 600000;
     phaseTimeoutMs ??= maximum;
     if (!Number.isFinite(phaseTimeoutMs) || phaseTimeoutMs < 1 || phaseTimeoutMs > maximum || !Number.isFinite(cleanupTimeoutMs) || cleanupTimeoutMs < 1) fail('TIMEOUT_REFUSED');
     this.#deadline = phaseTimeoutMs; this.cleanupTimeoutMs = cleanupTimeoutMs;
   }
   #emit(state, details = {}) { try { this.#state(Object.freeze({state, ...details})); } catch {} }
+  #report(kind, assetIndex, bytes, totalBytes) {
+    if (this.#closed || this.#abort.signal.aborted || !Number.isSafeInteger(bytes) || !Number.isSafeInteger(totalBytes) || bytes < 0 || bytes > totalBytes) return;
+    const now = performance.now();
+    try { this.#progress(Object.freeze({phase:this.#lastPhase, kind, assetIndex, bytes, totalBytes, elapsedMs:Math.max(0, now-this.#startedAt), phaseElapsedMs:Math.max(0, now-this.#phaseStart)})); } catch {}
+  }
   #check() {
     // Timers may be delayed by synchronous work or tab scheduling. Check the
     // absolute authority before every guarded continuation as well as racing IO.
@@ -171,7 +177,8 @@ export class GuardedSession {
   checkDevice(args) { return this.#run(args, true); }
   async #run({port, assets, boardConfirmation, firstInstallConsent = false, resetOnSuccess = false}, diagnostic) {
     if (this.#used) fail('SESSION_ALREADY_USED'); this.#used = true;
-    this.#endsAt = performance.now() + this.#deadline;
+    this.#startedAt = performance.now();
+    this.#endsAt = this.#startedAt + this.#deadline;
     try {
       this.#check();
       if (boardConfirmation !== BOARD) fail('BOARD_CONFIRMATION_REQUIRED');
@@ -208,15 +215,31 @@ export class GuardedSession {
       await this.#phase('official-stub', async () => {
         await l.runStub(); if (l.IS_STUB !== true) fail('STUB_REFUSED');
       });
+      await this.#phase('changing-baud', async () => {
+        if (typeof l.changeBaud !== 'function') fail('BAUD_SWITCH_UNSUPPORTED');
+        l.baudrate = 460800;
+        // Pinned vendor changeBaud uses command(), not checkCommand(). Validate
+        // its stub ACK before allowing its close/reopen sequence to continue.
+        const command = l.command;
+        l.command = async function (...args) {
+          const response = await command.apply(this, args);
+          if (args[0] === this.ESP_CHANGE_BAUDRATE &&
+              (!(response?.[1] instanceof Uint8Array) || response[1].length !== 2 || response[1][0] !== 0 || response[1][1] !== 0)) fail('BAUD_SWITCH_REFUSED');
+          return response;
+        };
+        try { await l.changeBaud(); } finally { l.command = command; }
+        if (transport.baudrate !== 460800) fail('BAUD_SWITCH_REFUSED');
+      });
       await this.#phase('jedec-preflight', async () => {
         const id = await l.readFlashId();
         // Raw JEDEC density code 0x19 (2^25 bytes), no image/header fallback.
         if (!Number.isInteger(id) || id < 1 || id > 0xffffff || ((id >>> 16) & 255) !== 0x19 || (id & 255) === 0 || (id & 255) === 255) fail('JEDEC_REFUSED');
       });
       const verify = async pins => {
-        for (const a of pins) {
-          this.#check(); const data = await readFlashComplete(l, a.offset, a.length);
+        for (const [index, a] of pins.entries()) {
+          this.#check(); const data = await readFlashComplete(l, a.offset, a.length, (_chunk, bytes, total) => this.#report('image-read', index, bytes, total));
           if (!(data instanceof Uint8Array) || data.length !== a.length || ![a.sha256,...(a.alternatives || [])].includes(await digest(data))) fail('READBACK_MISMATCH');
+          this.#report('image-verified', index, a.length, a.length);
         }
       };
       if (this.#p.mode === 'appupdate') {
@@ -230,7 +253,7 @@ export class GuardedSession {
         this.#emit('diagnostic-complete', {firmwareWriteEntered:false, cleanupSuccess:true, securityDiagnostic:this.#securityDiagnostic});
         return Object.freeze({ok:true, diagnostic:true, verified:false, reset:resetOnSuccess === true});
       }
-      await this.#phase('writing', () => l.writeFlash({fileArray:images, flashSize:'keep', flashMode:'keep', flashFreq:'keep', compress:true, eraseAll:false}));
+      await this.#phase('writing', () => l.writeFlash({fileArray:images, flashSize:'keep', flashMode:'keep', flashFreq:'keep', compress:true, eraseAll:false, reportProgress:(index, bytes, total) => this.#report('compressed-write', index, bytes, total)}));
       await this.#phase('verifying-readback', () => verify([...(this.#p.compatibility || []), ...this.#p.assets, ...(this.#p.tailReadbacks || [])]));
       if (resetOnSuccess === true) await this.#phase('resetting-verified', () => l.after('hard_reset'));
       const clean = await this.#stop(); if (!clean) fail('CLEANUP_INCOMPLETE');

@@ -20,7 +20,7 @@ function fixture(options={}) {
   // Public destructive policy deliberately has no private predecessor fixtures.
   const stats={opens:0,closes:0,writes:0,resets:0,stub:0,security:0,readbacks:0,aborts:0};
   let loader, rejectWrite;
-  const port={readable:null,writable:null,getInfo:()=>({}),async open(){stats.opens++;this.writable={getWriter:()=>({async write(wire){ clock.advance(wire.length*10/MODEL_BAUD*1000); stats.wireBytes=(stats.wireBytes||0)+wire.length;
+  const port={readable:null,writable:null,getInfo:()=>({}),async open(serial){stats.baudRates??=[];stats.baudRates.push(serial.baudRate);stats.opens++;this.writable={getWriter:()=>({async write(wire){ clock.advance(wire.length*10/MODEL_BAUD*1000); stats.wireBytes=(stats.wireBytes||0)+wire.length;
       const a=[]; for(let i=1;i<wire.length-1;i++){if(wire[i]===0xdb){i++;a.push(wire[i]===0xdc?0xc0:0xdb);}else a.push(wire[i]);}
       const packet=new Uint8Array(a); if(packet.length===4)return;
       if(options.hangWrite && packet[1]===loader.ESP_GET_SECURITY_INFO) await new Promise((_,reject)=>{rejectWrite=reject;});
@@ -39,7 +39,7 @@ function fixture(options={}) {
     async usesUsbOtg(){return false;}
     async emulateCommand(op,data=new Uint8Array()){
       let value=0, out=new Uint8Array(2);
-      if(op===this.ESP_GET_SECURITY_INFO){
+      if(op===this.ESP_CHANGE_BAUDRATE){stats.switches=(stats.switches||0)+1;assert.equal(stats.stub,1);assert.equal(stats.writes,0);assert.equal(this.transport.baudrate,115200);assert.deepEqual([u32(data),u32(data,4)],[460800,115200]);if(options.baudRefused)out[0]=1;} else if(op===this.ESP_GET_SECURITY_INFO){
         stats.security++; if(options.unknown) throw Error('unknown');
         out=new Uint8Array(24);const d=new DataView(out.buffer);d.setUint32(0,options.flags||0,true);out[4]=options.crypt||0;d.setUint32(12,options.chip??18,true);d.setUint32(16,options.api??0,true);
       } else if(op===this.ESP_READ_REG){
@@ -52,17 +52,23 @@ function fixture(options={}) {
       return [value,out];
     }
   }
-  const states=[];
-  const session=new GuardedSession({profile,Loader:WireLoader,Transport:WireTransport,onState:s=>{states.push(s.state);options.onState?.(s,session);if(s.state===options.stallPhase)clock.advance(options.stallMs);},...(options.timeout?{phaseTimeoutMs:options.timeout}:{})});
+  const states=[],progress=[];
+  const session=new GuardedSession({profile,Loader:WireLoader,Transport:WireTransport,onProgress:p=>progress.push(p),onState:s=>{states.push(s.state);options.onState?.(s,session);if(s.state===options.stallPhase)clock.advance(options.stallMs);},...(options.timeout?{phaseTimeoutMs:options.timeout}:{})});
   const args={port,assets:profile.assets.map(p=>({offset:p.offset,bytes:bytes[p.role]})),boardConfirmation:BOARD,firstInstallConsent:true,resetOnSuccess:false};
-  return {session,args,stats,states,bytes,profile};
+  return {session,args,stats,states,bytes,profile,progress};
 }
 
 const original={setTimeout:globalThis.setTimeout,clearTimeout:globalThis.clearTimeout,performance:globalThis.performance};
 const clock={now:0,next:0,timers:new Map(),advance(ms){const end=this.now+ms;while(true){const entry=[...this.timers].filter(([,t])=>t.at<=end).sort((a,b)=>a[1].at-b[1].at)[0];if(!entry)break;this.now=entry[1].at;this.timers.delete(entry[0]);entry[1].fn();}this.now=end;}};
-function setup(){clock.now=0;clock.timers.clear();globalThis.performance={now:()=>clock.now};globalThis.setTimeout=(fn,ms)=>{const id=++clock.next;clock.timers.set(id,{at:clock.now+ms,fn});return id;};globalThis.clearTimeout=id=>clock.timers.delete(id);}
+function setup(){clock.now=0;clock.timers.clear();globalThis.performance={now:()=>clock.now};globalThis.setTimeout=(fn,ms)=>{if(ms===50){queueMicrotask(()=>{clock.advance(ms);fn();});return -1;}const id=++clock.next;clock.timers.set(id,{at:clock.now+ms,fn});return id;};globalThis.clearTimeout=id=>clock.timers.delete(id);}
 function restore(){Object.assign(globalThis,original);}
 
 
 test('shipped vendor: three writes and six image/tail transactions',async()=>{setup();try{const f=fixture();assert.equal((await f.session.run(f.args)).verified,true);assert.equal(f.stats.writes,3);assert.equal(f.stats.readbacks,6);assert.equal(f.stats.resets,0);await assert.rejects(f.session.run(f.args),/SESSION_ALREADY_USED/);}finally{restore();}});
 for(const [name,opts] of Object.entries({chip:{chip:9},revision:{revMajor:2},eco:{api:5},flags:{flags:0x800},encryption:{crypt:2},size:{jedec:0x1840ef},block:{blockFails:true},tail:{mismatch:29456},expiry:{stallPhase:'writing',stallMs:900001},cancel:{onState:(s,session)=>{if(s.state==='writing')session.cancel();}}}))test('shipped vendor fail closed '+name,async()=>{setup();try{const f=fixture(opts);await assert.rejects(f.session.run(f.args));assert.equal(f.stats.resets,0);if(name==='block')assert.equal(f.stats.blocks,1);else if(name!=='tail')assert.equal(f.stats.writes,0);await assert.rejects(f.session.run(f.args),/SESSION_ALREADY_USED/);}finally{restore();}});
+
+test('baud command ACK before reopening at selected rate',async()=>{setup();try{const f=fixture();await f.session.run(f.args);assert.equal(f.stats.switches,1);assert.deepEqual(f.stats.baudRates,[115200,460800]);}finally{restore();}});
+
+test('refused baud ACK stops before reopen or firmware writes',async()=>{setup();try{const f=fixture({baudRefused:true});await assert.rejects(f.session.run(f.args));assert.equal(f.stats.writes,0);assert.deepEqual(f.stats.baudRates,[115200]);assert.equal(f.stats.switches,1);}finally{restore();}});
+
+test('progress separates compressed acknowledgements from SHA verified images and tails',async()=>{setup();try{const f=fixture();await f.session.run(f.args);assert.equal(f.progress.filter(p=>p.kind==='image-verified').length,6);assert.ok(f.progress.some(p=>p.kind==='compressed-write'&&p.bytes===p.totalBytes));assert.ok(f.progress.every((p,i)=>p.bytes<=p.totalBytes&&p.elapsedMs>=0&&(!i||p.elapsedMs>=f.progress[i-1].elapsedMs)));}finally{restore();}});
