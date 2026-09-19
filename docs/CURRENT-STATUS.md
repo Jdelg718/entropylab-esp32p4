@@ -22,7 +22,7 @@ Verify the published `public-release.zip` entry before extraction. The other pub
 
 ## Historical document routing
 
-Accepted source includes pinned documentation as well as code. Those originals remain unchanged to preserve the accepted host gate. Corrected current companions below explicitly contextualize their historical contents; follow these instead of old standalone status labels.
+Accepted source includes pinned documentation as well as code. Exact originals remain immutable inside the accepted source archive and Git history. This unpublished v0.1.1 documentation/onboarding patch prepends current-guidance links directly to 21 public root/docs files, including GitHub-discovered CONTRIBUTING and SECURITY. The finite [documentation successor map](retention-host/documentation-successors.json) pins each exact old/new hash; the checkout validator checks that pinned map without changing accepted archive, target identity, historical scripts or firmware pins. Only these documented checkout prose successors differ; archived identity437 remains exact. Corrected current companions below contextualize the historical contents.
 
 - [CHANGELOG.md](current/CHANGELOG.md)
 - [CONTRIBUTING.md](current/CONTRIBUTING.md)

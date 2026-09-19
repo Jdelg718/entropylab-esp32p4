@@ -1,3 +1,8 @@
+> **Current guidance:** [SECURITY — current retention preview](docs/current/SECURITY.md).
+> The text below is the historical source checkpoint, not current release status.
+> v0.1.0-retention-preview is published; v0.1.1 is a local documentation/onboarding patch pending publication.
+> Firmware is unchanged; public-policy hardware qualification and the separate retention updater remain held.
+
 # Security boundary
 
 This unofficial adaptation is independently maintained native software, not the upstream HTML product; it is not shipped, audited, or endorsed by OogaBoogaX. Upstream naming guidance concerned a historical empty-passphrase milestone, not security review or endorsement of this unreleased extension. The implemented optional BIP39 passphrase flow and D6 transcript editing extend that milestone; they are not an empty-passphrase-only claim. Public practice only: entropy is user-supplied, not generated or certified by the application.

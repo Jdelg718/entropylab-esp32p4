@@ -1,3 +1,8 @@
+> **Current guidance:** [KNOWN-LIMITS — current retention preview](current/docs/KNOWN-LIMITS.md).
+> The text below is the historical source checkpoint, not current release status.
+> v0.1.0-retention-preview is published; v0.1.1 is a local documentation/onboarding patch pending publication.
+> Firmware is unchanged; public-policy hardware qualification and the separate retention updater remain held.
+
 # Known limits
 
 - Experimental educational/public-practice calculator. Never use real secrets or funds. Not a wallet, signer, certified RNG or independently certified secure product.

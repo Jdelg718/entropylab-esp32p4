@@ -1,6 +1,8 @@
 # EntropyLab — unofficial ESP32-P4
 
-## v0.1.0-retention-preview — experimental public release
+## v0.1.1-retention-preview — documentation/onboarding patch (not yet published)
+
+This checkout prepares a new documentation patch with unchanged firmware. The currently published release remains **v0.1.0-retention-preview**; its assets are immutable.
 
 Download the [published prerelease](https://github.com/Jdelg718/entropylab-esp32p4/releases/tag/v0.1.0-retention-preview). Read [the first-install guide](docs/PUBLIC-FIRST-INSTALL.md) before replacing firmware: exact board confirmation, backup/export and destructive consent are required.
 

@@ -1,3 +1,8 @@
+> **Current guidance:** [DICE-MILESTONE — current retention preview](current/docs/DICE-MILESTONE.md).
+> The text below is the historical source checkpoint, not current release status.
+> v0.1.0-retention-preview is published; v0.1.1 is a local documentation/onboarding patch pending publication.
+> Firmware is unchanged; public-policy hardware qualification and the separate retention updater remain held.
+
 # DICE local publication candidate — not release approval
 
 Offline seed/mnemonic + fingerprint generator, not a signer. Public laboratory

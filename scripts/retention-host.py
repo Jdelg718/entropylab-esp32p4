@@ -31,11 +31,20 @@ def main():
         # README and CI are release packaging, not target inputs. Every other
         # accepted file (including ignored sdkconfig) must match the checkout.
         packaging = {'README.md', '.github/workflows/host.yml'}
+        # Finite documentation-only checkout successors; archive/source pins stay exact.
+        successor_file = R/'docs/retention-host/documentation-successors.json'
+        require(sha(successor_file) == 'd05977f93afbbf2d65d68e0303d99af87b1c8b7c2ac1b5dc2212c427aed1d77b', 'documentation mapping drift')
+        successors = json.loads(successor_file.read_text())
+        require(set(successors) <= set(current), 'unknown documentation successor')
+        for n, pins in successors.items():
+            require(n.endswith('.md') and not n.startswith('fixture-firmware/'), 'non-documentation successor')
+            require(pins['old_sha256'] == current[n], 'documentation predecessor drift: '+n)
+            require(sha(source/n) == pins['old_sha256'], 'archived documentation drift: '+n)
         for n, h in current.items():
             if n in packaging: continue
             p = R/n
             require(not any(x.is_symlink() for x in [p, *p.parents]), 'checkout symlink')
-            require(p.is_file() and sha(p) == h, 'checkout source drift: '+n)
+            require(p.is_file() and sha(p) == successors.get(n, {}).get('new_sha256', h), 'checkout source drift: '+n)
         proof = R/'docs/retention-host/historical.json'
         require(sha(proof) == 'd6c299b13ac854425abafc5e77cdc85ab53b5832b2ebe53fe88ef696dfea083e', 'historical mapping drift')
         mapping = json.loads(proof.read_text())
@@ -47,7 +56,7 @@ def main():
             require(sha(src) == h, 'historical input drift: '+n)
             dst = historical/n; dst.parent.mkdir(parents=True, exist_ok=True); shutil.copyfile(src, dst)
         if sys.argv[1:] == ['--check']:
-            print('PASS accepted archive745, identity437, checkout source/config, historical436; no host execution')
+            print('PASS accepted archive745, identity437, checkout source/config with finite documentation successors, historical436; no host execution')
             return
         env = {k: os.environ[k] for k in ['HOME','PATH','LANG','LC_ALL','TZ','CARGO','CARGO_HOME','RUSTUP_HOME','LVGL_SOURCE_DIR','BUILD_JOBS','CARGO_BUILD_JOBS','CARGO_NET_OFFLINE'] if k in os.environ}
         env.update(PYTHONDONTWRITEBYTECODE='1', PYTHONOPTIMIZE='0', HOST_TOOLCHAIN='1.95.0', CARGO_INCREMENTAL='0')

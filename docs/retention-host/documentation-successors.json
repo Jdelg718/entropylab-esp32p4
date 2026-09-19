@@ -1,0 +1,86 @@
+{
+  "CHANGELOG.md": {
+    "new_sha256": "4f971746761abdf05006c36ca659e8c09ee3ed68fd172548fc1475525060b7fc",
+    "old_sha256": "c024c9957edda4f11a963835ad9e178ec8202af2b8875cacd59dbad28ca9ea22"
+  },
+  "CONTRIBUTING.md": {
+    "new_sha256": "2a5765b8c045ac7c5a3e546cd5281f4b6b55157533af196fa3d48fe54a9f5a03",
+    "old_sha256": "b3656b9bd33eb718b942e8c2581dfc819f71450fbf8a5bd61f5bd913ce44e37d"
+  },
+  "ROADMAP.md": {
+    "new_sha256": "ceb734a8db4f0392c4d1d718f813cba0bda17c10a4e735fce1b909c689222ea6",
+    "old_sha256": "fd0be7ee1b39bed33fe3d7cde50443b33c79cc2c764c118ea51fac35655ae224"
+  },
+  "SECURITY.md": {
+    "new_sha256": "b2a84c642df751c1decc03e95489c44b380b56cedb85ad3e743a294adcf5df3e",
+    "old_sha256": "9b34118555dce298e40d9a03e48c2146f4901978ce0646ebc48d6c318bbd433d"
+  },
+  "docs/BUILD-FLASH.md": {
+    "new_sha256": "856682ade0d8150900599cf7a2b6edb454d6e7a87582bb07ea4c84ecac045997",
+    "old_sha256": "c2f626100fad01b4f628653fb973204e72218f9af46852938cb02f804d058d95"
+  },
+  "docs/BUILD.md": {
+    "new_sha256": "598980cf4be7eb0be073dc8c57362ae2497c7c0cd601032e4b6afdb0648f86a9",
+    "old_sha256": "fde2c8272d24a8d12625136697cfeca23fe3bd8212f0f2808fd5582db51e2d09"
+  },
+  "docs/COIN-MILESTONE.md": {
+    "new_sha256": "7f20d416d70aac4b40da6118524403562c839b0e84c75e43ebc8d0b4fe688536",
+    "old_sha256": "7e64c9fc5fea14657969ea3f4c383f246ff983ff7c61c042e431bd0262a79e05"
+  },
+  "docs/DICE-MILESTONE.md": {
+    "new_sha256": "c5babbdb53962b2d539a110b8df6c4b165817c51fbafbb1e268570a3b31cff76",
+    "old_sha256": "e0b7745c53051b79ad14604cac85fddaead91fb24615d88dac4e68ed900858fd"
+  },
+  "docs/EDUCATION-PROVENANCE.md": {
+    "new_sha256": "9b0af11f12181e7c99a3846fbf3695169c8c1ea12bbf41d15dc2c38ed19069e5",
+    "old_sha256": "099f19fc3a837258cb7f2147f1bd86c7f7b2769437eefd0e567f18b97d31f88d"
+  },
+  "docs/HANDOFF.md": {
+    "new_sha256": "a16b8df520640ab385fc81faf1f262e355dd186349b9314a97f2dd8573bb0dee",
+    "old_sha256": "871ef451d685ac7ed7f4f1ac1094c2664af93cac51cbbf03ca2fc135e6430f01"
+  },
+  "docs/HARDWARE.md": {
+    "new_sha256": "458291643c54a4f5d7ec5230295e5d9af44e7d12519b41ee4a31f36f30ba08f9",
+    "old_sha256": "a226773016b28e0fcafa9a874d76972604cbd47bf9163d1f4789c3691e08e150"
+  },
+  "docs/HEX-MILESTONE.md": {
+    "new_sha256": "86d59d70827ebfd2f96ff2ff07579abf4c754256f81fa8b3b84aab71f556b4eb",
+    "old_sha256": "4d666439c88c0bf1d83664b3ab2f384334c1b886fe39ba4107beefc5e398c4db"
+  },
+  "docs/INPUT-EXPLANATIONS.md": {
+    "new_sha256": "82a275fb48a60868c0fc8ca1dd46ce80fd5375dc6692d35b6b3b80b0a0db4ba7",
+    "old_sha256": "96230125b1e2364d8f2a73a020f60cdf7f02c13b0f4ba7cfb1cc648dedf5adcd"
+  },
+  "docs/KNOWN-LIMITS.md": {
+    "new_sha256": "5444603579568478852ee50938e4ba812873675d10063970416f80de58460295",
+    "old_sha256": "30c553f49e83d22d2ec7d4fa09a81def1364d2a9437593d436364aa5f06fb9ee"
+  },
+  "docs/MODAL-COMBINED-STATUS.md": {
+    "new_sha256": "3d966e54ce810ec69a673596345846af38384569fbb2fada06fcb396d9179949",
+    "old_sha256": "871ef451d685ac7ed7f4f1ac1094c2664af93cac51cbbf03ca2fc135e6430f01"
+  },
+  "docs/PROVENANCE.md": {
+    "new_sha256": "fd819b08231d766e6d832ef4536e2c62587d766cce44424831adbc70f13953e7",
+    "old_sha256": "59779ae389601fa7b08ccf85b9f708730ee73a534fcdcad07e389c61d750b953"
+  },
+  "docs/PUBLICATION-STATUS.md": {
+    "new_sha256": "b69e1b3cae19661cc50c92fe45e6032f6c79861b01f60b7f8f8376f752fd099a",
+    "old_sha256": "871ef451d685ac7ed7f4f1ac1094c2664af93cac51cbbf03ca2fc135e6430f01"
+  },
+  "docs/RELEASE-BUILD-HYGIENE.md": {
+    "new_sha256": "e45ace2632ab29326ebb7d7a0c63d56626020956e69c4333921f9ba8327af316",
+    "old_sha256": "46d3013a494ae67b19a6004e2a59a3b49b11ac6a9929705d14641a64e1ea583c"
+  },
+  "docs/UPSTREAM-FEATURES.md": {
+    "new_sha256": "dbb695ab843da7365025953861b04249c550e16f36311f296a743d36d64ab965",
+    "old_sha256": "8f7450a5b260a65d7d5d2bfa9359f1130db70fcbd0e7e0827d140f75934d4e65"
+  },
+  "docs/WORDS-MILESTONE.md": {
+    "new_sha256": "288091cd95ac4d61543e3a7d4a55191dd28d0e9eaa32536fc2ae63235ef14a9f",
+    "old_sha256": "b492f368937023ea0c56c315c75f66f176533ac816ad45cf58aa2d255692ee66"
+  },
+  "docs/d6-release/README.md": {
+    "new_sha256": "93ef1c097da593e95eb7b079dd02de0a5a8a51264fe0010dc2d1ffe4c3da90fb",
+    "old_sha256": "83a0d03846280289e7fefe6677c99d2a4e58cc3efd3d0554550ccdcf8f4ca1fa"
+  }
+}
