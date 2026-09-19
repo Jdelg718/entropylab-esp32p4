@@ -19,13 +19,7 @@
 #include "passphrase_core.h"
 #include "lifehash_fingerprint.h"
 #include "extra_dice_target.h"
-// Rust allocator: aligned internal 8-bit heap. NULL invokes Rust allocation abort;
-// panic/OOM reset rather than unwind. Public fixtures only, not secret-safe memory.
-void *fixture_alloc(size_t n,size_t align) {
-    if (align < sizeof(void*)) align=sizeof(void*);
-    return heap_caps_aligned_alloc(align,n?n:1,MALLOC_CAP_INTERNAL|MALLOC_CAP_8BIT);
-}
-void fixture_free(void *p) {heap_caps_free(p);}
+// Rust allocator and location-only panic diagnostics: fixture_diagnostics.c.
 static QueueHandle_t requests;
 static QueueHandle_t cards_bases_requests;
 static portMUX_TYPE transition_lock=portMUX_INITIALIZER_UNLOCKED;
@@ -115,7 +109,9 @@ static void cards_bases_worker(void *unused){
 }
 /* BSP LVGL timer executes serialized with GUI events; no worker wait here. */
 static void poll_result(lv_timer_t *timer){(void)timer;gui_passphrase_poll();all_features_application_poll();}
+extern int fixture_allocator_init(void);
 void app_main(void) {
+    if(!fixture_allocator_init()){ESP_LOGE("fixture","Rust internal heap initialization failed");return;}
     bsp_display_cfg_t cfg={.lv_adapter_cfg=ESP_LV_ADAPTER_DEFAULT_CONFIG(),.rotation=ESP_LV_ADAPTER_ROTATE_0,.tear_avoid_mode=ESP_LV_ADAPTER_TEAR_AVOID_MODE_TRIPLE_PARTIAL,.touch_flags={.swap_xy=0,.mirror_x=0,.mirror_y=0}};
     if(bsp_display_start_with_config(&cfg)==NULL){ESP_LOGE("fixture","Display initialization failed");return;}
     if(bsp_display_backlight_on()!=ESP_OK){ESP_LOGE("fixture","Backlight initialization failed");return;}

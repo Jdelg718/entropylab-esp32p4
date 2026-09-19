@@ -10,7 +10,17 @@ mod runtime {
  struct Heap;
  unsafe impl GlobalAlloc for Heap {unsafe fn alloc(&self,l:Layout)->*mut u8{fixture_alloc(l.size(),l.align())} unsafe fn dealloc(&self,p:*mut u8,_:Layout){fixture_free(p)}}
  #[global_allocator] static HEAP:Heap=Heap;
- #[panic_handler] fn panic(_: &core::panic::PanicInfo<'_>)->!{unsafe{abort()}}
+ extern "C" {fn fixture_panic_location(file:*const u8,len:usize,line:u32);}
+ #[panic_handler] fn panic(info: &core::panic::PanicInfo<'_>)->!{
+  // Location only: never format PanicInfo or access its message/operands.
+  unsafe {
+   if let Some(location)=info.location(){
+    let file=location.file().as_bytes();
+    fixture_panic_location(file.as_ptr(),file.len(),location.line());
+   } else {fixture_panic_location(core::ptr::null(),0,0);}
+   abort()
+  }
+ }
 }
 fn wipe(b:&mut[u8]){for x in b{unsafe{core::ptr::write_volatile(x,0)}}core::sync::atomic::compiler_fence(core::sync::atomic::Ordering::SeqCst);}
 struct Secret<const N:usize>([u8;N]);

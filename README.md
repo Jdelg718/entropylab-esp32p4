@@ -1,3 +1,17 @@
+# EntropyLab
+
+## Accepted retention successor and public first-install review candidate
+
+Start with [public installation, backup/export, supported hardware and limitations](docs/PUBLIC-FIRST-INSTALL.md).
+Run the local browser installer at `flash/first-install/`; the separate `flash/`
+retention updater is unchanged and remains held. No automatic backup is provided.
+The exact accepted source/provenance archive is `release/retention-public-source.tar.gz`.
+This is not a full application qualification or reproducible firmware-build claim.
+The inherited full host runner currently rejects the successor identity; see the
+installation document before using older build instructions below.
+
+<!-- Historical project documentation follows. -->
+
 # EntropyLab for ESP32-P4 (unofficial)
 
 This unofficial adaptation is independently maintained native software, not the upstream HTML product; it is not shipped, audited, or endorsed by OogaBoogaX. Upstream naming guidance concerned a historical empty-passphrase milestone, not security review or endorsement of this unreleased extension. The implemented optional BIP39 passphrase flow and D6 transcript editing extend that milestone; they are not an empty-passphrase-only claim. Public practice only: entropy is user-supplied, not generated or certified by the application.

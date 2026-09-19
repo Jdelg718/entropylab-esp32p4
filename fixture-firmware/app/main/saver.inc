@@ -15,6 +15,8 @@ static void saver_orbit_position(void){
  lv_arc_set_angles(saver_trail,(angle+345u)%360u,angle);
 }
 static bool saver_active,wake_latch,saver_eligible_last;
+/* Defined after all screen owners (including Passphrase) are in scope. */
+static bool saver_view_eligible(void);
 static uint32_t saver_since;
 static uintptr_t saver_epoch;
 static bool saver_epoch_exhausted;
@@ -69,7 +71,7 @@ static void saver_tick(lv_timer_t *timer){
  }
  if(wake_latch)return;
  lv_indev_t *device=lv_indev_get_next(NULL);
- if(lv_screen_active()!=lv_obj_get_screen(app_content)||lv_display_get_screen_loading(NULL)||lv_display_get_screen_prev(NULL)||!device||device!=saver_indev||lv_indev_get_next(device)||lv_indev_get_read_cb(device)!=saver_read||saver_scrolling||lv_obj_is_scrolling(mn_list)||saver_finger||mode!=MODE_MNEMONIC||lv_obj_has_flag(mn_panel,LV_OBJ_FLAG_HIDDEN)||nav_open||busy||mn_confirm||mn_safety_open||mn_reviewing||mn_valid||mn_draft[0]||mn_edit>=0||mn_settling||!lv_obj_has_flag(mn_output,LV_OBJ_FLAG_HIDDEN)){saver_eligible_last=false;return;}
+ if(lv_screen_active()!=lv_obj_get_screen(app_content)||lv_display_get_screen_loading(NULL)||lv_display_get_screen_prev(NULL)||!device||device!=saver_indev||lv_indev_get_next(device)||lv_indev_get_read_cb(device)!=saver_read||saver_scrolling||lv_obj_is_scrolling(mn_list)||saver_finger||!saver_view_eligible()){saver_eligible_last=false;return;}
  uint32_t now=lv_tick_get();
  if(!saver_eligible_last){saver_since=now;saver_eligible_last=true;return;}
  if((uint32_t)(now-saver_since)<60000)return;
