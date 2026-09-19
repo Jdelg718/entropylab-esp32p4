@@ -1,0 +1,116 @@
+{
+  "chromium": "151.0.7922.34",
+  "results": [
+    {
+      "name": "success",
+      "ok": true,
+      "opens": 2,
+      "closes": 2,
+      "writes": 3,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 6,
+      "aborts": 0,
+      "baudRates": [
+        115200,
+        460800
+      ],
+      "switches": 1,
+      "blocks": 52
+    },
+    {
+      "name": "refused",
+      "ok": false,
+      "opens": 1,
+      "closes": 1,
+      "writes": 0,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 0,
+      "aborts": 0,
+      "baudRates": [
+        115200
+      ],
+      "switches": 1
+    },
+    {
+      "name": "unsupported",
+      "ok": false,
+      "opens": 1,
+      "closes": 1,
+      "writes": 0,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 0,
+      "aborts": 0,
+      "baudRates": [
+        115200
+      ]
+    },
+    {
+      "name": "reopen",
+      "ok": false,
+      "opens": 2,
+      "closes": 2,
+      "writes": 0,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 0,
+      "aborts": 0,
+      "baudRates": [
+        115200,
+        460800
+      ],
+      "switches": 1
+    },
+    {
+      "name": "timeout",
+      "ok": false,
+      "opens": 1,
+      "closes": 1,
+      "writes": 0,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 0,
+      "aborts": 0,
+      "baudRates": [
+        115200
+      ]
+    },
+    {
+      "name": "cancel",
+      "ok": false,
+      "opens": 1,
+      "closes": 1,
+      "writes": 0,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 0,
+      "aborts": 0,
+      "baudRates": [
+        115200
+      ]
+    },
+    {
+      "name": "disconnect",
+      "ok": false,
+      "opens": 1,
+      "closes": 1,
+      "writes": 0,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 0,
+      "aborts": 0,
+      "baudRates": [
+        115200
+      ]
+    }
+  ]
+}
