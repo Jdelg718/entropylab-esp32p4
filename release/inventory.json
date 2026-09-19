@@ -48,8 +48,8 @@
     "sha256": "d5e3c7c62a84e80073201e2f6e5130e9e6804fa05f8ac4f8b26a13c7d3969697"
   },
   "README.md": {
-    "bytes": 11696,
-    "sha256": "cfec06ae0ac99007bb3d82007879a2170e55839b4e72d26563925530e1fd668e"
+    "bytes": 4814,
+    "sha256": "ee08820c06bdc86c58fb553ed196504825ffa172ea0029e01afbf8cd15ae696e"
   },
   "ROADMAP.md": {
     "bytes": 7689,
@@ -183,9 +183,17 @@
     "bytes": 7220,
     "sha256": "f81b16f4db43891667865e66a6ab2dff33fe141f213ad6ff379b8d38bd0dfd2c"
   },
+  "docs/CURRENT-STATUS.md": {
+    "bytes": 4646,
+    "sha256": "ff63bee0276b2fa08ff5ae1316e11e4dcdeafb2c5cf9343b39802745aae29236"
+  },
   "docs/DICE-MILESTONE.md": {
     "bytes": 9863,
     "sha256": "e0b7745c53051b79ad14604cac85fddaead91fb24615d88dac4e68ed900858fd"
+  },
+  "docs/DOC-CLEANUP-REVIEW.md": {
+    "bytes": 5085,
+    "sha256": "a294cf353cdc0a41c56614d7ac44bda3553ca6012e29456afd5227785afd2489"
   },
   "docs/EDUCATION-PROVENANCE.md": {
     "bytes": 4429,
@@ -214,6 +222,14 @@
   "docs/HEX-SOURCE-SHA256.txt": {
     "bytes": 1755,
     "sha256": "51a6c0afaec96192b0103fb62251755c5a45b106a7dcb007b3ddf0f7970a6152"
+  },
+  "docs/HISTORICAL-CONTRIBUTING.md": {
+    "bytes": 1974,
+    "sha256": "07825807119b81504322002f8a7e92123024c0c1b90bbfbc489f4f4ebb190931"
+  },
+  "docs/HISTORICAL-README.md": {
+    "bytes": 10773,
+    "sha256": "0b96716540f520148fedcc524b19b0824bf0f43ba962a5ce1f802967917d668c"
   },
   "docs/HOST-VERIFICATION.json": {
     "bytes": 899,
@@ -256,12 +272,12 @@
     "sha256": "59779ae389601fa7b08ccf85b9f708730ee73a534fcdcad07e389c61d750b953"
   },
   "docs/PUBLIC-FIRST-INSTALL.md": {
-    "bytes": 5665,
-    "sha256": "3a8118adec9387adda3c126b8391076eabb05daf5f7ec5df70d7bc07802e754e"
+    "bytes": 5878,
+    "sha256": "1fe8e3ddeb1b8ed8f0572531e429b7f2d88a67b4b84403b79c03ef8f72f2d741"
   },
   "docs/PUBLIC-INSTALLER-REVIEW.md": {
-    "bytes": 3540,
-    "sha256": "ef096711b1949b2d31a83428784b7a5f0cc76496ac6ba01a04d20fb78d01e5ac"
+    "bytes": 4018,
+    "sha256": "e739ce783fac2e6fdc54f9628cd5198096d4fa31bb48dfffafd5ff03a5c23f49"
   },
   "docs/PUBLICATION-STATUS.md": {
     "bytes": 2966,
@@ -310,6 +326,90 @@
   "docs/combined-import-successors.json": {
     "bytes": 1496,
     "sha256": "6175826b90922c266f8fa59940436cf814162213fb38b0f06c656f4fdd902480"
+  },
+  "docs/current/CHANGELOG.md": {
+    "bytes": 1011,
+    "sha256": "b829d96721cd93f8dfc2a51d0e933e56a3aa6b591277f0a2f3321278ac217dea"
+  },
+  "docs/current/CONTRIBUTING.md": {
+    "bytes": 4143,
+    "sha256": "4e8af0886bd7d6156d1d45b2edcb3bf1b705c53094cd934af27e248dc7c2821f"
+  },
+  "docs/current/ROADMAP.md": {
+    "bytes": 8706,
+    "sha256": "7a75e7d45ced21ace16f6ad3f93fe3965ed015746d9ff93f3e5870703afb7698"
+  },
+  "docs/current/SECURITY.md": {
+    "bytes": 1889,
+    "sha256": "c5553f7a87320b36bc74d41a70f7089c88ee34c312fef9fd67103adeca570eb3"
+  },
+  "docs/current/docs/BUILD-FLASH.md": {
+    "bytes": 5563,
+    "sha256": "5dbcad88939d4086808e1af17d915690ffc0683e0fcf57d1e91c6d9dbc9b672e"
+  },
+  "docs/current/docs/BUILD.md": {
+    "bytes": 5998,
+    "sha256": "13a13b30602a555815df87aa75b61ec59af11b917c145175f0887861deb238e6"
+  },
+  "docs/current/docs/COIN-MILESTONE.md": {
+    "bytes": 6831,
+    "sha256": "e47114fc5aef9a6cc807659c9b87d419665139ed448d5c22335e19ce559f576e"
+  },
+  "docs/current/docs/DICE-MILESTONE.md": {
+    "bytes": 10352,
+    "sha256": "cf5dcdbb56b3b7161ac4330e2ed3d733c571ba616b1f86c78cd108644e73031b"
+  },
+  "docs/current/docs/EDUCATION-PROVENANCE.md": {
+    "bytes": 4919,
+    "sha256": "10b4a886a2be9b1f2cb7920efdc7851182d8d8d3342ef15e2554a5e1916c95c6"
+  },
+  "docs/current/docs/HANDOFF.md": {
+    "bytes": 3456,
+    "sha256": "1edf6633e60fc74940e0c0a31d8b70a71cf891afe4a3583bc42a98f73d8c6ec0"
+  },
+  "docs/current/docs/HARDWARE.md": {
+    "bytes": 3773,
+    "sha256": "6a05bed57e49dbc031a123e3edde26b8b94bf6cbbc32a097a880be805d263fe2"
+  },
+  "docs/current/docs/HEX-MILESTONE.md": {
+    "bytes": 5528,
+    "sha256": "a4c9080dbc617400a26bdc7985ea66ff903767d540433794412a811d6c1ba534"
+  },
+  "docs/current/docs/INPUT-EXPLANATIONS.md": {
+    "bytes": 4163,
+    "sha256": "03c3cc8c897d8781701777359be41482f0736a61fa81c07e93e3c53c857e18f5"
+  },
+  "docs/current/docs/KNOWN-LIMITS.md": {
+    "bytes": 1857,
+    "sha256": "b10fc20ccb1941012cc638f6d4683baa24c7b9b6b5a262bc53804239e374a86a"
+  },
+  "docs/current/docs/MODAL-COMBINED-STATUS.md": {
+    "bytes": 3456,
+    "sha256": "1edf6633e60fc74940e0c0a31d8b70a71cf891afe4a3583bc42a98f73d8c6ec0"
+  },
+  "docs/current/docs/PROVENANCE.md": {
+    "bytes": 4538,
+    "sha256": "99f0a3a620d711a54dc0b8205933bd7a879021558def1939cdb9e6314f0804a8"
+  },
+  "docs/current/docs/PUBLICATION-STATUS.md": {
+    "bytes": 3456,
+    "sha256": "1edf6633e60fc74940e0c0a31d8b70a71cf891afe4a3583bc42a98f73d8c6ec0"
+  },
+  "docs/current/docs/RELEASE-BUILD-HYGIENE.md": {
+    "bytes": 3157,
+    "sha256": "011d02b683d13fe7236ea46fb2ae997d5917807775a9b91a8026dc558f399113"
+  },
+  "docs/current/docs/UPSTREAM-FEATURES.md": {
+    "bytes": 4105,
+    "sha256": "d940569627d38b0183ea4b2716f18241ba7ac112ebdd7324c20fd056446339ed"
+  },
+  "docs/current/docs/WORDS-MILESTONE.md": {
+    "bytes": 3988,
+    "sha256": "83b0e86b2a7540d4282313ef0f0273e8dbc704be8eb695adb0ed9c170821889b"
+  },
+  "docs/current/docs/d6-release/README.md": {
+    "bytes": 5547,
+    "sha256": "c5e030145167b018beae0c10eeb956c33aee1ac10b72b3e7eee535f289b2638c"
   },
   "docs/d6-release-successors.json": {
     "bytes": 3949,
@@ -1536,8 +1636,8 @@
     "sha256": "a853c2ffec17057872340eee242ae4d96cbf2b520ae27d903e1b2fef1a5f9d1c"
   },
   "docs/retention-host/README.md": {
-    "bytes": 3689,
-    "sha256": "39b589325c1b10dc1f67e239fd65d08a268c1c76cf96a7e41008ea4304fa0b6f"
+    "bytes": 3860,
+    "sha256": "029050c25b44019a2a6aac1a77ddb7b129ed0c1d1ebb80db70140b6bb3fe8638"
   },
   "docs/retention-host/historical.json": {
     "bytes": 53146,
@@ -2924,12 +3024,12 @@
     "sha256": "d9341100579070fb39c246b3c46f15ae3c139018993c42a937660c505b073300"
   },
   "flash/adapter/profiles.mjs": {
-    "bytes": 1257,
-    "sha256": "4283064a90c20981b93797d7895e39e28357445d031ebc03fe23a1680653d193"
+    "bytes": 1320,
+    "sha256": "a59681576b5fd7f4716a7dd884208e5b589e98e61d25c9ad664ce85275012186"
   },
   "flash/app.mjs": {
-    "bytes": 12243,
-    "sha256": "1db5d6f90cd7b5e00180223cf05804d5c10c25788d2077309e598a99e0888e56"
+    "bytes": 12253,
+    "sha256": "5cfa08e1ee23c8a64fac0e1e91b03f11f11803bcabff9ad2e0e465ca0988d1df"
   },
   "flash/assets.mjs": {
     "bytes": 1481,
@@ -2944,8 +3044,8 @@
     "sha256": "1ac713c834e60bbd99fa39cb54ea26b3a6d659f323f7b5f2abe04287549649e1"
   },
   "flash/first-install/adapter/adapter.mjs": {
-    "bytes": 18139,
-    "sha256": "b6aba2cb2802e80bacda24d486f35c83e36568627ac3ca7836d3402fc4afe4d1"
+    "bytes": 18202,
+    "sha256": "db3f94ec43f314397b7c9a012e5b7659dbbe22facad2e9d6f9ea22654f56298f"
   },
   "flash/first-install/adapter/observe.mjs": {
     "bytes": 2235,
@@ -2956,12 +3056,16 @@
     "sha256": "b5c5865e4efeb75dff473059c381422fd616ca5098233be8179e86f5c857ca30"
   },
   "flash/first-install/app.mjs": {
-    "bytes": 2624,
-    "sha256": "308616f689823373ea112936a2924d11a257d7b3282a1f3a9484124f1bfb9768"
+    "bytes": 2923,
+    "sha256": "d6e6b6a8c556e466066c77facd00520f77d33add17880d6d624cd5296e022509"
   },
   "flash/first-install/assets.mjs": {
     "bytes": 1987,
     "sha256": "e657e8ff2281fed66678785d405ea08dc92337b8d8b04253c700f9bfa773c3de"
+  },
+  "flash/first-install/completion.test.mjs": {
+    "bytes": 1580,
+    "sha256": "847d7d70a8a9a3263f26559ffd296bf6235aefddaa12c5b5b54b3bdc7a06666d"
   },
   "flash/first-install/firmware/bootloader.bin": {
     "bytes": 21264,
@@ -2980,8 +3084,8 @@
     "sha256": "e7121ba025c37acca34c0a8ffa79bcdfc5d653482c7447b5667b847b5144d351"
   },
   "flash/first-install/index.html": {
-    "bytes": 1879,
-    "sha256": "de1642ca2a2bd20cf4d61340b24624f046c7bbd5feab85a2e4cd45e6cb51d1b5"
+    "bytes": 2056,
+    "sha256": "3a9f3898f806b58e510fde88078c573bc0f1146da0a27684c47b83b51d066020"
   },
   "flash/first-install/public.test.mjs": {
     "bytes": 766,
@@ -3004,8 +3108,8 @@
     "sha256": "57f9ba944739f72b4b200a0fdada8ad22948a2f8f070ef78a17864af5fd0afd8"
   },
   "flash/index.html": {
-    "bytes": 8058,
-    "sha256": "746c6338bc70dd95aba7b1cf0342cfb446f2dd70e90a22a05d39feffe83c2f53"
+    "bytes": 8483,
+    "sha256": "52e6c99b05083c67aae47469967d4bb845d2fd5cad58d476dcdae31131e946fb"
   },
   "flash/publicrelease-manifest.json": {
     "bytes": 1946,

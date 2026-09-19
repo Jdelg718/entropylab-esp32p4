@@ -31,7 +31,7 @@ export async function readFlashComplete(loader, address, length) {
 }
 // Local conservative rollout gate, NOT a vendor-defined version enum.
 // Public P4 ROMs copy _rom_eco_version into the fixed 20-byte layout (0/5).
-// ECO2 passed observed no-write diagnostics; private writes still need physical acceptance.
+// ECO2 passed observed no-write diagnostics; prior accepted exact-tuple private-path writes are separate; this public policy remains hardware-unexercised.
 // Other values, including public 5, await local qualification. No coercion.
 const compatibleRomEco = value => value === 0 || value === 2;
 // Diagnostics only: no policy decision, IO, raw flags, key purposes or identifiers.

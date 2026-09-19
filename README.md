@@ -1,32 +1,22 @@
-# EntropyLab
+# EntropyLab — unofficial ESP32-P4
 
-## Accepted retention successor and public first-install review candidate
+## v0.1.0-retention-preview — experimental public release
 
-Start with [public installation, backup/export, supported hardware and limitations](docs/PUBLIC-FIRST-INSTALL.md).
-Run the local browser installer at `flash/first-install/`; the separate `flash/`
-retention updater is unchanged and remains held. No automatic backup is provided.
-The exact accepted source/provenance archive is `release/retention-public-source.tar.gz`.
-This is not a full application qualification or reproducible firmware-build claim.
-Use `python3 scripts/retention-host.py --check` for accepted-source verification
-and `python3 scripts/retention-host.py` for the complete current host gate.
-See [the portable retention host recipe](docs/retention-host/README.md).
-Older runners below intentionally retain predecessor-only identities.
+Download the [published prerelease](https://github.com/Jdelg718/entropylab-esp32p4/releases/tag/v0.1.0-retention-preview). Read [the first-install guide](docs/PUBLIC-FIRST-INSTALL.md) before replacing firmware: exact board confirmation, backup/export and destructive consent are required.
 
-> **Historical documentation below:** its status, branch, build and acceptance statements describe the earlier source candidate, not this release. For current install policy, exact firmware tuple, source archive, remaining limitations and publication hold, use [PUBLIC-FIRST-INSTALL.md](docs/PUBLIC-FIRST-INSTALL.md).
+From a clean clone or verified extracted ZIP, run `python3 scripts/serve-public.py` on Linux/macOS or `py -3 scripts/serve-public.py` on Windows, then open http://localhost:8000/flash/first-install/ in desktop Chrome or Edge. No public hosted installer is configured. Native Windows/macOS execution remains untested.
 
-# EntropyLab for ESP32-P4 (unofficial)
+**Public practice only — not a wallet or signer.** Never enter real secrets or fund displayed addresses. This independently maintained native adaptation is not shipped, audited or endorsed by OogaBoogaX or Waveshare. Input is supplied by the user; encoding, hashing and visual fingerprints do not certify randomness.
 
-This unofficial adaptation is independently maintained native software, not the upstream HTML product; it is not shipped, audited, or endorsed by OogaBoogaX. Upstream naming guidance concerned a historical empty-passphrase milestone, not security review or endorsement of this unreleased extension. The implemented optional BIP39 passphrase flow and D6 transcript editing extend that milestone; they are not an empty-passphrase-only claim. Public practice only: entropy is user-supplied, not generated or certified by the application.
+The exact firmware tuple has prior one-board private-path acceptance; the new public install policy is hardware-unexercised. The separate retention updater remains held. Read [current release scope and remaining holds](docs/CURRENT-STATUS.md), the single current status entrypoint; readback does not establish boot or recovery.
 
-EntropyLab is an experimental, offline-first educational application for entering public practice entropy, deriving BIP39 English mnemonics, and displaying a master fingerprint, first BIP84 receive address, and LifeHash-style visual fingerprint. It is intended to make input assumptions, encoding rules, checksum behavior, and common mistakes visible on a touchscreen.
+## Start here
 
-Contributors are welcome. Start with [CONTRIBUTING.md](CONTRIBUTING.md), then read the gated [build and flash guide](docs/BUILD-FLASH.md).
-
-> **Public practice only. Never enter a real seed, mnemonic, passphrase, private key, or funded-wallet material.** This project is experimental. It is not a wallet, signer, transaction device, audited cryptographic product, certified random-number generator, or secure-erasure implementation. A valid checksum, full input width, hash, or attractive fingerprint does not prove that physical input was fair or unpredictable.
-
-## Current publication status
-
-**Unreleased source candidate; bounded source review and complete fresh host suite passed. Publication remains on hold.** This candidate adds numbered D6 transcript review and individual roll correction. It is not the currently installed firmware and has no approved downloadable firmware or browser installer. No device acceptance or reproducible-build claim is made. See [publication status](docs/PUBLICATION-STATUS.md) and [current source mapping](docs/MODAL-COMBINED-SOURCE-MAPPING.json).
+- [Installation, manual RESET and evidence limits](docs/PUBLIC-FIRST-INSTALL.md)
+- [Contributing and current host tests](docs/current/CONTRIBUTING.md) · [portable retention host gate](docs/retention-host/README.md)
+- [Hardware identifiers](docs/current/docs/HARDWARE.md): exact Waveshare ESP32-P4-WIFI6-Touch-LCD-4.3, PCB rev1.3, 32 MiB. Silicon 100–199 alone does not identify PCB revision.
+- [Approved priority order](docs/current/ROADMAP.md) · [security boundary](docs/current/SECURITY.md)
+- [Provenance context](docs/CURRENT-STATUS.md#provenance-context) · [third-party notices](THIRD_PARTY_NOTICES.md)
 
 ## What is implemented
 
@@ -49,68 +39,7 @@ The output pipeline uses a Rust `no_std` + `alloc` runtime with bounded C ABI bu
 
 The application has no signing or transaction workflow. Its current application paths do not intentionally use networking or persistent secret storage. The board nevertheless contains an ESP32-C6 wireless coprocessor, so “offline application” is not the same as a proven physical air gap.
 
-## Supported hardware
 
-The hardware profile, historically exercised with predecessor firmware, is the **Waveshare ESP32-P4-WIFI6-Touch-LCD-4.3**, portrait **480 × 800**, with a physical ESP32-P4 **Rev1.3** device. The target profile selects ESP-IDF's Rev1.x compatibility range (`CONFIG_ESP32P4_REV_MIN_100`) and 200 MHz PSRAM; the historical accepted image reports a supported silicon revision range of 1.0 through 1.99. This is not a compatibility promise for Rev3.x boards or similarly named displays.
+## Historical evidence
 
-Official Waveshare identifiers:
-
-- SKU 33874: `ESP32-P4-WIFI6-Touch-LCD-4.3`, standard version without camera.
-- SKU 33875: `ESP32-P4-WIFI6-Touch-LCD-4.3-C`, version with optional OV5647 camera.
-- 4.3-inch IPS, 480 × 800, ST7701 over 2-lane MIPI-DSI, GT911 capacitive touch.
-- ESP32-P4NRW32, 32 MB in-package PSRAM, 32 MB external NOR flash, and onboard ESP32-C6-MINI-1.
-- Separate USB-to-UART and USB OTG Type-C ports, BOOT and RESET buttons, TF/microSD slot, MIPI-CSI camera connector, speaker header, battery headers, and 40-pin expansion header.
-
-Some sellers call bundles “Package C.” That seller label is not a board-revision identifier. The official product distinction is the `-C` SKU with the optional camera. Verify the actual board/silicon revision before building or flashing. The camera, included 8 Ω 2 W speaker, batteries, TF card, and 40-pin adapter are not required by EntropyLab. A known-good **USB data** cable is required and is not listed in Waveshare's official quick package overview.
-
-For programming/debugging, use the Type-C port labeled **USB TO UART**, not the adjacent USB OTG port. The official connector and accessory evidence is collected in [docs/HARDWARE.md](docs/HARDWARE.md).
-
-## Build and flash
-
-The source pins:
-
-- repository branch candidate: `release/d6-review-edit-20260917` (not remote until reviewed and pushed);
-- ESP-IDF v5.5.5 commit `b774170ff46c393eeb5e495ea37936038d3f4f4f`;
-- host Rust 1.95.0;
-- target Rust `nightly-2026-04-15` with `rust-src`;
-- LVGL v9.5.0 commit `85aa60d18b3d5e5588d7b247abf90198f07c8a63` for host GUI tests;
-- BSP/LVGL and transitive ESP-IDF components pinned by `fixture-firmware/app/dependencies.lock`.
-
-Use [docs/BUILD-FLASH.md](docs/BUILD-FLASH.md) for the build procedure and gated install/recovery requirements. Complete successor firmware assets, first-install/update/recovery acceptance and hardware smoke verification remain pending.
-
-The documented target-build entry point never flashes. A complete target image for this successor has not been built or verified:
-
-```sh
-bash scripts/build-firmware.sh
-```
-
-The complete `bash scripts/test-host.sh` gate passed (inner exit 0) on a fresh source-only copy of combined manifest `0c11e6fd9fcccc260f78918367c588c5095c755382cad35920a5c88a3ff7de10`. It compiled fresh host artifacts, ran the default GUI and all ten pointer-family slices, and continued through the combined native suite. Rust 1.95.0, GCC 14.2.0 and CMake 3.31.6 were inspected; existing LVGL sources and an isolated copy of the dependency registry were reused. This is clean-source/build-directory host assurance, not a fresh-network dependency test, ESP32-P4 build, binary reproducibility certification or hardware acceptance. Upstream dependency compiler warnings were retained, not represented as warning-free success.
-
-The same combined source received bounded independent source review: 37 focused tests and 74 independent semantic probes (three accepted valid controls, 71 rejected invalid mutations). All original findings are closed for that reviewed code. This package changes documentation/status only after those gates; `HOST-VERIFICATION.json` binds the tested manifest and stream hashes. Production, tests, scripts, lockfiles and historical successor manifests remain byte-identical to the tested package.
-
-Complete target image/ELF/map/resource/layout verification, exact pushed-SHA CI, first-install/update/recovery tests, physical acceptance and release/flasher review remain separate pending gates. No release, download URL, installed identity or publication approval is conveyed.
-
-Historical note: the predecessor failed its D6 pointer-navigation test after compilation; this combined successor includes the reviewed repair. See [status/history](docs/PUBLICATION-STATUS.md).
-
-Do not invent flash offsets or reuse binaries from another build directory. The generated `flasher_args.json` is the authority for that build.
-
-## Contributing
-
-Good first contributions include:
-
-- public-fixture tests and regression cases;
-- clearer educational explanations and accessibility improvements;
-- portable layout work for future screen sizes;
-- separately scoped board-support investigations;
-- build/documentation improvements that remain reproducible from public sources.
-
-Never submit real secrets, device dumps, device identifiers, private paths, credentials, or unsanitized serial logs/screenshots. Mockups are welcome, but must be labeled as mockups rather than firmware behavior. See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## Roadmap
-
-Support for other screen sizes and hardware devices is planned, not implemented or supported today. The first portability work is to separate layout metrics, board support, display/touch adapters, and hardware acceptance tests. There is no promised schedule or compatibility matrix. See [ROADMAP.md](ROADMAP.md).
-
-## Provenance and licenses
-
-This is selective reuse, not a full fork of [OogaBoogaX/entropylab](https://github.com/OogaBoogaX/entropylab). The pinned upstream commit and all adapted sources, fonts, vectors, artwork, and third-party components are documented in [docs/PROVENANCE.md](docs/PROVENANCE.md), [docs/EDUCATION-PROVENANCE.md](docs/EDUCATION-PROVENANCE.md), and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Retain all adjacent license files. No upstream, hardware vendor, or named method provider endorses this adaptation.
-
+The [original source-candidate landing page](docs/HISTORICAL-README.md) preserves earlier branch, build and acceptance claims, not current guidance. No historical hashes or receipts have been rebaselined.

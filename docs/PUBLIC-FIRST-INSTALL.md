@@ -1,6 +1,6 @@
 # Supported destructive first-install contract
 
-Review candidate; publication requires independent review. This is NOT the retention updater.
+Published in [v0.1.0-retention-preview](https://github.com/Jdelg718/entropylab-esp32p4/releases/tag/v0.1.0-retention-preview). The separate retention updater remains held; public install-policy hardware qualification and the evidence limits below remain unresolved. See [current status](CURRENT-STATUS.md).
 Only Waveshare ESP32-P4-WIFI6-Touch-LCD-4.3 PCB rev1.3, 32 MiB is supported.
 Physically inspect the PCB marking. Browser chip checks cannot establish PCB identity.
 Unknown boards, revisions and profiles must not be accepted by assumption.

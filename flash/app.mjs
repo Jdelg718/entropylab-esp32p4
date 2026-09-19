@@ -100,7 +100,7 @@ $('cancel').onclick=async()=>{if(terminal)return;terminal=true;busy=true;abort.a
 $('boot').onchange=()=>{if(!verified)return;$('boot-status').textContent=$('boot').checked?'Boot manually confirmed by you. This does not establish wallet security or qualify other hardware.':'Boot is not confirmed.';document.querySelectorAll('.steps .state')[3].textContent=$('boot').checked?'OBSERVED':'MANUAL';};
 choose('appupdate');
 $('install').hidden=true;
-$('flash').textContent='Release HOLD — writes disabled';
+$('flash').textContent='Retention updater HOLD — writes disabled';
 render();
 if(!supported){$('environment').textContent='Installation unavailable: use a secure HTTPS page in desktop Chrome or Edge with Web Serial. Mobile browsers are unsupported. No browser/OS combination is claimed qualified.';status('Unsupported browser or insecure context. Hardware actions are disabled.');}
 else{$('environment').textContent='Web Serial is available. Desktop Chrome or Edge is proposed; browser/OS qualification and factory-install hardware acceptance remain pending. Mobile installation is unsupported.';try{
