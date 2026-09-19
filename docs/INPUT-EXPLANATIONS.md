@@ -1,3 +1,8 @@
+> **Current guidance:** [INPUT-EXPLANATIONS — current retention preview](current/docs/INPUT-EXPLANATIONS.md).
+> The text below is the historical source checkpoint, not current release status.
+> v0.1.0-retention-preview is published; v0.1.1 is a local documentation/onboarding patch pending publication.
+> Firmware is unchanged; public-policy hardware qualification and the separate retention updater remain held.
+
 # About this input — compact explanations
 
 A bounded native UI milestone following Words/Orbit/practical cleanup at

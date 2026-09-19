@@ -6,7 +6,7 @@ export const PROFILE=Object.freeze({version:'d65d730162bc966e98c45868cd-r1',boar
 export function createSession({mode,ESPLoader,Transport,ESP32P4ROM,onState}) {
  if(mode!=='appupdate')throw new Error('MODE_REFUSED');
  const session=new GuardedSession({profile:PROFILE.appupdate,Loader:ESPLoader,Transport,ESP32P4ROM,onState});
- // Explicit local-only HOLD. Removing this requires independent release review.
+ // Separate historical retention updater HOLD; published first-install policy is elsewhere. Removing this requires independent release review.
  return Object.freeze({run:async()=>{throw new Error('RELEASE_HOLD');},checkDevice:args=>session.checkDevice(args),cancel:()=>session.cancel()});
 }
 export { BOARD, availability } from './adapter.mjs';

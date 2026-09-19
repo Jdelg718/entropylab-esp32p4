@@ -1,3 +1,8 @@
+> **Current guidance:** [PROVENANCE — current retention preview](current/docs/PROVENANCE.md).
+> The text below is the historical source checkpoint, not current release status.
+> v0.1.0-retention-preview is published; v0.1.1 is a local documentation/onboarding patch pending publication.
+> Firmware is unchanged; public-policy hardware qualification and the separate retention updater remain held.
+
 # Review-repair successor — current provenance boundary
 
 The complete text below is preserved historical predecessor evidence, including its old “current” labels. This successor changes the GUI index-format buffer, idle-saver brand text and its host assertion. Use [REVIEW-REPAIR-SOURCE-MAPPING.json](REVIEW-REPAIR-SOURCE-MAPPING.json) and [review-repair-successors.json](review-repair-successors.json) for current source lineage. No complete target image, installed-image identity or publication approval is asserted.

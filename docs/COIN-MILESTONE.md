@@ -1,3 +1,8 @@
+> **Current guidance:** [COIN-MILESTONE — current retention preview](current/docs/COIN-MILESTONE.md).
+> The text below is the historical source checkpoint, not current release status.
+> v0.1.0-retention-preview is published; v0.1.1 is a local documentation/onboarding patch pending publication.
+> Firmware is unchanged; public-policy hardware qualification and the separate retention updater remain held.
+
 # COIN source import — local review candidate
 
 Base: `a1f71c0fe73ad3eebc92d13c579bb10f881ea64f` (clean main).

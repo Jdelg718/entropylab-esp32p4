@@ -1,3 +1,8 @@
+> **Current guidance:** [BUILD — current retention preview](current/docs/BUILD.md).
+> The text below is the historical source checkpoint, not current release status.
+> v0.1.0-retention-preview is published; v0.1.1 is a local documentation/onboarding patch pending publication.
+> Firmware is unchanged; public-policy hardware qualification and the separate retention updater remain held.
+
 # Rebuilding
 
 ## Host suite

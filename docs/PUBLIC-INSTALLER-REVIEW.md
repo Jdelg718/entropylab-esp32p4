@@ -1,3 +1,5 @@
+> **Historical source-bound record, not current release/feature status.** Evidence and old “current” labels below apply only to the named predecessor identity. For published retention-preview assets, accepted tuple, implemented features and remaining holds see [current status](CURRENT-STATUS.md) and [first-install guide](PUBLIC-FIRST-INSTALL.md). Current host entrypoint: `python3 scripts/retention-host.py`; predecessor runners intentionally retain their original pins.
+
 # Independent public installer review
 
 Reviewed base `d7258eb37c70ffddb1970fdfec9fe65ea5682d9d` in an isolated clone.

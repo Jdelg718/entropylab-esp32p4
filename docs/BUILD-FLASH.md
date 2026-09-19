@@ -1,3 +1,8 @@
+> **Current guidance:** [BUILD-FLASH — current retention preview](current/docs/BUILD-FLASH.md).
+> The text below is the historical source checkpoint, not current release status.
+> v0.1.0-retention-preview is published; v0.1.1 is a local documentation/onboarding patch pending publication.
+> Firmware is unchanged; public-policy hardware qualification and the separate retention updater remain held.
+
 # Build, install and recovery boundary
 
 **This is an unreleased source candidate, not a tested first-install kit. No firmware assets or safe first-install command are available from this preparation.** Build instructions are in [BUILD.md](BUILD.md). They pin ESP-IDF v5.5.5 commit `b774170ff46c393eeb5e495ea37936038d3f4f4f`, Rust host 1.95.0, target nightly-2026-04-15 plus rust-src, and LVGL 9.5.0 commit `85aa60d18b3d5e5588d7b247abf90198f07c8a63`. Cargo and component lockfiles are retained. Do not use an unpushed branch checkout command: the proposed branch is not a download location.

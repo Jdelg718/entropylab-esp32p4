@@ -1,3 +1,8 @@
+> **Current guidance:** [HANDOFF — current retention preview](current/docs/HANDOFF.md).
+> The text below is the historical source checkpoint, not current release status.
+> v0.1.0-retention-preview is published; v0.1.1 is a local documentation/onboarding patch pending publication.
+> Firmware is unchanged; public-policy hardware qualification and the separate retention updater remain held.
+
 # Source preparation complete — publication HOLD
 
 Proposed branch: `release/d6-review-edit-20260917`. This preparation did not create a branch, commit, push, merge, tag, release or Pages deployment.

@@ -1,3 +1,8 @@
+> **Current guidance:** [ROADMAP — current retention preview](docs/current/ROADMAP.md).
+> The text below is the historical source checkpoint, not current release status.
+> v0.1.0-retention-preview is published; v0.1.1 is a local documentation/onboarding patch pending publication.
+> Firmware is unchanged; public-policy hardware qualification and the separate retention updater remain held.
+
 > **Current combined successor — publication HOLD.** This tree combines the exact review-repair package with the independently host-reviewed two-file modal repair. Combined full host, default+10 GUI, target build and device gates have **not been run** on this tree. Individual predecessor PASS evidence is not combined execution evidence. Current identity suites pass; see `docs/MODAL-COMBINED-STATUS.md` and `docs/MODAL-COMBINED-SOURCE-MAPPING.json`. Statements below describing the prior modal failure or review-repair-only identities are preserved historical predecessor evidence, not current-tree results. Historical manifests/mappings are not rebaselined.
 
 # Release priority — current candidate

@@ -1,3 +1,8 @@
+> **Current guidance:** [README — current retention preview](../current/docs/d6-release/README.md).
+> The text below is the historical source checkpoint, not current release status.
+> v0.1.0-retention-preview is published; v0.1.1 is a local documentation/onboarding patch pending publication.
+> Firmware is unchanged; public-policy hardware qualification and the separate retention updater remain held.
+
 # D6 reserved-heap candidate: portable successor recipe
 
 The existing device-tested application predates this public source export. Its source identity is **07d03ba6f421a25316e5b73662f1a6f9d79243c7bdaba8119c3cd27a16573d4d** (SHA256 of the exact `candidate-source-identity.json` bytes). Application BIN SHA256: **1f487910cdb362a02e82d5836e017c6ebd62e99c1d2a3f4be68a04b84efcd3f4**. No prior source commit is invented. No byte-reproducibility claim is made.

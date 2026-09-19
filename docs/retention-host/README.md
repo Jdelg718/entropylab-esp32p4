@@ -61,4 +61,4 @@ Direct gui_host children redirect only writes to `.ppm` files to `/dev/null`;
 rendering and assertions remain active. Capture persistence is **not tested**.
 Any nonzero test exit fails the command; timeout or interruption is **not PASS**.
 A final source-hash check is required before the success line. This integration
-changes host packaging only; release hold and original firmware remain unchanged.
+changes host packaging only; original firmware is unchanged. The scoped retention preview is published; the separate retention updater remains held and public-policy hardware qualification remains unresolved. See [current status](../CURRENT-STATUS.md).

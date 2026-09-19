@@ -1,3 +1,8 @@
+> **Current guidance:** [CONTRIBUTING — current retention preview](docs/current/CONTRIBUTING.md).
+> The text below is the historical source checkpoint, not current release status.
+> v0.1.0-retention-preview is published; v0.1.1 is a local documentation/onboarding patch pending publication.
+> Firmware is unchanged; public-policy hardware qualification and the separate retention updater remain held.
+
 # Contributing to EntropyLab
 
 Thank you for helping improve EntropyLab. We welcome small, reviewable changes to public-fixture tests, educational text, UI accessibility, portability, hardware support research, and documentation.
