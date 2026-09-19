@@ -1,10 +1,10 @@
 # EntropyLab — unofficial ESP32-P4
 
-## v0.1.1-retention-preview — documentation/onboarding patch (not yet published)
+## v0.1.1-retention-preview — documentation/onboarding patch
 
-This checkout prepares a new documentation patch with unchanged firmware. The currently published release remains **v0.1.0-retention-preview**; its assets are immutable.
+**v0.1.1-retention-preview** is the published documentation/onboarding patch with unchanged firmware. The previous **v0.1.0-retention-preview** release and its assets remain immutable. Existing v0.1.0 users do not need to reflash.
 
-Download the [published prerelease](https://github.com/Jdelg718/entropylab-esp32p4/releases/tag/v0.1.0-retention-preview). Read [the first-install guide](docs/PUBLIC-FIRST-INSTALL.md) before replacing firmware: exact board confirmation, backup/export and destructive consent are required.
+Download the [published prerelease](https://github.com/Jdelg718/entropylab-esp32p4/releases/tag/v0.1.1-retention-preview). Read [the first-install guide](docs/PUBLIC-FIRST-INSTALL.md) before replacing firmware: exact board confirmation, backup/export and destructive consent are required.
 
 From a clean clone or verified extracted ZIP, run `python3 scripts/serve-public.py` on Linux/macOS or `py -3 scripts/serve-public.py` on Windows, then open http://localhost:8000/flash/first-install/ in desktop Chrome or Edge. No public hosted installer is configured. Native Windows/macOS execution remains untested.
 
