@@ -1,0 +1,26 @@
+[
+  {
+    "command": "python3 scripts/test-current-doc-links.py",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "PASS 92 current first-party local links/anchors across 24 documents; external URL availability not claimed"
+  },
+  {
+    "command": "python3 scripts/test-serve-public.py",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /README.md HTTP/1.1\" 200 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /flash/first-install/ HTTP/1.1\" 200 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /docs/PUBLIC-FIRST-INSTALL.md HTTP/1.1\" 200 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] code 404, message Not Found\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /.git/config HTTP/1.1\" 404 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] code 404, message Not Found\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /%2e%2e/.git/config HTTP/1.1\" 404 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] code 404, message Not Found\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /factory-backup.bin HTTP/1.1\" 404 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] code 404, message Not Found\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /browser-review.png HTTP/1.1\" 404 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] code 404, message Not Found\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /docs/ HTTP/1.1\" 404 -\nPASS eight public-server allow/deny regressions\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /flash/first-install/NOTICES.txt HTTP/1.1\" 200 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /flash/first-install/adapter/adapter.mjs HTTP/1.1\" 200 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /flash/first-install/adapter/observe.mjs HTTP/1.1\" 200 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /flash/first-install/adapter/profiles.mjs HTTP/1.1\" 200 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /flash/first-install/app.mjs HTTP/1.1\" 200 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /flash/first-install/assets.mjs HTTP/1.1\" 200 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /flash/first-install/completion.test.mjs HTTP/1.1\" 200 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /flash/first-install/firmware/bootloader.bin HTTP/1.1\" 200 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /flash/first-install/firmware/entropylab.bin HTTP/1.1\" 200 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /flash/first-install/firmware/partition-table.bin HTTP/1.1\" 200 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /flash/first-install/guards.test.mjs HTTP/1.1\" 200 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /flash/first-install/index.html HTTP/1.1\" 200 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /flash/first-install/public.test.mjs HTTP/1.1\" 200 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /flash/first-install/speed-browser.mjs HTTP/1.1\" 200 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /flash/first-install/style.css HTTP/1.1\" 200 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /flash/first-install/vendor/NOTICES.txt HTTP/1.1\" 200 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /flash/first-install/vendor/esptool-js.mjs HTTP/1.1\" 200 -\n127.0.0.1 - - [20/Sep/2026 01:32:58] \"GET /flash/first-install/wire.test.mjs HTTP/1.1\" 200 -\nPASS all installer assets served byte-identically"
+  },
+  {
+    "command": "bash scripts/test-host.sh",
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "output": "Traceback (most recent call last):\n  File \"./scripts/test-d6-release-import.py\", line 15, in <module>\n    VERIFY=runpy.run_path(str(SCRIPT))['verify_identities']\n           ~~~~~~~~~~~~~~^^^^^^^^^^^^^\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"./scripts/verify-dice-import.py\", line 217, in <module>\n    verify_identities(r)\n    ~~~~~~~~~~~~~~~~~^^^\n  File \"./scripts/verify-dice-import.py\", line 108, in verify_identities\n    assert hashlib.sha256((root/path).read_bytes()).hexdigest()==global_saver_hash(path,e['candidate_sha256']), f'review-repair current mismatch: {path}'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: review-repair current mismatch: fixture-firmware/app/main/gui.c"
+  },
+  {
+    "command": "python3 scripts/retention-host.py --check",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "PASS packaging only: source745, identity437, delta5+1, notices301; runtime NOT executed; RELEASE HOLD\nPASS accepted archive745, identity437, checkout source/config with finite documentation successors, historical436; no host execution"
+  }
+]

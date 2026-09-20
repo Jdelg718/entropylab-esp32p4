@@ -23,8 +23,8 @@ Browser runner accepts CHROMIUM_PATH for an already installed executable. Chromi
 
 `scripts/test-host.sh` attempted and blocked at pre-existing source identity assertion: review-repair current mismatch: fixture-firmware/app/main/gui.c. This work does not modify firmware source. No repository-wide PASS claimed.
 
-## Integration caveat
-Concurrent writes appeared in this assigned checkout (app.mjs, completion.test.mjs, profiles.mjs and browser harness builder) from another worker. UI was explicitly assigned separately. Adapter-only tests are the independent scope; do not treat transient aggregate UI failures as an adapter PASS or silently overwrite another worker. Final parent must serialize ownership and run complete suite on its integrated commit. Reviewed diagnostics patch not imported: live main already contains security diagnostics; unrelated regular-profile changes remain outside this scope.
+## Integration caveat — historical, resolved
+The earlier concurrent-edit warning applied to the intermediate handoff, not an active owner. Live ownership was checked before serialized completion. The integrated adapter/UI now passes 62 Node tests, 16 Chromium transport scenarios and 8 Chromium UI cases, with separate independent adapter and integration reviews. Raw ACK framing and late cancellation lifecycle issues found after the initial handoff are fixed. See [current closeout report](SPEED-CANDIDATE-REPORT.md) for final evidence, the completed retention-aware native host gate and remaining physical/distribution qualifications. Held profiles remain unchanged.
 
 ## Hardware qualification checklist — not executed
 - Preserve physically accepted v0.1.1 / 115200 baseline and unchanged archive/pin hashes.

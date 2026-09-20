@@ -1,0 +1,22 @@
+{
+  "command": [
+    "python3",
+    "scripts/retention-host.py"
+  ],
+  "exit_code": 0,
+  "seconds": 482.269,
+  "final_marker_present": true,
+  "changed": {},
+  "locks_unchanged": true,
+  "tracked_files_checked": 406,
+  "versions": {
+    "cargo +1.95.0 --version": "cargo 1.95.0 (f2d3ce0bd 2026-03-21)\n",
+    "rustc +1.95.0 --version --verbose": "rustc 1.95.0 (59807616e 2026-04-14)\nbinary: rustc\ncommit-hash: 59807616e1fa2540724bfbac14d7976d7e4a3860\ncommit-date: 2026-04-14\nhost: x86_64-unknown-linux-gnu\nrelease: 1.95.0\nLLVM version: 22.1.2\n"
+  },
+  "rust_passed": 136,
+  "rust_failed": 0,
+  "final_marker": [
+    "PASS complete original host chain + focused retention; source745/identity437 unchanged; capture persistence NOT TESTED; firmware NOT BUILT"
+  ],
+  "boundary": "Existing retention-aware route; source unchanged during later browser-only integration; no firmware build or capture persistence test. Legacy direct test-host.sh identity mismatch remains."
+}

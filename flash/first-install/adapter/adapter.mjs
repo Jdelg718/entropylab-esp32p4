@@ -78,7 +78,7 @@ export async function readSecurityInfo(loader) {
 }
 export class GuardedSession {
   #p; #Loader; #Transport; #P4; #state; #used = false; #abort = new AbortController();
-  #transport; #port; #writer; #cleanup; #closed = false; #opening; #deadline;
+  #transport; #port; #writer; #cleanup; #closed = false; #opening; #closing; #deadline;
   #progress; #startedAt;
   #lastPhase = 'validation'; #phaseStart = performance.now(); #writeEntered = false;
   #timedOut = false; #endsAt; #phaseEndsAt; #securityDiagnostic;
@@ -114,6 +114,9 @@ export class GuardedSession {
       const work = async () => {
         await Promise.allSettled([this.#transport?.reader?.cancel(), this.#writer?.abort()]);
         if (this.#opening) await this.#opening.catch(() => {});
+        // An authorized vendor close may already be pending when cancelled.
+        // Do not close/release ownership ahead of that physical operation.
+        if (this.#closing) await this.#closing.catch(() => {});
         if (this.#writer) { try { this.#writer.releaseLock(); } catch {} }
         if (this.#transport?.reader) { try { this.#transport.reader.releaseLock(); } catch {} }
         try { await this.#port.close(); } catch (e) {
@@ -150,6 +153,15 @@ export class GuardedSession {
     this.#port = port;
     const self = this;
     const guardedPort = new Proxy(port, {get(target, key) {
+      // Revoked transports must not see a successor's streams: vendor changeBaud
+      // starts an unawaited readLoop after its final delay. Returning null lets
+      // that stale loop exit normally, without acquiring locks or rejecting.
+      if ((key === 'readable' || key === 'writable') && (self.#closed || self.#abort.signal.aborted)) return null;
+      if (key === 'close') return async () => {
+        self.#check(); if (self.#closed) fail('IO_CLOSED');
+        const closing = self.#closing = target.close();
+        try { await closing; } finally { if (self.#closing === closing) self.#closing = undefined; }
+      };
       if (key === 'open') return async options => {
         self.#check(); if (self.#closed) fail('IO_CLOSED');
         self.#opening = target.open(options);
@@ -218,8 +230,18 @@ export class GuardedSession {
       await this.#phase('changing-baud', async () => {
         if (typeof l.changeBaud !== 'function') fail('BAUD_SWITCH_UNSUPPORTED');
         l.baudrate = 460800;
-        // Pinned vendor changeBaud uses command(), not checkCommand(). Validate
-        // its stub ACK before allowing its close/reopen sequence to continue.
+        // Validate the complete SLIP-decoded ACK before vendor readPacket drops
+        // its header (the pinned implementation ignores declared payload length).
+        const read = transport.read;
+        transport.read = async function (...args) {
+          const p = await read.apply(this, args);
+          if (!(p instanceof Uint8Array) || p.length !== 10 ||
+              p[0] !== 1 || p[1] !== l.ESP_CHANGE_BAUDRATE ||
+              (p[2] | (p[3] << 8)) !== 2 || p[8] !== 0 || p[9] !== 0)
+            fail('BAUD_SWITCH_REFUSED');
+          return p;
+        };
+        // Retain the decoded-status check for the command boundary as well.
         const command = l.command;
         l.command = async function (...args) {
           const response = await command.apply(this, args);
@@ -227,7 +249,7 @@ export class GuardedSession {
               (!(response?.[1] instanceof Uint8Array) || response[1].length !== 2 || response[1][0] !== 0 || response[1][1] !== 0)) fail('BAUD_SWITCH_REFUSED');
           return response;
         };
-        try { await l.changeBaud(); } finally { l.command = command; }
+        try { await l.changeBaud(); } finally { l.command = command; transport.read = read; }
         if (transport.baudrate !== 460800) fail('BAUD_SWITCH_REFUSED');
       });
       await this.#phase('jedec-preflight', async () => {
