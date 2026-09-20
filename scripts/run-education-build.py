@@ -172,6 +172,12 @@ def validate_private_cargo(item, destination):
     # Cargo may update only these top-level lock/usage databases. New dependency
     # bytes (including newly extracted crates) require approval before invocation.
     extra = m.tree_files(destination) - set(item['entries'])
+    # Cargo also creates this fixed cache-directory marker, not dependency bytes.
+    if 'registry/CACHEDIR.TAG' in extra:
+        m.require((destination / 'registry/CACHEDIR.TAG').read_bytes() ==
+                  b'Signature: 8a477f597d28d172789f06886806bc55\n# This file is a cache directory tag created by cargo.\n# For information about cache directory tags see https://bford.info/cachedir/\n',
+                  'unexpected Cargo cache tag bytes')
+        extra.remove('registry/CACHEDIR.TAG')
     m.require(extra <= {'.package-cache', '.package-cache-mutate', '.global-cache'},
               'unexpected private Cargo input')
 

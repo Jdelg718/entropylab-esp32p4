@@ -20,6 +20,15 @@ class Hardening(unittest.TestCase):
         self.addCleanup(self.tmp.cleanup)
         self.root = Path(self.tmp.name)
 
+    def test_cargo_generated_cache_tag(self):
+        (self.root / 'registry').mkdir()
+        tag = self.root / 'registry/CACHEDIR.TAG'
+        tag.write_bytes(b'Signature: 8a477f597d28d172789f06886806bc55\n# This file is a cache directory tag created by cargo.\n# For information about cache directory tags see https://bford.info/cachedir/\n')
+        r.validate_private_cargo({'entries': {}}, self.root)
+        tag.write_bytes(b'injected')
+        with self.assertRaises(ValueError):
+            r.validate_private_cargo({'entries': {}}, self.root)
+
     def test_glob_extra_rejected(self):
         (self.root / 'a.cpp').write_bytes(b'a')
         entries = {'a.cpp': {'bytes': 1, 'sha256': m.sha(b'a')}}
