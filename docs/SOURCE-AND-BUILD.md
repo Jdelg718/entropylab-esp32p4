@@ -67,8 +67,19 @@ Only after local inventory provisioning (not verified by the staging test):
 # EXTERNAL_INPUTS and EXTERNAL_SHA256 identify your independently approved inventory.
 python3 -B "$RECIPE/scripts/run-education-build.py" "$CANDIDATE" \
   --external-inputs "$EXTERNAL_INPUTS" --external-inputs-sha256 "$EXTERNAL_SHA256"
-python3 -B "$RECIPE/scripts/verify-education-build.py" "$CANDIDATE"
-python3 -B "$RECIPE/scripts/verify-education-runtime.py" "$CANDIDATE" --recipe
+# Completed v2 receipts require the separate, pinned supplemental verifier.
+git worktree add --detach ../candidate02-verifier 33c90ec8d1b957e363690fa7912e250e4782fa11
+VERIFIER=$(cd ../candidate02-verifier && pwd -P)
+test "$(git -C "$VERIFIER" rev-parse HEAD)" = 33c90ec8d1b957e363690fa7912e250e4782fa11
+test -z "$(git -C "$VERIFIER" status --porcelain)"
+# Supply TOOL_PREFIX from your actual pinned RISC-V installation, ending in
+# /bin/riscv32-esp-elf- (the executable prefix, not just its directory).
+: "${TOOL_PREFIX:?Supply the actual pinned RISC-V executable prefix}"
+python3 -B "$VERIFIER/scripts/verify-education-build.py" "$CANDIDATE" \
+  --external-inputs "$EXTERNAL_INPUTS"
+python3 -B "$VERIFIER/scripts/verify-education-runtime.py" "$CANDIDATE" \
+  --tool-prefix "$TOOL_PREFIX"
+# Do not use --recipe for a completed build; it is a pre-build-only check.
 ```
 
 These commands describe the existing gated route, not a promise that a fresh
