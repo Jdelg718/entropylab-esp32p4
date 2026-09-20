@@ -1,0 +1,3440 @@
+{
+  "accepted_archive_sha256": "82d62829596fe080f6bf02cf67c3337d88d4287a98e6b82ad3c70aa56f8e4f19",
+  "entries": {
+    ".gitattributes": {
+      "bytes": 108,
+      "sha256": "e64669dec6d9828785f27bfdcc1de44e7ed1d9868c36fc5b2a30dd25e9339514"
+    },
+    ".github/workflows/host.yml": {
+      "bytes": 913,
+      "sha256": "ac2814040e3214ee4c30ad477e9ccfdb75346a11131558f476bd800cfa7d65f0"
+    },
+    ".github/workflows/public-installer.yml": {
+      "bytes": 618,
+      "sha256": "5182252ee2644241dcfed1122eb4fcce9a465eb91d7ae4f250c0a14d3a3ef93b"
+    },
+    ".gitignore": {
+      "bytes": 437,
+      "sha256": "cb0feeacb0ad3f534e2b02984076c46e2eaadddfbe608495ede348c00c0b2ba6"
+    },
+    "AGENTS.md": {
+      "bytes": 908,
+      "sha256": "db8f4fdd8f7ab166854c6b561e15ee4e84b5c4241e429b2a6a8f40bd2f4821aa"
+    },
+    "CHANGELOG.md": {
+      "bytes": 890,
+      "sha256": "4f971746761abdf05006c36ca659e8c09ee3ed68fd172548fc1475525060b7fc"
+    },
+    "CONTRIBUTING.md": {
+      "bytes": 5473,
+      "sha256": "2a5765b8c045ac7c5a3e546cd5281f4b6b55157533af196fa3d48fe54a9f5a03"
+    },
+    "GATES-REPORT.md": {
+      "bytes": 7780,
+      "sha256": "6e5ebbf858c3c6bab6b51f82a8d8a9c8b507a92c1ab3b3c0e02efca3f55725a7"
+    },
+    "LICENSE": {
+      "bytes": 715,
+      "sha256": "5307fe2aeebf3d03c6cd3101fb21b9d9cd463efd521b8029f3c1409d43b3df9e"
+    },
+    "LICENSE-BIP32-BSD-2-CLAUSE": {
+      "bytes": 1659,
+      "sha256": "590dae39d4da41b2f4a0bdeac738bb226f42caaea050292d2024bc3f1e6ec9a2"
+    },
+    "LICENSE-MIT": {
+      "bytes": 1093,
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "LICENSE-OOGA-BOOGA": {
+      "bytes": 700,
+      "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+    },
+    "LICENSE-TREZOR-MIT": {
+      "bytes": 1084,
+      "sha256": "d5e3c7c62a84e80073201e2f6e5130e9e6804fa05f8ac4f8b26a13c7d3969697"
+    },
+    "PROGRESS-CONTRACT.md": {
+      "bytes": 2795,
+      "sha256": "bd8d53738fffbdd84ce8b6927f178c205a0bd4cf2a971f262a991bba3d3a23db"
+    },
+    "README.md": {
+      "bytes": 5049,
+      "sha256": "bcef34c8a8894640ab8775d0e768a343db41c893350f74970e9b026f9a6cff64"
+    },
+    "ROADMAP.md": {
+      "bytes": 8083,
+      "sha256": "ceb734a8db4f0392c4d1d718f813cba0bda17c10a4e735fce1b909c689222ea6"
+    },
+    "SECURITY.md": {
+      "bytes": 2252,
+      "sha256": "b2a84c642df751c1decc03e95489c44b380b56cedb85ad3e743a294adcf5df3e"
+    },
+    "SPEED-CANDIDATE-REPORT.md": {
+      "bytes": 8845,
+      "sha256": "14127243c927a5c5f99dcf8481f8f3af305d1a81aa898ed8841e684d3b7c359a"
+    },
+    "SPEED-CANDIDATE.md": {
+      "bytes": 4508,
+      "sha256": "8db64558e5d8be9a950cef580e974dc9696fa425752f7cd0be4bb5864df96590"
+    },
+    "THIRD_PARTY_NOTICES.md": {
+      "bytes": 6522,
+      "sha256": "8042ca8b93d3ad58c3cfcb6d0017e2d69c20b7d7044b46c12eb30931bce01acd"
+    },
+    "core-spike/extract.py": {
+      "bytes": 2505,
+      "sha256": "6b91f9dcf14fed3e824e1127d6ecedf9a2c695c4364a855b366667e619805799"
+    },
+    "core-spike/integrity.py": {
+      "bytes": 884,
+      "sha256": "2059251481f5d04b191aee90dd8df3d348f66d5fac59a3259ab7ce3416645821"
+    },
+    "core-spike/native/Cargo.lock": {
+      "bytes": 6055,
+      "sha256": "716ae77dc26ceb9322de6abd567e6dfba23bccf0b23b374734336673608f5c53"
+    },
+    "core-spike/native/Cargo.toml": {
+      "bytes": 570,
+      "sha256": "b735979418662cb3f86c124f3310fc9fca3abc478cf2582133c3b7265d13f528"
+    },
+    "core-spike/native/LICENSE": {
+      "bytes": 2396,
+      "sha256": "7399dfd5bb35370fd5d190296ce4738528b9b601707545c09f30795157d1aa48"
+    },
+    "core-spike/native/LICENSE-MIT": {
+      "bytes": 1093,
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "core-spike/native/LICENSE-OOGA-BOOGA": {
+      "bytes": 700,
+      "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+    },
+    "core-spike/native/THIRD_PARTY_NOTICES.md": {
+      "bytes": 174,
+      "sha256": "0127d7b12015c40e6dc51145333151d388cada1dbd06add1ae9b846f199082f2"
+    },
+    "core-spike/native/src/known_answers.rs": {
+      "bytes": 3130,
+      "sha256": "4ad0e79ea638498004bb036010c90a91a17e88408d1adf78a0bd36c50db2fe91"
+    },
+    "core-spike/native/src/lib.rs": {
+      "bytes": 3848,
+      "sha256": "bcc05a2b8af1caf221503643f8f3b2a97095b10e27ded560be2f9535e681bcf5"
+    },
+    "core-spike/native/src/main.rs": {
+      "bytes": 1795,
+      "sha256": "77b6edea57c86011147f1f1d9d3ca8243feee1adb5d779f04d22f231f45cd223"
+    },
+    "core-spike/native/src/upstream_core.rs": {
+      "bytes": 6531,
+      "sha256": "fb93b0cb03e4ac76c060dd320df084bd72a83fd80866eba66566549f3a2b9d33"
+    },
+    "core-spike/native/tests/cli.rs": {
+      "bytes": 1261,
+      "sha256": "e8140cc5c57d6482b819aae78435dc0bcbf2553cf482931eeed8c638f7c36cc3"
+    },
+    "core-spike/native/tests/vectors.rs": {
+      "bytes": 1751,
+      "sha256": "941fd2d775a2e5091a979b0dad5c1f84d36c3c55bad3885ef7440f99bf4c3752"
+    },
+    "core-spike/prepare_vectors.py": {
+      "bytes": 1124,
+      "sha256": "3281d243c1df7dd247891118f0b7ecafbd395be79c2d1b8c7cfed54a1770515f"
+    },
+    "core-spike/test_drift.py": {
+      "bytes": 2504,
+      "sha256": "27d02de0a7efa9b019bb153b4e4082ed7b038966f22234da9dcd80247d181f36"
+    },
+    "core-spike/vectors/bip-0032.mediawiki": {
+      "bytes": 28032,
+      "sha256": "e5e00a8289db2f681052cf24a745320afc225e66b25d1e489a7c884d2fc7f11f"
+    },
+    "core-spike/vectors/bip-0084.mediawiki": {
+      "bytes": 4648,
+      "sha256": "1900feec6cafca65b8c09906ca0658d2d742b4c9b44cb15678996985b6bfe627"
+    },
+    "core-spike/vectors/bip32.tsv": {
+      "bytes": 5416,
+      "sha256": "37faa60452923af07fab98c0b5f4e9cf507451a76b6e475202bf1137f1286d8d"
+    },
+    "core-spike/vectors/bip39-english.tsv": {
+      "bytes": 9694,
+      "sha256": "1a1722a1b803fdbe1333745b1469cc7987a096155939fd638110ff831bab59a9"
+    },
+    "core-spike/vectors/bip39.json": {
+      "bytes": 152400,
+      "sha256": "fa3b937b7cff9c9b8ecd3aa011faeb8d6dd67993174b72326e83f4de8fdb30f8"
+    },
+    "core-spike/vectors/extraction.json": {
+      "bytes": 604,
+      "sha256": "775ea030ff152edfffc7a636f99d9d938d3a9ed0856b7cd1dd9126cb34cc20b8"
+    },
+    "core-spike/vectors/sha256.json": {
+      "bytes": 534,
+      "sha256": "11457e7d1ad7cf2329bbddec6abcdb75b651a7a4f67418f5f59f013548b64b61"
+    },
+    "docs/BUILD-FLASH.md": {
+      "bytes": 5469,
+      "sha256": "856682ade0d8150900599cf7a2b6edb454d6e7a87582bb07ea4c84ecac045997"
+    },
+    "docs/BUILD.md": {
+      "bytes": 5898,
+      "sha256": "598980cf4be7eb0be073dc8c57362ae2497c7c0cd601032e4b6afdb0648f86a9"
+    },
+    "docs/CHECKOUT-REPAIR-HANDOFF.md": {
+      "bytes": 439,
+      "sha256": "876c450b27ae7cb8760c2fb6f59f46d5de7a15dd9798e291d1e0152462f49fce"
+    },
+    "docs/COIN-MILESTONE.md": {
+      "bytes": 6749,
+      "sha256": "7f20d416d70aac4b40da6118524403562c839b0e84c75e43ebc8d0b4fe688536"
+    },
+    "docs/COMBINED-RUST-LICENSES.json": {
+      "bytes": 9486,
+      "sha256": "e1edb8e80c0ba78e3172d3069fe1d20254e0bb55eda166b627aad5b4eb31cbed"
+    },
+    "docs/COMBINED-SOURCE-MAPPING.json": {
+      "bytes": 3534,
+      "sha256": "1e9a74ec5c3732ae09f642491528f192c6a79c4f879437b7e2941fb6fdf3e973"
+    },
+    "docs/COMBINED-TEST-CANDIDATE.md": {
+      "bytes": 7220,
+      "sha256": "f81b16f4db43891667865e66a6ab2dff33fe141f213ad6ff379b8d38bd0dfd2c"
+    },
+    "docs/CURRENT-STATUS.md": {
+      "bytes": 7514,
+      "sha256": "4a9a7ba6e10ff0cf1408a16bf4630118fc69aa140a64ed0b6bc74f600e9da2f5"
+    },
+    "docs/DICE-MILESTONE.md": {
+      "bytes": 10271,
+      "sha256": "c5babbdb53962b2d539a110b8df6c4b165817c51fbafbb1e268570a3b31cff76"
+    },
+    "docs/DOC-CLEANUP-REVIEW.md": {
+      "bytes": 6131,
+      "sha256": "634fdc2c8cb8bfaab1c35332b1484a8bb4e3bf00c9cf91df252e5dd02bec3df6"
+    },
+    "docs/EDUCATION-NEXT-REVIEW.md": {
+      "bytes": 6016,
+      "sha256": "565f740f639d94710de2755764269bb6a933f63491b737c9aa7808371f83d3cf"
+    },
+    "docs/EDUCATION-PROVENANCE.md": {
+      "bytes": 4849,
+      "sha256": "9b0af11f12181e7c99a3846fbf3695169c8c1ea12bbf41d15dc2c38ed19069e5"
+    },
+    "docs/FLASH-LAYOUT-EVIDENCE.json": {
+      "bytes": 1372,
+      "sha256": "bc841c51f3f018d900bf96b449c9a9a35771a703764a74edb53a00f8734ab5ea"
+    },
+    "docs/HANDOFF.md": {
+      "bytes": 3360,
+      "sha256": "a16b8df520640ab385fc81faf1f262e355dd186349b9314a97f2dd8573bb0dee"
+    },
+    "docs/HARDWARE-EVIDENCE.md": {
+      "bytes": 1085,
+      "sha256": "a874844bb9cefd76a6688b93eb64c2473d206d92b422ea35045949018f8bd6ae"
+    },
+    "docs/HARDWARE.md": {
+      "bytes": 3803,
+      "sha256": "458291643c54a4f5d7ec5230295e5d9af44e7d12519b41ee4a31f36f30ba08f9"
+    },
+    "docs/HEX-MILESTONE.md": {
+      "bytes": 5444,
+      "sha256": "86d59d70827ebfd2f96ff2ff07579abf4c754256f81fa8b3b84aab71f556b4eb"
+    },
+    "docs/HEX-SOURCE-SHA256.txt": {
+      "bytes": 1755,
+      "sha256": "51a6c0afaec96192b0103fb62251755c5a45b106a7dcb007b3ddf0f7970a6152"
+    },
+    "docs/HISTORICAL-CONTRIBUTING.md": {
+      "bytes": 1974,
+      "sha256": "07825807119b81504322002f8a7e92123024c0c1b90bbfbc489f4f4ebb190931"
+    },
+    "docs/HISTORICAL-README.md": {
+      "bytes": 10773,
+      "sha256": "0b96716540f520148fedcc524b19b0824bf0f43ba962a5ce1f802967917d668c"
+    },
+    "docs/HOST-VERIFICATION.json": {
+      "bytes": 899,
+      "sha256": "13c5b43801dd8407ee72f2115293401127b8cb7b1aa4856869da853ad656f723"
+    },
+    "docs/INPUT-EXPLANATIONS.md": {
+      "bytes": 4089,
+      "sha256": "82a275fb48a60868c0fc8ca1dd46ce80fd5375dc6692d35b6b3b80b0a0db4ba7"
+    },
+    "docs/INSTALLED-SOURCE-MAPPING.json": {
+      "bytes": 4391,
+      "sha256": "5d4628336b8631aec789c08175d14c8b262b216cbfea47621ca5bd5de2a8e947"
+    },
+    "docs/KNOWN-LIMITS.md": {
+      "bytes": 1771,
+      "sha256": "5444603579568478852ee50938e4ba812873675d10063970416f80de58460295"
+    },
+    "docs/MODAL-COMBINED-SOURCE-MAPPING.json": {
+      "bytes": 33823,
+      "sha256": "17e448d091047cfb6ff3d5d005fabb499e5c094a44e638a7afe90b146e535a34"
+    },
+    "docs/MODAL-COMBINED-STATUS.md": {
+      "bytes": 3388,
+      "sha256": "3d966e54ce810ec69a673596345846af38384569fbb2fada06fcb396d9179949"
+    },
+    "docs/NATIVE-GUI-CHECKPOINT.md": {
+      "bytes": 6271,
+      "sha256": "a6dc42924ae772bcd9bba3687f995f2f071138d213afe313b084ce16619a8554"
+    },
+    "docs/PACKAGE-SOURCE-MANIFEST.json": {
+      "bytes": 78941,
+      "sha256": "902fa6672650aef4f829aeb9f8ef21c96fb00b35317c34403a0d9b2d3418bf23"
+    },
+    "docs/PRODUCTION-SOURCE-EQUIVALENCE.json": {
+      "bytes": 20425,
+      "sha256": "d2f15a29784ea0bb3ce2729c94492792475996d83f9baa87449d531ba674a3d4"
+    },
+    "docs/PROVENANCE.md": {
+      "bytes": 4430,
+      "sha256": "fd819b08231d766e6d832ef4536e2c62587d766cce44424831adbc70f13953e7"
+    },
+    "docs/PUBLIC-FIRST-INSTALL.md": {
+      "bytes": 5878,
+      "sha256": "1fe8e3ddeb1b8ed8f0572531e429b7f2d88a67b4b84403b79c03ef8f72f2d741"
+    },
+    "docs/PUBLIC-INSTALLER-REVIEW.md": {
+      "bytes": 4018,
+      "sha256": "e739ce783fac2e6fdc54f9628cd5198096d4fa31bb48dfffafd5ff03a5c23f49"
+    },
+    "docs/PUBLICATION-STATUS.md": {
+      "bytes": 3382,
+      "sha256": "b69e1b3cae19661cc50c92fe45e6032f6c79861b01f60b7f8f8376f752fd099a"
+    },
+    "docs/RECOVERY.md": {
+      "bytes": 1103,
+      "sha256": "0c44ecccd9453f6fbb00d55de81f9cd8281d5122b048cac517b54b1f4d37d4e9"
+    },
+    "docs/RELEASE-BUILD-HYGIENE.md": {
+      "bytes": 3089,
+      "sha256": "e45ace2632ab29326ebb7d7a0c63d56626020956e69c4333921f9ba8327af316"
+    },
+    "docs/RELEASE-READINESS.md": {
+      "bytes": 7529,
+      "sha256": "5e7d07c3497b87ab3a5b79a8abcfab9d6c296e31cbf4e3620fa2764854c0d7e1"
+    },
+    "docs/RELEASE-SOURCE-MAPPING.json": {
+      "bytes": 41162,
+      "sha256": "085d1c52285474b28275a9abd42d5bcb20b46c02e34d08fa9e097fb8654bdc22"
+    },
+    "docs/REVIEW-REPAIR-SOURCE-MAPPING.json": {
+      "bytes": 33720,
+      "sha256": "f44024dcab19fb8c06e6944d03a07dbf9d0a26afa092fb835834f2f5d63e291d"
+    },
+    "docs/RUST-DEPENDENCIES.md": {
+      "bytes": 1195,
+      "sha256": "c6cd50cc3130d79790fd54538e3c2db78a7ebb43097d2d7a08932c1eab19233a"
+    },
+    "docs/UI-REPAIR.md": {
+      "bytes": 3184,
+      "sha256": "15f01bb5ad7140f406b410ff210f46aade2744db6048a6b32ba23d731ef53390"
+    },
+    "docs/UPSTREAM-FEATURES.md": {
+      "bytes": 4029,
+      "sha256": "dbb695ab843da7365025953861b04249c550e16f36311f296a743d36d64ab965"
+    },
+    "docs/VECTOR-LICENSE-SOURCES.md": {
+      "bytes": 1583,
+      "sha256": "4d996bae84ff1d44ecaf9e9d7fe57058b827c5e3777785cb286026bdf04126a5"
+    },
+    "docs/WORDS-MILESTONE.md": {
+      "bytes": 3902,
+      "sha256": "288091cd95ac4d61543e3a7d4a55191dd28d0e9eaa32536fc2ae63235ef14a9f"
+    },
+    "docs/coin-import-manifest.json": {
+      "bytes": 7062,
+      "sha256": "0dc449b83b9db7d5c052b34fb48b7de4b60aa87ac8641a59e9e1209d266173c8"
+    },
+    "docs/combined-import-successors.json": {
+      "bytes": 1496,
+      "sha256": "6175826b90922c266f8fa59940436cf814162213fb38b0f06c656f4fdd902480"
+    },
+    "docs/current/CHANGELOG.md": {
+      "bytes": 1011,
+      "sha256": "b829d96721cd93f8dfc2a51d0e933e56a3aa6b591277f0a2f3321278ac217dea"
+    },
+    "docs/current/CONTRIBUTING.md": {
+      "bytes": 4143,
+      "sha256": "4e8af0886bd7d6156d1d45b2edcb3bf1b705c53094cd934af27e248dc7c2821f"
+    },
+    "docs/current/ROADMAP.md": {
+      "bytes": 10110,
+      "sha256": "abd751e5ed70b7925aae91daf1a98ad21ab9e079ca503e35531a833a23b13584"
+    },
+    "docs/current/SECURITY.md": {
+      "bytes": 1889,
+      "sha256": "c5553f7a87320b36bc74d41a70f7089c88ee34c312fef9fd67103adeca570eb3"
+    },
+    "docs/current/docs/BUILD-FLASH.md": {
+      "bytes": 5563,
+      "sha256": "5dbcad88939d4086808e1af17d915690ffc0683e0fcf57d1e91c6d9dbc9b672e"
+    },
+    "docs/current/docs/BUILD.md": {
+      "bytes": 5998,
+      "sha256": "13a13b30602a555815df87aa75b61ec59af11b917c145175f0887861deb238e6"
+    },
+    "docs/current/docs/COIN-MILESTONE.md": {
+      "bytes": 6831,
+      "sha256": "e47114fc5aef9a6cc807659c9b87d419665139ed448d5c22335e19ce559f576e"
+    },
+    "docs/current/docs/DICE-MILESTONE.md": {
+      "bytes": 10352,
+      "sha256": "cf5dcdbb56b3b7161ac4330e2ed3d733c571ba616b1f86c78cd108644e73031b"
+    },
+    "docs/current/docs/EDUCATION-PROVENANCE.md": {
+      "bytes": 4919,
+      "sha256": "10b4a886a2be9b1f2cb7920efdc7851182d8d8d3342ef15e2554a5e1916c95c6"
+    },
+    "docs/current/docs/HANDOFF.md": {
+      "bytes": 3456,
+      "sha256": "1edf6633e60fc74940e0c0a31d8b70a71cf891afe4a3583bc42a98f73d8c6ec0"
+    },
+    "docs/current/docs/HARDWARE.md": {
+      "bytes": 3773,
+      "sha256": "6a05bed57e49dbc031a123e3edde26b8b94bf6cbbc32a097a880be805d263fe2"
+    },
+    "docs/current/docs/HEX-MILESTONE.md": {
+      "bytes": 5528,
+      "sha256": "a4c9080dbc617400a26bdc7985ea66ff903767d540433794412a811d6c1ba534"
+    },
+    "docs/current/docs/INPUT-EXPLANATIONS.md": {
+      "bytes": 4163,
+      "sha256": "03c3cc8c897d8781701777359be41482f0736a61fa81c07e93e3c53c857e18f5"
+    },
+    "docs/current/docs/KNOWN-LIMITS.md": {
+      "bytes": 1857,
+      "sha256": "b10fc20ccb1941012cc638f6d4683baa24c7b9b6b5a262bc53804239e374a86a"
+    },
+    "docs/current/docs/MODAL-COMBINED-STATUS.md": {
+      "bytes": 3456,
+      "sha256": "1edf6633e60fc74940e0c0a31d8b70a71cf891afe4a3583bc42a98f73d8c6ec0"
+    },
+    "docs/current/docs/PROVENANCE.md": {
+      "bytes": 4538,
+      "sha256": "99f0a3a620d711a54dc0b8205933bd7a879021558def1939cdb9e6314f0804a8"
+    },
+    "docs/current/docs/PUBLICATION-STATUS.md": {
+      "bytes": 3456,
+      "sha256": "1edf6633e60fc74940e0c0a31d8b70a71cf891afe4a3583bc42a98f73d8c6ec0"
+    },
+    "docs/current/docs/RELEASE-BUILD-HYGIENE.md": {
+      "bytes": 3157,
+      "sha256": "011d02b683d13fe7236ea46fb2ae997d5917807775a9b91a8026dc558f399113"
+    },
+    "docs/current/docs/UPSTREAM-FEATURES.md": {
+      "bytes": 4105,
+      "sha256": "d940569627d38b0183ea4b2716f18241ba7ac112ebdd7324c20fd056446339ed"
+    },
+    "docs/current/docs/WORDS-MILESTONE.md": {
+      "bytes": 3988,
+      "sha256": "83b0e86b2a7540d4282313ef0f0273e8dbc704be8eb695adb0ed9c170821889b"
+    },
+    "docs/current/docs/d6-release/README.md": {
+      "bytes": 5547,
+      "sha256": "c5e030145167b018beae0c10eeb956c33aee1ac10b72b3e7eee535f289b2638c"
+    },
+    "docs/d6-release-successors.json": {
+      "bytes": 3949,
+      "sha256": "92c9b8343f023ace5b5d29e685b334f209993bb2b1ba50a3c67accd24e58ed5a"
+    },
+    "docs/d6-release/README.md": {
+      "bytes": 5745,
+      "sha256": "93ef1c097da593e95eb7b079dd02de0a5a8a51264fe0010dc2d1ffe4c3da90fb"
+    },
+    "docs/d6-release/candidate-source-identity.json": {
+      "bytes": 54388,
+      "sha256": "07d03ba6f421a25316e5b73662f1a6f9d79243c7bdaba8119c3cd27a16573d4d"
+    },
+    "docs/d6-release/historical-host-delta.json": {
+      "bytes": 718,
+      "sha256": "d98c8b4d00a891a713e9663f47ca91bf7873727fb4ddf06f710c36b7034b87bd"
+    },
+    "docs/d6-release/historical-inputs/fixture-firmware/app/main/CMakeLists.txt": {
+      "bytes": 1792,
+      "sha256": "45c7b537e4b546504c8f58b1b9813cf2ee7ec1a98f564ba1bc09cbd20bb14b59"
+    },
+    "docs/d6-release/historical-inputs/fixture-firmware/app/main/main.c": {
+      "bytes": 8885,
+      "sha256": "f666f06524a10ff67e1d1b5bfbd7f43701950e5e42f07eefd8e085bbc0e81cec"
+    },
+    "docs/d6-release/historical-inputs/fixture-firmware/runtime-sources/hex-core/src/lib.rs": {
+      "bytes": 3252,
+      "sha256": "9c003045fbd8b036bd6a550e06ec129230b49b39dac234751c5ffa304dcf90a6"
+    },
+    "docs/d6-release/predecessor-source-identity.json": {
+      "bytes": 54842,
+      "sha256": "fc354f8127655af09fa05066bc44b8e8044041b9ff768d052c65b25a77e8f3df"
+    },
+    "docs/d6-release/recipe-additions.json": {
+      "bytes": 57525,
+      "sha256": "cc5e9dd8b67bffe7c5e887ea78959daac5e76aa235e38798eb1d709186a59819"
+    },
+    "docs/dice-import-manifest.json": {
+      "bytes": 8524,
+      "sha256": "df76366c5bc512994f8cb993d584eb918464d6c5f2c62766bb7774e873e75a5e"
+    },
+    "docs/global-saver-successors.json": {
+      "bytes": 2060,
+      "sha256": "1ca9ca82cba083adfd74d17dfba0c916c81bbb3aaddf249fea35240c583e5edd"
+    },
+    "docs/input-explanations-native-edit.json": {
+      "bytes": 791,
+      "sha256": "dcd864bb86f0778b275e84379334c248eb4012bdd1c5467929ed1a05f8cc2599"
+    },
+    "docs/modal-successors.json": {
+      "bytes": 1198,
+      "sha256": "9e1d69da912c3dc592419a77cab6179f5876efe2eb1abe4ce6946a834a553c9c"
+    },
+    "docs/public-checkout-successors.json": {
+      "bytes": 4203,
+      "sha256": "1e2206cd513084284192a93e615bfe0bdf9e63db875517fc18a7b48ed18a5140"
+    },
+    "docs/release-notices/CHECKLIST.md": {
+      "bytes": 1844,
+      "sha256": "4298d5221e25dd9302785f650d72f1de5dcf1a38b3670edfd9d5a4104fb8757f"
+    },
+    "docs/release-notices/closure/BSD-2-Clause-FreeBSD.txt": {
+      "bytes": 1518,
+      "sha256": "38cc5fec5a80af1b141447d58f686b3a75488db05ddbd0ef439f494ea0458f64"
+    },
+    "docs/release-notices/closure/BSD-3-Clause.txt": {
+      "bytes": 1460,
+      "sha256": "5a93d5831e1297ab10fe643e1a631e83be392896da14ee2951285a79012df69d"
+    },
+    "docs/release-notices/closure/COMPILED-INPUT-NOTICES.txt": {
+      "bytes": 285597,
+      "sha256": "8aefdab7f41ecfca4b71fd65b414ec6e2fd30c1c57c0cd0f5248e121aa9b062b"
+    },
+    "docs/release-notices/closure/ISC.txt": {
+      "bytes": 823,
+      "sha256": "f2ec607f67bb0dd3053b49835b02110d5cd0f8eb6da3aac4dc0b142a6b299be9"
+    },
+    "docs/release-notices/closure/PROJECT-THIRD-PARTY-NOTICES.md": {
+      "bytes": 6522,
+      "sha256": "8042ca8b93d3ad58c3cfcb6d0017e2d69c20b7d7044b46c12eb30931bce01acd"
+    },
+    "docs/release-notices/closure/hex_lit-0.1.1-Cargo.toml": {
+      "bytes": 1016,
+      "sha256": "b4ba1f8ba3e957e70bde8405d69be608dbae5e8bd408ec2af069b0eaba47c89e"
+    },
+    "docs/release-notices/closure/hex_lit-0.1.1-Cargo.toml.orig": {
+      "bytes": 493,
+      "sha256": "075f91d066155da412de404ca0176756dd66435bc744714ab3af6818203e372b"
+    },
+    "docs/release-notices/closure/hex_lit-ATTRIBUTION.txt": {
+      "bytes": 944,
+      "sha256": "302e08e5735dcf9e1785ea04ecf4fe8b3b73fddfc75c103b045aa495afaae14c"
+    },
+    "docs/release-notices/esp-idf/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc/LICENSE.txt": {
+      "bytes": 1300,
+      "sha256": "ffd8b033d2df7568c25a98866bd92b1656f7da82d7f813c0b2eb85ec36611193"
+    },
+    "docs/release-notices/esp-idf/components/bt/common/tinycrypt/LICENSE": {
+      "bytes": 3254,
+      "sha256": "270e0b63ce74421f1ccaaf03f9c7daa430cdb16c9856259ca4c2e3c74880d589"
+    },
+    "docs/release-notices/esp-idf/components/bt/controller/lib_esp32/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/esp-idf/components/bt/controller/lib_esp32c2/esp32c2-bt-lib/NOTICE": {
+      "bytes": 320,
+      "sha256": "9db49cb1e535c496d7655dd54d5481404e7634353dc3bc0817c7d07767acc6e8"
+    },
+    "docs/release-notices/esp-idf/components/bt/controller/lib_esp32c3_family/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/esp-idf/components/bt/controller/lib_esp32c5/esp32c5-bt-lib/NOTICE": {
+      "bytes": 320,
+      "sha256": "ebd002217a1a76e3cce23cd89d0916477da6c7907a6a46c8a7f1fb209e3cb333"
+    },
+    "docs/release-notices/esp-idf/components/bt/controller/lib_esp32c6/esp32c6-bt-lib/NOTICE": {
+      "bytes": 320,
+      "sha256": "ebd002217a1a76e3cce23cd89d0916477da6c7907a6a46c8a7f1fb209e3cb333"
+    },
+    "docs/release-notices/esp-idf/components/bt/controller/lib_esp32h2/esp32h2-bt-lib/NOTICE": {
+      "bytes": 321,
+      "sha256": "a1a74b78d60bf3feb4f493f058ac8ee4022e40387783085171670e34b001d8dd"
+    },
+    "docs/release-notices/esp-idf/components/bt/esp_ble_mesh/lib/lib/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/esp-idf/components/bt/host/nimble/nimble/LICENSE": {
+      "bytes": 12514,
+      "sha256": "0deb15bc7df50b1d009c644b008f92e1062909e9521328d337c5fad3a5d4921c"
+    },
+    "docs/release-notices/esp-idf/components/bt/host/nimble/nimble/NOTICE": {
+      "bytes": 321,
+      "sha256": "b838c4733a5020cd8e2bafbe70842acd8c8dc7816012965b77d10c1f4c0727f6"
+    },
+    "docs/release-notices/esp-idf/components/bt/host/nimble/nimble/ext/tinycrypt/LICENSE": {
+      "bytes": 3313,
+      "sha256": "b2d451fcba3577b118741d733d37ebd15bdd0b6b381e554a7345bdbfa3743108"
+    },
+    "docs/release-notices/esp-idf/components/cmock/CMock/LICENSE.txt": {
+      "bytes": 1092,
+      "sha256": "a228c2871b9a779a6542a49470c5b567f2806dddcbcf90af861bb4d39291626c"
+    },
+    "docs/release-notices/esp-idf/components/cmock/CMock/vendor/unity/LICENSE.txt": {
+      "bytes": 1123,
+      "sha256": "3ed9b51da86f52c729c96cc99fdde6444b2297c788a9cf4ad1d3649dc34c4985"
+    },
+    "docs/release-notices/esp-idf/components/console/argtable3/LICENSE": {
+      "bytes": 8379,
+      "sha256": "a97df648b7db77f9f6f5e1ef5fe44eb6b154ecb8ae26ad39c92ea44201cce45c"
+    },
+    "docs/release-notices/esp-idf/components/console/linenoise/LICENSE": {
+      "bytes": 1408,
+      "sha256": "efe1692aa5b869edaa0ac88f95eb0276c1125304ffc636a299db3ebbab47f62b"
+    },
+    "docs/release-notices/esp-idf/components/driver/test_apps/components/esp_serial_slave_link/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/esp-idf/components/esp_coex/lib/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/esp-idf/components/esp_phy/lib/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/esp-idf/components/esp_wifi/lib/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/esp-idf/components/esptool_py/LICENSE": {
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    "docs/release-notices/esp-idf/components/freertos/FreeRTOS-Kernel/LICENSE.md": {
+      "bytes": 1036,
+      "sha256": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1"
+    },
+    "docs/release-notices/esp-idf/components/http_parser/LICENSE.txt": {
+      "bytes": 1298,
+      "sha256": "3aced2d086d3f59cafb6589770c30c1e45a5bdf50c1d4375060b81a615db604c"
+    },
+    "docs/release-notices/esp-idf/components/json/cJSON/LICENSE": {
+      "bytes": 1084,
+      "sha256": "a36dda207c36db5818729c54e7ad4e8b0c6fba847491ba64f372c1a2037b6d5c"
+    },
+    "docs/release-notices/esp-idf/components/json/cJSON/tests/unity/docs/license.txt": {
+      "bytes": 1123,
+      "sha256": "3ed9b51da86f52c729c96cc99fdde6444b2297c788a9cf4ad1d3649dc34c4985"
+    },
+    "docs/release-notices/esp-idf/components/lwip/lwip/COPYING": {
+      "bytes": 1425,
+      "sha256": "ef4aac92e05e87cd1cdc140870ed52206ba03d4a7fe46c1e11d7ffa6c87d252b"
+    },
+    "docs/release-notices/esp-idf/components/lwip/lwip/contrib/apps/LwipMibCompiler/SharpSnmpLib/license.txt": {
+      "bytes": 24383,
+      "sha256": "ef1f7505cfdff240e72602bc50ef1cdba37c681c84611cdf30e4371320c70942"
+    },
+    "docs/release-notices/esp-idf/components/mbedtls/mbedtls/LICENSE": {
+      "bytes": 29852,
+      "sha256": "9b405ef4c89342f5eae1dd828882f931747f71001cfba7d114801039b52ad09b"
+    },
+    "docs/release-notices/esp-idf/components/mbedtls/mbedtls/framework/LICENSE": {
+      "bytes": 29861,
+      "sha256": "11402351e38392230bb8934ba1095c0c0049a296c0f8821f76e4672dff54b490"
+    },
+    "docs/release-notices/esp-idf/components/mqtt/esp-mqtt/LICENSE": {
+      "bytes": 11339,
+      "sha256": "20ed622a5f1a273258b415097609f6a236fb2f23f8c593c63e29e6cc77de0032"
+    },
+    "docs/release-notices/esp-idf/components/newlib/COPYING.NEWLIB": {
+      "bytes": 46295,
+      "sha256": "0681089a556e93791da82718d68011ba452de245f7f59c3846936304756ac0c0"
+    },
+    "docs/release-notices/esp-idf/components/newlib/COPYING.picolibc": {
+      "bytes": 234687,
+      "sha256": "fa72ebf6e3c9b3d674f89da06648b0c17d3bcb1ce05ed5956cc102fba1e6964d"
+    },
+    "docs/release-notices/esp-idf/components/openthread/lib/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/esp-idf/components/openthread/openthread/LICENSE": {
+      "bytes": 1506,
+      "sha256": "e164182fc3e6378533ba706800087469a14dcd5913ee55e2e8ae3fb14f3cdbbb"
+    },
+    "docs/release-notices/esp-idf/components/openthread/openthread/NOTICE": {
+      "bytes": 1325,
+      "sha256": "1b37f4fbb95506a0529a15c007aa53053e0e2bf03b1547fb244fdebacf49374f"
+    },
+    "docs/release-notices/esp-idf/components/openthread/openthread/third_party/jlink/SEGGER_RTT_V640/License.txt": {
+      "bytes": 1759,
+      "sha256": "9a160ebc4406ed363f5fb397cc8cd201613ab29e67a2439474f7bafd77e3ce07"
+    },
+    "docs/release-notices/esp-idf/components/openthread/openthread/third_party/mbedtls/repo/LICENSE": {
+      "bytes": 29852,
+      "sha256": "9b405ef4c89342f5eae1dd828882f931747f71001cfba7d114801039b52ad09b"
+    },
+    "docs/release-notices/esp-idf/components/openthread/openthread/third_party/mbedtls/repo/framework/LICENSE": {
+      "bytes": 29861,
+      "sha256": "11402351e38392230bb8934ba1095c0c0049a296c0f8821f76e4672dff54b490"
+    },
+    "docs/release-notices/esp-idf/components/openthread/openthread/tools/otci/LICENSE": {
+      "bytes": 1506,
+      "sha256": "d29b8f5c1c666698dfe7717c53e10f82981e0889a06f8a3ebc093d9dccc35aa4"
+    },
+    "docs/release-notices/esp-idf/components/protobuf-c/protobuf-c/LICENSE": {
+      "bytes": 1613,
+      "sha256": "b8999cb392cc5bbe8cd679de59584ad8d2f26033123e76f1d662fa14b9d4f287"
+    },
+    "docs/release-notices/esp-idf/components/spiffs/spiffs/LICENSE": {
+      "bytes": 1117,
+      "sha256": "d19257540156a51ed50c2378e7159066415d8bbbe147779f8deb0d3e73f1b0a7"
+    },
+    "docs/release-notices/esp-idf/components/unity/unity/LICENSE.txt": {
+      "bytes": 1123,
+      "sha256": "7d710553eaf7174f383699ed4eebac67fe7cda7971cbe892f700cd0e087f860f"
+    },
+    "docs/release-notices/esp-idf/components/wpa_supplicant/COPYING": {
+      "bytes": 965,
+      "sha256": "a87ac4e333d0f120408a9d814e40c3672cd27f365af89b4f2f6631f7a9338953"
+    },
+    "docs/release-notices/managed/espressif__button/license.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/managed/espressif__cmake_utilities/license.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/managed/espressif__esp_codec_dev/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/managed/espressif__esp_codec_dev/device/zl38063/LICENSE.txt": {
+      "bytes": 1074,
+      "sha256": "d8023d14377b7e734064165e0ddf5961d0bfc1ab037bc63ad682cf295369964d"
+    },
+    "docs/release-notices/managed/espressif__esp_lcd_st7701/license.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/managed/espressif__esp_lcd_touch/license.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/managed/espressif__esp_lcd_touch_gt911/license.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/managed/espressif__esp_lv_decoder/license.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/managed/espressif__esp_lv_fs/license.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/managed/espressif__esp_lvgl_adapter/LICENSE": {
+      "bytes": 11363,
+      "sha256": "862f600b4c27954a54933f5c00fe4d92bae02bab216d795876ebd76aa6f5538d"
+    },
+    "docs/release-notices/managed/espressif__esp_mmap_assets/license.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/managed/espressif__esp_new_jpeg/LICENSE": {
+      "bytes": 1186,
+      "sha256": "0bf7f2018fffa1caff5ecbf10d79707b218eea4e26b8c705d744de4556552815"
+    },
+    "docs/release-notices/managed/espressif__freetype/LICENSE": {
+      "bytes": 2073,
+      "sha256": "594cbe9628b6681596b8ade0ca01c79a39ed3c768da46ae35cddebac63cd6f6d"
+    },
+    "docs/release-notices/managed/espressif__freetype/examples/color-emoji-example/main/assets/LICENSE-OFL.txt": {
+      "bytes": 4301,
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+    },
+    "docs/release-notices/managed/espressif__freetype/freetype/LICENSE.TXT": {
+      "bytes": 2149,
+      "sha256": "bd36c8b474855fa294c2ec5c184544478ef3720aad37d65a6296a4f264fd2d3b"
+    },
+    "docs/release-notices/managed/espressif__freetype/freetype/docs/FTL.TXT": {
+      "bytes": 6743,
+      "sha256": "5a5ee54c5001bbad1cdc1a57cc3dd4c42199b2da09d39c7ee41fab002d02967f"
+    },
+    "docs/release-notices/managed/espressif__freetype/freetype/docs/GPLv2.TXT": {
+      "bytes": 17994,
+      "sha256": "c4120c6752c910c299e3bd9cb3a46ff262c268303ca2069b61f92f10a5656c18"
+    },
+    "docs/release-notices/managed/espressif__freetype/freetype/subprojects/dlg/LICENSE": {
+      "bytes": 1338,
+      "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+    },
+    "docs/release-notices/managed/espressif__freetype/supplemental/include/freetype/internal/fthash.h.txt": {
+      "bytes": 4055,
+      "sha256": "023d88d49d29ecf3833db7717a3f7ae223c17ec2012bdb5bf33bb67abaf616c4"
+    },
+    "docs/release-notices/managed/espressif__freetype/supplemental/src/autofit/ft-hb.c.txt": {
+      "bytes": 4492,
+      "sha256": "b6fbcc6a2a7b6c291326b24de313ad21edf2c7bbfd82e6844f0c90b20802040a"
+    },
+    "docs/release-notices/managed/espressif__freetype/supplemental/src/autofit/ft-hb.h.txt": {
+      "bytes": 1800,
+      "sha256": "e1ca76cbe0df2850f38b974dbff58f0322d19bafecc4125f52077f0c82411534"
+    },
+    "docs/release-notices/managed/espressif__freetype/supplemental/src/base/fthash.c.txt": {
+      "bytes": 8406,
+      "sha256": "693e5a54b3ce30140975a94a3369dbe706eb1f280c69e80da426d39cc45b94ef"
+    },
+    "docs/release-notices/managed/espressif__freetype/supplemental/src/bdf/README.txt": {
+      "bytes": 5972,
+      "sha256": "7984455e7e5a9faba3797c8bf095fbe10cc846316b7320aff8c58402e22b82fe"
+    },
+    "docs/release-notices/managed/espressif__freetype/supplemental/src/gzip/zlib.h.txt": {
+      "bytes": 97499,
+      "sha256": "c86a25c27f74cb97b8fa07b175f479f063d5064ace9995b4684063643c81cf1b"
+    },
+    "docs/release-notices/managed/espressif__freetype/supplemental/src/pcf/README.txt": {
+      "bytes": 3311,
+      "sha256": "18d9782898d9eac04476e2f744678137b2a889689ed3e923e052fc396a86f86b"
+    },
+    "docs/release-notices/managed/espressif__knob/license.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/managed/espressif__libpng/LICENSE": {
+      "bytes": 5345,
+      "sha256": "bf5e22b9dce8464064ae17a48ea1133c3369ac9e1d80ef9e320e5219aa14ea9b"
+    },
+    "docs/release-notices/managed/espressif__libpng/libpng/LICENSE": {
+      "bytes": 5345,
+      "sha256": "bdb0a645ea18c60507d0368379b1ac5474b92255fcc2d115e07486a7672ba526"
+    },
+    "docs/release-notices/managed/espressif__libpng/libpng/ci/LICENSE_MIT.txt": {
+      "bytes": 1036,
+      "sha256": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1"
+    },
+    "docs/release-notices/managed/espressif__libpng/libpng/contrib/gregbook/COPYING": {
+      "bytes": 18097,
+      "sha256": "d6cb0e9e560f51085556949a84af12b79a00f10ab8b66c752537faf7cd665572"
+    },
+    "docs/release-notices/managed/espressif__libpng/libpng/contrib/gregbook/LICENSE": {
+      "bytes": 2373,
+      "sha256": "b6a03c1803eb58ffb1f1278d5c7d4096c4c116e66dce8a7553e8c77d163c3438"
+    },
+    "docs/release-notices/managed/espressif__libpng/libpng/contrib/pngexif/LICENSE_MIT.txt": {
+      "bytes": 1036,
+      "sha256": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1"
+    },
+    "docs/release-notices/managed/espressif__libpng/libpng/contrib/pngminus/LICENSE.txt": {
+      "bytes": 1164,
+      "sha256": "1806f1f10d393e9e377b3a8d1b968452b54f1a90378f14eeef45426946ace330"
+    },
+    "docs/release-notices/managed/espressif__zlib/LICENSE": {
+      "bytes": 1002,
+      "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243"
+    },
+    "docs/release-notices/managed/espressif__zlib/zlib/LICENSE": {
+      "bytes": 1002,
+      "sha256": "e32ff4e00d9d94930537635291da39e7e612703334bf6fde8c7f1686fe8a45a2"
+    },
+    "docs/release-notices/managed/espressif__zlib/zlib/contrib/dotzlib/LICENSE_1_0.txt": {
+      "bytes": 1359,
+      "sha256": "36266a8fd073568394cb81cdb2b124f7fdae2c64c1a7ed09db34b4d22efa2951"
+    },
+    "docs/release-notices/managed/espressif__zlib/zlib/contrib/minizip/LICENSE.Info-Zip": {
+      "bytes": 3509,
+      "sha256": "fc686023047ce5ce3a18a9b8a777156f0e475929d3de06bac279f3c025d2b2ca"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/COPYRIGHTS.md": {
+      "bytes": 1914,
+      "sha256": "18dff80ab6d19cca167018a2883b73f5575ccf1e6dff60a58b1f99425b666439"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/LICENCE.txt": {
+      "bytes": 1072,
+      "sha256": "27a80bd36832ab42d35ad60c08b2b230a807a9bc0d58e94ec1531543dc49cbe8"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/docs/src/introduction/license.rst": {
+      "bytes": 951,
+      "sha256": "75c5bbce99ab35522e48ef29d5be352f35c428a385cfed69231ae0ac865fecca"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/docs/src/xml/editor/license.rst": {
+      "bytes": 256,
+      "sha256": "4bd5f7689f0bf38ba2ecd59ea457e7263fb74c3ff6840c48e38589b02196f09b"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/docs/src/xml/xml/license.rst": {
+      "bytes": 3874,
+      "sha256": "b97009a52d7c7d61ed1053326331e4daf976449064f352be820715b834f08ac6"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/examples/libs/freetype/OFL.txt": {
+      "bytes": 4351,
+      "sha256": "3200a0abfc0ceba649de8ee433cfe5a7cb8c441cdf32b9e1a4a070e38621cef2"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/DejaVuSans/LICENSE": {
+      "bytes": 4816,
+      "sha256": "d75938dec098f06f0ac3c00853065d94f020be1c3c62ef1dc2975ba15b4d9b0e"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/FontAwesome/LICENSE.txt": {
+      "bytes": 7427,
+      "sha256": "9b914eae88817d63b576eab5aafde7068c7a1abae125d7cdfb034f1da43a9afc"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/FontAwesome5/LICENSE.txt": {
+      "bytes": 7427,
+      "sha256": "de784a808496d49f5f80dd9d1d6e9a51cff712cfbc339e7c25155631ae3cdb5d"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/Lato/OFL.txt": {
+      "bytes": 4409,
+      "sha256": "a8e9b45e643f6939f3cc19b27c9c1d4c562db65e8931516e77f12194293da689"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/Montserrat/OFL.txt": {
+      "bytes": 4392,
+      "sha256": "41f82bb4d24b304f30f7136bc47abdd083782e4265c984160f5649d1e78ea49c"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/NotoColorEmoji/OFL.txt": {
+      "bytes": 4353,
+      "sha256": "9d242e02bf26e61e6baccea03ab3de47c81202a18f07e3e190c17cbf0e9f8bd7"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/NotoSansSC/OFL.txt": {
+      "bytes": 4389,
+      "sha256": "fb97f1ad83b5aa2ef1e9f7e65bc705b5aa391ee62560fedcaf70f49319ca2079"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/scripts/built_in_font/font_license/SourceHanSansSC/LICENSE.txt": {
+      "bytes": 4463,
+      "sha256": "f55c2d43dd905011515f5e46ba78d180027e314ef8ccaaf53a9e88fe316767cd"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/FT800-FT813/LICENSE": {
+      "bytes": 1076,
+      "sha256": "862e06968462faf8ff2066fffaf7c4522aa48ddafd11fe9c578248aa4b013729"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/barcode/LICENSE.txt": {
+      "bytes": 1299,
+      "sha256": "bc9492ba4839f81fed80aa4b966e7078b18fc7f0d81cf47aa3c04a86047099f1"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/frogfs/LICENSE.txt": {
+      "bytes": 15921,
+      "sha256": "af175b9d96ee93c21a036152e1b905b0b95304d4ae8c2c921c7609100ba8df7e"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/gif/LICENSE": {
+      "bytes": 11419,
+      "sha256": "63fefff6dd199d109389e0f413579387e9ca9cfdeeae961ecdbcb120d08432e0"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/lodepng/LICENSE.txt": {
+      "bytes": 882,
+      "sha256": "f43c59ae0979ea7c08b24a56cfe7816f3c82141d13f5866a2040f66b02589771"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/lz4/LICENSE.txt": {
+      "bytes": 1311,
+      "sha256": "8b58c446121a109ccf32edc094bba3010a3d85e4ee3702950db55e4d3e87736c"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/nanovg/LICENSE.txt": {
+      "bytes": 877,
+      "sha256": "45185a6680ed83863bef33e1055f9fd76374df4b81c957802c19a286c982dfd2"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/qrcode/LICENSE.txt": {
+      "bytes": 1125,
+      "sha256": "4d3b92a5e730466508ed46e8632140dfb96221bacfa18c95355cee161e7a22c8"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/thorvg/LICENSE.txt": {
+      "bytes": 1099,
+      "sha256": "861eb0197d1b43e3c904c433b605cf38be3c4bc447bb9752dfad74c704e36af7"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/tiny_ttf/LICENSE.txt": {
+      "bytes": 3669,
+      "sha256": "f214b427f12e19d68f65e2e30a3c9a1f59ee4a09d4c684931971a8f3bfdd7a1f"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/tjpgd/LICENSE.txt": {
+      "bytes": 873,
+      "sha256": "e85563f195d82708ca334e85c63d0352c980ccc66dca2052e9fd05f7823df51c"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/libs/vg_lite_driver/LICENSE.txt": {
+      "bytes": 1399,
+      "sha256": "928c166e5324bd40709174aae078010aa8206ce056aa199fb98126b062ecbd64"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/stdlib/builtin/LICENSE_SPRINTF.txt": {
+      "bytes": 1135,
+      "sha256": "ec49d3c5a052dba6392f3e5e6d51134d102624c19afab6b3dd9ff8921d85403d"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/src/stdlib/builtin/LICENSE_TLSF.txt": {
+      "bytes": 32,
+      "sha256": "2b32f144050a1236599765ed1ca2c88d5b99e8e3364eadbb547ab0fbc4b01220"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/tests/src/test_files/fonts/noto/OFL.txt": {
+      "bytes": 4480,
+      "sha256": "1778d919f28e548adab94a9dc3cf05549124e53d204c2f4c8164617734dc1a3a"
+    },
+    "docs/release-notices/managed/lvgl__lvgl/tests/src/test_libs/rnd_unicodes/rnd_unicodes/LICENSE": {
+      "bytes": 1065,
+      "sha256": "ad4feab161c3e1f5b12ec323eb5c69688523b32f643684236af765c8931fecd1"
+    },
+    "docs/release-notices/managed/waveshare__esp32_p4_wifi6_touch_lcd_4_3/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/manifest.json": {
+      "bytes": 151251,
+      "sha256": "0349a9dc4fa323eb9e5a5418c488bc0339155c57a94c25f387badeb82e902d50"
+    },
+    "docs/release-notices/project/LICENSE": {
+      "bytes": 715,
+      "sha256": "5307fe2aeebf3d03c6cd3101fb21b9d9cd463efd521b8029f3c1409d43b3df9e"
+    },
+    "docs/release-notices/project/LICENSE-BIP32-BSD-2-CLAUSE": {
+      "bytes": 1659,
+      "sha256": "590dae39d4da41b2f4a0bdeac738bb226f42caaea050292d2024bc3f1e6ec9a2"
+    },
+    "docs/release-notices/project/LICENSE-MIT": {
+      "bytes": 1093,
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "docs/release-notices/project/LICENSE-OOGA-BOOGA": {
+      "bytes": 700,
+      "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+    },
+    "docs/release-notices/project/LICENSE-TREZOR-MIT": {
+      "bytes": 1084,
+      "sha256": "d5e3c7c62a84e80073201e2f6e5130e9e6804fa05f8ac4f8b26a13c7d3969697"
+    },
+    "docs/release-notices/project/core-spike/native/LICENSE": {
+      "bytes": 2396,
+      "sha256": "7399dfd5bb35370fd5d190296ce4738528b9b601707545c09f30795157d1aa48"
+    },
+    "docs/release-notices/project/core-spike/native/LICENSE-MIT": {
+      "bytes": 1093,
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "docs/release-notices/project/core-spike/native/LICENSE-OOGA-BOOGA": {
+      "bytes": 700,
+      "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+    },
+    "docs/release-notices/project/fixture-firmware/LICENSE-dictionary.txt": {
+      "bytes": 1122,
+      "sha256": "1565efd0ec4580bfaa96c7eeaaa9af3791baa1cc562c3bde62d0a055910b9ec7"
+    },
+    "docs/release-notices/project/fixture-firmware/app/main/assets/LICENSE-OOGA-BOOGA": {
+      "bytes": 700,
+      "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+    },
+    "docs/release-notices/project/fixture-firmware/app/main/fonts/LICENSE-Liberation.txt": {
+      "bytes": 5756,
+      "sha256": "f32df582a2aab128c07b2f7e36e7b928dc5f6bd82657b905c04f91459f9e5cf9"
+    },
+    "docs/release-notices/project/fixture-firmware/app/main/fonts/LICENSE-OFL-1.1": {
+      "bytes": 4414,
+      "sha256": "93fed46019c38bbe566b479d22148e2e8a1e85ada614accb0211c37b2c61c19b"
+    },
+    "docs/release-notices/project/fixture-firmware/coin/LICENSE": {
+      "bytes": 1094,
+      "sha256": "69554bf693be0de4b280906651f1278a9f3757b27d5b6fcb60b4ff5fafaa4e24"
+    },
+    "docs/release-notices/project/fixture-firmware/coin/LICENSE-OOGA-BOOGA": {
+      "bytes": 701,
+      "sha256": "9a73c8216b8766e0882c9f03a5aec1b61504bd86bb8744d59ec6766831456358"
+    },
+    "docs/release-notices/project/fixture-firmware/dice/LICENSE": {
+      "bytes": 1093,
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "docs/release-notices/project/fixture-firmware/dice/LICENSE-OOGA-BOOGA": {
+      "bytes": 700,
+      "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+    },
+    "docs/release-notices/project/fixture-firmware/integrated-lanes/lifehash/core/binary-notices/BSD-2-Clause-Patent.md": {
+      "bytes": 2854,
+      "sha256": "ff4648e9a492f4bbb4ad89982cd65cbf5d3f7414e4981344671fcccdd38745de"
+    },
+    "docs/release-notices/project/fixture-firmware/integrated-lanes/lifehash/core/binary-notices/SHA256-Gifford-Rusnak.txt": {
+      "bytes": 1609,
+      "sha256": "19b8de4e86f35dca825d47ced9d70600316c19472d65a1115818e4e987e17b80"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime-sources/coin-core/LICENSE": {
+      "bytes": 1094,
+      "sha256": "69554bf693be0de4b280906651f1278a9f3757b27d5b6fcb60b4ff5fafaa4e24"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime-sources/coin-core/LICENSE-OOGA-BOOGA": {
+      "bytes": 701,
+      "sha256": "9a73c8216b8766e0882c9f03a5aec1b61504bd86bb8744d59ec6766831456358"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime-sources/dice-core/LICENSE": {
+      "bytes": 1093,
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime-sources/dice-core/LICENSE-OOGA-BOOGA": {
+      "bytes": 700,
+      "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime-sources/hex-core/LICENSE": {
+      "bytes": 281,
+      "sha256": "a802642344476b2ff7ae691e94635b8f5cbd57c255a0e07fa78210d4fcae735c"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime-sources/hex-core/LICENSE-MIT": {
+      "bytes": 1093,
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime-sources/hex-core/LICENSE-OOGA-BOOGA": {
+      "bytes": 700,
+      "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime-sources/mnemonic-core/LICENSE": {
+      "bytes": 1093,
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/LICENSE": {
+      "bytes": 1093,
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/arrayvec-0.7.8/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/arrayvec-0.7.8/LICENSE-MIT": {
+      "bytes": 1071,
+      "sha256": "4da95ec4ecb65b738d470b7d762894ad9c97da93e6cbfb18b570fc2c96f4b871"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/bech32-0.11.1/LICENSE-MIT": {
+      "bytes": 1055,
+      "sha256": "9877c7b48cde1462f4e8688263aa96f3f1bd9717250718d3d2d9ebb031414fb9"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/bip39-2.2.2/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/cc-1.4.4/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/cc-1.4.4/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/find-msvc-tools-0.1.11/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/find-msvc-tools-0.1.11/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/hex-conservative-0.2.2/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/hex-conservative-1.2.0/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/proc-macro2-1.0.107/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/proc-macro2-1.0.107/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/quote-1.0.47/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/quote-1.0.47/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/secp256k1-0.29.1/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/secp256k1-sys-0.10.1/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/serde-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/serde-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/serde_core-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/serde_core-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/serde_derive-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/serde_derive-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/shlex-2.0.1/LICENSE-APACHE": {
+      "bytes": 566,
+      "sha256": "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/shlex-2.0.1/LICENSE-MIT": {
+      "bytes": 1092,
+      "sha256": "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/syn-3.0.4/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/syn-3.0.4/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/tinyvec-1.13.3/LICENSE-APACHE.md": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/tinyvec-1.13.3/LICENSE-MIT.md": {
+      "bytes": 1023,
+      "sha256": "fd80a26fbb3f644af1fa994134446702932968519797227e07a1368dea80f0bc"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/tinyvec-1.13.3/LICENSE-ZLIB.md": {
+      "bytes": 851,
+      "sha256": "84b34dd7608f7fb9b17bd588a6bf392bf7de504e2716f024a77d89f1b145a151"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/unicode-ident-1.0.24/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/unicode-ident-1.0.24/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/unicode-ident-1.0.24/LICENSE-UNICODE": {
+      "bytes": 1995,
+      "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/unicode-normalization-0.1.24/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/project/fixture-firmware/runtime/licenses/unicode-normalization-0.1.24/LICENSE-MIT": {
+      "bytes": 1071,
+      "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/LICENSE": {
+      "bytes": 275,
+      "sha256": "89041f4ce3a47f7629fea4443980b978335059142ea0664897f097249b83021f"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/LICENSE-MIT": {
+      "bytes": 1093,
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/LICENSE-OOGA-BOOGA": {
+      "bytes": 700,
+      "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/arrayvec-0.7.8/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/arrayvec-0.7.8/LICENSE-MIT": {
+      "bytes": 1071,
+      "sha256": "4da95ec4ecb65b738d470b7d762894ad9c97da93e6cbfb18b570fc2c96f4b871"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/bech32-0.11.1/LICENSE-MIT": {
+      "bytes": 1055,
+      "sha256": "9877c7b48cde1462f4e8688263aa96f3f1bd9717250718d3d2d9ebb031414fb9"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/bip39-2.2.2/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/cc-1.4.4/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/cc-1.4.4/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/find-msvc-tools-0.1.11/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/find-msvc-tools-0.1.11/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/hex-conservative-0.2.2/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/hex-conservative-1.2.0/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/proc-macro2-1.0.107/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/proc-macro2-1.0.107/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/quote-1.0.47/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/quote-1.0.47/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/secp256k1-0.29.1/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/secp256k1-sys-0.10.1/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/serde-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/serde-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/serde_core-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/serde_core-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/serde_derive-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/serde_derive-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/shlex-2.0.1/LICENSE-APACHE": {
+      "bytes": 566,
+      "sha256": "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/shlex-2.0.1/LICENSE-MIT": {
+      "bytes": 1092,
+      "sha256": "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/syn-3.0.4/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/syn-3.0.4/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/unicode-ident-1.0.24/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/unicode-ident-1.0.24/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/project/fixture-firmware/rust/licenses/unicode-ident-1.0.24/LICENSE-UNICODE": {
+      "bytes": 1995,
+      "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1"
+    },
+    "docs/release-notices/rust-toolchain/COPYRIGHT-library.html": {
+      "bytes": 425651,
+      "sha256": "4751c5f8d3ddaf1601512d691ed565444f471553c0e0293864153809b2ad8c42"
+    },
+    "docs/release-notices/rust-toolchain/LICENSE.txt": {
+      "bytes": 15078,
+      "sha256": "ab6eec6caf0fa5775e411c7a8bc6a45c4ef2956b0980b157ab74fc5cd62a928b"
+    },
+    "docs/release-notices/rust-toolchain/licenses/Apache-2.0.txt": {
+      "bytes": 10280,
+      "sha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff"
+    },
+    "docs/release-notices/rust-toolchain/licenses/BSD-2-Clause.txt": {
+      "bytes": 1267,
+      "sha256": "f32fb3b417a194167cfad068223fc975ba96c5960513a10f66a3c28720aec1df"
+    },
+    "docs/release-notices/rust-toolchain/licenses/CC-BY-SA-4.0.txt": {
+      "bytes": 20137,
+      "sha256": "23ee78c8bae49cf08ea2f0c84945c66b987ebe4520881fb51b3dad4fb43d07c2"
+    },
+    "docs/release-notices/rust-toolchain/licenses/GCC-exception-3.1.txt": {
+      "bytes": 3320,
+      "sha256": "a3966c9410ef94a1efbfa9ec04e9c1994026a70623fbf0885ce36737bfba3b54"
+    },
+    "docs/release-notices/rust-toolchain/licenses/GPL-2.0-only.txt": {
+      "bytes": 17642,
+      "sha256": "54b212ba1f97f6948fa5486239ab505dd820b02e50cbfd296b4062c8609a70af"
+    },
+    "docs/release-notices/rust-toolchain/licenses/GPL-3.0-or-later.txt": {
+      "bytes": 34795,
+      "sha256": "05315fce6c35f79b8a35454828995fa26336f235895ac64557abc028f4ffcea2"
+    },
+    "docs/release-notices/rust-toolchain/licenses/ISC.txt": {
+      "bytes": 730,
+      "sha256": "0ff61769b238634e042ab759dddfd104a8e69d091e3600ae3410e401a6164381"
+    },
+    "docs/release-notices/rust-toolchain/licenses/LLVM-exception.txt": {
+      "bytes": 919,
+      "sha256": "e34c58338bd89d43e709e226610d8f32b3e3c47f4ad9a99a8dc1d4ac7842488e"
+    },
+    "docs/release-notices/rust-toolchain/licenses/MIT.txt": {
+      "bytes": 1078,
+      "sha256": "b85dcd3e453d05982552c52b5fc9e0bdd6d23c6f8e844b984a88af32570b0cc0"
+    },
+    "docs/release-notices/rust-toolchain/licenses/NCSA.txt": {
+      "bytes": 1676,
+      "sha256": "39cb0234065c92b9e6cee3830cbb52b1aa289aa8fe9ba2e66730fec5cf05c630"
+    },
+    "docs/release-notices/rust-toolchain/licenses/OFL-1.1.txt": {
+      "bytes": 4016,
+      "sha256": "8eea8287e5876b539670cadb82e99f9a7afddec6f6730811be1daf25d2e9bcfd"
+    },
+    "docs/release-notices/rust-toolchain/licenses/Unicode-3.0.txt": {
+      "bytes": 1995,
+      "sha256": "f5062c9a188d81dfe66b56db4182dcf9e4b17c0d9b0d311a8e20b3a1b075c443"
+    },
+    "docs/release-notices/rust/arrayvec-0.7.8/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/rust/arrayvec-0.7.8/LICENSE-MIT": {
+      "bytes": 1071,
+      "sha256": "4da95ec4ecb65b738d470b7d762894ad9c97da93e6cbfb18b570fc2c96f4b871"
+    },
+    "docs/release-notices/rust/base58ck-0.1.101/CC0-1.0.txt": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/bech32-0.11.1/LICENSE-MIT": {
+      "bytes": 1055,
+      "sha256": "9877c7b48cde1462f4e8688263aa96f3f1bd9717250718d3d2d9ebb031414fb9"
+    },
+    "docs/release-notices/rust/bip39-2.2.2/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/bitcoin-0.32.11/CC0-1.0.txt": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/bitcoin-consensus-encoding-1.2.0/CC0-1.0.txt": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/bitcoin-internals-0.6.0/CC0-1.0.txt": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/bitcoin-io-0.1.101/CC0-1.0.txt": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/bitcoin-units-0.1.101/CC0-1.0.txt": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/bitcoin_hashes-0.14.101/CC0-1.0.txt": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/cc-1.4.4/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/rust/cc-1.4.4/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "docs/release-notices/rust/cc-1.4.6/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/rust/cc-1.4.6/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "docs/release-notices/rust/find-msvc-tools-0.1.11/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/rust/find-msvc-tools-0.1.11/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "docs/release-notices/rust/find-msvc-tools-0.1.12/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/rust/find-msvc-tools-0.1.12/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "docs/release-notices/rust/hex-conservative-0.2.2/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/hex-conservative-0.2.3/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/hex-conservative-1.2.0/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/hex-conservative-1.3.0/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/hex_lit-0.1.1/MITNFA.txt": {
+      "bytes": 1531,
+      "sha256": "d436716f7a05466f52443893079761c8a88f4967d0ef490fabc0a1c9ef1c3a1d"
+    },
+    "docs/release-notices/rust/proc-macro2-1.0.107/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/rust/proc-macro2-1.0.107/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/rust/quote-1.0.47/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/rust/quote-1.0.47/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/rust/secp256k1-0.29.1/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/secp256k1-sys-0.10.1/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "docs/release-notices/rust/secp256k1-sys-0.10.1/depend/secp256k1/COPYING": {
+      "bytes": 1057,
+      "sha256": "a735999c7e5649df6fcda6fb06ab97435851c392b1b93494ae8725f37441632f"
+    },
+    "docs/release-notices/rust/serde-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/rust/serde-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/rust/serde_core-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/rust/serde_core-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/rust/serde_derive-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/rust/serde_derive-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/rust/shlex-2.0.1/LICENSE-APACHE": {
+      "bytes": 566,
+      "sha256": "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583"
+    },
+    "docs/release-notices/rust/shlex-2.0.1/LICENSE-MIT": {
+      "bytes": 1092,
+      "sha256": "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1"
+    },
+    "docs/release-notices/rust/syn-3.0.4/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/rust/syn-3.0.4/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/rust/syn-3.0.5/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/rust/syn-3.0.5/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/rust/tinyvec-1.13.3/LICENSE-APACHE.md": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "docs/release-notices/rust/tinyvec-1.13.3/LICENSE-MIT.md": {
+      "bytes": 1023,
+      "sha256": "fd80a26fbb3f644af1fa994134446702932968519797227e07a1368dea80f0bc"
+    },
+    "docs/release-notices/rust/tinyvec-1.13.3/LICENSE-ZLIB.md": {
+      "bytes": 851,
+      "sha256": "84b34dd7608f7fb9b17bd588a6bf392bf7de504e2716f024a77d89f1b145a151"
+    },
+    "docs/release-notices/rust/unicode-ident-1.0.24/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "docs/release-notices/rust/unicode-ident-1.0.24/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "docs/release-notices/rust/unicode-ident-1.0.24/LICENSE-UNICODE": {
+      "bytes": 1995,
+      "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1"
+    },
+    "docs/release-notices/rust/unicode-normalization-0.1.24/COPYRIGHT": {
+      "bytes": 321,
+      "sha256": "23860c2a7b5d96b21569afedf033469bab9fe14a1b24a35068b8641c578ce24d"
+    },
+    "docs/release-notices/rust/unicode-normalization-0.1.24/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "docs/release-notices/rust/unicode-normalization-0.1.24/LICENSE-MIT": {
+      "bytes": 1071,
+      "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+    },
+    "docs/release-notices/toolchain/gcc/COPYING": {
+      "bytes": 18002,
+      "sha256": "231f7edcc7352d7734a96eef0b8030f77982678c516876fcb81e25b32d68564c"
+    },
+    "docs/release-notices/toolchain/gcc/COPYING.LIB": {
+      "bytes": 26527,
+      "sha256": "a9bdde5616ecdd1e980b44f360600ee8783b1f99b8cc83a2beb163a0a390e861"
+    },
+    "docs/release-notices/toolchain/gcc/COPYING.RUNTIME": {
+      "bytes": 3324,
+      "sha256": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74"
+    },
+    "docs/release-notices/toolchain/gcc/COPYING3": {
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    "docs/release-notices/toolchain/gcc/COPYING3.LIB": {
+      "bytes": 7639,
+      "sha256": "a853c2ffec17057872340eee242ae4d96cbf2b520ae27d903e1b2fef1a5f9d1c"
+    },
+    "docs/release-notices/toolchain/newlib/COPYING": {
+      "bytes": 18002,
+      "sha256": "231f7edcc7352d7734a96eef0b8030f77982678c516876fcb81e25b32d68564c"
+    },
+    "docs/release-notices/toolchain/newlib/COPYING.LIB": {
+      "bytes": 26527,
+      "sha256": "a9bdde5616ecdd1e980b44f360600ee8783b1f99b8cc83a2beb163a0a390e861"
+    },
+    "docs/release-notices/toolchain/newlib/COPYING.LIBGLOSS": {
+      "bytes": 23586,
+      "sha256": "f3b7f3e4426b1fa6f60198dae7adfedd94b77b28db2d108adc0253575011e0ff"
+    },
+    "docs/release-notices/toolchain/newlib/COPYING.NEWLIB": {
+      "bytes": 63318,
+      "sha256": "422aa40293093fb54fc66e692a0d68fd0b24ed5602e5d1d33ad05ba3909057e9"
+    },
+    "docs/release-notices/toolchain/newlib/COPYING3": {
+      "bytes": 35147,
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    "docs/release-notices/toolchain/newlib/COPYING3.LIB": {
+      "bytes": 7639,
+      "sha256": "a853c2ffec17057872340eee242ae4d96cbf2b520ae27d903e1b2fef1a5f9d1c"
+    },
+    "docs/retention-host/README.md": {
+      "bytes": 4024,
+      "sha256": "3fd71fd3f7cc47dc3af9e108c521904237a9ac35af90899ab11c8c8b1dcd7811"
+    },
+    "docs/retention-host/documentation-successors.json": {
+      "bytes": 4292,
+      "sha256": "d05977f93afbbf2d65d68e0303d99af87b1c8b7c2ac1b5dc2212c427aed1d77b"
+    },
+    "docs/retention-host/historical.json": {
+      "bytes": 53146,
+      "sha256": "d6c299b13ac854425abafc5e77cdc85ab53b5832b2ebe53fe88ef696dfea083e"
+    },
+    "docs/retention-host/inputs/fixture-firmware/app/main/CMakeLists.txt": {
+      "bytes": 1792,
+      "sha256": "45c7b537e4b546504c8f58b1b9813cf2ee7ec1a98f564ba1bc09cbd20bb14b59"
+    },
+    "docs/retention-host/inputs/fixture-firmware/app/main/gui.c": {
+      "bytes": 37267,
+      "sha256": "98db499ddfd502f402016de46968857edf8e388f266ed821e647bbf35af8dd61"
+    },
+    "docs/retention-host/inputs/fixture-firmware/app/main/main.c": {
+      "bytes": 8885,
+      "sha256": "f666f06524a10ff67e1d1b5bfbd7f43701950e5e42f07eefd8e085bbc0e81cec"
+    },
+    "docs/retention-host/inputs/fixture-firmware/app/main/passphrase_gui.inc": {
+      "bytes": 19522,
+      "sha256": "7586a9fbd5838c653606f7b2579f9535e822db6356993046fe4e21b1b75e9573"
+    },
+    "docs/retention-host/inputs/fixture-firmware/app/main/passphrase_integration.inc": {
+      "bytes": 11780,
+      "sha256": "27af1da5fc572c46eec944ba9129a9f7fcffd1a1d237ba13962a1f09fe1684c9"
+    },
+    "docs/retention-host/inputs/fixture-firmware/runtime-sources/hex-core/src/lib.rs": {
+      "bytes": 3252,
+      "sha256": "9c003045fbd8b036bd6a550e06ec129230b49b39dac234751c5ffa304dcf90a6"
+    },
+    "docs/retention-host/inputs/fixture-firmware/tests/gui_host.c": {
+      "bytes": 29259,
+      "sha256": "991792ef78011558a88b474a25ec75f6a9b09cf3f6ebc074344d48c32b695aa2"
+    },
+    "docs/retention-host/inputs/fixture-firmware/tests/passphrase_gui_tests.inc": {
+      "bytes": 20207,
+      "sha256": "5c90bb34943abe9c8a59a7b53aa28df7c09bf3ca0558532f759a8ecdb805c074"
+    },
+    "docs/review-repair-successors.json": {
+      "bytes": 1683,
+      "sha256": "7b027a35dbed6e6324229e98369ba4e96a293638213b2235c6b27b28fa7afbb1"
+    },
+    "docs/ui-repair-evidence-exclusions.json": {
+      "bytes": 1616,
+      "sha256": "f3f2ed86953cb49f0e5f4b07b714ec6e1ead962c95a8c78c394ffc4a4b6a210d"
+    },
+    "docs/ui-repair-successors.json": {
+      "bytes": 5695,
+      "sha256": "5770532b54d8c6e9f3cc43515158c9a98b4e3d06254c722e82ffe0f550141513"
+    },
+    "docs/words-import-manifest.json": {
+      "bytes": 2749,
+      "sha256": "3cb686840b5a8805afd80ddd3fb3d3520bdba90e9ec3ee2087a0facffd20b091"
+    },
+    "evidence/adapter-tests.txt": {
+      "bytes": 3045,
+      "sha256": "f2ac07b4da22a463f1aa33476de94abf0ab54526c314aa0957928a83bf3f0f8f"
+    },
+    "evidence/app-to-wire.json": {
+      "bytes": 2900,
+      "sha256": "8ef66dcefd98f889bca2e48ff95cb6031938fa783c1c541e79cc4966e4f21a50"
+    },
+    "evidence/chromium.json": {
+      "bytes": 9316,
+      "sha256": "ea13d8787c83fd3b35d0e25880d0edf416d4369f837f86561d86ff9a751136e0"
+    },
+    "evidence/closeout-regressions.json": {
+      "bytes": 4618,
+      "sha256": "95ed91b411fd279f4f6ac40daa5a7bc95e614e11edda4e1e98a96210061eb0df"
+    },
+    "evidence/host-regression.json": {
+      "bytes": 976,
+      "sha256": "ff1fa82c8fbb72439f7537a26d45e2e094dadbf99f1a2dd65886fb392ad2e08d"
+    },
+    "evidence/keyboard-accessibility.json": {
+      "bytes": 1631,
+      "sha256": "f15b61e86ec7f7d7b6f8cec25ad0c5c086b783f213e29e89c7fa332fcd43bf89"
+    },
+    "evidence/node-tests.txt": {
+      "bytes": 4282,
+      "sha256": "2c2be03b86ee1fabb0b587d37a24c0d4335ccbe66265b8a91d164d572e5240e4"
+    },
+    "evidence/physical-acceptance.md": {
+      "bytes": 2196,
+      "sha256": "938e198e47612a2aa5243284a3f5e92392f29cce87075c41fca1945c03e45e70"
+    },
+    "evidence/release-readiness.json": {
+      "bytes": 913,
+      "sha256": "2c1cfef9190c7d9c8b506df2af4b5714a186bed52c421b5184e62b4de1de31c8"
+    },
+    "evidence/remaining-gates.json": {
+      "bytes": 8007,
+      "sha256": "263722d929116e7f5a9e18d92ecb9b50b0a562b22025f418d9de24ab5c95fafb"
+    },
+    "evidence/review-closeout.md": {
+      "bytes": 12839,
+      "sha256": "0fd084080cac0fe8a2990f9960a19e568a13c27fa3bc00625dbd2fd6e9bc5be3"
+    },
+    "evidence/source-integrity.json": {
+      "bytes": 841,
+      "sha256": "9d896c6a21f1db9b5d361a8b508281f7bebdf2536187640b1f8e0c060aa85619"
+    },
+    "evidence/speed-ui.json": {
+      "bytes": 1596,
+      "sha256": "348890ca7ce25c5f441e2ac6fb8a0f59b7af0bc959f7fb379f091f41ca7c5231"
+    },
+    "fixture-firmware/LICENSE-dictionary.txt": {
+      "bytes": 1122,
+      "sha256": "1565efd0ec4580bfaa96c7eeaaa9af3791baa1cc562c3bde62d0a055910b9ec7"
+    },
+    "fixture-firmware/app/CMakeLists.txt": {
+      "bytes": 1033,
+      "sha256": "1a222a48ad4f90fc94876b8d8162028b167aa9756ff72f20766ac831dd791484"
+    },
+    "fixture-firmware/app/dependencies.lock": {
+      "bytes": 8834,
+      "sha256": "e91429e4785bc8fe996f237bfbb72ae46ecfd9721ba7e1e9b755c6f6737426b7"
+    },
+    "fixture-firmware/app/main/.hermes-tmp.DR59MC": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "fixture-firmware/app/main/.hermes-tmp.mCnUKi": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "fixture-firmware/app/main/.hermes-tmp.yKdlX2": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "fixture-firmware/app/main/CMakeLists.txt": {
+      "bytes": 2141,
+      "sha256": "a84e1d01e58438ccbe885cfa131380b61904a374ef25036b9c3fefd1edc1554f"
+    },
+    "fixture-firmware/app/main/all_features_application.cpp": {
+      "bytes": 10458,
+      "sha256": "3427967d8de7bb00967edb82efae8d232e03e4fbdba7ac3305c2c0185276b7c6"
+    },
+    "fixture-firmware/app/main/all_features_application.h": {
+      "bytes": 3380,
+      "sha256": "d14f65b9284dd4b0104c280efb26284cd9ea8c786352fe2c9777df90e98ac68a"
+    },
+    "fixture-firmware/app/main/all_features_dispatch.cpp": {
+      "bytes": 6859,
+      "sha256": "c5317cf1062aef527fd0414629ac4109129a1ed7fef316c81c1139bc48e9a5a9"
+    },
+    "fixture-firmware/app/main/all_features_dispatch.h": {
+      "bytes": 3134,
+      "sha256": "b5a26759acb690e51afae175e4916c5abc73e67532ee79313c502680c2171176"
+    },
+    "fixture-firmware/app/main/assets/LICENSE-OOGA-BOOGA": {
+      "bytes": 700,
+      "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+    },
+    "fixture-firmware/app/main/assets/PROVENANCE.md": {
+      "bytes": 2788,
+      "sha256": "5c1775e444c9788d7fe39a07024ef28e46824994bf32ea9d5ee0ee9d52015363"
+    },
+    "fixture-firmware/app/main/assets/logo-dark-180x270.png": {
+      "bytes": 11188,
+      "sha256": "79eeecc898c04f313bd98bce11e90aab9fd3a1ed3a1360bb81db4cc8a8553842"
+    },
+    "fixture-firmware/app/main/assets/logo-provenance.json": {
+      "bytes": 785,
+      "sha256": "af210b5280e0af867adddce474cc866813d534503283471f017066cc12286e02"
+    },
+    "fixture-firmware/app/main/assets/logo_rgb565a8.inc": {
+      "bytes": 741497,
+      "sha256": "479969199140989cacba1d2231b249f5de0efcede7e3ce25046f087bc27d5f28"
+    },
+    "fixture-firmware/app/main/assets/site-logo-dark.svg": {
+      "bytes": 5160,
+      "sha256": "f269bcda164493e546982875a6a4867dc88605c1937145157c31715bc81408f9"
+    },
+    "fixture-firmware/app/main/bip39_dictionary.inc": {
+      "bytes": 21528,
+      "sha256": "166c98e799bdcef576b608411b8b47f20c0bf12afe1bc2692f40d54ef2d3b100"
+    },
+    "fixture-firmware/app/main/coin_core.h": {
+      "bytes": 1489,
+      "sha256": "013896554504d7bf30cf559d49a47569d216fb7edab10acf1dfaf2de10654dba"
+    },
+    "fixture-firmware/app/main/compute.h": {
+      "bytes": 4631,
+      "sha256": "14f481663d118a41de4b25dedcaecc21a809e74855daf01d561f15dea0400842"
+    },
+    "fixture-firmware/app/main/dice_core.h": {
+      "bytes": 1851,
+      "sha256": "e64c66285cb7d481d3b636538bd5575356b8ad7f81f7f52fdfb1250dcd1a726e"
+    },
+    "fixture-firmware/app/main/education_content.inc": {
+      "bytes": 15865,
+      "sha256": "523ac951291e712add9e7c7c05238a1c4177bc811a6dc3afc33e8c9267aa17de"
+    },
+    "fixture-firmware/app/main/extra_dice_native.c": {
+      "bytes": 19934,
+      "sha256": "b6e5b704c413ef242b72e4624b68f945ac27d9ff534079e650a086ef6e0ab8be"
+    },
+    "fixture-firmware/app/main/extra_dice_native.h": {
+      "bytes": 2267,
+      "sha256": "c1f7fa7a6844a4f87ca4a01829e7a3effafbd4cb38eb3bb84579f04d83f22716"
+    },
+    "fixture-firmware/app/main/fingerprint_view.c": {
+      "bytes": 3558,
+      "sha256": "0a851637ef317b4b7ace7f7ac46699f2029ca3053c2290e2a70fe3da30ca2cda"
+    },
+    "fixture-firmware/app/main/fingerprint_view.h": {
+      "bytes": 799,
+      "sha256": "2c2039d3bee92f5b4687d757dc5e8a49629c2d8160da8e195197fcbadc00e032"
+    },
+    "fixture-firmware/app/main/fixture_diagnostics.c": {
+      "bytes": 2912,
+      "sha256": "ece3727dd890ff1c02cfda24e5b97e63676d7b4d7544caf980c2767c5d0dbe4d"
+    },
+    "fixture-firmware/app/main/fonts/LICENSE-Liberation.txt": {
+      "bytes": 5756,
+      "sha256": "f32df582a2aab128c07b2f7e36e7b928dc5f6bd82657b905c04f91459f9e5cf9"
+    },
+    "fixture-firmware/app/main/fonts/LICENSE-OFL-1.1": {
+      "bytes": 4414,
+      "sha256": "93fed46019c38bbe566b479d22148e2e8a1e85ada614accb0211c37b2c61c19b"
+    },
+    "fixture-firmware/app/main/fonts/PROVENANCE.md": {
+      "bytes": 2013,
+      "sha256": "c8f5a253c56ecd13ae9d8ba94822934122f05910ddc0965da6b4f984ca2c7845"
+    },
+    "fixture-firmware/app/main/fonts/el_mono_16.c": {
+      "bytes": 37480,
+      "sha256": "7cc94bfa12e3c61ae1b7416e904266b49cdc097df3aebcd870c87a39bb05a770"
+    },
+    "fixture-firmware/app/main/fonts/el_mono_20.c": {
+      "bytes": 48701,
+      "sha256": "ec514f609212da505acd8fb984d0849aee8e8f60a5a620a4069cc14fb57354fb"
+    },
+    "fixture-firmware/app/main/fonts/el_sans_14.c": {
+      "bytes": 33887,
+      "sha256": "a46195ff785fc32b6f4d47f7e2ea8ac9e253658d03dd09b85b894ee11a4fc05a"
+    },
+    "fixture-firmware/app/main/fonts/el_sans_16.c": {
+      "bytes": 39709,
+      "sha256": "29b052a98f3ef8fe110624b6006def9f63de3ea5f59fc3ba78c5884962d2acce"
+    },
+    "fixture-firmware/app/main/fonts/el_serif_24.c": {
+      "bytes": 63531,
+      "sha256": "c5255e48326ff045b77b658c44b465264c0da441e9573cab827140abb57f64bb"
+    },
+    "fixture-firmware/app/main/gui.c": {
+      "bytes": 37312,
+      "sha256": "572bba9eeca5fb1de691acaa494b57207690f75f4cec55dfb38c87b033035ddb"
+    },
+    "fixture-firmware/app/main/gui.h": {
+      "bytes": 2550,
+      "sha256": "5cced730fbdc2598d00bb0df6d159a1d24d1342ff80c3c7e5dc898c0c88af839"
+    },
+    "fixture-firmware/app/main/gui08_editor.c": {
+      "bytes": 8402,
+      "sha256": "69409b13d43fe32f20a9531cd2b7869b505daa2bc44ba961e35fc62ce4ed374e"
+    },
+    "fixture-firmware/app/main/gui08_editor.h": {
+      "bytes": 3049,
+      "sha256": "94df3e08c31a1cb403ededfc42644bc9f40fb354131fc267d7e1a42cbacb4019"
+    },
+    "fixture-firmware/app/main/gui08_native.c": {
+      "bytes": 16129,
+      "sha256": "89863dbf122e8b4c336aa5347ce9aaa987a1ca9019c6422c0069b2edc5f4f5d3"
+    },
+    "fixture-firmware/app/main/gui08_native.h": {
+      "bytes": 1909,
+      "sha256": "21914043898d5be844cd2adde455d56523363fdc45329af944e502420b28b276"
+    },
+    "fixture-firmware/app/main/hex_core.h": {
+      "bytes": 1687,
+      "sha256": "b254bc9ff090ee1f882e227645db903613f20e43bb07c41c06d0b80f79dd5fc2"
+    },
+    "fixture-firmware/app/main/idf_component.yml": {
+      "bytes": 176,
+      "sha256": "059af85af5638e62ef23fa2da24d07aa2665d605b19ced0f15269aef1815e520"
+    },
+    "fixture-firmware/app/main/input_explanations.inc": {
+      "bytes": 2642,
+      "sha256": "220505e79416b87b862713e2935b506e771d0984a2b3d2e1711056a21474b6cb"
+    },
+    "fixture-firmware/app/main/main.c": {
+      "bytes": 8709,
+      "sha256": "3cfff0a119fb512fdf9aed351bd8c8fd6d396bdf49001dbb5c7e955fffdf1837"
+    },
+    "fixture-firmware/app/main/mnemonic_core.h": {
+      "bytes": 1338,
+      "sha256": "687b2c9c41e5b55c139118e94ac1e6a22c914beb523715cfa3fa630796b726fb"
+    },
+    "fixture-firmware/app/main/mnemonic_editor.inc": {
+      "bytes": 23105,
+      "sha256": "30e34b2abe53d4ab9b257549727f12170356f45b2cedb6bca473a35f797eba0f"
+    },
+    "fixture-firmware/app/main/mnemonic_gui.inc": {
+      "bytes": 1584,
+      "sha256": "e69687f578d0aa5526adc2ee2174eed0204cb68c45e729b885d5ed798d175c20"
+    },
+    "fixture-firmware/app/main/native_theme.h": {
+      "bytes": 2276,
+      "sha256": "33f38020b2ab5368959a614f17b8d2d5a4138377f07d9a9e8812d27c80d5bb5a"
+    },
+    "fixture-firmware/app/main/navigation.inc": {
+      "bytes": 13583,
+      "sha256": "582a7607275d905af0d79b465089b2b0859fd627ab8987b1ac8d1f0a14764d74"
+    },
+    "fixture-firmware/app/main/passphrase_core.h": {
+      "bytes": 2140,
+      "sha256": "182ad90aa34a97643647ce136d3aefac13e56b91d4af3bd1ae7ebdb8cdb2aa2e"
+    },
+    "fixture-firmware/app/main/passphrase_dispatch.h": {
+      "bytes": 6955,
+      "sha256": "ab70836405d11eb8c116f038e8cd30bdc8e8812da92898cc004a6f66ec9450c2"
+    },
+    "fixture-firmware/app/main/passphrase_gui.h": {
+      "bytes": 6878,
+      "sha256": "5fd24ad0861e713655a68823cd906ca026473f622ed0f578d77c8a56f4220cf8"
+    },
+    "fixture-firmware/app/main/passphrase_gui.inc": {
+      "bytes": 20207,
+      "sha256": "4765aebd92d768128f727a7a0b6e0162d788bf3fdee80496c999de7106ca7cc5"
+    },
+    "fixture-firmware/app/main/passphrase_integration.inc": {
+      "bytes": 13546,
+      "sha256": "df6c40d2aae187928ee6065efd3aef5227538f3ae0388ad54dceecbd3067a11b"
+    },
+    "fixture-firmware/app/main/saver.inc": {
+      "bytes": 6669,
+      "sha256": "91dc5a3b97f6f98efc380f078b9ebcf001c454a7a94b7199cb56c7fc2e65feee"
+    },
+    "fixture-firmware/app/main/seed_native.c": {
+      "bytes": 21823,
+      "sha256": "ba7164604ee821a4bff08a18581adedd92adfdebba02681ee58f5fab8e044665"
+    },
+    "fixture-firmware/app/main/seed_native.h": {
+      "bytes": 2014,
+      "sha256": "9c079a6eefd2b79124baf537ff50bb156bf48ee4a0f597856d371ab386507762"
+    },
+    "fixture-firmware/app/partitions.csv": {
+      "bytes": 324,
+      "sha256": "2904f86f15da00e5abb6111c047eedcd390089b3abaef82b8272e299b904f0ec"
+    },
+    "fixture-firmware/app/rev1_3.defaults": {
+      "bytes": 341,
+      "sha256": "991da35b2e5bc3e6792f24a10259f43564b9800288c2a02149dbb111cf9d8199"
+    },
+    "fixture-firmware/app/sdkconfig": {
+      "bytes": 94177,
+      "sha256": "18877899bc9d81781ea7225d0380001e48f86e9ea8ea9caacd482816dafba826"
+    },
+    "fixture-firmware/app/sdkconfig.baseline": {
+      "bytes": 94177,
+      "sha256": "18877899bc9d81781ea7225d0380001e48f86e9ea8ea9caacd482816dafba826"
+    },
+    "fixture-firmware/app/sdkconfig.defaults": {
+      "bytes": 1728,
+      "sha256": "36ec9a128b6573d7d7c8e454bc5bda5d2b85838f1661d1a1c4e16471e01e13db"
+    },
+    "fixture-firmware/coin/Cargo.lock": {
+      "bytes": 6166,
+      "sha256": "29ceccc9b55a9da13f25210d9c8a9252aba7ce68cd5e1f412041a3507b58a06f"
+    },
+    "fixture-firmware/coin/Cargo.toml": {
+      "bytes": 317,
+      "sha256": "b03e86df0a31f31e39bfeb0fb7654f7ec262a2f7cb82aab1cad58d3e5c23f37a"
+    },
+    "fixture-firmware/coin/LICENSE": {
+      "bytes": 1094,
+      "sha256": "69554bf693be0de4b280906651f1278a9f3757b27d5b6fcb60b4ff5fafaa4e24"
+    },
+    "fixture-firmware/coin/LICENSE-OOGA-BOOGA": {
+      "bytes": 701,
+      "sha256": "9a73c8216b8766e0882c9f03a5aec1b61504bd86bb8744d59ec6766831456358"
+    },
+    "fixture-firmware/coin/coin_core.h": {
+      "bytes": 1489,
+      "sha256": "013896554504d7bf30cf559d49a47569d216fb7edab10acf1dfaf2de10654dba"
+    },
+    "fixture-firmware/coin/host-test.c": {
+      "bytes": 622,
+      "sha256": "00db47c720098d3863f5313c9c77b76e0c7090180ff0304ca6782e1d7c8cd0b5"
+    },
+    "fixture-firmware/coin/src/lib.rs": {
+      "bytes": 1313,
+      "sha256": "16b0f7daacf55ff53679c262b88fb1463ec2137086ad8f94a7974618a740c165"
+    },
+    "fixture-firmware/coin/tests/adapter.rs": {
+      "bytes": 312,
+      "sha256": "d851e379a267b1d70bf437cb7f53c6796a81be74381a211b64a53164dc39b9c6"
+    },
+    "fixture-firmware/coin/tests/bounds.rs": {
+      "bytes": 1687,
+      "sha256": "2145367037c9ad60bd61975d52c71a374302ac92f6f6e691de7c099430349efa"
+    },
+    "fixture-firmware/coin/tests/golden.rs": {
+      "bytes": 1063,
+      "sha256": "c938aa7da93110ed264f07c9478b94185e4c87dc779fa27d6888f6949091978f"
+    },
+    "fixture-firmware/coin/tests/inherited.rs": {
+      "bytes": 135,
+      "sha256": "3d074bc1e4ec9cc927b0b41a62e2ece093dd91ef4d4e5fa30219fdaf176b9b1b"
+    },
+    "fixture-firmware/coin/upstream-expanded.json": {
+      "bytes": 82216,
+      "sha256": "6483030af020ce693d7dc7cd4671adb01bad30ab99a7eddf26fab6a7cef18bbb"
+    },
+    "fixture-firmware/coin/vectors/raw-binary.json": {
+      "bytes": 37576,
+      "sha256": "48e9f406b7ea64688d565f8e18b0691d4905cc66b9e1d3d4952fd3ceab4c86aa"
+    },
+    "fixture-firmware/coin/vectors/raw-binary.tsv": {
+      "bytes": 8093,
+      "sha256": "75bd07cfc766091210a7a7c8dd72f7132b50ef1ad645cf36fe7400658784a431"
+    },
+    "fixture-firmware/coin/verify-fixtures.py": {
+      "bytes": 1032,
+      "sha256": "eaa700bbcada348d103d60b24c31276e1638e5c040fa4e1f3fcc393d6ec9885e"
+    },
+    "fixture-firmware/dice/Cargo.lock": {
+      "bytes": 6184,
+      "sha256": "870afcf761cc2ae30339189e610afc3bd1630e59978e23cf1b4bb874a4f03762"
+    },
+    "fixture-firmware/dice/Cargo.toml": {
+      "bytes": 423,
+      "sha256": "0e73ebad13e23177a4b94f37872bf60067eb2cde4e8d3ca466d2c2bc2557ee54"
+    },
+    "fixture-firmware/dice/LICENSE": {
+      "bytes": 1093,
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "fixture-firmware/dice/LICENSE-OOGA-BOOGA": {
+      "bytes": 700,
+      "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+    },
+    "fixture-firmware/dice/dice_core.h": {
+      "bytes": 1851,
+      "sha256": "e64c66285cb7d481d3b636538bd5575356b8ad7f81f7f52fdfb1250dcd1a726e"
+    },
+    "fixture-firmware/dice/host-test.c": {
+      "bytes": 786,
+      "sha256": "f60232a01b675467cd6ee15338f4b694136b27c45d2823ca6691566646143644"
+    },
+    "fixture-firmware/dice/src/lib.rs": {
+      "bytes": 2058,
+      "sha256": "97c62eada4c985b126c1a052ec73def6b62e782ed432e2ea2799f085a74fb03b"
+    },
+    "fixture-firmware/dice/tests/adapter.rs": {
+      "bytes": 286,
+      "sha256": "b8683013445c6e7c49c8b8dd08680c3739c90429de6e43db6e32cb8a9b3d0d62"
+    },
+    "fixture-firmware/dice/tests/bounds.rs": {
+      "bytes": 2030,
+      "sha256": "3bc93b194f45dff7fbe2ad396309218864137cbe45de978b848c99196d149efe"
+    },
+    "fixture-firmware/dice/tests/golden.rs": {
+      "bytes": 1400,
+      "sha256": "976ff82e8885be4dd197dad3458c44cd528d0db4319736d0d4e765bfbb42bdda"
+    },
+    "fixture-firmware/dice/vectors/dice.tsv": {
+      "bytes": 4833,
+      "sha256": "aee266459359f20e22f2637a46ab2ac33b8dba35db135485d8c11eb119a3fd1e"
+    },
+    "fixture-firmware/dice/vectors/upstream-dice.json": {
+      "bytes": 31319,
+      "sha256": "ec3edb6c7545c05f727459821463485742d347d4d68ee8e09b0b03e0160ab8c7"
+    },
+    "fixture-firmware/host-test.c": {
+      "bytes": 375,
+      "sha256": "6c1ead0f9847cc5560527d9b73fe26e34c95c7060c583bfb4a80cc4ec0817408"
+    },
+    "fixture-firmware/input-methods/extra-dice/extra_dice.c": {
+      "bytes": 4145,
+      "sha256": "d24a2eaff66816994de66353bd788068de0a5415905f64acdbeb445a921fe7a9"
+    },
+    "fixture-firmware/input-methods/extra-dice/extra_dice.h": {
+      "bytes": 1486,
+      "sha256": "889a2a83b2cbc0df6def3f987a3651db9edf50e40ebb2b841667604be7e3b831"
+    },
+    "fixture-firmware/integrated-lanes/bases/adapter-contract/bases_adapter_contract.c": {
+      "bytes": 1086,
+      "sha256": "0193fd08f929cae1b3d4e4ea552f0da6aea4d837cad0b3041135fc4940e095ce"
+    },
+    "fixture-firmware/integrated-lanes/bases/adapter-contract/bases_adapter_contract.h": {
+      "bytes": 1420,
+      "sha256": "9beaf4082851098f9f47b10ed26275430b2156930d58f7187a1993c9c58af2e4"
+    },
+    "fixture-firmware/integrated-lanes/bases/core/number_bases.c": {
+      "bytes": 3478,
+      "sha256": "a9607b27414b5d5fefe9e8f62bd8ce2a2e71f18d94ce0a4400c496d9374f8046"
+    },
+    "fixture-firmware/integrated-lanes/bases/core/number_bases.h": {
+      "bytes": 908,
+      "sha256": "aabb4187eedf2f961fa39f10667d190289408ac2c746be4d9bc8a4918b7857cd"
+    },
+    "fixture-firmware/integrated-lanes/bases/core/number_bases_ref.py": {
+      "bytes": 2242,
+      "sha256": "749703719d0f1944a0dafdb2e91050d9b7fa92dd32290145fddf8daf78bab330"
+    },
+    "fixture-firmware/integrated-lanes/bases/core/run-c-tests.sh": {
+      "bytes": 155,
+      "sha256": "835bbdf8ddf9a7dd656adae84e4058ac3588ed2386a368129a9bfa57f4e2022f"
+    },
+    "fixture-firmware/integrated-lanes/bases/core/test_metadata_alias.c": {
+      "bytes": 947,
+      "sha256": "5be0cf0c06f55b576199d1a754468c775029dbffbbeddc68c1c8419c3bfc3dee"
+    },
+    "fixture-firmware/integrated-lanes/bases/core/test_number_bases.c": {
+      "bytes": 1197,
+      "sha256": "c7408c5906c6f46b9574f88fbdb48595cb9d0cd7c1a99651016f7d825ac25a85"
+    },
+    "fixture-firmware/integrated-lanes/bases/core/test_reference.py": {
+      "bytes": 1947,
+      "sha256": "9cd5503a390432a893e646fd2a0859d682354aae6a665296db0eb3742e04c977"
+    },
+    "fixture-firmware/integrated-lanes/bases/core/test_upstream_slice.mjs": {
+      "bytes": 1899,
+      "sha256": "e2b8fbbfc3580c75e8205f65817a21f98041db01a1fdc74260b6f3464d2dccfc"
+    },
+    "fixture-firmware/integrated-lanes/bases/target-adapter/bases_target.c": {
+      "bytes": 1883,
+      "sha256": "c3e1e731bcfc39336bde16befb47b2ed1c31fb1b8da264534298897e2c2c2cc1"
+    },
+    "fixture-firmware/integrated-lanes/bases/target-adapter/bases_target.h": {
+      "bytes": 609,
+      "sha256": "13e049d556d8047badd9c1e2af910124ae5661a05a80d0f54bb904dcead74179"
+    },
+    "fixture-firmware/integrated-lanes/extra-dice/target-adapter/extra_dice_target.c": {
+      "bytes": 3800,
+      "sha256": "b17f551bfc4b59628afc7a12c90f9959dbbe586376467727c6e8b51e5d4695c7"
+    },
+    "fixture-firmware/integrated-lanes/extra-dice/target-adapter/extra_dice_target.h": {
+      "bytes": 617,
+      "sha256": "7341adebf69b883e2040d51fa76b53325072c73ed679cd525c5fcd7af2023699"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/ADAPTATION.md": {
+      "bytes": 1337,
+      "sha256": "7a63bb0ba3bedcc1335631c124a53e859619415ddbd010e933a5d76ac6167be4"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/CMakeLists.txt": {
+      "bytes": 2238,
+      "sha256": "60a97ef2430c2210412e52eccf30320490629b2d49e0d4a6ce75d9925616b5c1"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/ORIGINAL-SOURCE-TEST-SHA256.txt": {
+      "bytes": 6537,
+      "sha256": "e28e081189e5ad6a1120ecb1c2284ab9200566f9d5926dce628b87a4ddc6d11b"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/ORIGINAL-VENDOR-SHA256.txt": {
+      "bytes": 4089,
+      "sha256": "95eeac243ca79a3179fd1911c6e0e5b00be55ffc1e8e4596eec6f98f0ca10bab"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/PROVENANCE.md": {
+      "bytes": 926,
+      "sha256": "324cfafa820ace2ab6ce4a2b5eaaa6dff31cea749418af900b3b8f01ae8b60c3"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/README.md": {
+      "bytes": 1651,
+      "sha256": "e5b27ad6a9c977ed28e33b7a6de0db94416d03dcd0569e1dbe55bd6381fa4ce5"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/VENDOR-SHA256.txt": {
+      "bytes": 4034,
+      "sha256": "dbe3bfd2c6d78871817a58661399b0f70fac33e0f80250b74de6ff40babd1134"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/binary-notices/BSD-2-Clause-Patent.md": {
+      "bytes": 2854,
+      "sha256": "ff4648e9a492f4bbb4ad89982cd65cbf5d3f7414e4981344671fcccdd38745de"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/binary-notices/SHA256-Gifford-Rusnak.txt": {
+      "bytes": 1609,
+      "sha256": "19b8de4e86f35dca825d47ced9d70600316c19472d65a1115818e4e987e17b80"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/include/lifehash_fingerprint.h": {
+      "bytes": 1373,
+      "sha256": "b6ce154db8c4f05d7837d40f5586a23cdc4315467a86f73cd2aec72ff7d4305c"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/licenses/BSD-2-Clause-Patent.md": {
+      "bytes": 2854,
+      "sha256": "ff4648e9a492f4bbb4ad89982cd65cbf5d3f7414e4981344671fcccdd38745de"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/measure.py": {
+      "bytes": 839,
+      "sha256": "3d584f05f345d16783e41bf9be92de8cc24bf04e0ca82bc713333f4ebf359b94"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/run-tests.sh": {
+      "bytes": 1144,
+      "sha256": "b5d60fde9d607be1c8d2a5e6e9a089b2b09656ae20cc2548a95cf7492d13f089"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/src/lifehash_fingerprint.cpp": {
+      "bytes": 2035,
+      "sha256": "0f3b7b2e4cb518fa2ccbdd368fa9071e34fc259eccfd2468e3e7007833d051f3"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/tests/test_lifehash.cpp": {
+      "bytes": 8196,
+      "sha256": "e880cca765e12d61cf2650fc0de2c9a7b0ad7b163b15ae328da060f7ceaa69fb"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vectors/FINGERPRINT-VECTORS.md": {
+      "bytes": 1302,
+      "sha256": "11e0962a14dc5799b9ca76701a156e438fb0825519ef0851d504e9d19e37e7e5"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vectors/upstream-test-vectors-format.md": {
+      "bytes": 2435,
+      "sha256": "94da189d1e6303ea500a8636c63c0d3e11af14d6f38009fa060f3623de55edea"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vectors/upstream-test-vectors.json": {
+      "bytes": 808217,
+      "sha256": "9ab0ec42afaa71e0a4a9540ef8e7fd34704a14bd4e27017f5c3162a9e06d923c"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/bit-aggregator.cpp": {
+      "bytes": 343,
+      "sha256": "08a72b98a9b561e425e3b948f3f890c8a81d55a8b971a6dedb51a9ec90af3ad5"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/bit-aggregator.hpp": {
+      "bytes": 398,
+      "sha256": "b38b57e05aab64b2ffddecbe9a984066420b8ce91bbe3e2618727322b98087ac"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/bit-enumerator.cpp": {
+      "bytes": 1256,
+      "sha256": "46404034b242da7dc829fa2a37e52a8669c69eea066bb627acaf2b794d65c1db"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/bit-enumerator.hpp": {
+      "bytes": 699,
+      "sha256": "8385d3fb560f792015db7e74093086ff467da666b61c0dd2f6bcb36f73cb5308"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/cell-grid.cpp": {
+      "bytes": 614,
+      "sha256": "dc9d8fa0c92961833c857853b92888ace46ee7cac36bb27c2a7440def796c292"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/cell-grid.hpp": {
+      "bytes": 2030,
+      "sha256": "e0a93d270ea5c852b233de222b2f2185456b96e220dc00fd9404169080d1279c"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/change-grid.hpp": {
+      "bytes": 738,
+      "sha256": "b10c499945017e2a94c73f2d739c1a22d964c614fb68a2988f8e91ea138f3b3d"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/color-func.cpp": {
+      "bytes": 1298,
+      "sha256": "86a79ebe83234106e58e2d42ab764f7ca99e4b2e55e6d1b55dbce8aa87d4d209"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/color-func.hpp": {
+      "bytes": 665,
+      "sha256": "15dd3e0b828305531ce07114a7a10220e70f2a288d6b48864fa184cb2725f6d4"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/color-grid.cpp": {
+      "bytes": 2020,
+      "sha256": "05ca94c0f02ef7b1e4ec0d83175fa39a53de8b5243d310be9d70a5cc9bd7f484"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/color-grid.hpp": {
+      "bytes": 1061,
+      "sha256": "9d3661deffbc4dae51b3d70968f0a85d00a655b3394f86523d42547a3d0de5ae"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/color.cpp": {
+      "bytes": 1294,
+      "sha256": "ef13355fda365bc7e60449f8f0f824f8ca5f748163c21da65d09e968dedee953"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/color.hpp": {
+      "bytes": 904,
+      "sha256": "25c18a4e04acd2e05faf2749b454ef9eb4d86cc4e3bf77e4e1b2a82be772245f"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/data.hpp": {
+      "bytes": 241,
+      "sha256": "842e082a82171ddd9ce066f75e80ab477ee3885f4cb1ce199d6bbee09d5869ab"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/format-utils.cpp": {
+      "bytes": 629,
+      "sha256": "100afa58e3da2ed64ddd6785a6f51ef5267b52280ae13efe8288dca3eca9680c"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/format-utils.hpp": {
+      "bytes": 459,
+      "sha256": "6de3c70e14f42eff9ed24acc81edb872e7adb31b7c347572130ff2feecc475fe"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/frac-grid.hpp": {
+      "bytes": 712,
+      "sha256": "c96f53d2682a31e63cf0136a95d5d43836e37425817ebe94c7315d5b7009a89f"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/gradients.cpp": {
+      "bytes": 12180,
+      "sha256": "226abfc8e27959feea21d9c112120aca27945f4ba02453e7d79119e99881be59"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/gradients.hpp": {
+      "bytes": 425,
+      "sha256": "277ac0d95d103174c8f53a39be0ace333f1694f1419cfd9d9482452a080a1a4e"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/grid.hpp": {
+      "bytes": 2355,
+      "sha256": "ec79df598c7a181d8b242f6289a9b73dd1f2f93f9816bdfaab55974ea64eef8f"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/hex.cpp": {
+      "bytes": 1219,
+      "sha256": "c890feb662ae74457c1ec0f4c1540d4c96d3ddd183765620deb29bd5b20e23db"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/hex.hpp": {
+      "bytes": 192,
+      "sha256": "7cb48bd663498338f2bd277eae79cbc46a725890b869eeb5ac4853ffbee0d8fa"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/hsb-color.cpp": {
+      "bytes": 2349,
+      "sha256": "9aabcc108bfc0b69ad955cd71a1b67c9e48f92e33dbbe391f4d64362c6c29cc2"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/hsb-color.hpp": {
+      "bytes": 499,
+      "sha256": "5a588da6fd41730d676720fc3923d925a2ef0e228f8ad05bb985b300ecae5baf"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/lifehash.cpp": {
+      "bytes": 10174,
+      "sha256": "e8b52f1d2331080bf160288c4a69070d08dff1831ad9760418e46171fd5f0e77"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/lifehash.h": {
+      "bytes": 3079,
+      "sha256": "062534f0342b9051d40a23d89f2fdd6555d74aaf936d7c72f7647fb9f5a2c84e"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/lifehash.hpp": {
+      "bytes": 2309,
+      "sha256": "d9f4cf2a70524d035dfb3a975cdfa87ede2d690a3b9dcd38c5fa44f437047817"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/memzero.cpp": {
+      "bytes": 2420,
+      "sha256": "36ceef5db9a6e432a4fa4460c1678fa9f2b4abb8ce17a206cb7bbdabdcb6108f"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/memzero.hpp": {
+      "bytes": 226,
+      "sha256": "e2019afa14eaaaefd6ebc4bbe9bbcf4534d14ea5c4f22282854426fd75474d6a"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/numeric.hpp": {
+      "bytes": 1404,
+      "sha256": "f1af525b17a0ad54f20d2a718aad9328ea54ffc6ee57f2d685f0c4bf7a823d95"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/patterns.cpp": {
+      "bytes": 373,
+      "sha256": "af4da10e4efd5824a53fadb66c99576f25de6911398d9983d8f36112c0b119bb"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/patterns.hpp": {
+      "bytes": 554,
+      "sha256": "2d586f19740fd5fd574f27e9c2ee06ff175c8d6cb9563c087e13a2c93cd03c13"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/point.cpp": {
+      "bytes": 108,
+      "sha256": "10a075567ce76c31257e0dde249a83e79627df9fea88d090a1301124276b8885"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/point.hpp": {
+      "bytes": 379,
+      "sha256": "ef3ed24a9e54e25771ba9cada7930d34364a746a02c885c51f9668b429365071"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/sha256.cpp": {
+      "bytes": 13897,
+      "sha256": "e1fa27e2cee8dd1d3d17417b0a5196f172dc53454aa0fe05129d01962064e945"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/sha256.hpp": {
+      "bytes": 3397,
+      "sha256": "c39d5f9bd884a9142f84d467b8ae05fc5d60a4f1bac751ca2578ba9238331afe"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/size.hpp": {
+      "bytes": 299,
+      "sha256": "e82c6c0c3659f64b1223df0de73f4736a60f53f26d5d373128ab73c658064233"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/vendor/bc-lifehash/src/version.hpp": {
+      "bytes": 576,
+      "sha256": "0dcb6dc235fbe5f66b0b9fb641b15f1a35d926e88a548526aeb45e0b521ecbb9"
+    },
+    "fixture-firmware/integrated-lanes/lifehash/core/verify.py": {
+      "bytes": 2696,
+      "sha256": "3c66be1f108221103ec512e631f049ea4e8caa6280c78de2441a6d602808b204"
+    },
+    "fixture-firmware/integrated-lanes/playingcards/adapter/include/playing_cards_host_v1.h": {
+      "bytes": 1217,
+      "sha256": "845a9ee76dda8000457cab21ff8b2e6ddba0eac293195281eee8368f4d206e03"
+    },
+    "fixture-firmware/integrated-lanes/playingcards/target-adapter/cards_target.c": {
+      "bytes": 10376,
+      "sha256": "6f10f1b31382bbd7c127bd299f3ade585d0733a3aef4359b6a192338d09215b4"
+    },
+    "fixture-firmware/integrated-lanes/playingcards/target-adapter/cards_target.h": {
+      "bytes": 1064,
+      "sha256": "b325c16f0ca76af2b87964b65fe193cdfa39983d80321eff40273d17ee92ec09"
+    },
+    "fixture-firmware/integrated-lanes/seedhelpers/target-adapter/seed_helpers_target.c": {
+      "bytes": 8633,
+      "sha256": "ed68dbaf87ceaa73a7cd77a2263e88b042a768fe1e1562348baf84af51181b8b"
+    },
+    "fixture-firmware/integrated-lanes/seedhelpers/target-adapter/seed_helpers_target.h": {
+      "bytes": 1859,
+      "sha256": "27d2a312c9c97b8fdceec9f2e83f491ce7f32bec2ee3649608536aa4a358321b"
+    },
+    "fixture-firmware/runtime-sources/coin-core/Cargo.toml": {
+      "bytes": 308,
+      "sha256": "383bc767692c91c03247f0afa7e594e8c9a62e0f16eb831c771813ee4291053e"
+    },
+    "fixture-firmware/runtime-sources/coin-core/LICENSE": {
+      "bytes": 1094,
+      "sha256": "69554bf693be0de4b280906651f1278a9f3757b27d5b6fcb60b4ff5fafaa4e24"
+    },
+    "fixture-firmware/runtime-sources/coin-core/LICENSE-OOGA-BOOGA": {
+      "bytes": 701,
+      "sha256": "9a73c8216b8766e0882c9f03a5aec1b61504bd86bb8744d59ec6766831456358"
+    },
+    "fixture-firmware/runtime-sources/coin-core/src/lib.rs": {
+      "bytes": 1159,
+      "sha256": "a229a49f7140a4f07e1f558c11fa477684803c644d10ec2804dd9461bdb66d90"
+    },
+    "fixture-firmware/runtime-sources/dice-core/Cargo.lock": {
+      "bytes": 6184,
+      "sha256": "1e5b76d2c8ff9681384e85a3710e8c5a8b89124c86c343c40ff04cae4da58db1"
+    },
+    "fixture-firmware/runtime-sources/dice-core/Cargo.toml": {
+      "bytes": 414,
+      "sha256": "34ef23d01de20e79189c39a1c61f5e337b3346b7557cbe0ccb90daa086c2596e"
+    },
+    "fixture-firmware/runtime-sources/dice-core/LICENSE": {
+      "bytes": 1093,
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "fixture-firmware/runtime-sources/dice-core/LICENSE-OOGA-BOOGA": {
+      "bytes": 700,
+      "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+    },
+    "fixture-firmware/runtime-sources/dice-core/dice_core.h": {
+      "bytes": 1851,
+      "sha256": "e64c66285cb7d481d3b636538bd5575356b8ad7f81f7f52fdfb1250dcd1a726e"
+    },
+    "fixture-firmware/runtime-sources/dice-core/src/lib.rs": {
+      "bytes": 2058,
+      "sha256": "97c62eada4c985b126c1a052ec73def6b62e782ed432e2ea2799f085a74fb03b"
+    },
+    "fixture-firmware/runtime-sources/hex-core/Cargo.lock": {
+      "bytes": 6051,
+      "sha256": "5c5c0206c0639c880cab883b29f66387a8e839effaa80d496603d27e3b1fb4c4"
+    },
+    "fixture-firmware/runtime-sources/hex-core/Cargo.toml": {
+      "bytes": 536,
+      "sha256": "0d6d42d47dec381ce8dac3e2399819455d5376e8b0a195cc1cd46e95de492a8d"
+    },
+    "fixture-firmware/runtime-sources/hex-core/LICENSE": {
+      "bytes": 281,
+      "sha256": "a802642344476b2ff7ae691e94635b8f5cbd57c255a0e07fa78210d4fcae735c"
+    },
+    "fixture-firmware/runtime-sources/hex-core/LICENSE-MIT": {
+      "bytes": 1093,
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "fixture-firmware/runtime-sources/hex-core/LICENSE-OOGA-BOOGA": {
+      "bytes": 700,
+      "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+    },
+    "fixture-firmware/runtime-sources/hex-core/hex_core.h": {
+      "bytes": 1687,
+      "sha256": "b254bc9ff090ee1f882e227645db903613f20e43bb07c41c06d0b80f79dd5fc2"
+    },
+    "fixture-firmware/runtime-sources/hex-core/src/lib.rs": {
+      "bytes": 3631,
+      "sha256": "b029b9cf9ab459ad6c24c6c32973b95f866a4d55d4f98bdb1575ed93d6f4e6e3"
+    },
+    "fixture-firmware/runtime-sources/mnemonic-core/Cargo.lock": {
+      "bytes": 6169,
+      "sha256": "4511241ec1b11bfa80527019ddf0f7bb8c5295e696eed703ddb19de9546f74a1"
+    },
+    "fixture-firmware/runtime-sources/mnemonic-core/Cargo.toml": {
+      "bytes": 308,
+      "sha256": "9a28a387912113012f05bc7d41432fad9f8a518569bc223baec503abf8e1c4dd"
+    },
+    "fixture-firmware/runtime-sources/mnemonic-core/LICENSE": {
+      "bytes": 1093,
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "fixture-firmware/runtime-sources/mnemonic-core/mnemonic_core.h": {
+      "bytes": 1338,
+      "sha256": "687b2c9c41e5b55c139118e94ac1e6a22c914beb523715cfa3fa630796b726fb"
+    },
+    "fixture-firmware/runtime-sources/mnemonic-core/src/lib.rs": {
+      "bytes": 2619,
+      "sha256": "574c4ada8b42bce24d8cc43d7db23be3ec9b89dc341944fa3a7c5671db36600d"
+    },
+    "fixture-firmware/runtime/Cargo.lock": {
+      "bytes": 7025,
+      "sha256": "1433e9c1c1eed687b69011e2ac067d147d65de31f58e9bb2e194d30d043b7646"
+    },
+    "fixture-firmware/runtime/Cargo.toml": {
+      "bytes": 959,
+      "sha256": "f697ffe6fc2e34524c8710e10d5d3c284ca22286dc5523bc73a5c178116ad9ea"
+    },
+    "fixture-firmware/runtime/LICENSE": {
+      "bytes": 1093,
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "fixture-firmware/runtime/licenses/arrayvec-0.7.8/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "fixture-firmware/runtime/licenses/arrayvec-0.7.8/LICENSE-MIT": {
+      "bytes": 1071,
+      "sha256": "4da95ec4ecb65b738d470b7d762894ad9c97da93e6cbfb18b570fc2c96f4b871"
+    },
+    "fixture-firmware/runtime/licenses/bech32-0.11.1/LICENSE-MIT": {
+      "bytes": 1055,
+      "sha256": "9877c7b48cde1462f4e8688263aa96f3f1bd9717250718d3d2d9ebb031414fb9"
+    },
+    "fixture-firmware/runtime/licenses/bip39-2.2.2/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "fixture-firmware/runtime/licenses/cc-1.4.4/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "fixture-firmware/runtime/licenses/cc-1.4.4/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "fixture-firmware/runtime/licenses/find-msvc-tools-0.1.11/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "fixture-firmware/runtime/licenses/find-msvc-tools-0.1.11/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "fixture-firmware/runtime/licenses/hex-conservative-0.2.2/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "fixture-firmware/runtime/licenses/hex-conservative-1.2.0/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "fixture-firmware/runtime/licenses/proc-macro2-1.0.107/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "fixture-firmware/runtime/licenses/proc-macro2-1.0.107/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "fixture-firmware/runtime/licenses/quote-1.0.47/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "fixture-firmware/runtime/licenses/quote-1.0.47/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "fixture-firmware/runtime/licenses/secp256k1-0.29.1/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "fixture-firmware/runtime/licenses/secp256k1-sys-0.10.1/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "fixture-firmware/runtime/licenses/serde-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "fixture-firmware/runtime/licenses/serde-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "fixture-firmware/runtime/licenses/serde_core-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "fixture-firmware/runtime/licenses/serde_core-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "fixture-firmware/runtime/licenses/serde_derive-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "fixture-firmware/runtime/licenses/serde_derive-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "fixture-firmware/runtime/licenses/shlex-2.0.1/LICENSE-APACHE": {
+      "bytes": 566,
+      "sha256": "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583"
+    },
+    "fixture-firmware/runtime/licenses/shlex-2.0.1/LICENSE-MIT": {
+      "bytes": 1092,
+      "sha256": "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1"
+    },
+    "fixture-firmware/runtime/licenses/syn-3.0.4/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "fixture-firmware/runtime/licenses/syn-3.0.4/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "fixture-firmware/runtime/licenses/tinyvec-1.13.3/LICENSE-APACHE.md": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "fixture-firmware/runtime/licenses/tinyvec-1.13.3/LICENSE-MIT.md": {
+      "bytes": 1023,
+      "sha256": "fd80a26fbb3f644af1fa994134446702932968519797227e07a1368dea80f0bc"
+    },
+    "fixture-firmware/runtime/licenses/tinyvec-1.13.3/LICENSE-ZLIB.md": {
+      "bytes": 851,
+      "sha256": "84b34dd7608f7fb9b17bd588a6bf392bf7de504e2716f024a77d89f1b145a151"
+    },
+    "fixture-firmware/runtime/licenses/unicode-ident-1.0.24/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "fixture-firmware/runtime/licenses/unicode-ident-1.0.24/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "fixture-firmware/runtime/licenses/unicode-ident-1.0.24/LICENSE-UNICODE": {
+      "bytes": 1995,
+      "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1"
+    },
+    "fixture-firmware/runtime/licenses/unicode-normalization-0.1.24/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "fixture-firmware/runtime/licenses/unicode-normalization-0.1.24/LICENSE-MIT": {
+      "bytes": 1071,
+      "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+    },
+    "fixture-firmware/runtime/src/conversion.rs": {
+      "bytes": 4319,
+      "sha256": "9d0bb4e38391781cb177d54fc01f7775f3873e1506c4d40c77b80388042658cf"
+    },
+    "fixture-firmware/runtime/src/lib.rs": {
+      "bytes": 474,
+      "sha256": "0e861ca8a492dc4ee05cab9a82e91bd79f72416b48b73b44f3961c3490d7a815"
+    },
+    "fixture-firmware/runtime/src/passphrase.rs": {
+      "bytes": 18935,
+      "sha256": "47a4a4177eed165e710340470df880440ae710200b8176db67cc83c9345fd740"
+    },
+    "fixture-firmware/runtime/tests/abi.rs": {
+      "bytes": 576,
+      "sha256": "4cf77b7e2d99e5f170adfb32e8a9e3ddd437a91f1c2d72f3bb36f51e8782ecd6"
+    },
+    "fixture-firmware/runtime/tests/bounds.rs": {
+      "bytes": 994,
+      "sha256": "d124cfa08620c4530b8e8652d54faa6633c9e68029e717c8102521680cd91b7a"
+    },
+    "fixture-firmware/runtime/tests/conversion.rs": {
+      "bytes": 8558,
+      "sha256": "a07a03619ce47c069c85316a4b8782825b83c9f703f19002130d0b953f6301ae"
+    },
+    "fixture-firmware/runtime/tests/passphrase.rs": {
+      "bytes": 8249,
+      "sha256": "4523a321a623e58194e06534986d79c4210221abdcda7887f05d8ce43f49558a"
+    },
+    "fixture-firmware/runtime/tests/roundtrip.rs": {
+      "bytes": 1377,
+      "sha256": "92132e32d9c1580ed46a3ad2e1a99957f82432a88bd3f85dfcbca3f8ace87bd4"
+    },
+    "fixture-firmware/runtime/tests/strict.rs": {
+      "bytes": 801,
+      "sha256": "05ebeca90babdde0a86b5afcc0ec3aa574b71b3efd107e6d1c51c9f394607ad9"
+    },
+    "fixture-firmware/runtime/tests/validation.rs": {
+      "bytes": 318,
+      "sha256": "7a4e7b380d2d3de47b79886a8bf6e84afedefa360b651c07f1ec54f5459af8e1"
+    },
+    "fixture-firmware/runtime/vectors/bip39-english.tsv": {
+      "bytes": 9694,
+      "sha256": "1a1722a1b803fdbe1333745b1469cc7987a096155939fd638110ff831bab59a9"
+    },
+    "fixture-firmware/rust/Cargo.lock": {
+      "bytes": 6051,
+      "sha256": "5c5c0206c0639c880cab883b29f66387a8e839effaa80d496603d27e3b1fb4c4"
+    },
+    "fixture-firmware/rust/Cargo.toml": {
+      "bytes": 549,
+      "sha256": "06d9667a5bdf712926b1e2e5c36ab2b2b6c9733203ca09f763ae862ce0a35c0c"
+    },
+    "fixture-firmware/rust/LICENSE": {
+      "bytes": 275,
+      "sha256": "89041f4ce3a47f7629fea4443980b978335059142ea0664897f097249b83021f"
+    },
+    "fixture-firmware/rust/LICENSE-MIT": {
+      "bytes": 1093,
+      "sha256": "a778e9f385f3b69a23cb76e937eff1a7bf4272007ee2d623a60e61d8a1e42b7c"
+    },
+    "fixture-firmware/rust/LICENSE-OOGA-BOOGA": {
+      "bytes": 700,
+      "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+    },
+    "fixture-firmware/rust/THIRD_PARTY_NOTICES.md": {
+      "bytes": 174,
+      "sha256": "0127d7b12015c40e6dc51145333151d388cada1dbd06add1ae9b846f199082f2"
+    },
+    "fixture-firmware/rust/hex_core.h": {
+      "bytes": 1687,
+      "sha256": "b254bc9ff090ee1f882e227645db903613f20e43bb07c41c06d0b80f79dd5fc2"
+    },
+    "fixture-firmware/rust/host-test.c": {
+      "bytes": 375,
+      "sha256": "6c1ead0f9847cc5560527d9b73fe26e34c95c7060c583bfb4a80cc4ec0817408"
+    },
+    "fixture-firmware/rust/licenses/arrayvec-0.7.8/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "fixture-firmware/rust/licenses/arrayvec-0.7.8/LICENSE-MIT": {
+      "bytes": 1071,
+      "sha256": "4da95ec4ecb65b738d470b7d762894ad9c97da93e6cbfb18b570fc2c96f4b871"
+    },
+    "fixture-firmware/rust/licenses/bech32-0.11.1/LICENSE-MIT": {
+      "bytes": 1055,
+      "sha256": "9877c7b48cde1462f4e8688263aa96f3f1bd9717250718d3d2d9ebb031414fb9"
+    },
+    "fixture-firmware/rust/licenses/bip39-2.2.2/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "fixture-firmware/rust/licenses/cc-1.4.4/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "fixture-firmware/rust/licenses/cc-1.4.4/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "fixture-firmware/rust/licenses/find-msvc-tools-0.1.11/LICENSE-APACHE": {
+      "bytes": 10847,
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    "fixture-firmware/rust/licenses/find-msvc-tools-0.1.11/LICENSE-MIT": {
+      "bytes": 1057,
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    "fixture-firmware/rust/licenses/hex-conservative-0.2.2/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "fixture-firmware/rust/licenses/hex-conservative-1.2.0/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "fixture-firmware/rust/licenses/proc-macro2-1.0.107/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "fixture-firmware/rust/licenses/proc-macro2-1.0.107/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "fixture-firmware/rust/licenses/quote-1.0.47/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "fixture-firmware/rust/licenses/quote-1.0.47/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "fixture-firmware/rust/licenses/secp256k1-0.29.1/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "fixture-firmware/rust/licenses/secp256k1-sys-0.10.1/LICENSE": {
+      "bytes": 7049,
+      "sha256": "7179683e8000e6bdc9bbc60d85edf0a4ac8e76f951857f54fcb775d5886f1309"
+    },
+    "fixture-firmware/rust/licenses/serde-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "fixture-firmware/rust/licenses/serde-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "fixture-firmware/rust/licenses/serde_core-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "fixture-firmware/rust/licenses/serde_core-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "fixture-firmware/rust/licenses/serde_derive-1.0.229/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "fixture-firmware/rust/licenses/serde_derive-1.0.229/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "fixture-firmware/rust/licenses/shlex-2.0.1/LICENSE-APACHE": {
+      "bytes": 566,
+      "sha256": "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583"
+    },
+    "fixture-firmware/rust/licenses/shlex-2.0.1/LICENSE-MIT": {
+      "bytes": 1092,
+      "sha256": "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1"
+    },
+    "fixture-firmware/rust/licenses/syn-3.0.4/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "fixture-firmware/rust/licenses/syn-3.0.4/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "fixture-firmware/rust/licenses/unicode-ident-1.0.24/LICENSE-APACHE": {
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    "fixture-firmware/rust/licenses/unicode-ident-1.0.24/LICENSE-MIT": {
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    "fixture-firmware/rust/licenses/unicode-ident-1.0.24/LICENSE-UNICODE": {
+      "bytes": 1995,
+      "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1"
+    },
+    "fixture-firmware/rust/src/lib.rs": {
+      "bytes": 3252,
+      "sha256": "9c003045fbd8b036bd6a550e06ec129230b49b39dac234751c5ffa304dcf90a6"
+    },
+    "fixture-firmware/rust/tests/contract.rs": {
+      "bytes": 2991,
+      "sha256": "569c12193b7cf684e64773dd9f8f0fbc88847423d5f250754d9cf0d01a59eb28"
+    },
+    "fixture-firmware/rust/vectors/bip-0084.mediawiki": {
+      "bytes": 4648,
+      "sha256": "1900feec6cafca65b8c09906ca0658d2d742b4c9b44cb15678996985b6bfe627"
+    },
+    "fixture-firmware/rust/vectors/bip39-english.tsv": {
+      "bytes": 9694,
+      "sha256": "1a1722a1b803fdbe1333745b1469cc7987a096155939fd638110ff831bab59a9"
+    },
+    "fixture-firmware/rust/vectors/bip39.json": {
+      "bytes": 152400,
+      "sha256": "fa3b937b7cff9c9b8ecd3aa011faeb8d6dd67993174b72326e83f4de8fdb30f8"
+    },
+    "fixture-firmware/rust/vectors/sha256.json": {
+      "bytes": 534,
+      "sha256": "11457e7d1ad7cf2329bbddec6abcdb75b651a7a4f67418f5f59f013548b64b61"
+    },
+    "fixture-firmware/tests/CMakeLists.gui08-native.txt": {
+      "bytes": 940,
+      "sha256": "5ec06cebb54104faf555700932646d52a0ed72ddf97b882710d6a7cc0f881e22"
+    },
+    "fixture-firmware/tests/CMakeLists.gui08.txt": {
+      "bytes": 400,
+      "sha256": "00c256a7db893ad6b16c27c797613ac95b8bc8f7966203fa0159330a3f9f9a77"
+    },
+    "fixture-firmware/tests/CMakeLists.txt": {
+      "bytes": 1491,
+      "sha256": "509c0bfb292b681f3b9a395d17b7a86bfca426e1b94c57cfd5c51c22bb00795a"
+    },
+    "fixture-firmware/tests/cleanup_tests.inc": {
+      "bytes": 2746,
+      "sha256": "765efd8466a7e2b6011b02b6241ffc8aa3019f334f54b9c1d00893a1fa527b40"
+    },
+    "fixture-firmware/tests/coin_tests.inc": {
+      "bytes": 2409,
+      "sha256": "d1e714752e1d4bbc33c8dc6dcd8e962d6b0d5a5188b7d2e45eef5f811a30518c"
+    },
+    "fixture-firmware/tests/dice_navigation_tests.inc": {
+      "bytes": 7487,
+      "sha256": "03a34994a3a19f24c45aed6ad3682580f90daf2c6eeac8f9b0f9eb1301c30b70"
+    },
+    "fixture-firmware/tests/dice_tests.inc": {
+      "bytes": 3537,
+      "sha256": "7dfd5387ef0bf2ba10e34d1172de2a8f4eeed70fbde305d78c018c722c0144e8"
+    },
+    "fixture-firmware/tests/dice_vectors.h": {
+      "bytes": 4339,
+      "sha256": "387b62500331bcd1de6104884f8562dd1b816680330cef7f9ce3c6e82cfb2a09"
+    },
+    "fixture-firmware/tests/dice_worker.c": {
+      "bytes": 2811,
+      "sha256": "5e7bb1ee8e3ccd8d554632a0da44d3d905b577c143498ac7b21e85077110b557"
+    },
+    "fixture-firmware/tests/education_tests.inc": {
+      "bytes": 10949,
+      "sha256": "99e43a09c685a49524e7ee981fea8c1eaccadafa7ea45af73d1136839341467b"
+    },
+    "fixture-firmware/tests/explanation_tests.inc": {
+      "bytes": 13530,
+      "sha256": "ff340da1ca827d36b3d5a2b83f323fe4b61cfec504c562b9daba4b7a8cebbd7a"
+    },
+    "fixture-firmware/tests/global_saver_tests.inc": {
+      "bytes": 4938,
+      "sha256": "3a3d20a9717fc0f1e679e561e22c9a21a49e6d1791a8d00bd888b961fd2f126e"
+    },
+    "fixture-firmware/tests/gui08-native/CMakeLists.txt": {
+      "bytes": 1040,
+      "sha256": "ca4879a26ea31529717d034ce9a973cd315317777fb99e3fa7397fbbd4f65f6e"
+    },
+    "fixture-firmware/tests/gui08_editor_tests.c": {
+      "bytes": 3832,
+      "sha256": "47f5e0204b8526dfed8d2981bb906d763291952c77df953be9bff5055df9f963"
+    },
+    "fixture-firmware/tests/gui08_native_tests.c": {
+      "bytes": 10298,
+      "sha256": "c6a2321ce60ea3eceaeb0bfefbcc2fc18e96fc509f0bdd8a0c89a5aeb5949153"
+    },
+    "fixture-firmware/tests/gui_acceptance.inc": {
+      "bytes": 3840,
+      "sha256": "419f4bbb772f548f04591431a674a20bb8ce3560ab38a49106a1f0671230ea06"
+    },
+    "fixture-firmware/tests/gui_host.c": {
+      "bytes": 29628,
+      "sha256": "97e17a8eeac935ff2db330647f2a00732769695f9cd0fb1d048a425aa7435be9"
+    },
+    "fixture-firmware/tests/hex_worker.c": {
+      "bytes": 615,
+      "sha256": "17560e431be0bcdcdb8d2a373a50aa7ec66b7631319201fa5a0b584cb0dcada7"
+    },
+    "fixture-firmware/tests/integration20/dispatcher_test.cpp": {
+      "bytes": 5783,
+      "sha256": "144e3b4dbbf7bd400039d1c90acde77d9077709710d98d4683d86848ae546b42"
+    },
+    "fixture-firmware/tests/integration22/CMakeLists.txt": {
+      "bytes": 1448,
+      "sha256": "d702b6271797afedeb3027f3fd2ec6d71ae948c3d48f581c408e4feef26ff49e"
+    },
+    "fixture-firmware/tests/integration22/application_gui_test.cpp": {
+      "bytes": 9792,
+      "sha256": "118f480c61daa065f7b7d13db6baaa43ed578634b1aa972d64184be275ddf4c8"
+    },
+    "fixture-firmware/tests/integration23/cards_application_test.cpp": {
+      "bytes": 7091,
+      "sha256": "af8e27b7e19faeb3746a73e306f696ceda66d948263f322e01441b6e7ff49e41"
+    },
+    "fixture-firmware/tests/integration25/bases_application_test.cpp": {
+      "bytes": 7454,
+      "sha256": "485e3434b3f70f50193daf45dcacb8d93a8f16237e85fbf7661aa7f319337799"
+    },
+    "fixture-firmware/tests/integration26/derivation_application_test.cpp": {
+      "bytes": 7828,
+      "sha256": "4933c5de8bbbb688efb403c434f2c2100c54fb63f33f305f627493f5c9934612"
+    },
+    "fixture-firmware/tests/integration28/seed_application_test.cpp": {
+      "bytes": 9570,
+      "sha256": "7f8c7f4a54e15188c1fab1bfdeb8f0c55da95b4abb784c522a81c388081a6711"
+    },
+    "fixture-firmware/tests/integration37/CMakeLists.txt": {
+      "bytes": 739,
+      "sha256": "9ae1730f6e5694aeaab05ae449bb8d480b133ff5367a1b107d8c50c3eace6f9b"
+    },
+    "fixture-firmware/tests/integration37/lifehash_application_test.cpp": {
+      "bytes": 6840,
+      "sha256": "00764968a2affb53f5860e37f1b4c08c633367c346566fcfc3900c2f699db7a5"
+    },
+    "fixture-firmware/tests/integration41-native/CMakeLists.txt": {
+      "bytes": 1872,
+      "sha256": "e2be8d7ffd325366752beab9f90b8169c07077271f46e549e8d4a80a8fb9b933"
+    },
+    "fixture-firmware/tests/integration41-native/extra_dice_native_test.cpp": {
+      "bytes": 8195,
+      "sha256": "f63bb5f628d6cf916bd4419ce80da36cb09e2e632e5eadbc7a418c83fa78b7c2"
+    },
+    "fixture-firmware/tests/integration41/CMakeLists.txt": {
+      "bytes": 1017,
+      "sha256": "6456cf204eab9f0e00ac299769be16a76470013d6dece7da5c618f9796b07a89"
+    },
+    "fixture-firmware/tests/integration41/extra_dice_application_test.cpp": {
+      "bytes": 4630,
+      "sha256": "035b1109213d66b1e0de9624bf4a301c42463c5f573f8db4825976da45e3825b"
+    },
+    "fixture-firmware/tests/layout_tests.inc": {
+      "bytes": 4392,
+      "sha256": "b9f99d90a377974a0c6313aa4697482abb993d96ed598ad4d3b519111403451b"
+    },
+    "fixture-firmware/tests/lv_conf.h": {
+      "bytes": 305,
+      "sha256": "8a23ed4ce0775aa0d78e68cd8d8cbfb7dbb620c1e93bae69ecfb89676f4bf180"
+    },
+    "fixture-firmware/tests/mnemonic_bounds.c": {
+      "bytes": 1782,
+      "sha256": "7955a3bd8eb3b44171e8cbc4b65baf27c86b84d1e53579cd9577535a4c63c9b8"
+    },
+    "fixture-firmware/tests/mnemonic_bridge.c": {
+      "bytes": 1230,
+      "sha256": "b153627419e6846d20a1f417a56e67cb391a08d38d006d6b552ad1396435f818"
+    },
+    "fixture-firmware/tests/mnemonic_gui_tests.inc": {
+      "bytes": 5203,
+      "sha256": "1465be62ca37ab5900949f258af44861f1d5df6456c6ac025af8ac811ec29458"
+    },
+    "fixture-firmware/tests/mnemonic_red.c": {
+      "bytes": 345,
+      "sha256": "c13766a73fabea8e7f5db28ef320ab11b8be98f10e764e2abea12862a3572b46"
+    },
+    "fixture-firmware/tests/modal_touch_tests.inc": {
+      "bytes": 21536,
+      "sha256": "97213a63899db09514502e588cce9b5a44278650fa4b2cd7db09f1bc56b4fc1a"
+    },
+    "fixture-firmware/tests/passphrase_compute.c": {
+      "bytes": 259980,
+      "sha256": "ee59c6e878f16971bf09021eeb6dbbee992c3a8ba6ed9a68d529db3d04d57536"
+    },
+    "fixture-firmware/tests/passphrase_dispatch.c": {
+      "bytes": 6386,
+      "sha256": "b2353d764ab2099e7a17cf8a504aeb43f1170bf73ba97eb46a027696e1d00054"
+    },
+    "fixture-firmware/tests/passphrase_gui_tests.inc": {
+      "bytes": 20372,
+      "sha256": "86338993b9bc1ab80bbdf79e353d5c75a7f558576cc99cf1badc810dc57bcfda"
+    },
+    "fixture-firmware/tests/passphrase_integration_tests.inc": {
+      "bytes": 18562,
+      "sha256": "e794e9a4ac457abb5a3dd0eb90891551f0f985fb4f719f025604c23719e8e874"
+    },
+    "fixture-firmware/tests/prefix_tests.inc": {
+      "bytes": 5985,
+      "sha256": "d021bab5aa6c68a3f20168db7d3336bdbe497a0bc25913f8fc3e5b1b130fab59"
+    },
+    "fixture-firmware/tests/safety_cleanup_tests.inc": {
+      "bytes": 2052,
+      "sha256": "c266ff4a072283aa54ac1e241eb50a38b9eee2c77e7c2416f2a8b6fa73a75df6"
+    },
+    "fixture-firmware/tests/saver_tests.inc": {
+      "bytes": 4997,
+      "sha256": "d4f2412ac1ad62aa50fe51c89c8ef8e6e0e966a274b049d5235e954ad810d3b6"
+    },
+    "fixture-firmware/tests/seed_panel_tests.inc": {
+      "bytes": 4203,
+      "sha256": "b49b0e516372f02343b18610a71fa20f9f8c8eb03190c8c8443fb275c4ce81b1"
+    },
+    "fixture-firmware/tests/worker_host.c": {
+      "bytes": 1787,
+      "sha256": "75abce7497b56ff3b6409db819437c6f8c04b124bb151969a969a620f73be962"
+    },
+    "fixture-firmware/verify.py": {
+      "bytes": 2424,
+      "sha256": "6fc4c585e420398b2a5ad7d602e5cf65165dca99401f0444988381e0dfd4b4da"
+    },
+    "flash/NOTICES.txt": {
+      "bytes": 2819185,
+      "sha256": "1ac713c834e60bbd99fa39cb54ea26b3a6d659f323f7b5f2abe04287549649e1"
+    },
+    "flash/adapter/adapter.mjs": {
+      "bytes": 15089,
+      "sha256": "929b56310dc263d9878db4646f8b62a4d693c1a58119c5b0cdcb737aeec11f91"
+    },
+    "flash/adapter/observe.mjs": {
+      "bytes": 2235,
+      "sha256": "d9341100579070fb39c246b3c46f15ae3c139018993c42a937660c505b073300"
+    },
+    "flash/adapter/profiles.mjs": {
+      "bytes": 1320,
+      "sha256": "a59681576b5fd7f4716a7dd884208e5b589e98e61d25c9ad664ce85275012186"
+    },
+    "flash/app.mjs": {
+      "bytes": 12253,
+      "sha256": "5cfa08e1ee23c8a64fac0e1e91b03f11f11803bcabff9ad2e0e465ca0988d1df"
+    },
+    "flash/assets.mjs": {
+      "bytes": 1481,
+      "sha256": "13511e95ccc8c4c00bd177557b81404e4dc0063414788054e990c4892cd3ea77"
+    },
+    "flash/firmware/entropylab.bin": {
+      "bytes": 1539952,
+      "sha256": "a02a2192b5c302390a916f9ee67961b699e5f2f9038135378eed0b19d792f33b"
+    },
+    "flash/first-install/NOTICES.txt": {
+      "bytes": 2819185,
+      "sha256": "1ac713c834e60bbd99fa39cb54ea26b3a6d659f323f7b5f2abe04287549649e1"
+    },
+    "flash/first-install/adapter/adapter.mjs": {
+      "bytes": 21300,
+      "sha256": "783533cc8b2a13b9315d1743a705c807be4e2d9ff432356517ba4fc885704b11"
+    },
+    "flash/first-install/adapter/observe.mjs": {
+      "bytes": 2235,
+      "sha256": "d9341100579070fb39c246b3c46f15ae3c139018993c42a937660c505b073300"
+    },
+    "flash/first-install/adapter/profiles.mjs": {
+      "bytes": 549,
+      "sha256": "5977fa70eb794a4c9849323e4337fba76c71296792e6e832ae21bf60accade4e"
+    },
+    "flash/first-install/app.mjs": {
+      "bytes": 8065,
+      "sha256": "f3cb46e223bc2c19cea723cbb843b584072a8f60f60bfa3dbc819ab34b4b34d5"
+    },
+    "flash/first-install/assets.mjs": {
+      "bytes": 1987,
+      "sha256": "e657e8ff2281fed66678785d405ea08dc92337b8d8b04253c700f9bfa773c3de"
+    },
+    "flash/first-install/baud-lifecycle.test.mjs": {
+      "bytes": 8358,
+      "sha256": "a728e892641ecb98cfa04062c31c8da1c9e727d6cede17cbc939961de2ae3587"
+    },
+    "flash/first-install/completion.test.mjs": {
+      "bytes": 4571,
+      "sha256": "706904f3cbe26c7f8cbafd7363a58288a3bc715e2e3128b3a2ab395e68071aad"
+    },
+    "flash/first-install/firmware/bootloader.bin": {
+      "bytes": 21264,
+      "sha256": "530330004af627bf2de7ac9b1d05ab34f8a655829a74005b96fc15dd7083f678"
+    },
+    "flash/first-install/firmware/entropylab.bin": {
+      "bytes": 1539952,
+      "sha256": "a02a2192b5c302390a916f9ee67961b699e5f2f9038135378eed0b19d792f33b"
+    },
+    "flash/first-install/firmware/partition-table.bin": {
+      "bytes": 3072,
+      "sha256": "d3e6663d9cbd407623c82f215df58a5c9bd1e353fd937ad519018c06fd9298fb"
+    },
+    "flash/first-install/guards.test.mjs": {
+      "bytes": 2762,
+      "sha256": "6402ad25c0f316187fa2b0385ad84e3f63e2b9b433ac20e2c977a93663630505"
+    },
+    "flash/first-install/index.html": {
+      "bytes": 2187,
+      "sha256": "d94a1ddb20fff74a62e3148d81953aaf14aea706d46b9307a0e4130c83e2c56c"
+    },
+    "flash/first-install/progress.test.mjs": {
+      "bytes": 6232,
+      "sha256": "135b8594035ae8f56aecf2223b85787877e713d7f9ab4bf77eb3d60be31bc653"
+    },
+    "flash/first-install/public.test.mjs": {
+      "bytes": 766,
+      "sha256": "29638152460750a59ad15b2140dd6fb82f15a9e4c7ea3bc2d1209f655da1fbe6"
+    },
+    "flash/first-install/speed-browser.mjs": {
+      "bytes": 9055,
+      "sha256": "a624e7d596fc2806103d6f3c285e0ea405d6df16c767ed10ab425fb648ed2023"
+    },
+    "flash/first-install/style.css": {
+      "bytes": 8375,
+      "sha256": "28448efe3aefea05f040558c97027f01c022ccd698b5fdbe373e5f9cd43f295d"
+    },
+    "flash/first-install/vendor/NOTICES.txt": {
+      "bytes": 830838,
+      "sha256": "713bf5060681370bfbc345482a9fe635e1f25a1be6c0b65a61ec8a562eb3ad9a"
+    },
+    "flash/first-install/vendor/esptool-js.mjs": {
+      "bytes": 307921,
+      "sha256": "dbdb0d1115f672ec865896a841b13ef7a081a35a914e0158afcc3a6d14f33871"
+    },
+    "flash/first-install/wire.test.mjs": {
+      "bytes": 8819,
+      "sha256": "6cfcf52973c175bbb8269c5dfaeee606f6a78b2c2c6e19c41fd45689fe092679"
+    },
+    "flash/index.html": {
+      "bytes": 8483,
+      "sha256": "52e6c99b05083c67aae47469967d4bb845d2fd5cad58d476dcdae31131e946fb"
+    },
+    "flash/publicrelease-manifest.json": {
+      "bytes": 1946,
+      "sha256": "af33d5c6615cd3ff001c6220d4745540035b62ff04c4e7ca1c74eae40648c6b2"
+    },
+    "flash/style.css": {
+      "bytes": 7574,
+      "sha256": "bafa3726d85fcdea09371557ad4f5144f857fd50afab5b587b7e90115b248f83"
+    },
+    "flash/vendor/NOTICES.txt": {
+      "bytes": 830838,
+      "sha256": "713bf5060681370bfbc345482a9fe635e1f25a1be6c0b65a61ec8a562eb3ad9a"
+    },
+    "flash/vendor/esptool-js.mjs": {
+      "bytes": 307921,
+      "sha256": "dbdb0d1115f672ec865896a841b13ef7a081a35a914e0158afcc3a6d14f33871"
+    },
+    "release/inventory.json": {
+      "bytes": 138274,
+      "sha256": "3101c112eaa470149ff1ccaf79a3c6cf6f9061d8ce9472e710d0fac9640dad1d"
+    },
+    "release/retention-public-source.tar.gz": {
+      "bytes": 2744670,
+      "sha256": "82d62829596fe080f6bf02cf67c3337d88d4287a98e6b82ad3c70aa56f8e4f19"
+    },
+    "scripts/build-firmware.sh": {
+      "bytes": 2892,
+      "sha256": "96778c283974f5c2a889e6920c60c4a0fd6681fd1adc5c5e10384a172b5dcc0a"
+    },
+    "scripts/build-speed-browser.py": {
+      "bytes": 6530,
+      "sha256": "80c491bebf84c77e4f679875d797e0a8a159548685f2ce5a9a1ee58e7d22241a"
+    },
+    "scripts/check-idf-remaps.py": {
+      "bytes": 4236,
+      "sha256": "1731c98a9d608d708acbb9baccb813b29b7343bc7a19c0c9fbccdac58d1badb6"
+    },
+    "scripts/check-release-readiness.py": {
+      "bytes": 3566,
+      "sha256": "a3221c8b8a8a2dcf72046b5369e7636445e6e397723e10cebfb714a5af742061"
+    },
+    "scripts/d6-release/build.sh": {
+      "bytes": 2270,
+      "sha256": "784aa9a4133a76b1f9f7e441a3c0d88168cc1163fd935874f9c43b1d4a4c4538"
+    },
+    "scripts/d6-release/exports.py": {
+      "bytes": 942,
+      "sha256": "c9082d9d9216b3a80a0cff7ca2062c85020dd7535b20de67b8b4ddeb4d7421ac"
+    },
+    "scripts/d6-release/test-dice-host.sh": {
+      "bytes": 1233,
+      "sha256": "b0cb79f3fd2102adf1148d968ebeb2b398b09aaa5de9f82a99fb47269dbff1c8"
+    },
+    "scripts/d6-release/test-host.py": {
+      "bytes": 1094,
+      "sha256": "616b32db4da3a83b2232eff15a25cf9facc1dbb8ff4e25bf44bc7210922c741c"
+    },
+    "scripts/d6-release/test-host.sh": {
+      "bytes": 2077,
+      "sha256": "12d41674513afde9175b174ead6804e5d62728e9309ba2dd7a7257dafda6fee1"
+    },
+    "scripts/d6-release/test-source.py": {
+      "bytes": 2180,
+      "sha256": "c4ff808ed2fa3647857eb0eb197fc25263db6e5077177c5e197784702d007f2b"
+    },
+    "scripts/d6-release/verify-source.py": {
+      "bytes": 1540,
+      "sha256": "1884a434bffec5e56f4e5e95b76747eb212814f5c8b637ba14c6d0aebe79bb6e"
+    },
+    "scripts/d6-release/verify-target.py": {
+      "bytes": 3525,
+      "sha256": "bea41eedc23247d32c7e3a1f6ac395e17eefa71b3b7a6fcf9e1acba50f2ac358"
+    },
+    "scripts/localize-coin.py": {
+      "bytes": 3105,
+      "sha256": "0455444e19ab7064e6b05ced30ae0195b46b6dfc6439802c1d95a80bf916b6d7"
+    },
+    "scripts/package-public.py": {
+      "bytes": 1032,
+      "sha256": "cd631e6e0e8630988701fccf62a0785aca29e022b94ffc69afc67aafe37342e6"
+    },
+    "scripts/release-hygiene.py": {
+      "bytes": 4675,
+      "sha256": "3bf8d790dccfaee282932879144100b813ce6149e5e0458f6057a8f0b68a6703"
+    },
+    "scripts/retention-host.py": {
+      "bytes": 6281,
+      "sha256": "459be5ce45594d1a3b05df228a410376d71bc886036fcb1af5b82d4e1c6b5b48"
+    },
+    "scripts/retention-no-captures.c": {
+      "bytes": 755,
+      "sha256": "1059df3501ff56883e52b0a365d12cde51d204b7c24590a34b62fffb3109e78f"
+    },
+    "scripts/review-public.py": {
+      "bytes": 1316,
+      "sha256": "96118e473d3502a119c142fdccc2be0aff57eb22a82b608986935122346b0db2"
+    },
+    "scripts/serve-public.py": {
+      "bytes": 1447,
+      "sha256": "e5c78c86afd15d6df9a1be9900f2e9c138ad8c15fc091b1c4fee07ab38a6dd6d"
+    },
+    "scripts/test-coin-archive.py": {
+      "bytes": 5428,
+      "sha256": "bda9237e4e7bb3e8c408d37db72b45332d1ded28bdc7a1952b64ab001edba4ca"
+    },
+    "scripts/test-coin-host.sh": {
+      "bytes": 955,
+      "sha256": "289a86602d1652746b647accaaaa4f41943186988459b0c044856ce2d194bc89"
+    },
+    "scripts/test-combined-host.sh": {
+      "bytes": 965,
+      "sha256": "96c15ad73edffd5f5364ffb161dc133ae585760350d4f30dcb36a379cc0ce213"
+    },
+    "scripts/test-current-doc-links.py": {
+      "bytes": 1224,
+      "sha256": "284333b833ff8931012aebf4a7ec283b8c842f659e522ab5e321b117b18239df"
+    },
+    "scripts/test-d6-release-import.py": {
+      "bytes": 3510,
+      "sha256": "b797cb8853c217451e4c831b778702caf5f8203513a8fc126a1f126c111a76a0"
+    },
+    "scripts/test-dice-host.sh": {
+      "bytes": 993,
+      "sha256": "d7a78311a640c97316804f45f02d633e35b83d1086da9becb036c583acaf4129"
+    },
+    "scripts/test-dice-import.py": {
+      "bytes": 11084,
+      "sha256": "360fd0eef7f156d86af372baf4ed31c38325350bc9f3f14dbb757267f079d4b1"
+    },
+    "scripts/test-dice-lock.py": {
+      "bytes": 1866,
+      "sha256": "78caca0109e29f985c2d4d63d89305c7814eda4655be8288893508b738b41c00"
+    },
+    "scripts/test-documentation-successors.py": {
+      "bytes": 978,
+      "sha256": "0e5f52c97199a17180acad7c0d20c4bb7f3cb4aa11df870c7cb4bbff13a3b812"
+    },
+    "scripts/test-education-examples.py": {
+      "bytes": 6329,
+      "sha256": "825927ead95290d6176feed96d1dd6772642e08d69aa1caaeaa3b5cf482c07e7"
+    },
+    "scripts/test-global-saver-import.py": {
+      "bytes": 5861,
+      "sha256": "32552e536d9a2363f73945e7ae31ae2f0f9dee6751f3283a3fabe3145ca86e1c"
+    },
+    "scripts/test-gui-host.sh": {
+      "bytes": 1246,
+      "sha256": "ebe8a2345269d694756b65f9dc7d719f4689c1030a940a8f30d0272301aad504"
+    },
+    "scripts/test-hex-integration.py": {
+      "bytes": 1077,
+      "sha256": "382a32d0fdc0da35a9c01e59b28f33e0d414a0ac667717b929ee4a836ec0af4d"
+    },
+    "scripts/test-host.sh": {
+      "bytes": 1656,
+      "sha256": "1a92fd1ed8647fb53b6de3641a11ec1f5ff88b79c1552af2780e0c7a2492a8ae"
+    },
+    "scripts/test-modal-import.py": {
+      "bytes": 2984,
+      "sha256": "75777f28c0e62fe3b33a11bc3527b6aaeff5aaa7896defef9198e5751434f9aa"
+    },
+    "scripts/test-onboarding-browser.py": {
+      "bytes": 2668,
+      "sha256": "dd1daa13078c263f22190f86d38068a89e218303bcc30da7da27f14a05ec8b19"
+    },
+    "scripts/test-progress-animation.py": {
+      "bytes": 8169,
+      "sha256": "df6344ce1fe8afd0d0d68d9de2ec2a8e2e4df6eb852c5b19cf930338f865b8f6"
+    },
+    "scripts/test-public-zip.py": {
+      "bytes": 725,
+      "sha256": "e6f8d536cd0fb1a7625138d86378c501e235f52273c9fed8daa53c285971bc33"
+    },
+    "scripts/test-release-readiness.py": {
+      "bytes": 3456,
+      "sha256": "4fe1fa2bbaa7bca6d60b09623a89c17435a6194dbff4399a0bb3d3d3a5ad5a66"
+    },
+    "scripts/test-review-repair-import.py": {
+      "bytes": 1509,
+      "sha256": "75cd58af78a64260a060792b557e994e218a6d90de713f44df1664158e4fd1a4"
+    },
+    "scripts/test-runtime-lock.py": {
+      "bytes": 2778,
+      "sha256": "e42309b7fe4e6634a0d11e59a98043a72e8bd7b2af36bc47ae24430d9fe8e0c5"
+    },
+    "scripts/test-serve-public.py": {
+      "bytes": 1280,
+      "sha256": "c2238bc2fb3ade31baac33763d4929a92f3bcc7df3c13c426546a0856069757f"
+    },
+    "scripts/test-speed-accessibility.py": {
+      "bytes": 4474,
+      "sha256": "06cf17d3243732182373075b13a06ab6326f03c9b9f0a9babd25174fa0949e2e"
+    },
+    "scripts/test-speed-app-wire.py": {
+      "bytes": 4696,
+      "sha256": "6ef0f95643776f95275aa4123426b63d64ea7b70c94cac4d079e8959662a51b0"
+    },
+    "scripts/test-speed-browser.py": {
+      "bytes": 997,
+      "sha256": "60f7c79ce2555a0141677dad04b0207d594061613571014b17fb7f9efef6cb96"
+    },
+    "scripts/test-speed-ui.py": {
+      "bytes": 7063,
+      "sha256": "99d2c395268663dff4688fc25e1d0add8ff2c1b4bca74c9fcc2545d4180eb075"
+    },
+    "scripts/test-words-host.sh": {
+      "bytes": 1052,
+      "sha256": "312fe1efcac6d06ae582fb5d9de5a1ed73b8b31a7e926f8f8572a3b52009d6ca"
+    },
+    "scripts/verify-coin-elf.py": {
+      "bytes": 2593,
+      "sha256": "ce7d70a969035ba6dd352e78bac5c786ceaa8b9bd3c74123a116d1ecd3d9e574"
+    },
+    "scripts/verify-dice-import.py": {
+      "bytes": 17583,
+      "sha256": "62799268316d6ad1ffff4a8f0f7ee6c9afee7fd27bb9ed0a819e4b18d2d0889f"
+    },
+    "scripts/verify-runtime-elf.py": {
+      "bytes": 2198,
+      "sha256": "74352a1c7e0ed303182b7417af551956a8f184e421a24e3c4ec52f321b7d8957"
+    }
+  },
+  "firmware_changes": [
+    {
+      "after_sha256": "523ac951291e712add9e7c7c05238a1c4177bc811a6dc3afc33e8c9267aa17de",
+      "before_sha256": "0db37c218825e778b2c22aaf178128afc127ed720b99ffe754b89f9301065cf4",
+      "path": "fixture-firmware/app/main/education_content.inc"
+    }
+  ],
+  "schema": "education-successor-source-v1",
+  "source_revision": "2b919dc73c9cbcbb5e845850650d71c6782ad68b",
+  "source_tree": "c344b791f39f2abfbb7e9bae4d6afff0fd2364ca",
+  "status": "candidate-only; no inherited hardware acceptance; distribution HOLD"
+}
