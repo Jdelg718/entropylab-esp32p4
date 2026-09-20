@@ -1,0 +1,56 @@
+{
+  "chromium": "151.0.7922.34",
+  "boundary": "Actual HTML/CSS/app with mocked session and serial picker; native accessibility tree and keyboard input. No physical screen-reader listening or hardware qualification.",
+  "results": [
+    {
+      "width": 320,
+      "keyboard_flow": "board/consent/verify/select/write/cancel PASS",
+      "tabs": [
+        "A",
+        "board",
+        "consent",
+        "prepare",
+        "connect",
+        "check",
+        "flash",
+        "cancel"
+      ],
+      "status_properties": {
+        "live": "polite",
+        "atomic": true,
+        "relevant": "additions text"
+      },
+      "checkbox_names": [
+        "I physically checked Waveshare P4 4.3 PCB rev1.3 with 32 MiB flash.",
+        "I have exported anything needed and accept destructive factory replacement without guaranteed recovery or automatic backup."
+      ],
+      "terminal_frozen": true,
+      "page_errors": []
+    },
+    {
+      "width": 1280,
+      "keyboard_flow": "board/consent/verify/select/write/cancel PASS",
+      "tabs": [
+        "A",
+        "board",
+        "consent",
+        "prepare",
+        "connect",
+        "check",
+        "flash",
+        "cancel"
+      ],
+      "status_properties": {
+        "live": "polite",
+        "atomic": true,
+        "relevant": "additions text"
+      },
+      "checkbox_names": [
+        "I physically checked Waveshare P4 4.3 PCB rev1.3 with 32 MiB flash.",
+        "I have exported anything needed and accept destructive factory replacement without guaranteed recovery or automatic backup."
+      ],
+      "terminal_frozen": true,
+      "page_errors": []
+    }
+  ]
+}

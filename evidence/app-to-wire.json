@@ -1,0 +1,93 @@
+{
+  "chromium": "151.0.7922.34",
+  "boundary": "Actual app -> profiles -> GuardedSession -> pinned vendor -> synthetic port.\nOnly the app's vendor import is redirected to the existing synthetic-device subclasses.\nNo session/profiles/adapter method substitution, no physical WebSerial access.\n",
+  "results": [
+    {
+      "scenario": "success",
+      "result": "PASS",
+      "stats": {
+        "opens": 2,
+        "closes": 2,
+        "writes": 3,
+        "resets": 0,
+        "stub": 1,
+        "security": 1,
+        "readbacks": 6,
+        "aborts": 0,
+        "baudRates": [
+          115200,
+          460800
+        ],
+        "targetOpcodes": 1,
+        "switches": 1,
+        "blocks": 52
+      },
+      "terminal": "Complete All three images and erased tails verified. Press the board RESET button now, then confirm boot/display/touch and the public D6 test: Back, reopen Test results without recalculating. Readback is not boot or recovery qualification. Installation session is complete; do not repeat installation just to boot.",
+      "page_errors": []
+    },
+    {
+      "scenario": "malformed-header",
+      "result": "PASS",
+      "stats": {
+        "opens": 1,
+        "closes": 1,
+        "writes": 0,
+        "resets": 0,
+        "stub": 1,
+        "security": 1,
+        "readbacks": 0,
+        "aborts": 0,
+        "baudRates": [
+          115200
+        ],
+        "targetOpcodes": 1,
+        "switches": 1
+      },
+      "terminal": "Failed; disconnected; BAUD_SWITCH_REFUSED; Phase: Switching stub transport to 460800 Attempt refused or failed; no automatic retry or success reset. Session ended. Reload, reverify images and reselect port for a fresh attempt.",
+      "page_errors": []
+    },
+    {
+      "scenario": "reopen-refused",
+      "result": "PASS",
+      "stats": {
+        "opens": 2,
+        "closes": 2,
+        "writes": 0,
+        "resets": 0,
+        "stub": 1,
+        "security": 1,
+        "readbacks": 0,
+        "aborts": 0,
+        "baudRates": [
+          115200,
+          460800
+        ],
+        "targetOpcodes": 1,
+        "switches": 1
+      },
+      "terminal": "Failed; disconnected; DEPENDENCY_ERROR; Phase: Switching stub transport to 460800 Attempt refused or failed; no automatic retry or success reset. Session ended. Reload, reverify images and reselect port for a fresh attempt.",
+      "page_errors": []
+    },
+    {
+      "scenario": "UI-cancel-during-baud",
+      "result": "PASS",
+      "stats": {
+        "opens": 1,
+        "closes": 1,
+        "writes": 0,
+        "resets": 0,
+        "stub": 1,
+        "security": 1,
+        "readbacks": 0,
+        "aborts": 0,
+        "baudRates": [
+          115200
+        ],
+        "targetOpcodes": 1,
+        "faultReached": true
+      },
+      "terminal": "Cancelled. No retry. If cleanup is uncertain, unplug before reloading for a new attempt.",
+      "page_errors": []
+    }
+  ]
+}

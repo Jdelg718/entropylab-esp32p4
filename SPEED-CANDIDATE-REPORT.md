@@ -1,5 +1,7 @@
 # 460800 baud/progress candidate — software closeout
 
+Subsequent native-platform, packaging, combined-browser and accessibility results, plus the physical port-picker blocker, are recorded in [GATES-REPORT.md](GATES-REPORT.md). The evidence below describes the original software-closeout snapshot.
+
 Base: `124b746ff4cfd5cd878baaaade8e12170ab611ef`. Builds on existing speed commits `9999741` and `0ce4461`; this is not a new implementation. Candidate source only: not published, deployed, flashed, or physically speed-qualified. Accepted v0.1.1 firmware, archive, profile pins, vendor bundle, and held updater remain unchanged.
 
 ## Implemented and reviewed behavior
