@@ -4,7 +4,7 @@ from pathlib import Path
 from urllib.parse import unquote,urlsplit
 import re
 r=Path(__file__).resolve().parents[1]
-files=[r/'README.md',r/'docs/CURRENT-STATUS.md',r/'docs/PUBLIC-FIRST-INSTALL.md',*sorted((r/'docs/current').rglob('*.md'))]
+files=[r/'README.md',r/'docs/CURRENT-STATUS.md',r/'docs/RELEASE-READINESS.md',r/'docs/PUBLIC-FIRST-INSTALL.md',*sorted((r/'docs/current').rglob('*.md'))]
 fail=[];count=0
 for p in files:
  for target in re.findall(r'\]\(([^\s)]+)\)',p.read_text()):
