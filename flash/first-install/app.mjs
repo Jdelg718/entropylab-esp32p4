@@ -3,7 +3,26 @@ import {BOARD,createSession} from './adapter/profiles.mjs';
 import {ESPLoader,Transport} from './vendor/esptool-js.mjs';
 const $=id=>document.getElementById(id); const abort=new AbortController();
 let assets,port,session,ended=false,busy=false;
-const status=s=>{$('status').textContent=s;};
+// Decorative per-image track: the polite status remains the single accessible source.
+// Never interpolate byte counts/width or run autonomous activity indicators.
+let progressAnimation;
+const reducedMotion=globalThis.matchMedia?.('(prefers-reduced-motion: reduce)');
+function stopProgressVisual(){
+ progressAnimation?.cancel();progressAnimation=undefined;
+ const track=$('image-progress');if(track)track.hidden=true;
+}
+reducedMotion?.addEventListener('change',()=>{progressAnimation?.cancel();progressAnimation=undefined;});
+function drawProgress(p,total,previous){
+ const track=$('image-progress'),fill=$('image-progress-fill');
+ if(!track||!fill||total===null)return;
+ track.hidden=false;track.dataset.kind=p.kind;
+ fill.style.width=`${p.bytes/total*100}%`;
+ const advanced=p.bytes>0&&(!previous||previous.order!==p.order||p.bytes>previous.bytes);
+ if(advanced&&p.kind!=='image-verified'&&!reducedMotion?.matches){
+  progressAnimation=fill.animate?.([{opacity:0.6},{opacity:1}],{duration:180,iterations:1});
+ }
+}
+const status=s=>{stopProgressVisual();$('status').textContent=s;};
 let lastProgress, lastDisplayed, progressEnded=false;
 const phaseLabels={'verifying-assets':'Verifying downloaded images','connecting-rom':'Connecting ROM at 115200','security-preflight':'Checking ROM security','official-stub':'Loading official RAM stub at 115200','changing-baud':'Switching stub transport to 460800','jedec-preflight':'Checking flash capacity','writing':'Writing compressed images (not yet verified)','verifying-readback':'Reading back images and erased tails for SHA-256 verification','complete':'Complete','diagnostic-complete':'Diagnostic complete','failed-disconnected':'Failed; disconnected','failed-cleanup-incomplete':'Failed; cleanup incomplete. Unplug before reloading for a new attempt'};
 function state(e){
@@ -30,12 +49,13 @@ function progress(p){
  if(lastProgress&&(p.elapsedMs<lastProgress.elapsedMs||order<lastProgress.order||(order===lastProgress.order&&p.bytes<lastProgress.bytes)))return;
  p={...p,order};
  const previous=lastDisplayed;lastProgress={...p};
- if(previous&&p.kind===previous.kind&&p.assetIndex===previous.assetIndex&&p.elapsedMs-previous.elapsedMs<250&&p.bytes!==total)return;
+ // Exact bytes update synchronously; animation never delays the status.
  lastDisplayed={...p};
  const name=['bootloader','partition table','application'][p.assetIndex%3];
  const phase=p.kind==='compressed-write'?'Writing '+name:p.assetIndex>2?'Verifying erased tail for '+name:'Verifying '+name;
  const label=p.kind==='compressed-write'?'Compressed bytes acknowledged':p.kind==='image-verified'?'SHA-256 verified bytes':'Bytes read (SHA-256 pending)';
  status(`${phase} · ${Math.floor(p.elapsedMs/1000)}s elapsed\n${label}: ${p.bytes}${total===null?'':' / '+total}`);
+ drawProgress(p,total,previous);
 }
 function render(){$('flash').disabled=busy||ended||!assets||!port||!$('board').checked||!$('consent').checked;$('prepare').disabled=busy||ended||!!assets;$('connect').disabled=busy||ended||!assets||!$('board').checked;$('check').disabled=busy||ended||!port||!$('board').checked;}
 $('board').onchange=render;$('consent').onchange=render;

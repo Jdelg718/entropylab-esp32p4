@@ -25,7 +25,7 @@ try:
     const check=(b,m)=>{if(!b)throw Error(m)}, text=()=>document.querySelector('#status').textContent;
     const emit=(bytes,elapsedMs,extra={})=>events.onProgress({phase:'writing',kind:'compressed-write',assetIndex:0,bytes,totalBytes:1000,elapsedMs,phaseElapsedMs:elapsedMs,...extra});
     for(const [state,label] of Object.entries({'verifying-assets':'downloaded','connecting-rom':'115200','security-preflight':'security','official-stub':'RAM stub','changing-baud':'460800','jedec-preflight':'capacity','writing':'not yet verified','verifying-readback':'SHA-256'})){events.onState({state});check(text().includes(label),state);}
-    emit(0,0);let before=text();emit(100,100);emit(200,200);check(text()===before,'throttle');emit(300,300);check(text().includes('acknowledged: 300 / 1000'),'starvation');
+    emit(0,0);let before=text();emit(100,100);check(text().includes('acknowledged: 100 / 1000'),'immediate bytes');emit(200,200);check(text().includes('acknowledged: 200 / 1000'),'immediate bytes');emit(300,300);check(text().includes('acknowledged: 300 / 1000'),'continuous bytes');
     before=text();for(const bad of [null,{}, {kind:'compressed-write',bytes:NaN}])events.onProgress(bad);check(text()===before,'malformed');
     emit(400,600,{totalBytes:null});check(text().endsWith('acknowledged: 400'),'unknown total');
     emit(500,900,{phase:'verifying-readback',kind:'image-read',assetIndex:3});check(text().includes('erased tail')&&text().includes('SHA-256 pending'),'read');
