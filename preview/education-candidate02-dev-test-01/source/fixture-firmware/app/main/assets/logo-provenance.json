@@ -1,0 +1,24 @@
+{
+  "site-logo-dark.svg": {
+    "bytes": 5160,
+    "sha256": "f269bcda164493e546982875a6a4867dc88605c1937145157c31715bc81408f9"
+  },
+  "logo-dark-180x270.png": {
+    "bytes": 11188,
+    "sha256": "79eeecc898c04f313bd98bce11e90aab9fd3a1ed3a1360bb81db4cc8a8553842"
+  },
+  "logo_rgb565a8.inc": {
+    "bytes": 741497,
+    "sha256": "479969199140989cacba1d2231b249f5de0efcede7e3ce25046f087bc27d5f28"
+  },
+  "LICENSE-OOGA-BOOGA": {
+    "bytes": 700,
+    "sha256": "2bb49adc95f01dc9285140544bd0d99adebfd8a4824599c17f14b1b4aaa3a116"
+  },
+  "pixel_payload": {
+    "source": "logo_rgb565a8.inc",
+    "bytes": 145800,
+    "sha256": "dc11571cedef18b0dff81d3dd485652728acaa6766f6cd4136a71f0a35c6de0e",
+    "format": "RGB565 little endian plane, then A8; stride 360/180; no premultiplication"
+  }
+}

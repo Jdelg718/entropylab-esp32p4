@@ -1,0 +1,12 @@
+This repository contains separately licensed components, NOT a blanket dual license.
+
+core-spike/native/src/upstream_core.rs is extracted from OogaBoogaX/entropylab
+commit 6e1f39cc7da25942c7a1f51ea5837f4ac7ef8f51 under the exact custom
+THE OOGA BOOGA LICENSE in LICENSE-OOGA-BOOGA. This is not the Unlicense
+and no SPDX equivalence is claimed.
+
+Original host wrappers, fixture adapter, C entrypoint, scripts and documentation
+are under LICENSE-MIT. Existing copyright notices remain intact.
+Public Bitcoin/Trezor test vectors and third-party dependencies retain their
+own licenses; see THIRD_PARTY_NOTICES.md. No upstream endorsement or trademark
+rights are implied. This repository is unofficial and experimental.

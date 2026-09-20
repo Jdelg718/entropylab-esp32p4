@@ -1,0 +1,50 @@
+{
+  "animation_test_revision": "ce73b9138d51db5aca6a0d527d763f4c093c1ae9",
+  "build_receipt_sha256": "96e78c97c730a5a14a565ede5a375812a067af1333fc157887ca454c71bce2a8",
+  "candidate": "education-candidate-hardened-02",
+  "compatibility_sha256": "45564045c9c899b02dbf528ee38a11b89ceab8f2b6e66e824e01bed5a3563ff4",
+  "descriptor": "e66231dae53a45e30470f7f26-e1",
+  "dev_test_only": true,
+  "diagnostics_enabled": true,
+  "distribution": "HOLD",
+  "hardware": "NOT TESTED",
+  "image_verifier_status": "PASS-local-only",
+  "images": [
+    {
+      "bytes": 21264,
+      "offset": 8192,
+      "path": "flash/first-install/firmware/bootloader.bin",
+      "role": "boot",
+      "sha256": "4f00f81aad82838f4e33555e322abfbfff7d1de947d339c86e50be820cbd7bb4"
+    },
+    {
+      "bytes": 3072,
+      "offset": 32768,
+      "path": "flash/first-install/firmware/partition-table.bin",
+      "role": "table",
+      "sha256": "d3e6663d9cbd407623c82f215df58a5c9bd1e353fd937ad519018c06fd9298fb"
+    },
+    {
+      "bytes": 1542288,
+      "offset": 65536,
+      "path": "flash/first-install/firmware/entropylab.bin",
+      "role": "app",
+      "sha256": "42d5e3b40a3869157171552162189a281c84b893c8533fe3ae8266bfc4c47550"
+    }
+  ],
+  "package_version": "education-candidate02-dev-test-01",
+  "partition_unchanged": true,
+  "recipe_revision": "0ec7f6dd8ec62d6d554fea6726deeeb5a795a102",
+  "reproducibility": "NOT TESTED",
+  "runtime_verifier_status": "PASS-supplemental-only",
+  "schema": "entropylab-successor-test-provenance-v1",
+  "source_manifest_sha256": "66231dae53a45e30470f7f26ab50cb8a9aff3d500aafb7c78fcdedfd755bbb13",
+  "source_revision": "2b919dc73c9cbcbb5e845850650d71c6782ad68b",
+  "source_unchanged": true,
+  "supplemental_report_sha256": {
+    "image": "cf7c1229da1c1a6fb07e94051a53b68b44ce9dcb848231bb5820c3611faf35e6",
+    "runtime": "21f9f868f272e7c35b8ef287c1fc5574bd0e4c2425355385cdc6bdfc80c65bbb"
+  },
+  "supplemental_verifier_revision": "33c90ec8d1b957e363690fa7912e250e4782fa11",
+  "writes_enabled": true
+}

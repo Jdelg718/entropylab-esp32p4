@@ -1,3 +1,5 @@
+> Candidate02 successor: see [the current README](../README.md) and [publication status](PUBLICATION-CANDIDATE02.md). The body below preserves predecessor guidance/evidence; do not use its older installer URL for candidate02.
+
 # Current release status
 
 [v0.1.0-retention-preview](https://github.com/Jdelg718/entropylab-esp32p4/releases/tag/v0.1.0-retention-preview) was published on 2026-09-19. Start with [PUBLIC-FIRST-INSTALL.md](PUBLIC-FIRST-INSTALL.md) for downloads, local serving, backup/export, exact hardware and firmware hashes.

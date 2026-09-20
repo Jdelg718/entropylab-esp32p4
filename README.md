@@ -1,24 +1,129 @@
 # EntropyLab — unofficial ESP32-P4
 
-## v0.1.1-retention-preview — documentation/onboarding patch
+## Education candidate02 — public-test publication candidate
 
-**v0.1.1-retention-preview** is the published documentation/onboarding patch with unchanged firmware. The previous **v0.1.0-retention-preview** release and its assets remain immutable. Existing v0.1.0 users do not need to reflash.
+**Public practice only, not a wallet or signer. Never enter real seeds, passphrases,
+private keys or other secrets; never fund displayed addresses.** This is an
+unofficial native adaptation of EntropyLab — Team Ooga Booga, not endorsed by
+OogaBoogaX, Waveshare or BitBox.
 
-Download the [published prerelease](https://github.com/Jdelg718/entropylab-esp32p4/releases/tag/v0.1.1-retention-preview). Read [the first-install guide](docs/PUBLIC-FIRST-INSTALL.md) before replacing firmware: exact board confirmation, backup/export and destructive consent are required.
+This checkout includes the installable candidate02 firmware and animated flasher
+in an additive versioned directory. The earlier v0.1.0/v0.1.1 retention-preview
+releases, images and historical pins are unchanged. This is **new education
+firmware**, not the old documentation-only patch. No rebuild was performed.
 
-From a clean clone or verified extracted ZIP, run `python3 scripts/serve-public.py` on Linux/macOS or `py -3 scripts/serve-public.py` on Windows, then open http://localhost:8000/flash/first-install/ in desktop Chrome or Edge. No public hosted installer is configured. Native Windows/macOS execution remains untested.
+**Publication gate: HOLD for binary notice closure and independent candidate
+review.** This prepared checkout is not a published prerelease. See
+[publication status and exact provenance](docs/PUBLICATION-CANDIDATE02.md).
+The included installer allows explicit user-operated writes; HOLD is a
+publication gate, not an adapter lock. Do not distribute a release while it is open.
 
-**Public practice only — not a wallet or signer.** Never enter real secrets or fund displayed addresses. This independently maintained native adaptation is not shipped, audited or endorsed by OogaBoogaX or Waveshare. Input is supplied by the user; encoding, hashing and visual fingerprints do not certify randomness.
+## Get and run locally
 
-The exact firmware tuple has prior one-board private-path acceptance; the new public install policy is hardware-unexercised. The separate retention updater remains held. Read [current release scope and remaining holds](docs/CURRENT-STATUS.md), the single current status entrypoint; readback does not establish boot or recovery.
+Requires Python 3 and desktop Chrome with Web Serial (Chromium-based Edge may
+also work). No Node, Rust, ESP-IDF, package installation or private build checkout
+is required to run the installer.
 
-## Start here
+After this candidate is merged, clone main:
 
-- [Installation, manual RESET and evidence limits](docs/PUBLIC-FIRST-INSTALL.md)
-- [Contributing and current host tests](docs/current/CONTRIBUTING.md) · [portable retention host gate](docs/retention-host/README.md)
-- [Hardware identifiers](docs/current/docs/HARDWARE.md): exact Waveshare ESP32-P4-WIFI6-Touch-LCD-4.3, PCB rev1.3, 32 MiB. Silicon 100–199 alone does not identify PCB revision.
-- [Approved priority order](docs/current/ROADMAP.md) · [security boundary](docs/current/SECURITY.md)
-- [Provenance context](docs/CURRENT-STATUS.md#provenance-context) · [third-party notices](THIRD_PARTY_NOTICES.md)
+```sh
+git clone https://github.com/Jdelg718/entropylab-esp32p4.git
+cd entropylab-esp32p4
+```
+
+Alternatively choose **Code → Download ZIP** on GitHub, extract it completely,
+and open a terminal in the extracted `entropylab-esp32p4-main` folder (the folder
+containing this README). Until merge, GitHub main still serves the older release.
+
+Linux/macOS:
+
+```sh
+python3 scripts/verify-publication.py
+python3 scripts/serve-public.py
+```
+
+Windows (PowerShell or Command Prompt):
+
+```powershell
+py -3 scripts/verify-publication.py
+py -3 scripts/serve-public.py
+```
+
+Open **http://localhost:8000/** in desktop Chrome. The loopback server routes to
+`preview/education-candidate02-dev-test-01/flash/first-install/`, not the historical
+root flasher. Do not open the HTML with `file://` or expose this server publicly.
+Use Ctrl+C in the terminal to stop. Linux clean clone/ZIP and Chromium checks are
+reported separately from native macOS/Windows execution, which remains untested.
+
+## Board and installation
+
+Only **Waveshare ESP32-P4-WIFI6-Touch-LCD-4.3, PCB rev1.3, 32 MiB flash**, is in
+scope. The chip identifier/revision alone does not establish the board model.
+The installer checks ESP32-P4 chip 18, revision 100–199, ROM ECO 0 or 2, raw JEDEC
+32 MiB and disabled secure boot/encryption/download-security restrictions. Do not
+bypass any refusal, and do not use this for a different board or its C6 coprocessor.
+
+1. Preserve a verified board backup and recovery instructions **outside this
+   checkout**. The installer does not create a backup. Stop if unavailable.
+2. Connect the USB-to-UART port with a data-capable cable. Close serial monitors.
+3. Verify the three images, confirm the exact board and select its serial port.
+   Run the no-write diagnostic first; it loads the official RAM stub.
+4. Reload, verify/select again, then explicitly accept the preserved-backup and
+   destructive overwrite consent. Click **Install DEV TEST firmware** once.
+   This replaces three image sector windows, including erased tails; it is not
+   an app-only update. No erase-all, C6 write, automatic retry or eFuse write.
+5. Wait for verification of all three images **and all three erased tails**.
+   Only after successful completion press **RESET**, then check display, touch,
+   education pages, a public fixture/fingerprint, Back and retained Test results.
+6. On failure, cancel or unplug: **STOP**. Save the finite failure report, removing
+   identifying details before sharing; seek review rather than retrying blindly.
+
+Read the [immutable tested package instructions](preview/education-candidate02-dev-test-01/README.md)
+for the exact operator contract. Its earlier NOT TESTED labels are historical;
+the subsequent one-board user report is recorded separately, never retroactively
+rewritten into its immutable manifest.
+
+## Changes and public testing
+
+Education text now explains biased dice/coins, independence, transcript hashing,
+representation versus entropy and public worked examples. The flasher adds
+per-image live progress and a guarded 115200 → 460800 baud transition. Candidate02
+uses the hardened build recipe and private runtime heap checks; these are not a
+claim of independently reproducible builds or entropy-source certification.
+
+The exact dev package was installed by its owner on **one board**: installation
+reported three images plus three erased tails verified, followed by the owner's
+“everything works” report after RESET/boot/touch/education/retention checks were
+requested. This is user-reported acceptance, not an exhaustive instrumented
+hardware campaign. Other boards, recovery qualification, independent rebuilds
+and native Windows/macOS testing remain unqualified.
+
+**BitBox-style dice is not proven interoperability with BitBox hardware.** The
+maintainer has no BitBox device. BitBox owners are invited to compare **public,
+disposable known vectors only** and report model/firmware, exact public dice/coin
+transcript, word-count/final-candidate choices and expected versus actual output.
+Never submit a real wallet seed, private key, secret passphrase or private backup.
+Please report OS/browser and sanitized errors for installation tests as well.
+
+## Troubleshooting
+
+- No serial chooser: use desktop Chrome on localhost, not mobile Safari or file://;
+  close another tab/serial monitor holding the port and check OS serial permissions.
+- No board/port: check USB-to-UART connector and a known data cable; consult the
+  board vendor's driver/bootloader instructions. Do not disable security checks.
+- Port 8000 busy: stop the previous preview server, then rerun the same command.
+- Hash mismatch: stop and obtain a fresh complete checkout/archive; do not edit pins.
+- Verified install but no boot: use manual RESET once after success, record symptoms;
+  do not reinstall as a substitute for checking boot or recovery.
+
+## Source and license scope
+
+[Third-party notices](THIRD_PARTY_NOTICES.md), the exact custom Ooga Booga license,
+MIT/BSD/OFL notices and dependency terms remain intact. The versioned package
+includes the corresponding project sources and collected exact dependency notices.
+External dependencies remain pinned but not completely vendored. Outstanding
+binary notice questions are explicit in the publication status; collection of
+license text alone is not legal clearance.
 
 ## What is implemented
 

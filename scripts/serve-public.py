@@ -11,14 +11,19 @@ if (ROOT / '.git').exists():
 else:
     # ZIPs have no Git metadata. Use the packaged tracked-file inventory, never
     # filesystem enumeration (which would expose subsequently added backups).
-    ALLOWED = set(json.loads((ROOT / 'release/inventory.json').read_text()))
-    ALLOWED.add('release/inventory.json')
+    ALLOWED = set(json.loads((ROOT / 'release/publication-inventory.json').read_text()))
+    ALLOWED.add('release/publication-inventory.json')
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(ROOT), **kwargs)
     def send_head(self):
         path = unquote(urlsplit(self.path).path).lstrip('/')
-        if path.endswith('/') or not path:
+        if not path:
+            self.send_response(302)
+            self.send_header('Location', '/preview/education-candidate02-dev-test-01/flash/first-install/')
+            self.end_headers()
+            return None
+        if path.endswith('/'):
             path += 'index.html'
         target = ROOT / path
         if path not in ALLOWED or not target.is_file() or target.is_symlink() or not target.resolve().is_relative_to(ROOT):
@@ -26,5 +31,5 @@ class Handler(SimpleHTTPRequestHandler):
             return None
         return super().send_head()
 if __name__ == '__main__':
-    print('Open http://localhost:8000/flash/first-install/', flush=True)
+    print('Open http://localhost:8000/ (education candidate02; publication HOLD)', flush=True)
     ThreadingHTTPServer(('127.0.0.1', 8000), Handler).serve_forever()

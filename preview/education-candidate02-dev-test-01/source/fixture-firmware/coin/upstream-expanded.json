@@ -1,0 +1,3163 @@
+{
+  "warning": "PUBLIC TEST DATA ONLY. Never fund these wallets.",
+  "revision": "6e1f39cc7da25942c7a1f51ea5837f4ac7ef8f51",
+  "appSha256": "638844c858c8592137ffc21118446d145c1dad2ba9641b9d730decc2d7e00958",
+  "generator": "Slices actual app.js; upstream WASM sha256 and BIP39 facades; no RNG, network, browser or upstream writes.",
+  "sources": {
+    "hodlNote": {
+      "file": "src/js/app.js",
+      "start": 100,
+      "end": 102
+    },
+    "hodlSeedConfig": {
+      "file": "src/js/app.js",
+      "start": 2361,
+      "end": 2363
+    },
+    "hodlNormalizeEntropyFormat": {
+      "file": "src/js/app.js",
+      "start": 2364,
+      "end": 2366
+    },
+    "hodlEntropyFormatConfig": {
+      "file": "src/js/app.js",
+      "start": 2367,
+      "end": 2370
+    },
+    "hodlNormalizeEntropyCharacter": {
+      "file": "src/js/app.js",
+      "start": 3047,
+      "end": 3051
+    },
+    "hodlFilterNumberBase": {
+      "file": "src/js/app.js",
+      "start": 3052,
+      "end": 3063
+    },
+    "hodlEntropyDigitEntries": {
+      "file": "src/js/app.js",
+      "start": 3064,
+      "end": 3076
+    },
+    "hodlEntropyDigits": {
+      "file": "src/js/app.js",
+      "start": 3077,
+      "end": 3079
+    },
+    "hodlNumberBaseBits": {
+      "file": "src/js/app.js",
+      "start": 3080,
+      "end": 3087
+    },
+    "hodlAnalyzeEntropyInput": {
+      "file": "src/js/app.js",
+      "start": 3129,
+      "end": 3132
+    },
+    "hodlNumberBaseEntropy": {
+      "file": "src/js/app.js",
+      "start": 3225,
+      "end": 3237
+    },
+    "hodlBinaryDigits": {
+      "file": "src/js/app.js",
+      "start": 3044,
+      "end": 3046
+    },
+    "hodlGroupedBinary": {
+      "file": "src/js/app.js",
+      "start": 3100,
+      "end": 3103
+    },
+    "hodlDiceEntropyBits": {
+      "file": "src/js/app.js",
+      "start": 148,
+      "end": 150
+    },
+    "hodlSplitDiceString": {
+      "file": "src/js/app.js",
+      "start": 151,
+      "end": 155
+    },
+    "hodlIanColemanDiceString": {
+      "file": "src/js/app.js",
+      "start": 3206,
+      "end": 3208
+    },
+    "hodlDiceEntropy": {
+      "file": "src/js/app.js",
+      "start": 3209,
+      "end": 3224
+    },
+    "hodlBitBoxLookupWord": {
+      "file": "src/js/app.js",
+      "start": 156,
+      "end": 160
+    },
+    "hodlBitBoxRolls": {
+      "file": "src/js/app.js",
+      "start": 4572,
+      "end": 4606
+    },
+    "hodlDPlusD16Value": {
+      "file": "src/js/app.js",
+      "start": 2463,
+      "end": 2466
+    },
+    "hodlDPlusStepValue": {
+      "file": "src/js/app.js",
+      "start": 2419,
+      "end": 2423
+    }
+  },
+  "prerequisites": [
+    {
+      "words": 12,
+      "bits": 128,
+      "bytes": 16,
+      "hexChars": 32,
+      "hashRolls": 50,
+      "partialWords": 11,
+      "candidates": 128,
+      "checksumBits": 4,
+      "coinFlips": 128,
+      "computedHashRolls": 50,
+      "fairDieBitsAtRecommendation": 129.24812503605781,
+      "bitboxMinimumAcceptedRolls": 66,
+      "bitboxExpectedD6Rolls": 93.5,
+      "bitboxFinalPickBits": 7
+    },
+    {
+      "words": 15,
+      "bits": 160,
+      "bytes": 20,
+      "hexChars": 40,
+      "hashRolls": 62,
+      "partialWords": 14,
+      "candidates": 64,
+      "checksumBits": 5,
+      "coinFlips": 160,
+      "computedHashRolls": 62,
+      "fairDieBitsAtRecommendation": 160.26767504471167,
+      "bitboxMinimumAcceptedRolls": 84,
+      "bitboxExpectedD6Rolls": 119,
+      "bitboxFinalPickBits": 6
+    },
+    {
+      "words": 18,
+      "bits": 192,
+      "bytes": 24,
+      "hexChars": 48,
+      "hashRolls": 75,
+      "partialWords": 17,
+      "candidates": 32,
+      "checksumBits": 6,
+      "coinFlips": 192,
+      "computedHashRolls": 75,
+      "fairDieBitsAtRecommendation": 193.8721875540867,
+      "bitboxMinimumAcceptedRolls": 102,
+      "bitboxExpectedD6Rolls": 144.5,
+      "bitboxFinalPickBits": 5
+    },
+    {
+      "words": 21,
+      "bits": 224,
+      "bytes": 28,
+      "hexChars": 56,
+      "hashRolls": 87,
+      "partialWords": 20,
+      "candidates": 16,
+      "checksumBits": 7,
+      "coinFlips": 224,
+      "computedHashRolls": 87,
+      "fairDieBitsAtRecommendation": 224.8917375627406,
+      "bitboxMinimumAcceptedRolls": 120,
+      "bitboxExpectedD6Rolls": 170,
+      "bitboxFinalPickBits": 4
+    },
+    {
+      "words": 24,
+      "bits": 256,
+      "bytes": 32,
+      "hexChars": 64,
+      "hashRolls": 99,
+      "partialWords": 23,
+      "candidates": 8,
+      "checksumBits": 8,
+      "coinFlips": 256,
+      "computedHashRolls": 100,
+      "fairDieBitsAtRecommendation": 255.91128757139444,
+      "bitboxMinimumAcceptedRolls": 138,
+      "bitboxExpectedD6Rolls": 195.5,
+      "bitboxFinalPickBits": 3
+    }
+  ],
+  "fixtures": [
+    {
+      "id": "zero-12",
+      "kind": "binary",
+      "input": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "words": 12,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hex": "00000000000000000000000000000000",
+        "bits": 128,
+        "sourceBits": 128,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 128,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 128,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 128,
+              "words": 12
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
+      }
+    },
+    {
+      "id": "alternating-12",
+      "kind": "binary",
+      "input": "01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101",
+      "words": 12,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85
+        ],
+        "hex": "55555555555555555555555555555555",
+        "bits": 128,
+        "sourceBits": 128,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 128,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 128,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 128,
+              "words": 12
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "fetch primary fetch primary fetch primary fetch primary fetch primary fetch problem"
+      }
+    },
+    {
+      "id": "short-12",
+      "kind": "binary",
+      "input": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "words": 12,
+      "method": "binary",
+      "expected": {
+        "ok": false,
+        "error": {
+          "key": "The selected {words}-word seed needs exactly {digits} {unit} ({bits} bits). You entered {have}.",
+          "vars": {
+            "words": 12,
+            "digits": 128,
+            "unit": "binary digits",
+            "bits": 128,
+            "have": 127
+          }
+        },
+        "notes": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "excess-12",
+      "kind": "binary",
+      "input": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "words": 12,
+      "method": "binary",
+      "expected": {
+        "ok": false,
+        "error": {
+          "key": "The selected {words}-word seed needs exactly {digits} {unit} ({bits} bits). You entered {have}.",
+          "vars": {
+            "words": 12,
+            "digits": 128,
+            "unit": "binary digits",
+            "bits": 128,
+            "have": 129
+          }
+        },
+        "notes": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "coldcard-12",
+      "kind": "dice",
+      "input": "12345612345612345612345612345612345612345612345612",
+      "words": 12,
+      "method": "coldcard",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          238,
+          114,
+          174,
+          145,
+          90,
+          78,
+          110,
+          167,
+          204,
+          190,
+          184,
+          229,
+          229,
+          238,
+          206,
+          242
+        ],
+        "hex": "ee72ae915a4e6ea7ccbeb8e5e5eecef2",
+        "bits": 128,
+        "sourceBits": 129.24812503605781,
+        "method": "coldcard-sha256",
+        "notes": [
+          {
+            "key": "{n} rolls of a fair six-sided die ≈ {bits} bits.",
+            "vars": {
+              "n": 50,
+              "bits": "129.2"
+            }
+          },
+          {
+            "key": "Hashed rolls / Base 10 [0-9]: SHA-256 hash the complete original dice digit string, then use the first {bits} bits for the selected {words}-word seed. This matches COLDCARD and SeedSigner.",
+            "vars": {
+              "bits": 128,
+              "words": 12
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "unveil nice picture region tragic fault cream strike tourist control recipe tourist"
+      }
+    },
+    {
+      "id": "coleman-12",
+      "kind": "dice",
+      "input": "12345612345612345612345612345612345612345612345612",
+      "words": 12,
+      "method": "coleman",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          39,
+          148,
+          209,
+          159,
+          102,
+          157,
+          139,
+          232,
+          170,
+          105,
+          153,
+          240,
+          229,
+          148,
+          162,
+          100
+        ],
+        "hex": "2794d19f669d8be8aa6999f0e594a264",
+        "bits": 128,
+        "sourceBits": 129.24812503605781,
+        "method": "ian-coleman-dice-sha256",
+        "notes": [
+          {
+            "key": "{n} rolls of a fair six-sided die ≈ {bits} bits.",
+            "vars": {
+              "n": 50,
+              "bits": "129.2"
+            }
+          },
+          {
+            "key": "Hashed rolls / Dice [1-6]: convert every 6 to 0, SHA-256 hash the complete mapped digit string, then use the first {bits} bits for the selected {words}-word seed. This matches the method used by Keystone.",
+            "vars": {
+              "bits": 128,
+              "words": 12
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "chest pledge guitar snake suffer violin predict creek valley coach chuckle sister"
+      }
+    },
+    {
+      "id": "zero-15",
+      "kind": "binary",
+      "input": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "words": 15,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hex": "0000000000000000000000000000000000000000",
+        "bits": 160,
+        "sourceBits": 160,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 160,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 160,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 160,
+              "words": 15
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon address"
+      }
+    },
+    {
+      "id": "alternating-15",
+      "kind": "binary",
+      "input": "0101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101",
+      "words": 15,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85
+        ],
+        "hex": "5555555555555555555555555555555555555555",
+        "bits": 160,
+        "sourceBits": 160,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 160,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 160,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 160,
+              "words": 15
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "fetch primary fetch primary fetch primary fetch primary fetch primary fetch primary fetch primary feel"
+      }
+    },
+    {
+      "id": "short-15",
+      "kind": "binary",
+      "input": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "words": 15,
+      "method": "binary",
+      "expected": {
+        "ok": false,
+        "error": {
+          "key": "The selected {words}-word seed needs exactly {digits} {unit} ({bits} bits). You entered {have}.",
+          "vars": {
+            "words": 15,
+            "digits": 160,
+            "unit": "binary digits",
+            "bits": 160,
+            "have": 159
+          }
+        },
+        "notes": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "excess-15",
+      "kind": "binary",
+      "input": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "words": 15,
+      "method": "binary",
+      "expected": {
+        "ok": false,
+        "error": {
+          "key": "The selected {words}-word seed needs exactly {digits} {unit} ({bits} bits). You entered {have}.",
+          "vars": {
+            "words": 15,
+            "digits": 160,
+            "unit": "binary digits",
+            "bits": 160,
+            "have": 161
+          }
+        },
+        "notes": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "coldcard-15",
+      "kind": "dice",
+      "input": "12345612345612345612345612345612345612345612345612345612345612",
+      "words": 15,
+      "method": "coldcard",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          73,
+          154,
+          55,
+          148,
+          149,
+          126,
+          67,
+          87,
+          15,
+          213,
+          93,
+          14,
+          42,
+          202,
+          61,
+          111,
+          95,
+          6,
+          225,
+          242
+        ],
+        "hex": "499a3794957e43570fd55d0e2aca3d6f5f06e1f2",
+        "bits": 160,
+        "sourceBits": 160.26767504471167,
+        "method": "coldcard-sha256",
+        "notes": [
+          {
+            "key": "{n} rolls of a fair six-sided die ≈ {bits} bits.",
+            "vars": {
+              "n": 62,
+              "bits": "160.3"
+            }
+          },
+          {
+            "key": "Hashed rolls / Base 10 [0-9]: SHA-256 hash the complete original dice digit string, then use the first {bits} bits for the selected {words}-word seed. This matches COLDCARD and SeedSigner.",
+            "vars": {
+              "bits": 160,
+              "words": 15
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "end spider topple cliff tomorrow process dismiss produce athlete film monster team vacant ill silk"
+      }
+    },
+    {
+      "id": "coleman-15",
+      "kind": "dice",
+      "input": "12345612345612345612345612345612345612345612345612345612345612",
+      "words": 15,
+      "method": "coleman",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          71,
+          252,
+          246,
+          100,
+          158,
+          50,
+          141,
+          137,
+          124,
+          239,
+          110,
+          194,
+          198,
+          183,
+          201,
+          236,
+          124,
+          18,
+          162,
+          25
+        ],
+        "hex": "47fcf6649e328d897cef6ec2c6b7c9ec7c12a219",
+        "bits": 160,
+        "sourceBits": 160.26767504471167,
+        "method": "ian-coleman-dice-sha256",
+        "notes": [
+          {
+            "key": "{n} rolls of a fair six-sided die ≈ {bits} bits.",
+            "vars": {
+              "n": 62,
+              "bits": "160.3"
+            }
+          },
+          {
+            "key": "Hashed rolls / Dice [1-6]: convert every 6 to 0, SHA-256 hash the complete mapped digit string, then use the first {bits} bits for the selected {words}-word seed. This matches the method used by Keystone.",
+            "vars": {
+              "bits": 160,
+              "words": 15
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "elevator tray odor detect churn seven victory universe security cup venue suggest scorpion extra gun"
+      }
+    },
+    {
+      "id": "zero-18",
+      "kind": "binary",
+      "input": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "words": 18,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hex": "000000000000000000000000000000000000000000000000",
+        "bits": 192,
+        "sourceBits": 192,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 192,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 192,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 192,
+              "words": 18
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon agent"
+      }
+    },
+    {
+      "id": "alternating-18",
+      "kind": "binary",
+      "input": "010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101",
+      "words": 18,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85
+        ],
+        "hex": "555555555555555555555555555555555555555555555555",
+        "bits": 192,
+        "sourceBits": 192,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 192,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 192,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 192,
+              "words": 18
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "fetch primary fetch primary fetch primary fetch primary fetch primary fetch primary fetch primary fetch primary fetch program"
+      }
+    },
+    {
+      "id": "short-18",
+      "kind": "binary",
+      "input": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "words": 18,
+      "method": "binary",
+      "expected": {
+        "ok": false,
+        "error": {
+          "key": "The selected {words}-word seed needs exactly {digits} {unit} ({bits} bits). You entered {have}.",
+          "vars": {
+            "words": 18,
+            "digits": 192,
+            "unit": "binary digits",
+            "bits": 192,
+            "have": 191
+          }
+        },
+        "notes": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "excess-18",
+      "kind": "binary",
+      "input": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "words": 18,
+      "method": "binary",
+      "expected": {
+        "ok": false,
+        "error": {
+          "key": "The selected {words}-word seed needs exactly {digits} {unit} ({bits} bits). You entered {have}.",
+          "vars": {
+            "words": 18,
+            "digits": 192,
+            "unit": "binary digits",
+            "bits": 192,
+            "have": 193
+          }
+        },
+        "notes": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "coldcard-18",
+      "kind": "dice",
+      "input": "123456123456123456123456123456123456123456123456123456123456123456123456123",
+      "words": 18,
+      "method": "coldcard",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          138,
+          165,
+          24,
+          26,
+          92,
+          5,
+          145,
+          53,
+          18,
+          187,
+          3,
+          172,
+          21,
+          144,
+          133,
+          201,
+          149,
+          228,
+          237,
+          12,
+          43,
+          237,
+          132,
+          25
+        ],
+        "hex": "8aa5181a5c05913512bb03ac159085c995e4ed0c2bed8419",
+        "bits": 192,
+        "sourceBits": 193.8721875540867,
+        "method": "coldcard-sha256",
+        "notes": [
+          {
+            "key": "{n} rolls of a fair six-sided die ≈ {bits} bits.",
+            "vars": {
+              "n": 75,
+              "bits": "193.9"
+            }
+          },
+          {
+            "key": "Hashed rolls / Base 10 [0-9]: SHA-256 hash the complete original dice digit string, then use the first {bits} bits for the selected {words}-word seed. This matches COLDCARD and SeedSigner.",
+            "vars": {
+              "bits": 192,
+              "words": 18
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "melt churn alley retreat flip once enough gather project prosper cannon nasty furnace isolate cost laundry lottery slice"
+      }
+    },
+    {
+      "id": "coleman-18",
+      "kind": "dice",
+      "input": "123456123456123456123456123456123456123456123456123456123456123456123456123",
+      "words": 18,
+      "method": "coleman",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          91,
+          113,
+          89,
+          90,
+          146,
+          48,
+          73,
+          101,
+          39,
+          178,
+          135,
+          242,
+          75,
+          123,
+          162,
+          22,
+          155,
+          33,
+          212,
+          169,
+          76,
+          103,
+          153,
+          159
+        ],
+        "hex": "5b71595a9230496527b287f24b7ba2169b21d4a94c67999f",
+        "bits": 192,
+        "sourceBits": 193.8721875540867,
+        "method": "ian-coleman-dice-sha256",
+        "notes": [
+          {
+            "key": "{n} rolls of a fair six-sided die ≈ {bits} bits.",
+            "vars": {
+              "n": 75,
+              "bits": "193.9"
+            }
+          },
+          {
+            "key": "Hashed rolls / Dice [1-6]: convert every 6 to 0, SHA-256 hash the complete mapped digit string, then use the first {bits} bits for the selected {words}-word seed. This matches the method used by Keystone.",
+            "vars": {
+              "bits": 192,
+              "words": 18
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "fork member find caught afraid raw paddle extend venture forward trigger coffee rare tumble pioneer mind office wife"
+      }
+    },
+    {
+      "id": "zero-21",
+      "kind": "binary",
+      "input": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "words": 21,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hex": "00000000000000000000000000000000000000000000000000000000",
+        "bits": 224,
+        "sourceBits": 224,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 224,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 224,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 224,
+              "words": 21
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon admit"
+      }
+    },
+    {
+      "id": "alternating-21",
+      "kind": "binary",
+      "input": "01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101",
+      "words": 21,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85
+        ],
+        "hex": "55555555555555555555555555555555555555555555555555555555",
+        "bits": 224,
+        "sourceBits": 224,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 224,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 224,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 224,
+              "words": 21
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "fetch primary fetch primary fetch primary fetch primary fetch primary fetch primary fetch primary fetch primary fetch primary fetch primary feel"
+      }
+    },
+    {
+      "id": "short-21",
+      "kind": "binary",
+      "input": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "words": 21,
+      "method": "binary",
+      "expected": {
+        "ok": false,
+        "error": {
+          "key": "The selected {words}-word seed needs exactly {digits} {unit} ({bits} bits). You entered {have}.",
+          "vars": {
+            "words": 21,
+            "digits": 224,
+            "unit": "binary digits",
+            "bits": 224,
+            "have": 223
+          }
+        },
+        "notes": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "excess-21",
+      "kind": "binary",
+      "input": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "words": 21,
+      "method": "binary",
+      "expected": {
+        "ok": false,
+        "error": {
+          "key": "The selected {words}-word seed needs exactly {digits} {unit} ({bits} bits). You entered {have}.",
+          "vars": {
+            "words": 21,
+            "digits": 224,
+            "unit": "binary digits",
+            "bits": 224,
+            "have": 225
+          }
+        },
+        "notes": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "coldcard-21",
+      "kind": "dice",
+      "input": "123456123456123456123456123456123456123456123456123456123456123456123456123456123456123",
+      "words": 21,
+      "method": "coldcard",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          212,
+          174,
+          156,
+          31,
+          41,
+          23,
+          179,
+          91,
+          167,
+          141,
+          163,
+          25,
+          93,
+          19,
+          72,
+          66,
+          108,
+          185,
+          159,
+          173,
+          152,
+          230,
+          181,
+          178,
+          206,
+          7,
+          109,
+          135
+        ],
+        "hex": "d4ae9c1f2917b35ba78da3195d1348426cb99fad98e6b5b2ce076d87",
+        "bits": 224,
+        "sourceBits": 224.8917375627406,
+        "method": "coldcard-sha256",
+        "notes": [
+          {
+            "key": "{n} rolls of a fair six-sided die ≈ {bits} bits.",
+            "vars": {
+              "n": 87,
+              "bits": "224.9"
+            }
+          },
+          {
+            "key": "Hashed rolls / Base 10 [0-9]: SHA-256 hash the complete original dice digit string, then use the first {bits} bits for the selected {words}-word seed. This matches COLDCARD and SeedSigner.",
+            "vars": {
+              "bits": 224,
+              "words": 21
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "start insane amazing fall kite punch owner refuse bone trigger spirit luggage slide sound reopen broom remember nose limb swallow kitten"
+      }
+    },
+    {
+      "id": "coleman-21",
+      "kind": "dice",
+      "input": "123456123456123456123456123456123456123456123456123456123456123456123456123456123456123",
+      "words": 21,
+      "method": "coleman",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          226,
+          134,
+          192,
+          131,
+          222,
+          60,
+          117,
+          207,
+          179,
+          144,
+          225,
+          127,
+          165,
+          200,
+          94,
+          246,
+          53,
+          18,
+          216,
+          186,
+          249,
+          126,
+          216,
+          181,
+          160,
+          36,
+          156,
+          5
+        ],
+        "hex": "e286c083de3c75cfb390e17fa5c85ef63512d8baf97ed8b5a0249c05",
+        "bits": 224,
+        "sourceBits": 224.8917375627406,
+        "method": "ian-coleman-dice-sha256",
+        "notes": [
+          {
+            "key": "{n} rolls of a fair six-sided die ≈ {bits} bits.",
+            "vars": {
+              "n": 87,
+              "bits": "224.9"
+            }
+          },
+          {
+            "key": "Hashed rolls / Dice [1-6]: convert every 6 to 0, SHA-256 hash the complete mapped digit string, then use the first {bits} bits for the selected {words}-word seed. This matches the method used by Keystone.",
+            "vars": {
+              "bits": 224,
+              "words": 21
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "tip current can round shrug treat soft bring leisure comic bless unaware eye hobby typical cool suffer public ankle day explain"
+      }
+    },
+    {
+      "id": "zero-24",
+      "kind": "binary",
+      "input": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "words": 24,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hex": "0000000000000000000000000000000000000000000000000000000000000000",
+        "bits": 256,
+        "sourceBits": 256,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 256,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 256,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 256,
+              "words": 24
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon art"
+      }
+    },
+    {
+      "id": "alternating-24",
+      "kind": "binary",
+      "input": "0101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101",
+      "words": 24,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85
+        ],
+        "hex": "5555555555555555555555555555555555555555555555555555555555555555",
+        "bits": 256,
+        "sourceBits": 256,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 256,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 256,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 256,
+              "words": 24
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "fetch primary fetch primary fetch primary fetch primary fetch primary fetch primary fetch primary fetch primary fetch primary fetch primary fetch primary fetch rack"
+      }
+    },
+    {
+      "id": "short-24",
+      "kind": "binary",
+      "input": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "words": 24,
+      "method": "binary",
+      "expected": {
+        "ok": false,
+        "error": {
+          "key": "The selected {words}-word seed needs exactly {digits} {unit} ({bits} bits). You entered {have}.",
+          "vars": {
+            "words": 24,
+            "digits": 256,
+            "unit": "binary digits",
+            "bits": 256,
+            "have": 255
+          }
+        },
+        "notes": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "excess-24",
+      "kind": "binary",
+      "input": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "words": 24,
+      "method": "binary",
+      "expected": {
+        "ok": false,
+        "error": {
+          "key": "The selected {words}-word seed needs exactly {digits} {unit} ({bits} bits). You entered {have}.",
+          "vars": {
+            "words": 24,
+            "digits": 256,
+            "unit": "binary digits",
+            "bits": 256,
+            "have": 257
+          }
+        },
+        "notes": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "coldcard-24",
+      "kind": "dice",
+      "input": "123456123456123456123456123456123456123456123456123456123456123456123456123456123456123456123456123",
+      "words": 24,
+      "method": "coldcard",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          85,
+          136,
+          211,
+          99,
+          11,
+          209,
+          159,
+          99,
+          117,
+          183,
+          189,
+          146,
+          36,
+          87,
+          175,
+          52,
+          234,
+          156,
+          116,
+          240,
+          8,
+          7,
+          86,
+          106,
+          28,
+          248,
+          8,
+          228,
+          69,
+          220,
+          140,
+          32
+        ],
+        "hex": "5588d3630bd19f6375b7bd922457af34ea9c74f00807566a1cf808e445dc8c20",
+        "bits": 256,
+        "sourceBits": 255.91128757139444,
+        "method": "coldcard-sha256",
+        "notes": [
+          {
+            "key": "{n} rolls of a fair six-sided die ≈ {bits} bits.",
+            "vars": {
+              "n": 99,
+              "bits": "255.9"
+            }
+          },
+          {
+            "key": "Hashed rolls / Base 10 [0-9]: SHA-256 hash the complete original dice digit string, then use the first {bits} bits for the selected {words}-word seed. This matches COLDCARD and SeedSigner.",
+            "vars": {
+              "bits": 256,
+              "words": 24
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "few educate sugar bless boring random strategy waste mutual cargo type hawk prefer denial scan abstract filter extend dignity balcony dust unusual correct bubble"
+      }
+    },
+    {
+      "id": "coleman-24",
+      "kind": "dice",
+      "input": "123456123456123456123456123456123456123456123456123456123456123456123456123456123456123456123456123",
+      "words": 24,
+      "method": "coleman",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          215,
+          95,
+          39,
+          29,
+          177,
+          51,
+          95,
+          152,
+          63,
+          55,
+          224,
+          97,
+          244,
+          178,
+          189,
+          80,
+          216,
+          118,
+          65,
+          220,
+          192,
+          212,
+          242,
+          249,
+          50,
+          74,
+          87,
+          171,
+          178,
+          93,
+          116,
+          89
+        ],
+        "hex": "d75f271db1335f983f37e061f4b2bd50d87641dcc0d4f2f9324a57abb25d7459",
+        "bits": 256,
+        "sourceBits": 255.91128757139444,
+        "method": "ian-coleman-dice-sha256",
+        "notes": [
+          {
+            "key": "{n} rolls of a fair six-sided die ≈ {bits} bits.",
+            "vars": {
+              "n": 99,
+              "bits": "255.9"
+            }
+          },
+          {
+            "key": "Hashed rolls / Dice [1-6]: convert every 6 to 0, SHA-256 hash the complete mapped digit string, then use the first {bits} bits for the selected {words}-word seed. This matches the method used by Keystone.",
+            "vars": {
+              "bits": 256,
+              "words": 24
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "struggle weird shuffle give curious slot wolf winter giggle pitch quantum payment manual can indoor box very sister myth quantum robot concert sphere chase"
+      }
+    },
+    {
+      "id": "msb-first",
+      "kind": "binary",
+      "input": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "words": 12,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          128,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hex": "80000000000000000000000000000000",
+        "bits": 128,
+        "sourceBits": 128,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 128,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 128,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 128,
+              "words": 12
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "length abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
+      }
+    },
+    {
+      "id": "lsb-last",
+      "kind": "binary",
+      "input": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+      "words": 12,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "hex": "00000000000000000000000000000001",
+        "bits": 128,
+        "sourceBits": 128,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 128,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 128,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 128,
+              "words": 12
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon actual"
+      }
+    },
+    {
+      "id": "whitespace-js",
+      "kind": "binary",
+      "input": "\t0101010101010101010101010101010101010101010101010101010101010101 \n0101010101010101010101010101010101010101010101010101010101010101﻿",
+      "words": 12,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85,
+          85
+        ],
+        "hex": "55555555555555555555555555555555",
+        "bits": 128,
+        "sourceBits": 128,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 128,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 128,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 128,
+              "words": 12
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "fetch primary fetch primary fetch primary fetch primary fetch primary fetch problem"
+      }
+    },
+    {
+      "id": "raw-invalid-rejected",
+      "kind": "binary",
+      "input": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000H,2",
+      "words": 12,
+      "method": "binary",
+      "expected": {
+        "ok": false,
+        "error": {
+          "key": "{label} entropy contains {n} invalid characters.",
+          "vars": {
+            "label": "Binary",
+            "n": 3
+          }
+        },
+        "notes": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "empty",
+      "kind": "binary",
+      "input": "",
+      "words": 12,
+      "method": "binary",
+      "expected": {
+        "ok": false,
+        "error": {
+          "key": "Enter exactly {digits} {unit} for a {words}-word seed.",
+          "vars": {
+            "digits": 128,
+            "unit": "binary digits",
+            "words": 12
+          }
+        },
+        "notes": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "ui-filtered-accepted",
+      "kind": "binary",
+      "input": "00000000000 00000000000 00000000000 00000000000 00000000000 00000000000 00000000000 00000000000 00000000000 00000000000 00000000000 0000000",
+      "words": 12,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "hex": "00000000000000000000000000000000",
+        "bits": 128,
+        "sourceBits": 128,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 128,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 128,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 128,
+              "words": 12
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
+      }
+    },
+    {
+      "id": "coldcard-single",
+      "kind": "dice",
+      "input": "6",
+      "words": 12,
+      "method": "coldcard",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          231,
+          246,
+          192,
+          17,
+          119,
+          110,
+          141,
+          183,
+          205,
+          51,
+          11,
+          84,
+          23,
+          79,
+          215,
+          111
+        ],
+        "hex": "e7f6c011776e8db7cd330b54174fd76f",
+        "bits": 128,
+        "sourceBits": 2.584962500721156,
+        "method": "coldcard-sha256",
+        "notes": [
+          {
+            "key": "{n} rolls of a fair six-sided die ≈ {bits} bits.",
+            "vars": {
+              "n": 1,
+              "bits": "2.6"
+            }
+          },
+          {
+            "key": "Hashed rolls / Base 10 [0-9]: SHA-256 hash the complete original dice digit string, then use the first {bits} bits for the selected {words}-word seed. This matches COLDCARD and SeedSigner.",
+            "vars": {
+              "bits": 128,
+              "words": 12
+            }
+          }
+        ],
+        "warnings": [
+          {
+            "key": "Only {have} of {need} recommended fair-die rolls were entered. The {words}-word phrase is deterministic, but its security cannot exceed the approximately {bits} bits supplied. Use only for testing until the recommendation is met.",
+            "vars": {
+              "have": 1,
+              "need": 50,
+              "words": 12,
+              "bits": "2.6"
+            }
+          }
+        ],
+        "mnemonic": "tree render affair uphold trip swim crumble gesture favorite risk volume test"
+      }
+    },
+    {
+      "id": "coldcard-separators",
+      "kind": "dice",
+      "input": "1,2;3|4\n5 6",
+      "words": 12,
+      "method": "coldcard",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          141,
+          150,
+          158,
+          239,
+          110,
+          202,
+          211,
+          194,
+          154,
+          58,
+          98,
+          146,
+          128,
+          230,
+          134,
+          207
+        ],
+        "hex": "8d969eef6ecad3c29a3a629280e686cf",
+        "bits": 128,
+        "sourceBits": 15.509775004326936,
+        "method": "coldcard-sha256",
+        "notes": [
+          {
+            "key": "{n} rolls of a fair six-sided die ≈ {bits} bits.",
+            "vars": {
+              "n": 6,
+              "bits": "15.5"
+            }
+          },
+          {
+            "key": "Hashed rolls / Base 10 [0-9]: SHA-256 hash the complete original dice digit string, then use the first {bits} bits for the selected {words}-word seed. This matches COLDCARD and SeedSigner.",
+            "vars": {
+              "bits": 128,
+              "words": 12
+            }
+          }
+        ],
+        "warnings": [
+          {
+            "key": "Only {have} of {need} recommended fair-die rolls were entered. The {words}-word phrase is deterministic, but its security cannot exceed the approximately {bits} bits supplied. Use only for testing until the recommendation is met.",
+            "vars": {
+              "have": 6,
+              "need": 50,
+              "words": 12,
+              "bits": "15.5"
+            }
+          }
+        ],
+        "mnemonic": "mirror reject rookie talk pudding throw happy era myth already payment owner"
+      }
+    },
+    {
+      "id": "coldcard-invalid",
+      "kind": "dice",
+      "input": "1230",
+      "words": 12,
+      "method": "coldcard",
+      "expected": {
+        "ok": false,
+        "error": {
+          "key": "Dice must be faces 1–6. Ignored characters: {chars}",
+          "vars": {
+            "chars": "\"0\""
+          }
+        },
+        "notes": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "coldcard-empty",
+      "kind": "dice",
+      "input": "",
+      "words": 12,
+      "method": "coldcard",
+      "expected": {
+        "ok": false,
+        "error": {
+          "key": "Enter at least one dice roll (faces 1–6)."
+        },
+        "notes": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "coldcard-excess",
+      "kind": "dice",
+      "input": "123456123456123456123456123456123456123456123456123456123456123456123456123456123456123456123456123456123456123456123456",
+      "words": 12,
+      "method": "coldcard",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          111,
+          48,
+          55,
+          11,
+          171,
+          247,
+          215,
+          223,
+          253,
+          251,
+          125,
+          117,
+          107,
+          4,
+          111,
+          192
+        ],
+        "hex": "6f30370babf7d7dffdfb7d756b046fc0",
+        "bits": 128,
+        "sourceBits": 310.19550008653874,
+        "method": "coldcard-sha256",
+        "notes": [
+          {
+            "key": "{n} rolls of a fair six-sided die ≈ {bits} bits.",
+            "vars": {
+              "n": 120,
+              "bits": "310.2"
+            }
+          },
+          {
+            "key": "All {n} rolls, including {extra} beyond the recommendation, are included in the hash.",
+            "vars": {
+              "n": 120,
+              "extra": 70
+            }
+          },
+          {
+            "key": "Hashed rolls / Base 10 [0-9]: SHA-256 hash the complete original dice digit string, then use the first {bits} bits for the selected {words}-word seed. This matches COLDCARD and SeedSigner.",
+            "vars": {
+              "bits": 128,
+              "words": 12
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "hundred like seed fitness latin useful wave hurry install flag brief lesson"
+      }
+    },
+    {
+      "id": "coleman-single",
+      "kind": "dice",
+      "input": "6",
+      "words": 12,
+      "method": "coleman",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          95,
+          236,
+          235,
+          102,
+          255,
+          200,
+          111,
+          56,
+          217,
+          82,
+          120,
+          108,
+          109,
+          105,
+          108,
+          121
+        ],
+        "hex": "5feceb66ffc86f38d952786c6d696c79",
+        "bits": 128,
+        "sourceBits": 2.584962500721156,
+        "method": "ian-coleman-dice-sha256",
+        "notes": [
+          {
+            "key": "{n} rolls of a fair six-sided die ≈ {bits} bits.",
+            "vars": {
+              "n": 1,
+              "bits": "2.6"
+            }
+          },
+          {
+            "key": "Hashed rolls / Dice [1-6]: convert every 6 to 0, SHA-256 hash the complete mapped digit string, then use the first {bits} bits for the selected {words}-word seed. This matches the method used by Keystone.",
+            "vars": {
+              "bits": 128,
+              "words": 12
+            }
+          }
+        ],
+        "warnings": [
+          {
+            "key": "Only {have} of {need} recommended fair-die rolls were entered. The {words}-word phrase is deterministic, but its security cannot exceed the approximately {bits} bits supplied. Use only for testing until the recommendation is met.",
+            "vars": {
+              "have": 1,
+              "need": 50,
+              "words": 12,
+              "bits": "2.6"
+            }
+          }
+        ],
+        "mnemonic": "garment guard super zebra manage organ grab excuse hockey hero force vessel"
+      }
+    },
+    {
+      "id": "coleman-separators",
+      "kind": "dice",
+      "input": "1,2;3|4\n5 6",
+      "words": 12,
+      "method": "coleman",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          235,
+          118,
+          226,
+          37,
+          79,
+          241,
+          203,
+          67,
+          17,
+          82,
+          153,
+          73,
+          30,
+          25,
+          6,
+          251
+        ],
+        "hex": "eb76e2254ff1cb43115299491e1906fb",
+        "bits": 128,
+        "sourceBits": 15.509775004326936,
+        "method": "ian-coleman-dice-sha256",
+        "notes": [
+          {
+            "key": "{n} rolls of a fair six-sided die ≈ {bits} bits.",
+            "vars": {
+              "n": 6,
+              "bits": "15.5"
+            }
+          },
+          {
+            "key": "Hashed rolls / Dice [1-6]: convert every 6 to 0, SHA-256 hash the complete mapped digit string, then use the first {bits} bits for the selected {words}-word seed. This matches the method used by Keystone.",
+            "vars": {
+              "bits": 128,
+              "words": 12
+            }
+          }
+        ],
+        "warnings": [
+          {
+            "key": "Only {have} of {need} recommended fair-die rolls were entered. The {words}-word phrase is deterministic, but its security cannot exceed the approximately {bits} bits supplied. Use only for testing until the recommendation is met.",
+            "vars": {
+              "have": 6,
+              "need": 50,
+              "words": 12,
+              "bits": "15.5"
+            }
+          }
+        ],
+        "mnemonic": "twin require matter paper bronze pave earn farm empower valid double voyage"
+      }
+    },
+    {
+      "id": "coleman-invalid",
+      "kind": "dice",
+      "input": "1230",
+      "words": 12,
+      "method": "coleman",
+      "expected": {
+        "ok": false,
+        "error": {
+          "key": "Dice must be faces 1–6. Ignored characters: {chars}",
+          "vars": {
+            "chars": "\"0\""
+          }
+        },
+        "notes": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "coleman-empty",
+      "kind": "dice",
+      "input": "",
+      "words": 12,
+      "method": "coleman",
+      "expected": {
+        "ok": false,
+        "error": {
+          "key": "Enter at least one dice roll (faces 1–6)."
+        },
+        "notes": [],
+        "warnings": []
+      }
+    },
+    {
+      "id": "coleman-excess",
+      "kind": "dice",
+      "input": "123456123456123456123456123456123456123456123456123456123456123456123456123456123456123456123456123456123456123456123456",
+      "words": 12,
+      "method": "coleman",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          173,
+          15,
+          100,
+          184,
+          192,
+          250,
+          228,
+          252,
+          135,
+          182,
+          224,
+          174,
+          0,
+          27,
+          52,
+          224
+        ],
+        "hex": "ad0f64b8c0fae4fc87b6e0ae001b34e0",
+        "bits": 128,
+        "sourceBits": 310.19550008653874,
+        "method": "ian-coleman-dice-sha256",
+        "notes": [
+          {
+            "key": "{n} rolls of a fair six-sided die ≈ {bits} bits.",
+            "vars": {
+              "n": 120,
+              "bits": "310.2"
+            }
+          },
+          {
+            "key": "All {n} rolls, including {extra} beyond the recommendation, are included in the hash.",
+            "vars": {
+              "n": 120,
+              "extra": 70
+            }
+          },
+          {
+            "key": "Hashed rolls / Dice [1-6]: convert every 6 to 0, SHA-256 hash the complete mapped digit string, then use the first {bits} bits for the selected {words}-word seed. This matches the method used by Keystone.",
+            "vars": {
+              "bits": 128,
+              "words": 12
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "public kite comfort limit purity layer burst swing puppy absorb snake scissors"
+      }
+    },
+    {
+      "id": "ones-12",
+      "kind": "binary",
+      "input": "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+      "words": 12,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255
+        ],
+        "hex": "ffffffffffffffffffffffffffffffff",
+        "bits": 128,
+        "sourceBits": 128,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 128,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 128,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 128,
+              "words": 12
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo wrong"
+      }
+    },
+    {
+      "id": "leading-zeros-12",
+      "kind": "binary",
+      "input": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111",
+      "words": 12,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15
+        ],
+        "hex": "0000000000000000000000000000000f",
+        "bits": 128,
+        "sourceBits": 128,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 128,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 128,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 128,
+              "words": 12
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon burger"
+      }
+    },
+    {
+      "id": "ones-15",
+      "kind": "binary",
+      "input": "1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+      "words": 15,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255
+        ],
+        "hex": "ffffffffffffffffffffffffffffffffffffffff",
+        "bits": 160,
+        "sourceBits": 160,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 160,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 160,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 160,
+              "words": 15
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo wrist"
+      }
+    },
+    {
+      "id": "leading-zeros-15",
+      "kind": "binary",
+      "input": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111",
+      "words": 15,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15
+        ],
+        "hex": "000000000000000000000000000000000000000f",
+        "bits": 160,
+        "sourceBits": 160,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 160,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 160,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 160,
+              "words": 15
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon device"
+      }
+    },
+    {
+      "id": "ones-18",
+      "kind": "binary",
+      "input": "111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+      "words": 18,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255
+        ],
+        "hex": "ffffffffffffffffffffffffffffffffffffffffffffffff",
+        "bits": 192,
+        "sourceBits": 192,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 192,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 192,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 192,
+              "words": 18
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo when"
+      }
+    },
+    {
+      "id": "leading-zeros-18",
+      "kind": "binary",
+      "input": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111",
+      "words": 18,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15
+        ],
+        "hex": "00000000000000000000000000000000000000000000000f",
+        "bits": 192,
+        "sourceBits": 192,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 192,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 192,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 192,
+              "words": 18
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon lemon"
+      }
+    },
+    {
+      "id": "ones-21",
+      "kind": "binary",
+      "input": "11111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+      "words": 21,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255
+        ],
+        "hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "bits": 224,
+        "sourceBits": 224,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 224,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 224,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 224,
+              "words": 21
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo veteran"
+      }
+    },
+    {
+      "id": "leading-zeros-21",
+      "kind": "binary",
+      "input": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111",
+      "words": 21,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15
+        ],
+        "hex": "0000000000000000000000000000000000000000000000000000000f",
+        "bits": 224,
+        "sourceBits": 224,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 224,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 224,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 224,
+              "words": 21
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon verify"
+      }
+    },
+    {
+      "id": "ones-24",
+      "kind": "binary",
+      "input": "1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111",
+      "words": 24,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255,
+          255
+        ],
+        "hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "bits": 256,
+        "sourceBits": 256,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 256,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 256,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 256,
+              "words": 24
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo vote"
+      }
+    },
+    {
+      "id": "leading-zeros-24",
+      "kind": "binary",
+      "input": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111",
+      "words": 24,
+      "method": "binary",
+      "expected": {
+        "ok": true,
+        "bytes": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          15
+        ],
+        "hex": "000000000000000000000000000000000000000000000000000000000000000f",
+        "bits": 256,
+        "sourceBits": 256,
+        "method": "binary",
+        "notes": [
+          {
+            "key": "{digits} {unit} = {bits} bits of {label} entropy.",
+            "vars": {
+              "digits": 256,
+              "unit": {
+                "key": "binary digits"
+              },
+              "bits": 256,
+              "label": {
+                "key": "hex.short.bin"
+              }
+            }
+          },
+          {
+            "key": "BIP39 entropy length: {bits} bits → {words}-word seed.",
+            "vars": {
+              "bits": 256,
+              "words": 24
+            }
+          }
+        ],
+        "warnings": [],
+        "mnemonic": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon ability trash"
+      }
+    }
+  ],
+  "normalization": {
+    "raw": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000H,2",
+    "filtered": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "grouped": "00000000000 00000000000 00000000000 00000000000 00000000000 00000000000 00000000000 00000000000 00000000000 00000000000 00000000000 0000000"
+  },
+  "bitbox": [
+    {
+      "id": "reject-high",
+      "input": "56123451",
+      "words": 12,
+      "expected": {
+        "words": [],
+        "targetWords": 12,
+        "neededPartial": 11,
+        "skippedHigh": 3,
+        "leftover": "",
+        "extraAfter": 0,
+        "waiting": "coin",
+        "diceInWord": 5,
+        "bits": 0,
+        "notes": [
+          {
+            "key": "BitBox diceware: {have} of {need} lookup-table words ({bits} encoded bits). Then choose the final checksum word.",
+            "vars": {
+              "have": 0,
+              "need": 11,
+              "bits": 0
+            }
+          },
+          {
+            "key": "Skipped {n} faces of 5 or 6 on the first five dice of a word (reroll).",
+            "vars": {
+              "n": 3
+            }
+          }
+        ],
+        "warnings": []
+      }
+    },
+    {
+      "id": "zero-word",
+      "input": "111111",
+      "words": 12,
+      "expected": {
+        "words": [
+          "abandon"
+        ],
+        "targetWords": 12,
+        "neededPartial": 11,
+        "skippedHigh": 0,
+        "leftover": "",
+        "extraAfter": 0,
+        "waiting": "dice",
+        "diceInWord": 0,
+        "bits": 11,
+        "notes": [
+          {
+            "key": "BitBox diceware: {have} of {need} lookup-table words ({bits} encoded bits). Then choose the final checksum word.",
+            "vars": {
+              "have": 1,
+              "need": 11,
+              "bits": 11
+            }
+          }
+        ],
+        "warnings": []
+      }
+    },
+    {
+      "id": "last-word",
+      "input": "444446",
+      "words": 12,
+      "expected": {
+        "words": [
+          "zoo"
+        ],
+        "targetWords": 12,
+        "neededPartial": 11,
+        "skippedHigh": 0,
+        "leftover": "",
+        "extraAfter": 0,
+        "waiting": "dice",
+        "diceInWord": 0,
+        "bits": 11,
+        "notes": [
+          {
+            "key": "BitBox diceware: {have} of {need} lookup-table words ({bits} encoded bits). Then choose the final checksum word.",
+            "vars": {
+              "have": 1,
+              "need": 11,
+              "bits": 11
+            }
+          }
+        ],
+        "warnings": []
+      }
+    },
+    {
+      "id": "excess",
+      "input": "111111111111111111111111111111111111111111111111111111111111111111123",
+      "words": 12,
+      "expected": {
+        "words": [
+          "abandon",
+          "abandon",
+          "abandon",
+          "abandon",
+          "abandon",
+          "abandon",
+          "abandon",
+          "abandon",
+          "abandon",
+          "abandon",
+          "abandon"
+        ],
+        "targetWords": 12,
+        "neededPartial": 11,
+        "skippedHigh": 0,
+        "leftover": "",
+        "extraAfter": 3,
+        "waiting": "last-word",
+        "diceInWord": 0,
+        "bits": 121,
+        "notes": [
+          {
+            "key": "BitBox diceware: {have} of {need} lookup-table words ({bits} encoded bits). Then choose the final checksum word.",
+            "vars": {
+              "have": 11,
+              "need": 11,
+              "bits": 121
+            }
+          }
+        ],
+        "warnings": [
+          {
+            "key": "Extra rolls after the final lookup-table word are ignored. The checksum word is a separate pick, not another roll."
+          }
+        ]
+      }
+    },
+    {
+      "id": "invalid",
+      "input": "h111111",
+      "words": 12,
+      "expected": {
+        "words": [
+          "abandon"
+        ],
+        "targetWords": 12,
+        "neededPartial": 11,
+        "skippedHigh": 0,
+        "leftover": "h",
+        "extraAfter": 0,
+        "waiting": "dice",
+        "diceInWord": 0,
+        "bits": 11,
+        "notes": [
+          {
+            "key": "BitBox diceware: {have} of {need} lookup-table words ({bits} encoded bits). Then choose the final checksum word.",
+            "vars": {
+              "have": 1,
+              "need": 11,
+              "bits": 11
+            }
+          }
+        ],
+        "warnings": [
+          {
+            "key": "Ignored characters: {chars}",
+            "vars": {
+              "chars": "\"h\""
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "dplusStepVectors": [
+    {
+      "face": "1",
+      "value": 0
+    },
+    {
+      "face": "4",
+      "value": 0
+    },
+    {
+      "face": "5",
+      "value": 1
+    },
+    {
+      "face": "8",
+      "value": 1
+    },
+    {
+      "face": "0",
+      "value": null
+    },
+    {
+      "face": "H",
+      "value": null
+    }
+  ]
+}
