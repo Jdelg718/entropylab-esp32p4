@@ -1,0 +1,62 @@
+This package contains separately licensed components, not a blanket dual license.
+
+src/upstream_core.rs: extracted from OogaBoogaX/entropylab, commit
+6e1f39cc7da25942c7a1f51ea5837f4ac7ef8f51. Its custom upstream license is
+reproduced verbatim below and in LICENSE-OOGA-BOOGA. It is NOT the Unlicense.
+
+New host wrapper src/lib.rs, CLI src/main.rs, and tests/: MIT, reproduced below
+and in LICENSE-MIT. This does not relicense upstream code or dependencies.
+See THIRD_PARTY_NOTICES.md for attribution and dependency-license boundaries.
+
+--- Upstream EntropyLab license ---
+
+THE OOGA BOOGA LICENSE
+
+OOGA BOOGA. Me make code. Me give code to tribe.
+
+You take code. You copy code. You change code. You share code. You sell code.
+You put code in bigger code. You make shiny. Or no shiny. Me no care.
+No ask. No pay. No club.
+
+Me throw away all "mine."
+Code for all tribe, now and after me become bone.
+Me child no come later with club and bill.
+
+Code come how code come.
+Maybe work. Maybe no work. Maybe eat wallet.
+Me promise nothing.
+
+Code break? Not me fault.
+Coin fall in river? Not me fault.
+Mammoth step on laptop? Very not me fault.
+
+You use code, you take chance.
+You no blame me. You no sue me. You get no shiny from me.
+
+Take fire. Make fire. Share fire.
+
+OOGA BOOGA.
+
+--- New wrapper license ---
+
+MIT License
+
+Copyright (c) 2026 EntropyLab native spike contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

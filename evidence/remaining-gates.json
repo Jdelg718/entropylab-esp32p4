@@ -1,0 +1,263 @@
+{
+  "runtime_commit": "dc5c65420aa96013ae3847ab4771a7f520f1c3a8",
+  "platforms": {
+    "mac": {
+      "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+      "node": "v26.6.0",
+      "archive_sha256": "df310810463284158449882496f218f13c238095869932490d660874fff48f54",
+      "source_before": {
+        "files": 842,
+        "mismatches": []
+      },
+      "source_after": {
+        "files": 842,
+        "mismatches": []
+      },
+      "node_passed": 62,
+      "node_failed": 0,
+      "tests": {
+        "test-speed-browser": {
+          "exit": 0,
+          "chromium": "151.0.7922.34",
+          "cases": 16
+        },
+        "test-speed-ui": {
+          "exit": 0,
+          "chromium": "151.0.7922.34",
+          "cases": 8
+        }
+      },
+      "accessibility": {
+        "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+        "results": [
+          {
+            "name": "keyboard-flow-and-AX-live-status",
+            "result": "PASS",
+            "tab_order": [
+              "",
+              "board",
+              "consent",
+              "prepare",
+              "connect",
+              "check",
+              "flash"
+            ],
+            "announcements_exposed_to_AX": [
+              {
+                "state": "writing",
+                "role": "status",
+                "properties": {
+                  "live": "polite",
+                  "atomic": true,
+                  "relevant": "additions text"
+                },
+                "text": "Writing compressed images (not yet verified)"
+              },
+              {
+                "state": "verifying-readback",
+                "role": "status",
+                "properties": {
+                  "live": "polite",
+                  "atomic": true,
+                  "relevant": "additions text"
+                },
+                "text": "Reading back images and erased tails for SHA-256 verification"
+              },
+              {
+                "state": "complete",
+                "role": "status",
+                "properties": {
+                  "live": "polite",
+                  "atomic": true,
+                  "relevant": "additions text"
+                },
+                "text": "Complete All three images and erased tails verified. Press the board RESET button now, then confirm boot/display/touch and the public D6 test: Back, reopen Test results without recalculating. Readback is not boot or recovery qualification. Installation session is complete; do not repeat installation just to boot."
+              }
+            ],
+            "pageErrors": []
+          },
+          {
+            "name": "native-browser-200pct",
+            "result": "PASS",
+            "method": "chrome.tabs.setZoom API; actual page zoom, NOT literal toolbar clicking",
+            "getZoom": 2,
+            "before": {
+              "width": 1280,
+              "outer": 1280,
+              "dpr": 1,
+              "cssZoom": "1",
+              "scroll": 1280,
+              "client": 1280
+            },
+            "after": {
+              "width": 640,
+              "outer": 1280,
+              "dpr": 2,
+              "cssZoom": "1",
+              "scroll": 640,
+              "client": 640
+            }
+          }
+        ],
+        "chromium": "151.0.7922.34",
+        "toolbar_keyboard_attempt": {
+          "before": {
+            "width": 1200,
+            "outer": 1200,
+            "dpr": 2,
+            "cssZoom": "1",
+            "scroll": 1200,
+            "client": 1200
+          },
+          "after": {
+            "width": 1200,
+            "outer": 1200,
+            "dpr": 2,
+            "cssZoom": "1",
+            "scroll": 1200,
+            "client": 1200
+          },
+          "verified200percent": false
+        }
+      }
+    },
+    "win": {
+      "platform": "Windows-11-10.0.26200-SP0",
+      "node": "v24.11.1",
+      "archive_sha256": "df310810463284158449882496f218f13c238095869932490d660874fff48f54",
+      "source_before": {
+        "files": 842,
+        "mismatches": []
+      },
+      "source_after": {
+        "files": 842,
+        "mismatches": [
+          "evidence/speed-ui.json"
+        ]
+      },
+      "node_passed": 62,
+      "node_failed": 0,
+      "tests": {
+        "test-speed-browser": {
+          "exit": 0,
+          "chromium": "148.0.7778.96",
+          "cases": 16
+        },
+        "test-speed-ui": {
+          "exit": 0,
+          "chromium": "148.0.7778.96",
+          "cases": 8
+        }
+      },
+      "accessibility": {
+        "platform": "Windows-11-10.0.26200-SP0",
+        "results": [
+          {
+            "name": "keyboard-flow-and-AX-live-status",
+            "result": "PASS",
+            "tab_order": [
+              "",
+              "board",
+              "consent",
+              "prepare",
+              "connect",
+              "check",
+              "flash"
+            ],
+            "announcements_exposed_to_AX": [
+              {
+                "state": "writing",
+                "role": "status",
+                "properties": {
+                  "live": "polite",
+                  "atomic": true,
+                  "relevant": "additions text"
+                },
+                "text": "Writing compressed images (not yet verified)"
+              },
+              {
+                "state": "verifying-readback",
+                "role": "status",
+                "properties": {
+                  "live": "polite",
+                  "atomic": true,
+                  "relevant": "additions text"
+                },
+                "text": "Reading back images and erased tails for SHA-256 verification"
+              },
+              {
+                "state": "complete",
+                "role": "status",
+                "properties": {
+                  "live": "polite",
+                  "atomic": true,
+                  "relevant": "additions text"
+                },
+                "text": "Complete All three images and erased tails verified. Press the board RESET button now, then confirm boot/display/touch and the public D6 test: Back, reopen Test results without recalculating. Readback is not boot or recovery qualification. Installation session is complete; do not repeat installation just to boot."
+              }
+            ],
+            "pageErrors": []
+          },
+          {
+            "name": "native-browser-200pct",
+            "result": "PASS",
+            "method": "chrome.tabs.setZoom API; actual page zoom, NOT literal toolbar clicking",
+            "getZoom": 2,
+            "before": {
+              "width": 1264,
+              "outer": 1280,
+              "dpr": 1,
+              "cssZoom": "1",
+              "scroll": 1264,
+              "client": 1264
+            },
+            "after": {
+              "width": 632,
+              "outer": 1280,
+              "dpr": 2,
+              "cssZoom": "1",
+              "scroll": 632,
+              "client": 632
+            }
+          }
+        ],
+        "chromium": "148.0.7778.96",
+        "toolbar_keyboard_attempt": {
+          "before": {
+            "width": 988,
+            "outer": 1004,
+            "dpr": 1,
+            "cssZoom": "1",
+            "scroll": 988,
+            "client": 988
+          },
+          "after": {
+            "width": 988,
+            "outer": 1004,
+            "dpr": 1,
+            "cssZoom": "1",
+            "scroll": 988,
+            "client": 988
+          },
+          "verified200percent": false
+        }
+      }
+    }
+  },
+  "package": {
+    "bytes": 7588712,
+    "sha256": "a77d0182b88444b1f724ae6f038567678d3e68ac8b13978692fbbbea723e7f38",
+    "node_passed": 62,
+    "extracted_chromium_transport_cases": 16,
+    "extracted_chromium_ui_cases": 8,
+    "published": false
+  },
+  "physical": {
+    "status": "BLOCKED_BEFORE_PORT_OPEN",
+    "cause": "Native Web Serial chooser not exposed to headless CDP DeviceAccess automation",
+    "writes_requested": 0,
+    "reset_performed": false,
+    "actual_baud_transition_qualified": false,
+    "preview_exact_runtime_verified": true
+  }
+}

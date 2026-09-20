@@ -1,0 +1,153 @@
+{
+  "accepted_app_erase_end": 1605632,
+  "accepted_evidence_sha256": "938e198e47612a2aa5243284a3f5e92392f29cce87075c41fca1945c03e45e70",
+  "accepted_runtime": "dc5c65420aa96013ae3847ab4771a7f520f1c3a8",
+  "baseline_images": [
+    {
+      "eraseEnd": 32768,
+      "length": 21264,
+      "offset": 8192,
+      "role": "boot",
+      "sha256": "530330004af627bf2de7ac9b1d05ab34f8a655829a74005b96fc15dd7083f678"
+    },
+    {
+      "eraseEnd": 36864,
+      "length": 3072,
+      "offset": 32768,
+      "role": "table",
+      "sha256": "d3e6663d9cbd407623c82f215df58a5c9bd1e353fd937ad519018c06fd9298fb"
+    },
+    {
+      "eraseEnd": 1605632,
+      "length": 1539952,
+      "offset": 65536,
+      "role": "app",
+      "sha256": "a02a2192b5c302390a916f9ee67961b699e5f2f9038135378eed0b19d792f33b"
+    }
+  ],
+  "candidate_app_erase_end": 1609728,
+  "candidate_images": [
+    {
+      "bytes": 21264,
+      "offset": 8192,
+      "path": "flash/first-install/firmware/bootloader.bin",
+      "role": "boot",
+      "sha256": "4f00f81aad82838f4e33555e322abfbfff7d1de947d339c86e50be820cbd7bb4"
+    },
+    {
+      "bytes": 3072,
+      "offset": 32768,
+      "path": "flash/first-install/firmware/partition-table.bin",
+      "role": "table",
+      "sha256": "d3e6663d9cbd407623c82f215df58a5c9bd1e353fd937ad519018c06fd9298fb"
+    },
+    {
+      "bytes": 1542288,
+      "offset": 65536,
+      "path": "flash/first-install/firmware/entropylab.bin",
+      "role": "app",
+      "sha256": "42d5e3b40a3869157171552162189a281c84b893c8533fe3ae8266bfc4c47550"
+    }
+  ],
+  "flash_arguments_equal": true,
+  "generated_configs": {
+    "bootloader/config/sdkconfig.json": {
+      "accepted_sha256": "ded6770861c5ae979d93cb500117c64dbc89b7a7c4b67bdce0951c44ea419e7e",
+      "candidate_sha256": "ded6770861c5ae979d93cb500117c64dbc89b7a7c4b67bdce0951c44ea419e7e",
+      "semantic_equality": true
+    },
+    "config/sdkconfig.json": {
+      "accepted_sha256": "661d0fd8792434954abe3a657714908e83cb4fdeca046ef8b393ab4b92be237b",
+      "candidate_sha256": "661d0fd8792434954abe3a657714908e83cb4fdeca046ef8b393ab4b92be237b",
+      "semantic_equality": true
+    }
+  },
+  "hardware": "NOT TESTED",
+  "headers": {
+    "app": {
+      "accepted": {
+        "checksum_and_digest": "PASS",
+        "chip_id": 18,
+        "flash_mode_byte": 2,
+        "flash_size_frequency_byte": 95,
+        "revision": [
+          100,
+          199
+        ],
+        "segments": 7
+      },
+      "candidate": {
+        "checksum_and_digest": "PASS",
+        "chip_id": 18,
+        "flash_mode_byte": 2,
+        "flash_size_frequency_byte": 95,
+        "revision": [
+          100,
+          199
+        ],
+        "segments": 7
+      }
+    },
+    "boot": {
+      "accepted": {
+        "checksum_and_digest": "PASS",
+        "chip_id": 18,
+        "flash_mode_byte": 2,
+        "flash_size_frequency_byte": 95,
+        "revision": [
+          100,
+          199
+        ],
+        "segments": 3
+      },
+      "candidate": {
+        "checksum_and_digest": "PASS",
+        "chip_id": 18,
+        "flash_mode_byte": 2,
+        "flash_size_frequency_byte": 95,
+        "revision": [
+          100,
+          199
+        ],
+        "segments": 3
+      }
+    }
+  },
+  "new_app_sector_scope": "inside same factory application partition; explicit destructive overwrite consent required",
+  "partitions": [
+    {
+      "flags": 0,
+      "label": "nvs",
+      "offset": 36864,
+      "size": 24576,
+      "subtype": 2,
+      "type": 1
+    },
+    {
+      "flags": 0,
+      "label": "phy_init",
+      "offset": 61440,
+      "size": 4096,
+      "subtype": 1,
+      "type": 1
+    },
+    {
+      "flags": 0,
+      "label": "factory",
+      "offset": 65536,
+      "size": 8388608,
+      "subtype": 0,
+      "type": 0
+    },
+    {
+      "flags": 0,
+      "label": "storage",
+      "offset": 8454144,
+      "size": 7340032,
+      "subtype": 130,
+      "type": 1
+    }
+  ],
+  "reproducibility": "NOT TESTED",
+  "status": "PASS-static-dev-test-only"
+}

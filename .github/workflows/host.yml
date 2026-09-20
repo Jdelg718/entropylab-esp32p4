@@ -9,6 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
+          ref: 124b746ff4cfd5cd878baaaade8e12170ab611ef
           persist-credentials: false
       - name: Check out pinned LVGL sources for native GUI tests
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2

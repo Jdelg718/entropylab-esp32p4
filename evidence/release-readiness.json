@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "runtime_commit": "dc5c65420aa96013ae3847ab4771a7f520f1c3a8",
+  "evidence_sha256": {
+    "evidence/physical-acceptance.md": "938e198e47612a2aa5243284a3f5e92392f29cce87075c41fca1945c03e45e70",
+    "evidence/remaining-gates.json": "263722d929116e7f5a9e18d92ecb9b50b0a562b22025f418d9de24ab5c95fafb",
+    "GATES-REPORT.md": "6e5ebbf858c3c6bab6b51f82a8d8a9c8b507a92c1ab3b3c0e02efca3f55725a7"
+  },
+  "gates": {
+    "one_board_install_retention": "accepted_human_observation",
+    "six_image_tail_hashes": "accepted_browser_result",
+    "native_platform_suites": "passed_synthetic_serial",
+    "historical_candidate_package": "verified_unpublished",
+    "physical_speed": "not_measured",
+    "outside_window": "not_pass",
+    "recovery": "not_qualified",
+    "final_candidate_package_review": "required_before_publication",
+    "publication_authorization": "required_before_publication"
+  }
+}

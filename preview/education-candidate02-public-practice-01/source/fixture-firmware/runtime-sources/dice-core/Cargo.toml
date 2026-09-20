@@ -1,0 +1,16 @@
+[package]
+name = "entropylab-dice-core"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license = "MIT"
+[lib]
+crate-type = ["rlib"]
+[dependencies]
+entropylab-hex-core = { path = "../hex-core" }
+bitcoin_hashes = { version = "=0.14.101", default-features = false, features = ["alloc"] }
+[dev-dependencies]
+bip39 = { version = "=2.2.2", default-features = false }
+[profile.release]
+panic = "abort"
+opt-level = "s"

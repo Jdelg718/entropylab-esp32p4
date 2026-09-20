@@ -13,7 +13,7 @@ function fixture(opts={}) {
  constructor({transport}){this.transport=transport;}
  async connect(){stats.opens++;}
  async getSecurityInfo(){await this.transport.read();return {chipId:opts.chip??18,flags:opts.flags??0,apiVersion:opts.eco??2,parsedFlags:{SECURE_BOOT_EN:opts.secure??false,SECURE_DOWNLOAD_ENABLE:false},flashCryptCnt:opts.crypt??0};}
- applyDetectedChip(){}async runStub(){this.IS_STUB=true;}async readFlashId(){return opts.jedec??0x1940ef;}
+ async changeBaud(){this.transport.baudrate=460800;}applyDetectedChip(){}async runStub(){this.IS_STUB=true;}async readFlashId(){return opts.jedec??0x1940ef;}
  async writeFlash(o){assert.equal(o.eraseAll,false);assert.equal(o.flashSize,'keep');assert.equal(o.flashMode,'keep');assert.equal(o.flashFreq,'keep');assert.equal(o.fileArray.length,3);stats.writes++;}
  async readFlash(offset,length){current=assets.find(a=>a.offset===offset);this.transport.read=async()=>new Uint8Array(16);return current?current.bytes:new Uint8Array(length).fill(255);}
  }

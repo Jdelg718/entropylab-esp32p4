@@ -1,0 +1,4 @@
+Original direct-library public-fixture adapter: MIT, see LICENSE-MIT.
+No upstream_core.rs extraction is present in this crate. Included upstream license
+text is retained for project attribution, not a blanket dual license.
+See ../../LICENSE and ../../THIRD_PARTY_NOTICES.md.

@@ -1,11 +1,25 @@
 # Approved priority order
 
-1. Align documentation and public onboarding with the published retention preview and evidence boundaries.
-2. Resume separately reviewed 460800 baud/progress work only after documentation review; speed work is paused now. No faster baud or measured-throughput claim is made here.
-3. Educational explanations using public fixtures, without new feature commitments.
-4. Remaining verification: public-policy hardware qualification, full outside-window comparison, recovery and broader application qualification are separate unresolved gates.
+1. Close release documentation against the accepted one-board installation and unchanged firmware tuple. Speed/progress is implemented in the unpublished `dc5c654` runtime, not paused work. Native platform synthetic-serial and prior distribution checks passed.
+2. Review and package the exact final integrated source, run the release checks, and obtain explicit publication approval. Do not overwrite accepted or published archives/assets. Education copy, readiness documentation and browser animation are now integrated locally. The changed education source is not in the accepted binaries; fresh packaging remains deferred pending a reviewed successor source/binary provenance contract. Other development lanes still require separate integration and regression review.
+3. Retain one-board human acceptance of installation, browser-displayed six image/tail hashes, boot, 12/24-word results and Back/reopen retention. No repeat flash is required for this milestone. Physical speed measurement, outside-window comparison and recovery remain separate gates for those claims.
+4. Educational explanations and broader qualification remain bounded follow-up work, not an endless list of prerequisites for a scoped preview. Real-secret use remains out of scope.
 
-See [current status](../CURRENT-STATUS.md). No build, hardware operation, feature expansion or schedule is authorized by this roadmap.
+See [current status](../CURRENT-STATUS.md), [physical acceptance](../../evidence/physical-acceptance.md) and [release readiness](../RELEASE-READINESS.md) for concrete closure criteria. No hardware operation, publication, feature expansion or schedule is authorized by this roadmap.
+
+<!-- release-readiness:start -->
+| Gate | Evidence state |
+|---|---|
+| one_board_install_retention | accepted_human_observation |
+| six_image_tail_hashes | accepted_browser_result |
+| native_platform_suites | passed_synthetic_serial |
+| historical_candidate_package | verified_unpublished |
+| physical_speed | not_measured |
+| outside_window | not_pass |
+| recovery | not_qualified |
+| final_candidate_package_review | required_before_publication |
+| publication_authorization | required_before_publication |
+<!-- release-readiness:end -->
 
 ---
 

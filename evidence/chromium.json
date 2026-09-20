@@ -1,0 +1,460 @@
+{
+  "chromium": "151.0.7922.34",
+  "results": [
+    {
+      "name": "success",
+      "ok": true,
+      "opens": 2,
+      "closes": 2,
+      "writes": 3,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 6,
+      "aborts": 0,
+      "baudRates": [
+        115200,
+        460800
+      ],
+      "targetOpcodes": 1,
+      "switches": 1,
+      "blocks": 52,
+      "states": [
+        "verifying-assets",
+        "connecting-rom",
+        "security-preflight",
+        "official-stub",
+        "changing-baud",
+        "jedec-preflight",
+        "writing",
+        "verifying-readback",
+        "complete"
+      ],
+      "verifiedSpans": 6
+    },
+    {
+      "name": "refused",
+      "ok": false,
+      "opens": 1,
+      "closes": 1,
+      "writes": 0,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 0,
+      "aborts": 0,
+      "baudRates": [
+        115200
+      ],
+      "targetOpcodes": 1,
+      "switches": 1,
+      "states": [
+        "verifying-assets",
+        "connecting-rom",
+        "security-preflight",
+        "official-stub",
+        "changing-baud",
+        "failed-disconnected"
+      ],
+      "verifiedSpans": 0
+    },
+    {
+      "name": "malformed",
+      "ok": false,
+      "opens": 1,
+      "closes": 1,
+      "writes": 0,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 0,
+      "aborts": 0,
+      "baudRates": [
+        115200
+      ],
+      "targetOpcodes": 1,
+      "switches": 1,
+      "states": [
+        "verifying-assets",
+        "connecting-rom",
+        "security-preflight",
+        "official-stub",
+        "changing-baud",
+        "failed-disconnected"
+      ],
+      "verifiedSpans": 0
+    },
+    {
+      "name": "malformed-header",
+      "ok": false,
+      "opens": 1,
+      "closes": 1,
+      "writes": 0,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 0,
+      "aborts": 0,
+      "baudRates": [
+        115200
+      ],
+      "targetOpcodes": 1,
+      "switches": 1,
+      "states": [
+        "verifying-assets",
+        "connecting-rom",
+        "security-preflight",
+        "official-stub",
+        "changing-baud",
+        "failed-disconnected"
+      ],
+      "verifiedSpans": 0
+    },
+    {
+      "name": "cancel-after-ack",
+      "ok": false,
+      "opens": 2,
+      "closes": 2,
+      "writes": 0,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 0,
+      "aborts": 0,
+      "baudRates": [
+        115200,
+        115200
+      ],
+      "targetOpcodes": 1,
+      "switches": 1,
+      "successorUnaffected": true,
+      "states": [
+        "verifying-assets",
+        "connecting-rom",
+        "security-preflight",
+        "official-stub",
+        "changing-baud",
+        "failed-disconnected"
+      ],
+      "verifiedSpans": 0
+    },
+    {
+      "name": "unsupported",
+      "ok": false,
+      "opens": 1,
+      "closes": 1,
+      "writes": 0,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 0,
+      "aborts": 0,
+      "baudRates": [
+        115200
+      ],
+      "states": [
+        "verifying-assets",
+        "connecting-rom",
+        "security-preflight",
+        "official-stub",
+        "changing-baud",
+        "failed-disconnected"
+      ],
+      "verifiedSpans": 0
+    },
+    {
+      "name": "reopen",
+      "ok": false,
+      "opens": 2,
+      "closes": 2,
+      "writes": 0,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 0,
+      "aborts": 0,
+      "baudRates": [
+        115200,
+        460800
+      ],
+      "targetOpcodes": 1,
+      "switches": 1,
+      "states": [
+        "verifying-assets",
+        "connecting-rom",
+        "security-preflight",
+        "official-stub",
+        "changing-baud",
+        "failed-disconnected"
+      ],
+      "verifiedSpans": 0
+    },
+    {
+      "name": "baud-stall",
+      "ok": false,
+      "opens": 1,
+      "closes": 1,
+      "writes": 0,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 0,
+      "aborts": 0,
+      "baudRates": [
+        115200
+      ],
+      "targetOpcodes": 1,
+      "faultReached": true,
+      "states": [
+        "verifying-assets",
+        "connecting-rom",
+        "security-preflight",
+        "official-stub",
+        "changing-baud",
+        "failed-disconnected"
+      ],
+      "verifiedSpans": 0
+    },
+    {
+      "name": "baud-cancel",
+      "ok": false,
+      "opens": 1,
+      "closes": 1,
+      "writes": 0,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 0,
+      "aborts": 0,
+      "baudRates": [
+        115200
+      ],
+      "targetOpcodes": 1,
+      "faultReached": true,
+      "states": [
+        "verifying-assets",
+        "connecting-rom",
+        "security-preflight",
+        "official-stub",
+        "changing-baud",
+        "failed-disconnected"
+      ],
+      "verifiedSpans": 0
+    },
+    {
+      "name": "baud-disconnect",
+      "ok": false,
+      "opens": 1,
+      "closes": 1,
+      "writes": 0,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 0,
+      "aborts": 0,
+      "baudRates": [
+        115200
+      ],
+      "targetOpcodes": 1,
+      "faultReached": true,
+      "states": [
+        "verifying-assets",
+        "connecting-rom",
+        "security-preflight",
+        "official-stub",
+        "changing-baud",
+        "failed-disconnected"
+      ],
+      "verifiedSpans": 0
+    },
+    {
+      "name": "write-stall",
+      "ok": false,
+      "opens": 2,
+      "closes": 2,
+      "writes": 2,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 0,
+      "aborts": 0,
+      "baudRates": [
+        115200,
+        460800
+      ],
+      "switches": 1,
+      "targetOpcodes": 2,
+      "blocks": 1,
+      "faultReached": true,
+      "states": [
+        "verifying-assets",
+        "connecting-rom",
+        "security-preflight",
+        "official-stub",
+        "changing-baud",
+        "jedec-preflight",
+        "writing",
+        "failed-disconnected"
+      ],
+      "verifiedSpans": 0
+    },
+    {
+      "name": "write-cancel",
+      "ok": false,
+      "opens": 2,
+      "closes": 2,
+      "writes": 2,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 0,
+      "aborts": 0,
+      "baudRates": [
+        115200,
+        460800
+      ],
+      "switches": 1,
+      "targetOpcodes": 2,
+      "blocks": 1,
+      "faultReached": true,
+      "states": [
+        "verifying-assets",
+        "connecting-rom",
+        "security-preflight",
+        "official-stub",
+        "changing-baud",
+        "jedec-preflight",
+        "writing",
+        "failed-disconnected"
+      ],
+      "verifiedSpans": 0
+    },
+    {
+      "name": "write-disconnect",
+      "ok": false,
+      "opens": 2,
+      "closes": 2,
+      "writes": 2,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 0,
+      "aborts": 0,
+      "baudRates": [
+        115200,
+        460800
+      ],
+      "switches": 1,
+      "targetOpcodes": 2,
+      "blocks": 1,
+      "faultReached": true,
+      "states": [
+        "verifying-assets",
+        "connecting-rom",
+        "security-preflight",
+        "official-stub",
+        "changing-baud",
+        "jedec-preflight",
+        "writing",
+        "failed-disconnected"
+      ],
+      "verifiedSpans": 0
+    },
+    {
+      "name": "read-stall",
+      "ok": false,
+      "opens": 2,
+      "closes": 2,
+      "writes": 3,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 1,
+      "aborts": 0,
+      "baudRates": [
+        115200,
+        460800
+      ],
+      "switches": 1,
+      "blocks": 52,
+      "targetOpcodes": 2,
+      "faultReached": true,
+      "states": [
+        "verifying-assets",
+        "connecting-rom",
+        "security-preflight",
+        "official-stub",
+        "changing-baud",
+        "jedec-preflight",
+        "writing",
+        "verifying-readback",
+        "failed-disconnected"
+      ],
+      "verifiedSpans": 1
+    },
+    {
+      "name": "read-cancel",
+      "ok": false,
+      "opens": 2,
+      "closes": 2,
+      "writes": 3,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 1,
+      "aborts": 0,
+      "baudRates": [
+        115200,
+        460800
+      ],
+      "switches": 1,
+      "blocks": 52,
+      "targetOpcodes": 2,
+      "faultReached": true,
+      "states": [
+        "verifying-assets",
+        "connecting-rom",
+        "security-preflight",
+        "official-stub",
+        "changing-baud",
+        "jedec-preflight",
+        "writing",
+        "verifying-readback",
+        "failed-disconnected"
+      ],
+      "verifiedSpans": 1
+    },
+    {
+      "name": "read-disconnect",
+      "ok": false,
+      "opens": 2,
+      "closes": 2,
+      "writes": 3,
+      "resets": 0,
+      "stub": 1,
+      "security": 1,
+      "readbacks": 1,
+      "aborts": 0,
+      "baudRates": [
+        115200,
+        460800
+      ],
+      "switches": 1,
+      "blocks": 52,
+      "targetOpcodes": 2,
+      "faultReached": true,
+      "states": [
+        "verifying-assets",
+        "connecting-rom",
+        "security-preflight",
+        "official-stub",
+        "changing-baud",
+        "jedec-preflight",
+        "writing",
+        "verifying-readback",
+        "failed-disconnected"
+      ],
+      "verifiedSpans": 1
+    }
+  ]
+}

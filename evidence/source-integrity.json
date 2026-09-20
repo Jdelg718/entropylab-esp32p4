@@ -1,0 +1,14 @@
+{
+  "base": "124b746ff4cfd5cd878baaaade8e12170ab611ef",
+  "protected_files": 365,
+  "changed": [],
+  "independent_review_hashes_match": true,
+  "reviewed_sha256": {
+    "flash/first-install/adapter/adapter.mjs": "783533cc8b2a13b9315d1743a705c807be4e2d9ff432356517ba4fc885704b11",
+    "flash/first-install/baud-lifecycle.test.mjs": "a728e892641ecb98cfa04062c31c8da1c9e727d6cede17cbc939961de2ae3587",
+    "flash/first-install/app.mjs": "05c6a4dc2275683058c4519c1488eac4f2e54ae8ccdfb07f5842bcdd495098af",
+    "flash/first-install/adapter/profiles.mjs": "5977fa70eb794a4c9849323e4337fba76c71296792e6e832ae21bf60accade4e",
+    "flash/first-install/style.css": "c86bf73500582be162d7015704bac15b1ab22f623d4caa8c2ad0a5f0fe402662",
+    "flash/first-install/speed-browser.mjs": "a624e7d596fc2806103d6f3c285e0ea405d6df16c767ed10ab425fb648ed2023"
+  }
+}

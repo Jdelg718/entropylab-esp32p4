@@ -1,3 +1,5 @@
+> Candidate02 successor: see [the current README](../README.md) and [publication status](PUBLICATION-CANDIDATE02.md). The body below preserves predecessor guidance/evidence; do not use its older installer URL for candidate02.
+
 # Supported destructive first-install contract
 
 Published in [v0.1.0-retention-preview](https://github.com/Jdelg718/entropylab-esp32p4/releases/tag/v0.1.0-retention-preview). The separate retention updater remains held; public install-policy hardware qualification and the evidence limits below remain unresolved. See [current status](CURRENT-STATUS.md).
