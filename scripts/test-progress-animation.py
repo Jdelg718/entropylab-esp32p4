@@ -85,19 +85,35 @@ try:
             assert props['live'] == 'polite' and props['atomic'] is True
             assert not [n for n in nodes if n.get('role', {}).get('value') == 'progressbar']
             # Changing preference mid-pulse cancels motion without losing true bytes.
-            page.evaluate("emit(100,27,{phase:'verifying-readback',kind:'image-read',assetIndex:3})")
+            page.evaluate("""() => {
+                emit(100,27,{phase:'verifying-readback',kind:'image-read',assetIndex:3});
+                window.preferencePulse=null;
+                if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+                    const animations=fill.getAnimations();
+                    check(animations.length===1,'live preference pulse');
+                    window.preferencePulse=animations[0];
+                    check(preferencePulse.playState==='running','preference pulse has not ended');
+                    // Freeze a live pulse: natural expiry cannot satisfy cancellation.
+                    preferencePulse.pause();
+                    check(preferencePulse.playState==='paused','preference pulse paused');
+                }
+            }""")
             page.emulate_media(reduced_motion='reduce')
-            page.wait_for_function('fill.getAnimations().length===0')
+            page.wait_for_function('fill.getAnimations().length===0 && (!preferencePulse || preferencePulse.playState==="idle")')
             assert page.locator('#image-progress-fill').evaluate('e=>e.style.width') == '10%'
             page.emulate_media(reduced_motion='no-preference')
             page.wait_for_function("!matchMedia('(prefers-reduced-motion: reduce)').matches")
-            page.evaluate("emit(200,28,{phase:'verifying-readback',kind:'image-read',assetIndex:3})")
-            # Terminal state in the same JS turn proves cancellation without waiting for the pulse.
+            # Emit, prove a live pulse, and terminate in one JS turn (no expiry race).
             outcome = {320: 'cancel', 390: 'failed-cleanup-incomplete', 1280: 'complete'}[width]
             page.evaluate("""outcome=>{
+                emit(200,28,{phase:'verifying-readback',kind:'image-read',assetIndex:3});
+                const animations=fill.getAnimations();
+                check(animations.length===1,'live terminal pulse same turn');
+                const pulse=animations[0];
+                check(pulse.playState==='running','terminal pulse has not ended');
                 if(outcome==='cancel')document.querySelector('#cancel').onclick();
                 else {events.onState({state:outcome});if(outcome==='complete')finish();else fail(Error('fixture'));}
-                check(track.hidden&&fill.getAnimations().length===0,'terminal stops motion immediately');
+                check(track.hidden&&fill.getAnimations().length===0&&pulse.playState==='idle','terminal stops motion immediately');
             }""", outcome)
             page.wait_for_function('document.querySelector("#flash").disabled')
             final = page.locator('#status').inner_text()
