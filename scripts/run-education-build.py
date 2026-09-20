@@ -263,10 +263,17 @@ def main():
         provision_cargo(external['cargo_inputs'], Path(env['CARGO_HOME']))
         # No inherited Cargo config or unsupervised tool execution for remap discovery.
         pairs = []
+        # The immutable checker maps rustc's sysroot, NOT its RUSTUP_HOME.
+        # This exact pinned host toolchain is covered by validate_external above;
+        # do not execute caller-selected rustc during admission. The post-export
+        # checker independently resolves rustc and rejects any selection drift.
+        sysroot = m.private_directory(Path(env['RUSTUP_HOME']) /
+                                     'toolchains/nightly-2026-04-15-x86_64-unknown-linux-gnu')
         for path, dest in [(source, '/src/entropylab'), (Path(env['IDF_PATH']), '/IDF'),
                            (Path(env['CARGO_HOME']), '/deps/cargo'),
-                           (Path(env['RUSTUP_HOME']), '/toolchain/rustup')]:
-            pairs.extend([(str(path), dest), ('/' + str(path), dest)])
+                           (sysroot, '/toolchain/rust')]:
+            for spelling in {str(path.absolute()), str(path.resolve())}:
+                pairs.extend([(spelling, dest), ('/' + spelling, dest)])
         pairs = sorted(set(pairs), key=lambda pair: (len(pair[0]), pair[0]))
         m.require(not any(any(c.isspace() or c in '=;\"\'\\' for c in p) for pair in pairs for p in pair), 'unsupported remap path')
         cflags = ' '.join('-ffile-prefix-map=' + a + '=' + b for a, b in pairs)

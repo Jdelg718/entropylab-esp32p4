@@ -19,6 +19,8 @@ RUSTC="$(rustup which --toolchain nightly-2026-04-15 rustc)"
 RUSTDOC="$(rustup which --toolchain nightly-2026-04-15 rustdoc)"
 CARGO="$(rustup which --toolchain nightly-2026-04-15 cargo)"
 export RUSTC RUSTDOC CARGO
+# Bounded to four jobs: measured six-CPU quota / 20-GiB cgroup, with headroom.
+export CARGO_BUILD_JOBS=4 CMAKE_BUILD_PARALLEL_LEVEL=4 IDF_PY_BUILD_JOBS=4
 export CC_riscv32imafc_esp_espidf=riscv32-esp-elf-gcc AR_riscv32imafc_esp_espidf=riscv32-esp-elf-ar
 # Capture post-export environment and resolved executable bytes (not only versions).
 python3 - <<'PY'

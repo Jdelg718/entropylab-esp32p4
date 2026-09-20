@@ -109,6 +109,8 @@ class Invocation(unittest.TestCase):
     def test_main_mock_recipe_admission_and_sealing(self, contaminate=False):
         # Mock identity anchor and process only, exercising real main admission,
         # external checks, provisioning, post-check and atomic receipt logic.
+        (self.base / 'RUSTUP_HOME/toolchains/nightly-2026-04-15-x86_64-unknown-linux-gnu').mkdir(parents=True, mode=0o700)
+        self.refresh()
         candidate = self.base / 'education-candidate-test'
         source = candidate / 'source'
         source.mkdir(parents=True, mode=0o700)
