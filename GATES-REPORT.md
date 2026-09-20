@@ -24,7 +24,11 @@ Official `scripts/package-public.py` produced an isolated candidate ZIP for runt
 - Accepted source archive remains `82d62829596fe080f6bf02cf67c3337d88d4287a98e6b82ad3c70aa56f8e4f19`; firmware and pins unchanged. This is a new candidate distribution, not a replacement for an immutable published release. No target firmware build/reproducibility claim.
 - The ZIP deliberately identifies dc5c654 and does not contain these later test/evidence additions. No publication, tag, release or push occurred.
 
-## Physical board — blocked before port open
+## Physical board — human-operated acceptance completed
+
+The subsequent native-browser run on EL-002 completed installation with displayed verification of all three images and erased tails. Kent confirmed boot, 12/24-word result checks matching the prior test, and Back/reopen retention without recalculation. See [physical acceptance](evidence/physical-acceptance.md) for the evidence and scope. Raw physical baud/timing telemetry was not captured. The earlier attempt below is retained as history, not the current installation blocker.
+
+### Earlier automated attempt — stopped before port open
 
 The controller verified access to the Dell and the expected single serial interface, no competing accessible serial holder, and the preserved read-only 32 MiB factory backup against its sealed digest. An exact archive was staged under the existing project campaign directory; all 842 files and 11 served runtime assets matched. No private backup or physical identifiers are included here.
 
@@ -32,7 +36,7 @@ The actual candidate app completed image verification in native Dell Chromium, b
 
 The exact candidate was left on a bounded, loopback-only preview server for a normal headed-browser handoff. The controller independently fetched its app module and matched the reviewed SHA-256. This server owns no serial port and does not automatically install. Its lifetime is limited; do not assume a historical URL is still live without checking.
 
-A normal browser port-selection interaction is still required. After that, the actual app must perform fresh same-session silicon/security/revision/capacity checks, one authorized three-image write, and all six physical image/tail SHA-256 verifications. Only verified completion permits the separately authorized reset. Physical display/touch/public D6/Back retention still requires observation. Historical device identity and earlier firmware acceptance do not qualify this speed path.
+At that earlier checkpoint a normal browser port-selection interaction was still required. The subsequent human-operated run above completed that handoff. The original acceptance sequence was: the actual app must perform fresh same-session silicon/security/revision/capacity checks, one authorized three-image write, and all six physical image/tail SHA-256 verifications. Only verified completion permits the separately authorized reset. Physical display/touch/public D6/Back retention still requires observation. Historical device identity and earlier firmware acceptance do not qualify this speed path.
 
 ## Review and remaining boundaries
 
@@ -47,4 +51,4 @@ uv run --with playwright python scripts/test-speed-app-wire.py
 
 `CHROMIUM_PATH` may select an installed Chromium; `SPEED_GATE_OUTPUT` selects an external evidence directory. Defaults use temporary directories and do not dirty the checkout.
 
-Still open: physical 460800 installation and boot/touch acceptance; real serial-driver acceptance on other OSes; screen-reader listening/usability; outside-window whole-flash comparison and actual recovery/restoration; capture persistence and any separate firmware reproducibility claim. The unrelated retained updater's historical holds remain. The original direct legacy host-script identity mismatch remains documented, with the existing full retention-aware native route already passed. Publication remains separate from these automated qualification results.
+Still open: independently captured physical baud/timing evidence; real serial-driver acceptance on other OSes; screen-reader listening/usability; outside-window whole-flash comparison and actual recovery/restoration; capture persistence and any separate firmware reproducibility claim. The unrelated retained updater's historical holds remain. The original direct legacy host-script identity mismatch remains documented, with the existing full retention-aware native route already passed. Publication remains separate from these automated qualification results.
