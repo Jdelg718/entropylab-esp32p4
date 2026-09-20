@@ -6,6 +6,7 @@ retains its ABI/symbol/map gates and requires the source's private multi_heap sh
 """
 import argparse
 import hashlib
+import importlib.util
 import json
 from pathlib import Path
 import re
@@ -36,13 +37,23 @@ def main():
     parser.add_argument('--tool-prefix', default='riscv32-esp-elf-')
     parser.add_argument('--recipe', action='store_true', help='Pre-receipt gate for a fresh successor build; no historical receipt repair')
     args = parser.parse_args()
-    d = args.candidate.resolve()
+    d = args.candidate.absolute()
     r = d / 'source/fixture-firmware'
     elf = r / 'build/entropylab_fixture.elf'
     archive = r / 'runtime/target/riscv32imafc-esp-espidf/release/libentropylab_runtime.a'
     run = lambda tool, *a: subprocess.check_output([args.tool_prefix + tool, *map(str, a)], text=True)
     sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
-    receipt = {'status': 'in-progress-recipe', 'exit_code': None} if args.recipe else json.loads((d / 'build-status.json').read_text())
+    if args.recipe:
+        for path in [d / 'build-status.json', d / 'run/build-status.json']:
+            if path.exists():
+                current = json.loads(path.read_bytes())
+                require(current.get('status') == 'running' and 'finished' not in current, 'recipe gate requires an unfinished build')
+        receipt = {'status': 'in-progress-recipe', 'exit_code': None}
+    else:
+        spec = importlib.util.spec_from_file_location('receipt', Path(__file__).with_name('education-receipt.py'))
+        checks = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(checks)
+        receipt, _, _, _ = checks.load(d)
     if not args.recipe:
         require(sha(elf) == receipt['artifacts']['entropylab_fixture.elf']['sha256'], 'ELF receipt drift')
     headers = run('readelf', '-h', archive)

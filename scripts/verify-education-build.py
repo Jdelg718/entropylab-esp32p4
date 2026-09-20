@@ -36,13 +36,10 @@ def image(data):
             'checksum_and_digest': 'PASS'}
 
 
-def receipt_inventory_check(receipt):
-    m.require(set(receipt['artifacts']) == {
-        'entropylab_fixture.bin', 'entropylab_fixture.elf', 'entropylab_fixture.map',
-        'bootloader/bootloader.bin', 'partition_table/partition-table.bin',
-        'flasher_args.json', 'compile_commands.json', 'project_description.json'}, 'artifact inventory')
-    m.require(set(receipt['recipe_sha256']) == {
-        'education-successor.py', 'build-education-successor.sh', 'run-education-build.py'}, 'recipe inventory')
+spec = importlib.util.spec_from_file_location('receipt', Path(__file__).with_name('education-receipt.py'))
+r = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(r)
+receipt_inventory_check = r.inventory
 
 
 def config_check(config):
@@ -59,10 +56,11 @@ def config_check(config):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('candidate', type=Path)
+    parser.add_argument('--external-inputs', type=Path, help='Required v2 externally bound inventory')
     parser.add_argument('--inspect-failed', action='store_true', help='inspect completed failed outputs; still exits 2, never qualifies the build')
     args = parser.parse_args()
-    d = args.candidate.resolve()
-    receipt = json.loads((d / 'build-status.json').read_text())
+    d = args.candidate.absolute()
+    receipt, work, receipt_path, passed = r.load(d, args.inspect_failed)
     receipt_inventory_check(receipt)
     manifest = m.load()
     passed = receipt['status'] == 'local-build-passed' and receipt['child_exit_code'] == 0 and receipt['exit_code'] == 0
@@ -70,19 +68,25 @@ def main():
     m.require(passed or (args.inspect_failed and failed), 'build did not pass')
     m.require(receipt['post_source_check'] == 'PASS', 'post-build source check')
     m.require(receipt['source_revision'] == m.REVISION and receipt['source_manifest_sha256'] == m.sha(m.MANIFEST.read_bytes()), 'source binding')
-    m.require(receipt['log_sha256'] == m.sha((d / 'build.log').read_bytes()), 'stream binding')
-    m.require(receipt['exports_sha256'] == m.sha((d / 'exports.sh').read_bytes()), 'export binding')
+    m.require(receipt['log_sha256'] == m.sha((work / 'build.log').read_bytes()), 'stream binding')
+    m.require(receipt['exports_sha256'] == m.sha((work / 'exports.sh').read_bytes()), 'export binding')
     for name, digest in receipt['recipe_sha256'].items():
         m.require('/' not in name and name.endswith(('.py', '.sh')), 'recipe name')
         m.require(m.sha(m.git('show', receipt['recipe_revision'] + ':scripts/' + name)) == digest, 'committed recipe binding')
     source = d / 'source'
     m.validate_tree(source, manifest['entries'])
     managed = source / 'fixture-firmware/app/managed_components'
-    inputs = d / 'managed-inputs.json'
-    m.require(m.sha(inputs.read_bytes()) == receipt['managed_input_inventory_sha256'], 'managed inventory binding')
-    m.require(json.loads(inputs.read_text()) == {
-        p.relative_to(managed).as_posix(): m.sha(p.read_bytes())
-        for p in managed.rglob('*') if p.is_file()}, 'managed source drift')
+    inputs = m.no_links(work / 'managed-inputs.json')
+    if receipt['schema'] == 'education-local-build-v1':
+        m.require(m.sha(inputs.read_bytes()) == receipt['managed_input_inventory_sha256'], 'managed inventory binding')
+        actual = {n: m.sha((managed / n).read_bytes()) for n in m.tree_files(managed)}
+    else:
+        m.require(args.external_inputs is not None, 'v2 requires --external-inputs')
+        raw = m.no_links(args.external_inputs).read_bytes()
+        m.require(m.sha(raw) == receipt['external_inventory_sha256'], 'external inventory binding')
+        m.require(json.loads(raw)['managed_components'] == json.loads(inputs.read_bytes()), 'managed inventory binding')
+        actual = {n: {'sha256': m.sha((managed / n).read_bytes()), 'bytes': (managed / n).stat().st_size} for n in m.tree_files(managed)}
+    m.require(json.loads(inputs.read_text()) == actual, 'managed source drift')
     build = source / 'fixture-firmware/build'
     config = config_check(json.loads((build / 'config/sdkconfig.json').read_text()))
     for name, info in receipt['artifacts'].items():
@@ -132,7 +136,7 @@ def main():
               'generated_config_sha256': {name: m.sha((build / name).read_bytes()) for name in
                                          ['config/sdkconfig.json', 'config/sdkconfig.h', 'bootloader/config/sdkconfig.json']},
               'artifacts': receipt['artifacts'],
-              'build_receipt_sha256': m.sha((d / 'build-status.json').read_bytes()),
+              'build_receipt_sha256': m.sha(receipt_path.read_bytes()),
               'source_manifest_sha256': receipt['source_manifest_sha256'], 'descriptor': descriptor,
               'images': images, 'partitions': partitions, 'flash_offsets': offsets,
               'new_lessons_in_binary': 'PASS', 'known_local_path_scan': privacy,
