@@ -1,7 +1,7 @@
 # Approved priority order
 
 1. Close release documentation against the accepted one-board installation and unchanged firmware tuple. Speed/progress is implemented in the unpublished `dc5c654` runtime, not paused work. Native platform synthetic-serial and prior distribution checks passed.
-2. Review and package the exact final integrated source, run the release checks, and obtain explicit publication approval. Do not overwrite accepted or published archives/assets. Other development lanes require separate integration and regression review; they are not already included here.
+2. Review and package the exact final integrated source, run the release checks, and obtain explicit publication approval. Do not overwrite accepted or published archives/assets. Education copy, readiness documentation and browser animation are now integrated locally. The changed education source is not in the accepted binaries; fresh packaging remains deferred pending a reviewed successor source/binary provenance contract. Other development lanes still require separate integration and regression review.
 3. Retain one-board human acceptance of installation, browser-displayed six image/tail hashes, boot, 12/24-word results and Back/reopen retention. No repeat flash is required for this milestone. Physical speed measurement, outside-window comparison and recovery remain separate gates for those claims.
 4. Educational explanations and broader qualification remain bounded follow-up work, not an endless list of prerequisites for a scoped preview. Real-secret use remains out of scope.
 
