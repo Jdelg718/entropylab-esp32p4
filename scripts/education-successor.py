@@ -6,6 +6,8 @@ This records local build evidence, not reproducibility, publication or hardware 
 import argparse
 import hashlib
 import json
+import os
+import stat
 from pathlib import Path
 import subprocess
 import tarfile
@@ -68,14 +70,58 @@ def validate_manifest(data, trusted):
     require(data == trusted, 'successor manifest does not match immutable source/accepted predecessor')
 
 
+def no_links(path):
+    path = Path(os.path.abspath(path))
+    require(not any(p.is_symlink() for p in [path, *path.parents]), 'symlink path: ' + str(path))
+    return path
+
+
+def private_directory(path):
+    path = no_links(path)
+    st = path.stat()
+    require(stat.S_ISDIR(st.st_mode) and st.st_uid == os.getuid() and not st.st_mode & 0o022,
+            'directory must be owned by runner and not group/world writable: ' + str(path))
+    return path
+
+
+def fresh_directory(path):
+    path = no_links(path)
+    private_directory(path.parent)
+    path.mkdir(mode=0o700)  # lexists, including dangling links, fails closed
+    return path
+
+
+def exclusive_write(path, data):
+    path = no_links(path)
+    private_directory(path.parent)
+    fd = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW, 0o600)
+    with os.fdopen(fd, 'wb') as stream:
+        stream.write(data)
+        stream.flush()
+        os.fsync(stream.fileno())
+
+
+def tree_files(root):
+    root = no_links(root)
+    require(root.is_dir(), 'missing input directory: ' + str(root))
+    files = set()
+    for parent, dirs, names in os.walk(root, followlinks=False):
+        for name in dirs + names:
+            p = Path(parent) / name
+            mode = p.lstat().st_mode
+            require(stat.S_ISDIR(mode) or stat.S_ISREG(mode), 'non-regular input: ' + str(p))
+            if stat.S_ISREG(mode):
+                files.add(p.relative_to(root).as_posix())
+    return files
+
+
 def validate_tree(root, entries, exact=False):
     for name, info in entries.items():
-        p = root / name
-        require(not any(q.is_symlink() for q in [p, *p.parents]), 'symlink source: ' + name)
+        require(not Path(name).is_absolute() and '..' not in Path(name).parts, 'unsafe inventory path')
+        p = no_links(root / name)
         require(p.is_file() and p.stat().st_size == info['bytes'] and sha(p.read_bytes()) == info['sha256'], 'source drift: ' + name)
     if exact:
-        actual = {p.relative_to(root).as_posix() for p in root.rglob('*') if not p.is_dir()}
-        require(actual == set(entries), 'unexpected source inventory')
+        require(tree_files(root) == set(entries), 'unexpected source inventory')
 
 
 def load():
@@ -105,8 +151,10 @@ def main():
         if args.action == 'stage':
             dest = args.destination
             require(dest is not None and dest.name == 'source' and dest.parent.name.startswith('education-candidate-'), 'use new education-candidate-*/source namespace')
-            require(not dest.exists(), 'fresh source directory required')
-            dest.mkdir(parents=True)
+            # Validate ancestors BEFORE creating or populating anything.
+            no_links(dest)
+            fresh_directory(dest.parent)
+            fresh_directory(dest)
             # Only regular files from the verified immutable revision; no stale build output.
             for name in data['entries']:
                 p = dest / name
