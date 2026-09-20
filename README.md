@@ -19,42 +19,76 @@ See
 [status and provenance](docs/PUBLICATION-CANDIDATE02.md) and
 [exact source and build route](docs/SOURCE-AND-BUILD.md).
 
-## Get and run locally
+## Install firmware on your board
 
-Requires Python 3 and desktop Chrome with Web Serial (Chromium-based Edge may
-also work). No Node, Rust, ESP-IDF, package installation or private build checkout
-is required to run the installer.
+The **installer runs in a browser on your computer**; it writes the **firmware
+that runs on your board**. Opening a link does not download or start the installer.
+**localhost is your own computer, not a public website: the URL works only after
+you start the local server below and while that terminal stays open.**
 
-For the published successor, clone main:
+You need Git, Python 3 and desktop Chrome with Web Serial (Chromium-based Edge
+may also work). No Node, Rust, ESP-IDF or firmware build is needed. If you do not
+have Git, use the separate [ZIP download alternative](#zip-download-alternative).
+
+1. **Download/clone.** Open a terminal in a folder where you want to keep the
+   download. Use the command block for your computer below to clone public main.
+2. **Enter the correct folder.** The `cd entropylab-esp32p4` command enters the
+   downloaded folder containing this `README.md` and the `scripts` folder.
+3. **Verify the download.** Run `verify-publication.py` as shown. Continue only
+   if it succeeds; if it reports an error, stop and see Troubleshooting.
+4. **Start the server and leave the terminal open.** Run `serve-public.py` as
+   shown. It stays running rather than returning to a prompt. If it exits with
+   an error, the server did not start—even if an “Open” URL was printed.
+
+Run these commands **one line at a time, stopping on any error**.
+
+**Linux/macOS — Terminal:**
 
 ```sh
 git clone https://github.com/Jdelg718/entropylab-esp32p4.git
 cd entropylab-esp32p4
-```
-
-Alternatively choose **Code → Download ZIP** on GitHub, extract it completely,
-and open a terminal in the extracted `entropylab-esp32p4-main` folder (the folder
-containing this README). GitHub main includes the candidate02 installer and firmware.
-
-Linux/macOS:
-
-```sh
 python3 scripts/verify-publication.py
 python3 scripts/serve-public.py
 ```
 
-Windows (PowerShell or Command Prompt):
+**Windows — PowerShell or Command Prompt:**
 
 ```powershell
+git clone https://github.com/Jdelg718/entropylab-esp32p4.git
+cd entropylab-esp32p4
 py -3 scripts/verify-publication.py
 py -3 scripts/serve-public.py
 ```
 
-Open **http://localhost:8000/** in desktop Chrome. The loopback server routes to
-`preview/education-candidate02-public-practice-01/flash/first-install/`, not the historical
-root flasher. Do not open the HTML with `file://` or expose this server publicly.
-Use Ctrl+C in the terminal to stop. Linux clean clone/ZIP and Chromium checks are
-reported separately from native macOS/Windows execution, which remains untested.
+5. **Open the installer.** With the server still running, open
+   **http://localhost:8000/** in desktop Chrome **on the same computer**.
+   The address should redirect to
+   `/preview/education-candidate02-public-practice-01/flash/first-install/`.
+   Check that the page says **EntropyLab — DEV TEST** and **Candidate02 firmware**.
+   A v0.1.0/v0.1.1 retention-preview page or the root `/flash/` page is not this
+   installer; use the troubleshooting steps below rather than installing it.
+6. **Run the diagnostic, then install.** Follow [Board and installation](#board-and-installation)
+   below: preserve your backup, verify images, run the no-write diagnostic, then
+   reload and explicitly consent before installing.
+
+Keep the server terminal open until finished; **Ctrl+C** stops it. Do not open
+HTML with `file://` or expose the server publicly. Linux clean clone/ZIP and
+Chromium checks are reported separately from native macOS/Windows execution,
+which remains untested.
+
+### ZIP download alternative
+
+Use this **instead of cloning**, not as an additional installation method.
+On the repository's **main** branch, choose **Code → Download ZIP** and extract
+it completely. This is the source ZIP of current main, not a historical release
+ZIP. Open a terminal inside the extracted `entropylab-esp32p4-main` folder—the
+one directly containing `README.md` and `scripts`, not its parent and not the ZIP
+viewer. If extraction created nested folders, enter the inner one with those files.
+
+Run the two `python3` commands (Linux/macOS) or the two `py -3` commands (Windows)
+from the matching block above, one at a time: verify first, then start the server.
+Skip `git clone` and `cd entropylab-esp32p4` because you are already in the extracted
+folder. Leave the terminal open and continue at **step 5** with the same URL.
 
 ## Board and installation
 
@@ -80,7 +114,7 @@ bypass any refusal, and do not use this for a different board or its C6 coproces
    identifying details before sharing; seek review rather than retrying blindly.
 
 Read the [public-practice package instructions](preview/education-candidate02-public-practice-01/README.md)
-for the exact operator contract. Its earlier NOT TESTED labels are historical;
+for detailed installation and recovery steps. Its earlier NOT TESTED labels are historical;
 the subsequent one-board user report is recorded separately, never retroactively
 rewritten into its immutable manifest.
 
@@ -112,7 +146,24 @@ Please report OS/browser and sanitized errors for installation tests as well.
   close another tab/serial monitor holding the port and check OS serial permissions.
 - No board/port: check USB-to-UART connector and a known data cable; consult the
   board vendor's driver/bootloader instructions. Do not disable security checks.
-- Port 8000 busy: stop the previous preview server, then rerun the same command.
+- **localhost cannot connect:** first complete steps 1–4 above on the same computer
+  as the browser. Keep the server terminal open. A localhost link alone cannot
+  start the server, and closing its terminal stops it.
+- **“Address already in use” / port 8000 busy:** another server is already using
+  the address; this attempt did not start. If you recognize the old preview server's
+  terminal, stop it with Ctrl+C. Otherwise identify the process using port 8000
+  with your OS tools before stopping it; do not kill unrelated processes. Then
+  rerun `serve-public.py` from the verified current folder. Keep the same port and URL.
+- **404 or an old v0.1.0/v0.1.1 page:** an older server can answer localhost while
+  lacking the candidate02 files. Check the server terminal for startup errors,
+  stop the identified old server as above, and start the current download's server.
+  Reopen `http://localhost:8000/` (not an old bookmarked subpath) and refresh.
+  Confirm the candidate02 URL and visible text from step 5 before proceeding.
+- **“Can't open file” / missing `scripts` folder:** your terminal is in the wrong
+  folder or the ZIP is not fully extracted. Enter the folder containing this
+  README and `scripts`, then rerun verification before starting the server.
+- **`git`, `python3` or `py` not found:** install Git (or use the ZIP alternative)
+  and Python 3 for your OS, reopen the terminal, then retry from the correct folder.
 - Hash mismatch: stop and obtain a fresh complete checkout/archive; do not edit pins.
 - Verified install but no boot: use manual RESET once after success, record symptoms;
   do not reinstall as a substitute for checking boot or recovery.
