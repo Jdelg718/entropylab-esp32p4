@@ -249,7 +249,7 @@ def main():
             m.require(not os.path.lexists(parent / '.cargo'), 'ancestor Cargo configuration is forbidden')
         managed = external['managed_components']
         validate_inputs(source, data['entries'], managed)
-        recipe_names = ['education-successor.py', 'build-education-successor.sh', 'run-education-build.py']
+        recipe_names = ['education-successor.py', 'build-education-successor.sh', 'run-education-build.py', 'verify-education-runtime.py']
         recipe = {n: m.sha((m.ROOT / 'scripts' / n).read_bytes()) for n in recipe_names}
         m.require(not m.git('status', '--porcelain', '--', *['scripts/' + n for n in recipe_names]), 'commit recipe before build')
         digest = m.sha(m.MANIFEST.read_bytes())

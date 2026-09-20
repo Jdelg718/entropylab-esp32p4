@@ -61,6 +61,6 @@ idf.py -B "$B" -D 'SDKCONFIG_DEFAULTS=sdkconfig.defaults;rev1_3.defaults' -D "PR
 riscv32-esp-elf-readelf -h "$R/fixture-firmware/runtime/target/riscv32imafc-esp-espidf/release/libentropylab_runtime.a" > "$R/fixture-firmware/logs/archive-headers.txt"
 riscv32-esp-elf-nm "$B/entropylab_fixture.elf" > "$R/fixture-firmware/logs/symbols.txt"
 python3 "$R/fixture-firmware/verify.py"
-python3 "$R/scripts/verify-runtime-elf.py"
+python3 "$(dirname "${BASH_SOURCE[0]}")/verify-education-runtime.py" "$(dirname "$R")" --recipe > "$EDUCATION_RUN/runtime-verification.json"
 python3 "$R/scripts/test-runtime-lock.py"
 [[ "$(sha256sum dependencies.lock)" == "$LOCK_SHA" ]]

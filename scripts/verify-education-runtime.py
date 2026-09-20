@@ -34,6 +34,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('candidate', type=Path)
     parser.add_argument('--tool-prefix', default='riscv32-esp-elf-')
+    parser.add_argument('--recipe', action='store_true', help='Pre-receipt gate for a fresh successor build; no historical receipt repair')
     args = parser.parse_args()
     d = args.candidate.resolve()
     r = d / 'source/fixture-firmware'
@@ -41,8 +42,9 @@ def main():
     archive = r / 'runtime/target/riscv32imafc-esp-espidf/release/libentropylab_runtime.a'
     run = lambda tool, *a: subprocess.check_output([args.tool_prefix + tool, *map(str, a)], text=True)
     sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
-    receipt = json.loads((d / 'build-status.json').read_text())
-    require(sha(elf) == receipt['artifacts']['entropylab_fixture.elf']['sha256'], 'ELF receipt drift')
+    receipt = {'status': 'in-progress-recipe', 'exit_code': None} if args.recipe else json.loads((d / 'build-status.json').read_text())
+    if not args.recipe:
+        require(sha(elf) == receipt['artifacts']['entropylab_fixture.elf']['sha256'], 'ELF receipt drift')
     headers = run('readelf', '-h', archive)
     flags = [x for x in headers.splitlines() if 'Flags:' in x]
     require(flags and all('RVC, single-float ABI' in x for x in flags), 'archive ABI')
@@ -74,7 +76,7 @@ def main():
         require('<' + callee + '>' in disassembly['fixture_allocator_init'], 'private heap init: ' + callee)
     sizes = run('nm', '-S', '--defined-only', elf)
     require(re.search(r'\b00002000\s+[bBdD]\s+fixture_rust_memory$', sizes, re.M), 'private 8KiB arena')
-    print(json.dumps({'schema': 'education-runtime-inspection-v1', 'status': 'PASS-supplemental-only',
+    print(json.dumps({'schema': 'education-runtime-inspection-v1', 'status': 'PASS-recipe-gate' if args.recipe else 'PASS-supplemental-only',
                       'original_build_status': receipt['status'], 'original_build_exit_code': receipt['exit_code'],
                       'elf_sha256': sha(elf), 'runtime_archive_sha256': sha(archive),
                       'verifier_sha256': sha(Path(__file__)),
