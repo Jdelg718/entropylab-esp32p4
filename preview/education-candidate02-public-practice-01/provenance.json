@@ -4,10 +4,10 @@
   "candidate": "education-candidate-hardened-02",
   "compatibility_sha256": "45564045c9c899b02dbf528ee38a11b89ceab8f2b6e66e824e01bed5a3563ff4",
   "descriptor": "e66231dae53a45e30470f7f26-e1",
-  "dev_test_only": true,
+  "dev_test_only": false,
   "diagnostics_enabled": true,
-  "distribution": "HOLD",
-  "hardware": "NOT TESTED",
+  "distribution": "PUBLIC-PRACTICE-PRERELEASE",
+  "hardware": "USER-REPORTED-ONE-BOARD",
   "image_verifier_status": "PASS-local-only",
   "images": [
     {
@@ -32,7 +32,12 @@
       "sha256": "42d5e3b40a3869157171552162189a281c84b893c8533fe3ae8266bfc4c47550"
     }
   ],
-  "package_version": "education-candidate02-dev-test-01",
+  "package_version": "education-candidate02-public-practice-01",
+  "packaging_exclusions": [
+    "fixture-firmware/app/main/.hermes-tmp.DR59MC",
+    "fixture-firmware/app/main/.hermes-tmp.mCnUKi",
+    "fixture-firmware/app/main/.hermes-tmp.yKdlX2"
+  ],
   "partition_unchanged": true,
   "recipe_revision": "0ec7f6dd8ec62d6d554fea6726deeeb5a795a102",
   "reproducibility": "NOT TESTED",
@@ -40,7 +45,7 @@
   "schema": "entropylab-successor-test-provenance-v1",
   "source_manifest_sha256": "66231dae53a45e30470f7f26ab50cb8a9aff3d500aafb7c78fcdedfd755bbb13",
   "source_revision": "2b919dc73c9cbcbb5e845850650d71c6782ad68b",
-  "source_unchanged": true,
+  "source_unchanged": false,
   "supplemental_report_sha256": {
     "image": "cf7c1229da1c1a6fb07e94051a53b68b44ce9dcb848231bb5820c3611faf35e6",
     "runtime": "21f9f868f272e7c35b8ef287c1fc5574bd0e4c2425355385cdc6bdfc80c65bbb"

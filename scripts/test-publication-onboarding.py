@@ -19,7 +19,7 @@ a = ap.parse_args()
 root = a.checkout.resolve()
 a.output.mkdir(parents=True, exist_ok=True)
 subprocess.run([sys.executable, 'scripts/verify-publication.py'], cwd=root, check=True)
-prefix = 'preview/education-candidate02-dev-test-01/'
+prefix = 'preview/education-candidate02-public-practice-01/'
 package = root/prefix
 manifest = json.loads((package/'package-manifest.json').read_text())
 node = subprocess.run(['node','--test','tests/successor-smoke.test.mjs','flash/first-install/wire.test.mjs'],cwd=package,capture_output=True,text=True)

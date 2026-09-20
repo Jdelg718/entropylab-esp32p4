@@ -7,7 +7,7 @@ import re
 import sys
 import zipfile
 
-VERSION = 'education-candidate02-dev-test-01'
+VERSION = 'education-candidate02-public-practice-01'
 SOURCE = '2b919dc73c9cbcbb5e845850650d71c6782ad68b'
 RECIPE = '0ec7f6dd8ec62d6d554fea6726deeeb5a795a102'
 RECEIPT = '96e78c97c730a5a14a565ede5a375812a067af1333fc157887ca454c71bce2a8'
@@ -24,14 +24,14 @@ def validate(files):
         private = rb'/opt/' + rb'data/|/Us' + rb'ers/|/ho' + rb'me/[^ /\n]+/'
         need(not re.search(private,files[name]),'private path '+name)
     manifest=json.loads(files['package-manifest.json'])
-    need(manifest['schema']=='entropylab-successor-test-package-v1' and manifest['version']==VERSION and manifest['distribution']=='HOLD','package identity')
+    need(manifest['schema']=='entropylab-successor-test-package-v1' and manifest['version']==VERSION and manifest['distribution']=='PUBLIC-PRACTICE-PRERELEASE','package identity')
     need(set(files)==set(manifest['files'])|{'package-manifest.json'},'exact inventory')
     for name,pin in manifest['files'].items(): need(record(files[name])==pin,'member hash '+name)
     p=json.loads(files['provenance.json'])
     need(p['package_version']==VERSION and p['source_revision']==SOURCE and p['recipe_revision']==RECIPE and p['build_receipt_sha256']==RECEIPT,'candidate source/receipt binding')
     need(p['source_manifest_sha256']=='66231dae53a45e30470f7f26ab50cb8a9aff3d500aafb7c78fcdedfd755bbb13','source manifest binding')
     need(p['descriptor']=='e66231dae53a45e30470f7f26-e1','descriptor identity')
-    need(p['distribution']=='HOLD' and p['hardware']=='NOT TESTED' and p['reproducibility']=='NOT TESTED' and p['writes_enabled'] is True and p['diagnostics_enabled'] is True and p['dev_test_only'] is True,'assurance scope')
+    need(p['distribution']=='PUBLIC-PRACTICE-PRERELEASE' and p['hardware']=='USER-REPORTED-ONE-BOARD' and p['reproducibility']=='NOT TESTED' and p['writes_enabled'] is True and p['diagnostics_enabled'] is True and p['dev_test_only'] is False,'assurance scope')
     expected=[{'role':r,'path':'flash/first-install/firmware/'+n,'offset':o,'bytes':s,'sha256':h} for r,n,o,s,h in PINS]
     need(p['images']==expected,'exact candidate tuple')
     for i in expected: need(record(files[i['path']])=={'bytes':i['bytes'],'sha256':i['sha256']},'candidate bytes')
@@ -41,7 +41,7 @@ def validate(files):
     adapter=files['flash/first-install/adapter/adapter.mjs'].decode()
     profile=json.loads(re.search(r'export const FACTORY_PROFILE = freeze\((\{.*\})\);',adapter)[1])
     assets=[{'role':r,'offset':o,'length':s,'sha256':h,'eraseEnd':((o+s+4095)//4096)*4096} for r,n,o,s,h in PINS]
-    need(profile['assets']==assets and profile['profileId']==VERSION and profile['writeHold'] is False,'adapter pins/hold')
+    need(profile['assets']==assets and profile['profileId']=='education-candidate02-dev-test-01' and profile['writeHold'] is False,'adapter pins/hold')
     need(profile['tailReadbacks']==[{'offset':a['offset']+a['length'],'length':a['eraseEnd']-a['offset']-a['length'],'sha256':sha(b'\xff'*(a['eraseEnd']-a['offset']-a['length']))} for a in assets],'tail geometry')
     need(profile['preserveToolRegions']==[[0,8192],[36864,65536],[assets[-1]['eraseEnd'],33554432]],'preservation geometry')
     need(sha(files["flash/first-install/adapter/adapter.mjs"]) == 'c6d7b17b5e1c75b15781157858a922b40a7c9c78a3e7c4003e414041aa747e21', "exact dev adapter incl safety gates")
@@ -52,7 +52,12 @@ def validate(files):
     selected={name:pin for name,pin in all_entries.items() if name.startswith(('fixture-firmware/','core-spike/','docs/release-notices/')) or name.startswith('LICENSE') or name in ('THIRD_PARTY_NOTICES.md','docs/COMBINED-RUST-LICENSES.json','docs/RUST-DEPENDENCIES.md','docs/VECTOR-LICENSE-SOURCES.md')}
     inv=json.loads(files['source/source-inventory.json'])
     need(inv['source_revision']==SOURCE and inv['files']==selected,'corresponding source inventory')
-    for name,pin in inv['files'].items(): need(record(files['source/'+name])==pin,'source hash')
+    excluded = ['fixture-firmware/app/main/.hermes-tmp.DR59MC', 'fixture-firmware/app/main/.hermes-tmp.mCnUKi', 'fixture-firmware/app/main/.hermes-tmp.yKdlX2']
+    need(p['packaging_exclusions']==excluded, 'exact packaging exclusion')
+    for name,pin in inv['files'].items():
+        if name in excluded:
+            need(pin==record(b'') and 'source/'+name not in files, 'zero-byte exclusion only')
+        else: need(record(files['source/'+name])==pin,'source hash')
     need('fixture-firmware/app/main/education_content.inc' in inv['files'],'education source required')
     notices=json.loads(files['source/docs/release-notices/manifest.json'])
     combined=files['flash/first-install/NOTICES.txt']
@@ -61,7 +66,7 @@ def validate(files):
         need(record(data)=={'bytes':pin['bytes'],'sha256':pin['sha256']} and data in combined,'exact notice '+name)
     for name in ('LICENSE','LICENSE-MIT','LICENSE-OOGA-BOOGA','LICENSE-TREZOR-MIT','LICENSE-BIP32-BSD-2-CLAUSE'):
         need(files[name]==files['source/'+name],'license coverage')
-    return {'status':'PASS-local-test-package-only','members':len(files),'source_files':len(inv['files']),'notices':len(notices['files']),'version':VERSION}
+    return {'status':'PASS-public-practice-package','members':len(files),'source_files':len(inv['files']),'notices':len(notices['files']),'version':VERSION}
 
 def load(path):
     if path.is_dir():

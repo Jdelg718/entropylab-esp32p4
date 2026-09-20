@@ -1,5 +1,5 @@
 {
-  "distribution": "HOLD",
+  "distribution": "PUBLIC-PRACTICE-PRERELEASE",
   "files": {
     "LICENSE": {
       "bytes": 715,
@@ -21,9 +21,13 @@
       "bytes": 1084,
       "sha256": "d5e3c7c62a84e80073201e2f6e5130e9e6804fa05f8ac4f8b26a13c7d3969697"
     },
+    "PUBLICATION-CLOSURE.md": {
+      "bytes": 2431,
+      "sha256": "b6253567f2cdbaddceccfdaab2355147f22d06f331520bb146ad026cf525707f"
+    },
     "README.md": {
-      "bytes": 3160,
-      "sha256": "be3bf049d3a0a3a6acb7ab2691657be2ebcad1a81335dc735d371f8910390b57"
+      "bytes": 3203,
+      "sha256": "5fb5d90a642a239587393fcb64943d0eb5d096306de660d268233349c2622ff8"
     },
     "THIRD_PARTY_NOTICES.md": {
       "bytes": 6522,
@@ -78,8 +82,8 @@
       "sha256": "d3e6663d9cbd407623c82f215df58a5c9bd1e353fd937ad519018c06fd9298fb"
     },
     "flash/first-install/index.html": {
-      "bytes": 2505,
-      "sha256": "41e737b69247368472f04100d18b5bdc3d81dfff7a30487b0ef7c60ea688d670"
+      "bytes": 2536,
+      "sha256": "14b74985a62de1d7d6dd28da0ac7a37ddd32838e639346cf69505fb2d0fa0b05"
     },
     "flash/first-install/speed-browser.mjs": {
       "bytes": 9055,
@@ -102,8 +106,8 @@
       "sha256": "53fcf9b64f12dde296c020cb0ac393f47ddba94b26baed782fe3efd47cbf1e4c"
     },
     "provenance.json": {
-      "bytes": 2009,
-      "sha256": "9fb585fc6af65c5f84ab9ac77c09267aa38e68b41fc0551f74acae963cb938d7"
+      "bytes": 2241,
+      "sha256": "a276f4882eeed89a007e9ecbcd67daa16dd9bd912460831e70b3d7367f00bc43"
     },
     "scripts/test-progress-animation.py": {
       "bytes": 9186,
@@ -1437,18 +1441,6 @@
       "bytes": 8834,
       "sha256": "e91429e4785bc8fe996f237bfbb72ae46ecfd9721ba7e1e9b755c6f6737426b7"
     },
-    "source/fixture-firmware/app/main/.hermes-tmp.DR59MC": {
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    "source/fixture-firmware/app/main/.hermes-tmp.mCnUKi": {
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
-    "source/fixture-firmware/app/main/.hermes-tmp.yKdlX2": {
-      "bytes": 0,
-      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    },
     "source/fixture-firmware/app/main/CMakeLists.txt": {
       "bytes": 2141,
       "sha256": "a84e1d01e58438ccbe885cfa131380b61904a374ef25036b9c3fefd1edc1554f"
@@ -2750,14 +2742,14 @@
       "sha256": "5f77bf0af4386631018ba67c790bc1afa7eeac3e6d538dfa8a956009c9d1ff20"
     },
     "tests/successor-smoke.test.mjs": {
-      "bytes": 1891,
-      "sha256": "97fda26e25f80d1a2b86ea696a923c0d74921f7d6f8815b7346818265b6a8872"
+      "bytes": 1898,
+      "sha256": "30052f0fd7b2e87c524334729b2e872bbad55b53eeb83e6d81a66ee97f292c74"
     },
     "verify-package.py": {
-      "bytes": 6118,
-      "sha256": "b2de9330f8b50f415a5efe0eff83b2fee6dc4d288c998dd93677e9d4e07995a4"
+      "bytes": 6584,
+      "sha256": "ec4852511f33f762ffda107a46bdbb6c8dfdb417c2dae456d724649498311af5"
     }
   },
   "schema": "entropylab-successor-test-package-v1",
-  "version": "education-candidate02-dev-test-01"
+  "version": "education-candidate02-public-practice-01"
 }

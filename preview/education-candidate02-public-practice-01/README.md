@@ -1,7 +1,7 @@
-# EntropyLab education-candidate02-dev-test-01
+# EntropyLab education-candidate02-public-practice-01
 
-LOCAL DEV TEST ONLY. Public distribution HOLD; **diagnostic and install are enabled**.
-Not a production release or hardware-accepted candidate. Never use real secrets.
+EXPERIMENTAL PUBLIC-PRACTICE PRERELEASE. **Diagnostic and install are enabled**.
+User-reported acceptance on one board only, not production qualification. Never use real secrets.
 
 Firmware is unchanged candidate02, source `2b919dc73c9cbcbb5e845850650d71c6782ad68b`, recipe `0ec7f6dd8ec62d6d554fea6726deeeb5a795a102`.
 Static compatibility against the accepted EL-002 tuple passed: see compatibility.json.
@@ -36,8 +36,8 @@ command scope, not by a full-chip readback proof.
 ## Sources, notices and assurance
 Complete tracked corresponding firmware/core sources and exact original notices are
 under source/; installer/vendor notices and root licenses are retained unchanged.
-External dependencies remain lock-pinned, not vendored. Public distribution licensing,
-independent reproducibility, exact-candidate physical acceptance, recovery qualification
-and publication approval remain open; none is represented as satisfied by this DEV TEST.
+External dependencies remain lock-pinned, not vendored. Finite notice disposition is closed in PUBLICATION-CLOSURE.md. One-board user
+acceptance applies to unchanged firmware and adapter bytes. Independent reproducibility,
+recovery qualification and other-board acceptance remain untested.
 Tests model transport and public memory, never private backups. Hashes establish local
 byte consistency, not authenticity. No firmware rebuild was performed.

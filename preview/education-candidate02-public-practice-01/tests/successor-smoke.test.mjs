@@ -9,7 +9,7 @@ const root=new URL('../',import.meta.url);
 const manifest=JSON.parse(await readFile(new URL('provenance.json',root)));
 const data=await Promise.all(manifest.images.map(i=>readFile(new URL(i.path,root))));
 test('candidate02 manifest, download and adapter pins all bind exact bytes',()=>{
- assert.equal(manifest.package_version,'education-candidate02-dev-test-01');
+ assert.equal(manifest.package_version,'education-candidate02-public-practice-01');
  assert.equal(manifest.source_revision,'2b919dc73c9cbcbb5e845850650d71c6782ad68b');
  for(let i=0;i<data.length;i++){
   const p=manifest.images[i],digest=createHash('sha256').update(data[i]).digest('hex');

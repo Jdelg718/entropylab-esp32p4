@@ -20,7 +20,7 @@ class Handler(SimpleHTTPRequestHandler):
         path = unquote(urlsplit(self.path).path).lstrip('/')
         if not path:
             self.send_response(302)
-            self.send_header('Location', '/preview/education-candidate02-dev-test-01/flash/first-install/')
+            self.send_header('Location', '/preview/education-candidate02-public-practice-01/flash/first-install/')
             self.end_headers()
             return None
         if path.endswith('/'):
@@ -31,5 +31,5 @@ class Handler(SimpleHTTPRequestHandler):
             return None
         return super().send_head()
 if __name__ == '__main__':
-    print('Open http://localhost:8000/ (education candidate02; publication HOLD)', flush=True)
+    print('Open http://localhost:8000/ (education candidate02; public-practice prerelease)', flush=True)
     ThreadingHTTPServer(('127.0.0.1', 8000), Handler).serve_forever()

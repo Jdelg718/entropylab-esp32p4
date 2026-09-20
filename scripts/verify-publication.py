@@ -5,8 +5,8 @@ import importlib.util
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-PACKAGE = ROOT / 'preview/education-candidate02-dev-test-01'
-MANIFEST = '64371d3c19a483170ba37119b44d5566b2cc1df5d2cbe76179522a2fffbeded5'
+PACKAGE = ROOT / 'preview/education-candidate02-public-practice-01'
+MANIFEST = '5425d12ce511a33759cc4f152cbc937df920d13baaa090723661b891156c1e83'
 
 def verify():
     assert hashlib.sha256((PACKAGE/'package-manifest.json').read_bytes()).hexdigest() == MANIFEST, 'immutable manifest changed'
@@ -22,9 +22,9 @@ def verify():
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     result = module.validate(module.load(PACKAGE))
-    assert len(module.load(PACKAGE)) == 690, 'exact member count'
+    assert len(module.load(PACKAGE)) == 688, 'exact member count'
     print(result)
-    print('PASS: exact candidate02 package; publication HOLD remains; no device accessed')
+    print('PASS: exact candidate02 package; public-practice prerelease; one-board user report only; no device accessed')
 
 if __name__ == '__main__':
     verify()

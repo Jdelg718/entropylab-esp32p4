@@ -7,6 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: 124b746ff4cfd5cd878baaaade8e12170ab611ef
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: '22'

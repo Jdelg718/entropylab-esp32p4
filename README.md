@@ -12,11 +12,11 @@ in an additive versioned directory. The earlier v0.1.0/v0.1.1 retention-preview
 releases, images and historical pins are unchanged. This is **new education
 firmware**, not the old documentation-only patch. No rebuild was performed.
 
-**Publication gate: HOLD for binary notice closure and independent candidate
-review.** This prepared checkout is not a published prerelease. See
-[publication status and exact provenance](docs/PUBLICATION-CANDIDATE02.md).
-The included installer allows explicit user-operated writes; HOLD is a
-publication gate, not an adapter lock. Do not distribute a release while it is open.
+**Experimental public-practice prerelease; user-tested on one board only.**
+The finite notice disposition is closed. Frozen correction review is required before
+push; this local commit is not yet published. See
+[status and provenance](docs/PUBLICATION-CANDIDATE02.md) and
+[exact source and build route](docs/SOURCE-AND-BUILD.md).
 
 ## Get and run locally
 
@@ -24,7 +24,7 @@ Requires Python 3 and desktop Chrome with Web Serial (Chromium-based Edge may
 also work). No Node, Rust, ESP-IDF, package installation or private build checkout
 is required to run the installer.
 
-After this candidate is merged, clone main:
+For the published successor, clone main (before publication, use the reviewed candidate checkout):
 
 ```sh
 git clone https://github.com/Jdelg718/entropylab-esp32p4.git
@@ -50,7 +50,7 @@ py -3 scripts/serve-public.py
 ```
 
 Open **http://localhost:8000/** in desktop Chrome. The loopback server routes to
-`preview/education-candidate02-dev-test-01/flash/first-install/`, not the historical
+`preview/education-candidate02-public-practice-01/flash/first-install/`, not the historical
 root flasher. Do not open the HTML with `file://` or expose this server publicly.
 Use Ctrl+C in the terminal to stop. Linux clean clone/ZIP and Chromium checks are
 reported separately from native macOS/Windows execution, which remains untested.
@@ -78,7 +78,7 @@ bypass any refusal, and do not use this for a different board or its C6 coproces
 6. On failure, cancel or unplug: **STOP**. Save the finite failure report, removing
    identifying details before sharing; seek review rather than retrying blindly.
 
-Read the [immutable tested package instructions](preview/education-candidate02-dev-test-01/README.md)
+Read the [public-practice package instructions](preview/education-candidate02-public-practice-01/README.md)
 for the exact operator contract. Its earlier NOT TESTED labels are historical;
 the subsequent one-board user report is recorded separately, never retroactively
 rewritten into its immutable manifest.
@@ -121,9 +121,8 @@ Please report OS/browser and sanitized errors for installation tests as well.
 [Third-party notices](THIRD_PARTY_NOTICES.md), the exact custom Ooga Booga license,
 MIT/BSD/OFL notices and dependency terms remain intact. The versioned package
 includes the corresponding project sources and collected exact dependency notices.
-External dependencies remain pinned but not completely vendored. Outstanding
-binary notice questions are explicit in the publication status; collection of
-license text alone is not legal clearance.
+External dependencies remain pinned but not completely vendored. The bounded notice determination is recorded in the publication status; it is
+not legal certification. Root `flash/` paths are legacy, not candidate02 onboarding.
 
 ## What is implemented
 
