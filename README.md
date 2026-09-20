@@ -1,6 +1,6 @@
 # EntropyLab — unofficial ESP32-P4
 
-## Education candidate02 — public-test publication candidate
+## Education candidate02 — published public-practice prerelease
 
 **Public practice only, not a wallet or signer. Never enter real seeds, passphrases,
 private keys or other secrets; never fund displayed addresses.** This is an
@@ -13,8 +13,9 @@ releases, images and historical pins are unchanged. This is **new education
 firmware**, not the old documentation-only patch. No rebuild was performed.
 
 **Experimental public-practice prerelease; user-tested on one board only.**
-The finite notice disposition is closed. Frozen correction review is required before
-push; this local commit is not yet published. See
+The finite notice disposition is closed. Candidate02 is published on main and as the
+[public-practice prerelease](https://github.com/Jdelg718/entropylab-esp32p4/releases/tag/education-candidate02-public-practice-01).
+See
 [status and provenance](docs/PUBLICATION-CANDIDATE02.md) and
 [exact source and build route](docs/SOURCE-AND-BUILD.md).
 
@@ -24,7 +25,7 @@ Requires Python 3 and desktop Chrome with Web Serial (Chromium-based Edge may
 also work). No Node, Rust, ESP-IDF, package installation or private build checkout
 is required to run the installer.
 
-For the published successor, clone main (before publication, use the reviewed candidate checkout):
+For the published successor, clone main:
 
 ```sh
 git clone https://github.com/Jdelg718/entropylab-esp32p4.git
@@ -33,7 +34,7 @@ cd entropylab-esp32p4
 
 Alternatively choose **Code → Download ZIP** on GitHub, extract it completely,
 and open a terminal in the extracted `entropylab-esp32p4-main` folder (the folder
-containing this README). Until merge, GitHub main still serves the older release.
+containing this README). GitHub main includes the candidate02 installer and firmware.
 
 Linux/macOS:
 
