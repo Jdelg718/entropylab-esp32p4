@@ -7,38 +7,68 @@ The extracted preview `source/build-recipe/` is archival, not a standalone kit.
 External dependencies are pinned but not completely vendored; independent
 reproducibility is NOT established. No rebuild accompanies publication.
 
+## Verified source retrieval and staging (no compiler required)
+
+Run in a new workspace with Git, Python 3 and an owned, non-group/world-writable
+HOME without symlink ancestors. The candidate directory must not already exist.
+The public clone must contain both pinned commits; stop if either is unavailable.
+
 ```sh
+set -eu
 git clone https://github.com/Jdelg718/entropylab-esp32p4.git
 cd entropylab-esp32p4
 git worktree add --detach ../candidate02-recipe 0ec7f6dd8ec62d6d554fea6726deeeb5a795a102
 git worktree add --detach ../candidate02-source 2b919dc73c9cbcbb5e845850650d71c6782ad68b
-cd ../candidate02-source
-python3 ../candidate02-recipe/scripts/education-successor.py stage --destination "$HOME/education-candidate-rebuild/source"
+RECIPE=$(cd ../candidate02-recipe && pwd -P)
+SOURCE=$(cd ../candidate02-source && pwd -P)
+CANDIDATE="$HOME/education-candidate-rebuild"
+test "$(git -C "$RECIPE" rev-parse HEAD)" = 0ec7f6dd8ec62d6d554fea6726deeeb5a795a102
+test "$(git -C "$SOURCE" rev-parse HEAD)" = 2b919dc73c9cbcbb5e845850650d71c6782ad68b
+test -z "$(git -C "$RECIPE" status --porcelain)"
+test -z "$(git -C "$SOURCE" status --porcelain)"
+python3 -B "$RECIPE/scripts/education-successor.py" check
+python3 -B "$RECIPE/scripts/education-successor.py" stage --destination "$CANDIDATE/source"
 ```
 
-The historical staging helper validates its own checkout before exporting Git objects.
-Because recipe-only documentation may differ from the source snapshot, that check can
-reject the recipe checkout. Resolve this with the original isolated build preparation
-procedure before rebuilding; the commands above are navigation, not a verified fresh
-build recipe. Publication does not claim that this route has been exercised.
-Do not run its historical whole-checkout identity check on publication main.
-Read [runner prerequisites](../scripts/run-education-build.py) and
-[build recipe](../scripts/build-education-successor.sh). Prepare isolated writable
-HOME, TMPDIR, CARGO_HOME and IDF_COMPONENT_CACHE_PATH, pinned managed components
-and Cargo downloads, and the external input inventory required by the runner.
-Set IDF_PATH, IDF_TOOLS_PATH, RUSTUP_HOME and Rust proxy PATH explicitly.
-IDF must be clean recursive revision `b774170ff46c393eeb5e495ea37936038d3f4f4f`;
-Rust is nightly-2026-04-15 with rust-src and target riscv32imafc-esp-espidf.
+The helper anchors its checkout to its own file, **not the working directory**.
+The exact pinned recipe passes: its changes relative to the pinned source are
+additions, not modifications to the source manifest's entries. Staging exports
+immutable source Git objects and checks every staged file's size and SHA-256,
+including exact inventory equality. The source worktree is a separate inspection
+checkout; it is not modified or used to supply recipe files. Do not copy recipe
+files into it or run the publication-main helper instead: publication-main
+correctly fails historical source identity even when invoked from the source
+worktree. No identity exceptions or manifest changes are needed.
+
+This source staging route was exercised using local Git objects at both exact
+revisions; a fresh public network clone and a full firmware compile were not
+performed for this documentation correction.
+
+## Local inventory provisioning and gated build (not a portable bootstrap)
+
+Keep the shell variables above. Read the complete pinned helpers in `$RECIPE`,
+particularly `scripts/run-education-build.py` and
+`scripts/build-education-successor.sh`. The runner creates isolated writable
+HOME, TMPDIR, CARGO_HOME and IDF_COMPONENT_CACHE_PATH. Supply pinned managed
+components, Cargo downloads and the external input inventory required by the
+runner. That inventory binds local absolute installation paths, physical entries
+and resolved links; it is not a portable dependency lock or an automatic installer.
+Prepare its IDF_PATH, IDF_TOOLS_PATH, RUSTUP_HOME and Rust proxy TOOL_BIN roots
+explicitly. IDF must be clean recursive revision
+`b774170ff46c393eeb5e495ea37936038d3f4f4f`; Rust is nightly-2026-04-15 with
+rust-src and target riscv32imafc-esp-espidf.
 Retain component/Cargo locks and Rev1.3 defaults. No old build objects are permitted.
 The external inventory format and validation are defined in the pinned runner;
 its checksum must be independently recorded, not copied from an untrusted input.
 
+Only after local inventory provisioning (not verified by the staging test):
+
 ```sh
-# EXTERNAL_INPUTS and EXTERNAL_SHA256 identify your prepared inventory.
-python3 scripts/run-education-build.py "$HOME/education-candidate-rebuild" \
+# EXTERNAL_INPUTS and EXTERNAL_SHA256 identify your independently approved inventory.
+python3 -B "$RECIPE/scripts/run-education-build.py" "$CANDIDATE" \
   --external-inputs "$EXTERNAL_INPUTS" --external-inputs-sha256 "$EXTERNAL_SHA256"
-python3 scripts/verify-education-build.py "$HOME/education-candidate-rebuild"
-python3 scripts/verify-education-runtime.py "$HOME/education-candidate-rebuild" --recipe
+python3 -B "$RECIPE/scripts/verify-education-build.py" "$CANDIDATE"
+python3 -B "$RECIPE/scripts/verify-education-runtime.py" "$CANDIDATE" --recipe
 ```
 
 These commands describe the existing gated route, not a promise that a fresh
