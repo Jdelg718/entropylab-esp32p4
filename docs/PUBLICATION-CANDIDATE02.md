@@ -38,7 +38,10 @@ archival, not a standalone build kit. See the main repository SOURCE-AND-BUILD g
 [Exact source/build route](SOURCE-AND-BUILD.md).
 
 Current namespace: `preview/education-candidate02-public-practice-01/`. Root `/flash/first-install/` is legacy.
-Frozen correction review precedes push; no remote publication is claimed.
+Candidate02 was published via [PR #11](https://github.com/Jdelg718/entropylab-esp32p4/pull/11)
+at main commit `fb127782ae712f8cda040bcde0ae111978bbb3a9` and as the
+[public-practice prerelease](https://github.com/Jdelg718/entropylab-esp32p4/releases/tag/education-candidate02-public-practice-01).
+The published tag, ZIP and firmware are unchanged by this documentation correction.
 
 ## Historical staging finding (superseded above)
 

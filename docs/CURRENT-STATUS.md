@@ -1,4 +1,4 @@
-> Candidate02 successor: see [the current README](../README.md) and [publication status](PUBLICATION-CANDIDATE02.md). The body below preserves predecessor guidance/evidence; do not use its older installer URL for candidate02.
+> Candidate02 is published on main and as the [public-practice prerelease](https://github.com/Jdelg718/entropylab-esp32p4/releases/tag/education-candidate02-public-practice-01): see [the current README](../README.md) and [publication status](PUBLICATION-CANDIDATE02.md). The body below preserves predecessor guidance/evidence, including its historical unpublished/hold labels; do not use its older installer URL for candidate02.
 
 # Current release status
 
